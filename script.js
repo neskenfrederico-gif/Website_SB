@@ -168,62 +168,92 @@ function initFadeInObserver() {
 }
 
 // ===== Contact Form =====
+async function sendFormToEndpoint(formEl, formData) {
+  const endpoint = (formEl.getAttribute("action") || "").trim();
+  if (!endpoint) return { ok: false, skipped: true };
+
+  try {
+    const response = await fetch(endpoint, {
+      method: formEl.getAttribute("method") || "POST",
+      headers: { Accept: "application/json" },
+      body: formData,
+    });
+
+    return { ok: response.ok, status: response.status };
+  } catch (err) {
+    return { ok: false, error: err };
+  }
+}
+
+function buildWhatsappMessage(data) {
+  return encodeURIComponent(
+    `*Novo contato pelo site*
+
+` +
+      `*Nome:* ${data.name}
+` +
+      `*E-mail:* ${data.email}
+` +
+      `*Telefone:* ${data.phone || "Não informado"}
+` +
+      `*Tipo de Projeto:* ${data.subject}
+
+` +
+      `*Mensagem:*
+${data.message}`
+  );
+}
+
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    contactForm.classList.add("was-submitted");
 
-    // Simple validation
-    if (!data.name || !data.email || !data.subject || !data.message) {
-      showNotification(
-        "Por favor, preencha todos os campos obrigatórios.",
-        "error"
-      );
+    // HTML5 validation (shows visual feedback via CSS)
+    if (!contactForm.checkValidity()) {
+      showNotification("Por favor, preencha todos os campos obrigatórios.", "error");
       return;
     }
 
-    // Email validation
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+
+    // Extra email validation (defensive)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
       showNotification("Por favor, insira um e-mail válido.", "error");
       return;
     }
 
-    // Simulate form submission
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = "<span>Enviando...</span>";
     submitBtn.disabled = true;
 
-    // Simulate API call
-    setTimeout(() => {
-      // Create WhatsApp message
-      const whatsappMessage = encodeURIComponent(
-        `*Novo contato pelo site*\n\n` +
-          `*Nome:* ${data.name}\n` +
-          `*E-mail:* ${data.email}\n` +
-          `*Telefone:* ${data.phone || "Não informado"}\n` +
-          `*Tipo de Projeto:* ${data.subject}\n\n` +
-          `*Mensagem:*\n${data.message}`
-      );
+    // 1) Attempt real submission to a configurable endpoint (Formspree, etc.)
+    const result = await sendFormToEndpoint(contactForm, formData);
 
-      // Open WhatsApp
-      window.open(
-        `https://wa.me/5562992250067?text=${whatsappMessage}`,
-        "_blank"
-      );
+    // 2) Keep the current WhatsApp flow as fallback/secondary channel
+    const whatsappMessage = buildWhatsappMessage(data);
+    window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
 
+    if (result && result.ok) {
       showNotification(
         "Mensagem enviada! Você será redirecionado para o WhatsApp.",
         "success"
       );
-      contactForm.reset();
-      submitBtn.innerHTML = originalText;
-      submitBtn.disabled = false;
-    }, 1500);
+    } else {
+      showNotification(
+        "Mensagem preparada! Se o envio automático não estiver configurado, você será redirecionado para o WhatsApp.",
+        "info"
+      );
+    }
+
+    contactForm.reset();
+    contactForm.classList.remove("was-submitted");
+    submitBtn.innerHTML = originalText;
+    submitBtn.disabled = false;
   });
 }
 
@@ -408,6 +438,55 @@ function initHeroSlider() {
   }, slideInterval);
 }
 
+
+
+// ===== Hero Background Lazy Loading =====
+function preloadHeroSlideBackgrounds() {
+  const slides = document.querySelectorAll(".hero__slide");
+  if (!slides.length) return;
+
+  const applyBg = (slide) => {
+    const webp = slide.dataset.bgWebp;
+    const jpg = slide.dataset.bgJpg;
+    if (!webp || !jpg) return;
+    if (slide.style.backgroundImage) return;
+
+    slide.style.backgroundImage = `image-set(url('${webp}') type('image/webp'), url('${jpg}') type('image/jpeg'))`;
+  };
+
+  // Keep the first slide eager; lazy-load the others after idle.
+  const lazySlides = Array.from(slides).filter((s) => !s.classList.contains("active"));
+  const run = () => lazySlides.forEach(applyBg);
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(run, { timeout: 2000 });
+  } else {
+    setTimeout(run, 1200);
+  }
+}
+
+// ===== WhatsApp Floating Button Visibility =====
+function initWhatsappFloatVisibility() {
+  const floatBtn = document.getElementById("whatsapp-float");
+  const contatoSection = document.getElementById("contato");
+  if (!floatBtn || !contatoSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          floatBtn.classList.add("is-hidden");
+        } else {
+          floatBtn.classList.remove("is-hidden");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(contatoSection);
+}
+
 // ===== Initialize =====
 document.addEventListener("DOMContentLoaded", () => {
   // Add loaded class to body
@@ -418,6 +497,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize Slider
   initHeroSlider();
+
+  // Lazy-load hero backgrounds
+  preloadHeroSlideBackgrounds();
+
+  // WhatsApp floating button (hide on contact section)
+  initWhatsappFloatVisibility();
+
+  // Footer current year
+  const yearEl = document.getElementById("current-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Initial active section check
   highlightActiveSection();
