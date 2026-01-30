@@ -2044,6 +2044,7 @@ select {
   .spotlight__wrapper {
     padding: var(--spacing-5);
     gap: var(--spacing-6);
+    background: rgba(255, 255, 255, 0.95);
   }
 
   .spotlight__image {
