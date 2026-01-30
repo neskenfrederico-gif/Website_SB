@@ -526,7 +526,7 @@ function initSpotlightRotator() {
       stat3: 'ISO 7/8', stat3Label: 'Classe de Limpeza',
       badge: 'Ref. em Farmacêutica',
       badgeIcon: '🏆',
-      img: 'banner_hero'
+      img: 'spotlight-geolab'
     },
     {
       title: 'Ministério da <span class="gradient-text">Fazenda</span>',
@@ -536,7 +536,7 @@ function initSpotlightRotator() {
       stat3: 'Híbrido', stat3Label: 'VRF + Chiller',
       badge: 'Maior Capacidade',
       badgeIcon: '⚡',
-      img: 'banner_hero1'
+      img: 'spotlight-fazenda'
     },
     {
       title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
@@ -546,7 +546,7 @@ function initSpotlightRotator() {
       stat3: 'Siemens', stat3Label: 'Automação',
       badge: 'Ref. em Industrial',
       badgeIcon: '🏭',
-      img: 'banner_hero2'
+      img: 'spotlight-ontex'
     },
     {
       title: 'Linea <span class="gradient-text">Vitta</span>',
@@ -556,7 +556,7 @@ function initSpotlightRotator() {
       stat3: 'VRF', stat3Label: 'Sistema Adotado',
       badge: 'Maior Área',
       badgeIcon: '🏢',
-      img: 'banner_hero'
+      img: 'spotlight-linea'
     }
   ];
 
@@ -603,9 +603,10 @@ function initSpotlightRotator() {
     const c = cases[current];
     const content = document.querySelector('.spotlight__content');
     
-    // Fade out
+    // Fade out content + image
     content.style.opacity = '0';
     content.style.transform = 'translateY(10px)';
+    imgEl.style.opacity = '0';
     
     setTimeout(() => {
       titleEl.innerHTML = c.title;
@@ -633,6 +634,7 @@ function initSpotlightRotator() {
       // Fade in
       content.style.opacity = '1';
       content.style.transform = 'translateY(0)';
+      imgEl.style.opacity = '1';
     }, 300);
   }
 }
