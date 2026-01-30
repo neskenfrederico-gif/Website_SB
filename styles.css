@@ -423,11 +423,69 @@ select {
   margin: 0 auto var(--spacing-8);
 }
 
+/* Hero Trust Bar */
+.hero__trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+  padding: var(--spacing-4) var(--spacing-6);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(8px);
+}
+
+.hero__trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero__trust-value {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.hero__trust-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero__trust-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Hero link (secondary action) */
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+  padding: var(--spacing-3) 0;
+}
+
+.hero__link:hover {
+  color: var(--color-secondary-light);
+  gap: var(--spacing-3);
+}
+
 .hero__buttons {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-4);
   justify-content: center;
+  align-items: center;
 }
 
 .hero__stats {
@@ -1663,8 +1721,60 @@ select {
     justify-content: center;
   }
 
+  /* Hero buttons: CTA full-width, link inline */
   .hero__buttons {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__buttons .btn--primary {
+    width: 100%;
+  }
+
+  .hero__link {
+    width: auto !important;
+  }
+
+  /* Hero trust bar mobile */
+  .hero__trust {
+    padding: var(--spacing-3) var(--spacing-4);
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .hero__trust-value {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero__trust-label {
+    font-size: 0.65rem;
+  }
+
+  .hero__trust-divider {
+    height: 28px;
+  }
+
+  /* Hero mais compacto no mobile */
+  .hero {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: var(--spacing-10);
+  }
+
+  .hero__content {
+    padding: var(--spacing-8) 0 var(--spacing-6);
+    min-height: auto;
+    gap: var(--spacing-6);
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 7vw, 3rem);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .hero__description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-4);
   }
 }
 
