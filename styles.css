@@ -1085,11 +1085,12 @@ select {
 
 .project-card__image {
   height: 200px;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-secondary) 100%
-  );
+  /* Fallback color (in case the image fails to load) */
+  background-color: var(--color-primary);
+  background-image: url("portfolio/portfolio-1.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -1105,35 +1106,38 @@ select {
 }
 
 .project-card__image--2 {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, #2dd4bf 100%);
+  background-color: var(--color-secondary);
+  background-image: url("portfolio/portfolio-2.webp");
 }
 
 .project-card__image--3 {
-  background: linear-gradient(135deg, #6366f1 0%, var(--color-secondary) 100%);
+  background-color: #6366f1;
+  background-image: url("portfolio/portfolio-3.webp");
 }
 
 .project-card__image--4 {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #f59e0b 100%);
+  background-color: var(--color-accent);
+  background-image: url("portfolio/portfolio-4.webp");
 }
 
 .project-card__image--5 {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  background-color: #8b5cf6;
+  background-image: url("portfolio/portfolio-5.webp");
 }
 
 .project-card__image--6 {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-dark) 0%,
-    var(--color-primary) 100%
-  );
+  background-color: var(--color-primary-dark);
+  background-image: url("portfolio/portfolio-6.webp");
 }
 
 .project-card__image--7 {
-  background: linear-gradient(135deg, #059669 0%, var(--color-secondary) 100%);
+  background-color: #059669;
+  background-image: url("portfolio/portfolio-7.webp");
 }
 
 .project-card__image--8 {
-  background: linear-gradient(135deg, #dc2626 0%, var(--color-accent) 100%);
+  background-color: #dc2626;
+  background-image: url("portfolio/portfolio-8.webp");
 }
 
 .project-card__overlay {
