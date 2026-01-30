@@ -91,6 +91,8 @@
 .sector-content__text p {
   color: var(--color-gray-600);
   margin-bottom: var(--spacing-4);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .sector-highlights {
@@ -138,6 +140,8 @@
 .sector-highlight__desc {
   color: var(--color-gray-600);
   font-size: var(--font-size-sm);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Normas */
@@ -171,6 +175,8 @@
 .standard-badge span {
   color: var(--color-gray-600);
   font-size: var(--font-size-sm);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Serviços e Cases */
@@ -226,6 +232,8 @@
 .sector-info-card p {
   color: var(--color-gray-600);
   font-size: var(--font-size-sm);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .sector-info-card ul {
@@ -265,6 +273,8 @@
 
 .sector-cta__info p {
   color: rgba(255, 255, 255, 0.82);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .sector-cta__info .btn {
@@ -276,7 +286,11 @@
 }
 
 /* Responsivo */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
+  .sector-hero {
+    padding: calc(var(--header-height) + var(--spacing-10)) 0 var(--spacing-10);
+  }
+
   .sector-content__grid,
   .sector-cta__grid {
     grid-template-columns: 1fr;
