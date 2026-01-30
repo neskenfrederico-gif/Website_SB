@@ -1249,7 +1249,7 @@ select {
 .project-card__image {
   height: 200px;
   background-color: var(--color-primary);
-  background-image: url("portfolio/portfolio-1.webp");
+  background-image: url("portfolio/portfolio-1.webp?v=3");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1269,77 +1269,77 @@ select {
 
 .project-card__image--2 {
   background-color: var(--color-secondary);
-  background-image: url("portfolio/portfolio-2.webp?v=2");
+  background-image: url("portfolio/portfolio-2.webp?v=3");
 }
 
 .project-card__image--3 {
   background-color: #6366f1;
-  background-image: url("portfolio/portfolio-3.webp");
+  background-image: url("portfolio/portfolio-3.webp?v=3");
 }
 
 .project-card__image--4 {
   background-color: var(--color-accent);
-  background-image: url("portfolio/portfolio-4.webp");
+  background-image: url("portfolio/portfolio-4.webp?v=3");
 }
 
 .project-card__image--5 {
   background-color: #8b5cf6;
-  background-image: url("portfolio/portfolio-5.webp");
+  background-image: url("portfolio/portfolio-5.webp?v=3");
 }
 
 .project-card__image--6 {
   background-color: var(--color-primary-dark);
-  background-image: url("portfolio/portfolio-6.webp");
+  background-image: url("portfolio/portfolio-6.webp?v=3");
 }
 
 .project-card__image--7 {
   background-color: #059669;
-  background-image: url("portfolio/portfolio-7.webp");
+  background-image: url("portfolio/portfolio-7.webp?v=3");
 }
 
 .project-card__image--8 {
   background-color: #dc2626;
-  background-image: url("portfolio/portfolio-8.webp?v=2");
+  background-image: url("portfolio/portfolio-8.webp?v=3");
 }
 
 .project-card__image--9 {
   background-color: #0ea5e9;
-  background-image: url("portfolio/portfolio-9.webp");
+  background-image: url("portfolio/portfolio-9.webp?v=3");
 }
 
 .project-card__image--10 {
   background-color: #0b1220;
-  background-image: url("portfolio/portfolio-10.webp");
+  background-image: url("portfolio/portfolio-10.webp?v=3");
 }
 
 .project-card__image--11 {
   background-color: #1b1433;
-  background-image: url("portfolio/portfolio-11.webp?v=2");
+  background-image: url("portfolio/portfolio-11.webp?v=3");
 }
 
 .project-card__image--12 {
   background-color: #0b1220;
-  background-image: url("portfolio/portfolio-12.webp");
+  background-image: url("portfolio/portfolio-12.webp?v=3");
 }
 
 .project-card__image--13 {
   background-color: #071a18;
-  background-image: url("portfolio/portfolio-13.webp");
+  background-image: url("portfolio/portfolio-13.webp?v=3");
 }
 
 .project-card__image--14 {
   background-color: #111827;
-  background-image: url("portfolio/portfolio-14.webp");
+  background-image: url("portfolio/portfolio-14.webp?v=3");
 }
 
 .project-card__image--15 {
   background-color: #0f172a;
-  background-image: url("portfolio/portfolio-15.webp");
+  background-image: url("portfolio/portfolio-15.webp?v=3");
 }
 
 .project-card__image--16 {
   background-color: #070b14;
-  background-image: url("portfolio/portfolio-16.webp");
+  background-image: url("portfolio/portfolio-16.webp?v=3");
 }
 
 .project-card__overlay {
