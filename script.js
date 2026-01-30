@@ -529,14 +529,14 @@ function initSpotlightRotator() {
       img: 'spotlight-geolab.webp?v=3'
     },
     {
-      title: 'Ministério da <span class="gradient-text">Fazenda</span>',
-      desc: 'Sistema híbrido <strong>VRF-Split (350 TR) + Chiller-Fancoil (870 TR)</strong> com automação moderna para a sede do Ministério da Fazenda. Maior capacidade em projeto único.',
-      stat1: '1.220', stat1Label: 'TR de Capacidade',
-      stat2: '18.500 m²', stat2Label: 'Área Climatizada',
-      stat3: 'Híbrido', stat3Label: 'VRF + Chiller',
+      title: 'Geolab — <span class="gradient-text">Site I</span>',
+      desc: 'Projeto completo para <strong>25.000+ m² de áreas produtivas</strong>: sólidos, efervescentes e semi-sólidos. CAG de 1.500 TR, UTAs TROX TKZ e desumidificação química para efervescentes.',
+      stat1: '1.500', stat1Label: 'TR de Capacidade',
+      stat2: '25.000+ m²', stat2Label: 'Área Produtiva',
+      stat3: 'TROX TKZ', stat3Label: 'UTAs',
       badge: 'Maior Capacidade',
       badgeIcon: '⚡',
-      img: 'spotlight-fazenda.webp?v=3'
+      img: 'spotlight-geolab1.webp?v=3'
     },
     {
       title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
