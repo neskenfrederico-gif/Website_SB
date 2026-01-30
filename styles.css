@@ -2511,3 +2511,15 @@ select {
 .whatsapp-float {
   animation: whatsappPulse 2.4s ease-in-out infinite;
 }
+
+/* Garantir logo clicável em todas as páginas */
+.nav__logo {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+
+.header .nav {
+  pointer-events: auto;
+}
