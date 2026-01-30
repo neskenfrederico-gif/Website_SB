@@ -1815,6 +1815,7 @@ select {
 }
 
 .spotlight__stats {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-6);
   margin-bottom: var(--spacing-10);
@@ -2003,7 +2004,8 @@ select {
 
   /* Spotlight: stats em 3 colunas no mobile (valores curtos) */
   .spotlight__stats {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: var(--spacing-3);
     text-align: center;
     margin-bottom: var(--spacing-8);
@@ -2061,9 +2063,10 @@ select {
   }
 
   /* Botão com largura auto no spotlight */
-  .spotlight .btn {
-    width: auto;
+  .spotlight .btn.btn--primary {
+    width: auto !important;
     align-self: flex-start;
+    padding: var(--spacing-3) var(--spacing-6);
   }
 
   .spotlight__content {
