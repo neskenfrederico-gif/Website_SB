@@ -3,7 +3,7 @@
 */
 
 .project-hero {
-  padding: calc(var(--header-height) + 0.25rem) 0 var(--spacing-6);
+  padding: calc(var(--header-height) + 1rem) 0 var(--spacing-6);
   background: radial-gradient(1200px 600px at 10% 0%, rgba(78, 205, 196, 0.18), transparent 60%),
               radial-gradient(1000px 500px at 90% 10%, rgba(37, 99, 235, 0.22), transparent 55%),
               linear-gradient(180deg, rgba(10, 12, 16, 0.95), rgba(10, 12, 16, 0.92));
@@ -197,7 +197,7 @@
 
 @media (max-width: 768px) {
   .project-hero {
-    padding: calc(var(--header-height) + 0.15rem) 0 var(--spacing-4);
+    padding: calc(var(--header-height) + 0.75rem) 0 var(--spacing-4);
   }
 
   .project-hero__title {
