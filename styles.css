@@ -1135,6 +1135,25 @@ select {
   display: none;
 }
 
+/* Make project cards clickable links */
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card-link:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.6);
+  outline-offset: 6px;
+  border-radius: var(--radius-xl);
+}
+
+.project-card-link:hover .project-card {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-2xl);
+}
+
 .project-card__image {
   height: 200px;
   /* Fallback color (in case the image fails to load) */
@@ -1190,6 +1209,11 @@ select {
 .project-card__image--8 {
   background-color: #dc2626;
   background-image: url("portfolio/portfolio-8.webp");
+}
+
+.project-card__image--9 {
+  background-color: #0ea5e9;
+  background-image: url("portfolio/portfolio-5.webp");
 }
 
 .project-card__overlay {
@@ -1263,6 +1287,23 @@ select {
   font-size: var(--font-size-sm);
   color: var(--color-gray-500);
   line-height: 1.6;
+}
+
+.project-card__details {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: 0.85;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+.project-card-link:hover .project-card__details {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 /* ===== CONTATO SECTION ===== */
