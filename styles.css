@@ -1269,7 +1269,7 @@ select {
 
 .project-card__image--2 {
   background-color: var(--color-secondary);
-  background-image: url("portfolio/portfolio-2.webp");
+  background-image: url("portfolio/portfolio-2.webp?v=2");
 }
 
 .project-card__image--3 {
@@ -1299,7 +1299,7 @@ select {
 
 .project-card__image--8 {
   background-color: #dc2626;
-  background-image: url("portfolio/portfolio-8.webp");
+  background-image: url("portfolio/portfolio-8.webp?v=2");
 }
 
 .project-card__image--9 {
@@ -1314,7 +1314,7 @@ select {
 
 .project-card__image--11 {
   background-color: #1b1433;
-  background-image: url("portfolio/portfolio-11.webp");
+  background-image: url("portfolio/portfolio-11.webp?v=2");
 }
 
 .project-card__image--12 {
