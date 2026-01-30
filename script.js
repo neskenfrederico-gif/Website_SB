@@ -526,7 +526,7 @@ function initSpotlightRotator() {
       stat3: 'ISO 7/8', stat3Label: 'Classe de Limpeza',
       badge: 'Ref. em Farmacêutica',
       badgeIcon: '🏆',
-      img: 'spotlight-geolab'
+      img: 'spotlight-geolab.webp?v=3'
     },
     {
       title: 'Ministério da <span class="gradient-text">Fazenda</span>',
@@ -536,7 +536,7 @@ function initSpotlightRotator() {
       stat3: 'Híbrido', stat3Label: 'VRF + Chiller',
       badge: 'Maior Capacidade',
       badgeIcon: '⚡',
-      img: 'spotlight-fazenda'
+      img: 'spotlight-fazenda.webp?v=3'
     },
     {
       title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
@@ -546,7 +546,7 @@ function initSpotlightRotator() {
       stat3: 'Siemens', stat3Label: 'Automação',
       badge: 'Ref. em Industrial',
       badgeIcon: '🏭',
-      img: 'spotlight-ontex'
+      img: 'spotlight-ontex.webp?v=3'
     },
     {
       title: 'Linea <span class="gradient-text">Vitta</span>',
@@ -556,7 +556,7 @@ function initSpotlightRotator() {
       stat3: 'VRF', stat3Label: 'Sistema Adotado',
       badge: 'Maior Área',
       badgeIcon: '🏢',
-      img: 'spotlight-linea'
+      img: 'spotlight-linea.webp?v=3'
     }
   ];
 
@@ -623,8 +623,8 @@ function initSpotlightRotator() {
       // Update image
       const picture = imgEl.closest('picture');
       const source = picture ? picture.querySelector('source') : null;
-      if (source) source.srcset = c.img + '.webp';
-      imgEl.src = c.img + '.jpg';
+      if (source) source.srcset = c.img;
+      imgEl.src = c.img;
 
       // Update dots
       dotsContainer.querySelectorAll('.spotlight__dot').forEach((d, i) => {
