@@ -1721,14 +1721,15 @@ select {
     justify-content: center;
   }
 
-  /* Hero buttons: CTA full-width, link inline */
+  /* Hero buttons: inline, centralizados */
   .hero__buttons {
     flex-direction: column;
     align-items: center;
   }
 
   .hero__buttons .btn--primary {
-    width: 100%;
+    width: auto !important;
+    padding: var(--spacing-4) var(--spacing-8);
   }
 
   .hero__link {
