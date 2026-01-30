@@ -1977,11 +1977,14 @@ select {
 @media (max-width: 1024px) {
   .spotlight__wrapper {
     grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    padding: var(--spacing-8);
   }
   
   .spotlight__image {
-    min-height: 300px;
+    min-height: 280px;
     order: -1; /* Image first on tablet */
+    border-radius: var(--radius-xl);
   }
 
   .lifecycle__grid {
@@ -1994,17 +1997,90 @@ select {
 
 @media (max-width: 768px) {
   .stats__container, 
-  .lifecycle__grid,
-  .spotlight__stats {
+  .lifecycle__grid {
     grid-template-columns: 1fr;
   }
-  
-  .pillar-card:last-child {
-    grid-column: span 1;
+
+  /* Spotlight: stats em 3 colunas no mobile (valores curtos) */
+  .spotlight__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-3);
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+    padding-top: var(--spacing-5);
+  }
+
+  .spotlight__stats .s-stat {
+    align-items: center;
+    position: relative;
+  }
+
+  /* Divisor vertical entre stats */
+  .spotlight__stats .s-stat:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    height: 70%;
+    width: 1px;
+    background: var(--color-gray-200);
+  }
+
+  .spotlight__stats .s-stat__value {
+    font-size: var(--font-size-xl);
+  }
+
+  .spotlight__stats .s-stat__label {
+    font-size: 0.65rem;
+  }
+
+  /* Spotlight wrapper mobile */
+  .spotlight {
+    padding: var(--spacing-12) 0;
+  }
+
+  .spotlight__wrapper {
+    padding: var(--spacing-5);
+    gap: var(--spacing-6);
+  }
+
+  .spotlight__image {
+    min-height: 220px;
+    border-radius: var(--radius-lg);
   }
 
   .spotlight__title {
-    font-size: 2rem;
+    font-size: 1.65rem;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .spotlight__description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-5);
+    line-height: 1.7;
+  }
+
+  /* Botão com largura auto no spotlight */
+  .spotlight .btn {
+    width: auto;
+    align-self: flex-start;
+  }
+
+  .spotlight__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Badge mais compacto */
+  .spotlight__badge {
+    bottom: var(--spacing-4);
+    left: var(--spacing-4);
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-sm);
+  }
+
+  .pillar-card:last-child {
+    grid-column: span 1;
   }
 }
 
