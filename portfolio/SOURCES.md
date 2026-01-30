@@ -11,10 +11,9 @@ All images were downloaded from Wikimedia Commons and converted to `800x500` Web
    - Direct file: https://upload.wikimedia.org/wikipedia/commons/c/c3/BYU_Clean_Room.JPG
    - License: **CC0 1.0 (Public Domain Dedication)**
 
-2. **portfolio-2.webp** — Linha de produção / fábrica (industrial)
-   - Source page: https://commons.wikimedia.org/wiki/File:Consolidated_TB-32_production_line.jpg
-   - Direct file: https://upload.wikimedia.org/wikipedia/commons/5/53/Consolidated_TB-32_production_line.jpg
-   - License: **Public Domain (PD US Air Force)**
+2. **portfolio-2.webp** — Produção farmacêutica industrial (trabalhador com EPI e containers)
+   - Source: Wikimedia Commons (pharmaceutical production)
+   - License: **Public Domain / CC** — Replaced 2026-01-30
 
 3. **portfolio-3.webp** — Hotel resort (fachada)
    - Source page: https://commons.wikimedia.org/wiki/File:Aria_Resort_and_Casino,_Las_Vegas,_Nevada,_USA_(7075221237).jpg
@@ -41,7 +40,11 @@ All images were downloaded from Wikimedia Commons and converted to `800x500` Web
    - Direct file: https://upload.wikimedia.org/wikipedia/commons/3/39/NYPD_One_Police_Plaza.JPG
    - License: **CC BY-SA 3.0** (Youngking11)
 
-8. **portfolio-8.webp** — Laboratório / indústria (interior técnico)
-   - Source page: https://commons.wikimedia.org/wiki/File:Helsinki_accelerator_laboratory_interior_1.jpg
-   - Direct file: https://upload.wikimedia.org/wikipedia/commons/d/d0/Helsinki_accelerator_laboratory_interior_1.jpg
-   - License: **CC BY 4.0** (Antti T. Leppänen)
+8. **portfolio-8.webp** — Laboratório farmacêutico (microscópio, análise)
+   - Source: Wikimedia Commons (pharmaceutical laboratory / microscopy)
+   - License: **CC** — Replaced 2026-01-30
+
+9–16. Additional portfolio images added 2026-01-30.
+   - **portfolio-11.webp** — Laboratório farmacêutico (tubos de ensaio, análise química)
+     - Source: Pexels (free license)
+     - License: **Pexels License (free for commercial use)** — Replaced 2026-01-30
