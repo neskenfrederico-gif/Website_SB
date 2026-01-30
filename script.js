@@ -510,4 +510,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initial active section check
   highlightActiveSection();
+
+  // Spotlight Cases Rotator
+  initSpotlightRotator();
 });
+
+// ===== Spotlight Cases Rotator =====
+function initSpotlightRotator() {
+  const cases = [
+    {
+      title: 'Geolab — <span class="gradient-text">Site II</span>',
+      desc: 'Projeto completo para <strong>8.000 m² de salas limpas Grau B/C</strong>, incluindo central de água gelada com VFD para produção de colírios e laboratório farmacêutico.',
+      stat1: '900', stat1Label: 'TR de Capacidade',
+      stat2: '8.000 m²', stat2Label: 'Área Climatizada',
+      stat3: 'ISO 7/8', stat3Label: 'Classe de Limpeza',
+      badge: 'Ref. em Farmacêutica',
+      badgeIcon: '🏆',
+      img: 'banner_hero'
+    },
+    {
+      title: 'Ministério da <span class="gradient-text">Fazenda</span>',
+      desc: 'Sistema híbrido <strong>VRF-Split (350 TR) + Chiller-Fancoil (870 TR)</strong> com automação moderna para a sede do Ministério da Fazenda. Maior capacidade em projeto único.',
+      stat1: '1.220', stat1Label: 'TR de Capacidade',
+      stat2: '18.500 m²', stat2Label: 'Área Climatizada',
+      stat3: 'Híbrido', stat3Label: 'VRF + Chiller',
+      badge: 'Maior Capacidade',
+      badgeIcon: '⚡',
+      img: 'banner_hero1'
+    },
+    {
+      title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
+      desc: 'Projeto HVAC para <strong>15.600 m² de área industrial</strong> com alta vazão e automação Siemens. Controle térmico rigoroso para conformidade com NR-15/IBUTG.',
+      stat1: '1.050', stat1Label: 'TR de Capacidade',
+      stat2: '15.600 m²', stat2Label: 'Área Industrial',
+      stat3: 'Siemens', stat3Label: 'Automação',
+      badge: 'Ref. em Industrial',
+      badgeIcon: '🏭',
+      img: 'banner_hero2'
+    },
+    {
+      title: 'Linea <span class="gradient-text">Vitta</span>',
+      desc: 'Edifício comercial em Brasília com <strong>27.500 m² climatizados</strong>. Sistema VRF/Split de alta eficiência com pressurização de escadas e conformidade total.',
+      stat1: '941', stat1Label: 'TR de Capacidade',
+      stat2: '27.500 m²', stat2Label: 'Área Climatizada',
+      stat3: 'VRF', stat3Label: 'Sistema Adotado',
+      badge: 'Maior Área',
+      badgeIcon: '🏢',
+      img: 'banner_hero'
+    }
+  ];
+
+  const titleEl = document.getElementById('spotlight-title');
+  const descEl = document.getElementById('spotlight-desc');
+  const stat1 = document.getElementById('stat-1');
+  const stat1Label = document.getElementById('stat-1-label');
+  const stat2 = document.getElementById('stat-2');
+  const stat2Label = document.getElementById('stat-2-label');
+  const stat3 = document.getElementById('stat-3');
+  const stat3Label = document.getElementById('stat-3-label');
+  const badgeText = document.getElementById('spotlight-badge-text');
+  const badgeEl = document.getElementById('spotlight-badge');
+  const imgEl = document.getElementById('spotlight-img');
+  const dotsContainer = document.getElementById('spotlight-dots');
+
+  if (!titleEl || !dotsContainer) return;
+
+  // Create dots
+  cases.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'spotlight__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Case ' + (i + 1));
+    dot.addEventListener('click', () => goToCase(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  let current = 0;
+  let interval = setInterval(nextCase, 6000);
+
+  function goToCase(index) {
+    current = index;
+    updateCase();
+    clearInterval(interval);
+    interval = setInterval(nextCase, 6000);
+  }
+
+  function nextCase() {
+    current = (current + 1) % cases.length;
+    updateCase();
+  }
+
+  function updateCase() {
+    const c = cases[current];
+    const content = document.querySelector('.spotlight__content');
+    
+    // Fade out
+    content.style.opacity = '0';
+    content.style.transform = 'translateY(10px)';
+    
+    setTimeout(() => {
+      titleEl.innerHTML = c.title;
+      descEl.innerHTML = c.desc;
+      stat1.textContent = c.stat1;
+      stat1Label.textContent = c.stat1Label;
+      stat2.textContent = c.stat2;
+      stat2Label.textContent = c.stat2Label;
+      stat3.textContent = c.stat3;
+      stat3Label.textContent = c.stat3Label;
+      badgeText.textContent = c.badge;
+      badgeEl.querySelector('.s-icon').textContent = c.badgeIcon;
+
+      // Update image
+      const picture = imgEl.closest('picture');
+      const source = picture ? picture.querySelector('source') : null;
+      if (source) source.srcset = c.img + '.webp';
+      imgEl.src = c.img + '.jpg';
+
+      // Update dots
+      dotsContainer.querySelectorAll('.spotlight__dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+
+      // Fade in
+      content.style.opacity = '1';
+      content.style.transform = 'translateY(0)';
+    }, 300);
+  }
+}
