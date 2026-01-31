@@ -2515,9 +2515,10 @@ select {
 /* Garantir logo clicável em todas as páginas */
 .nav__logo {
   position: relative;
-  z-index: 10;
+  z-index: calc(var(--z-header) + 35);
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  pointer-events: auto;
 }
 
 .header .nav {
