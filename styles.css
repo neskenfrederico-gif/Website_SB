@@ -300,7 +300,7 @@ select {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .logo-img {
-    height: 40px;
+    height: 48px;
   }
 }
 
@@ -2369,7 +2369,7 @@ select {
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 40px;
+    height: 48px;
   }
 }
 
