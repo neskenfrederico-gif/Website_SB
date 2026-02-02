@@ -31,12 +31,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=2" />
-    <link rel="stylesheet" href="setor.css?v=2" />
+    <link rel="stylesheet" href="../styles.css?v=1769798726" />
+    <link rel="stylesheet" href="setor.css?v=1769798726" />
 
     <script type="application/ld+json">
       {
@@ -72,7 +72,6 @@
             class="logo-img"
             width="180"
             height="48"
-            loading="lazy"
           />
         </a>
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
@@ -217,7 +216,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧪</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧪</div>
               <h3>Projeto de salas limpas</h3>
             </div>
             <p>Arquitetura de fluxo de ar, setorização, vazões, filtragem e controle de pressão para atender à classe ISO e ao processo.</p>
@@ -230,7 +229,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🌡️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🌡️</div>
               <h3>Qualificação térmica</h3>
             </div>
             <p>Estudos e medições para comprovar estabilidade de temperatura/umidade e uniformidade, reduzindo variações de microclima.</p>
@@ -243,7 +242,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">✅</div>
+              <div class="sector-info-card__icon" aria-hidden="true">✅</div>
               <h3>Validação de sistemas</h3>
             </div>
             <p>Suporte técnico na comprovação de desempenho do HVAC, com foco em documentação, rastreabilidade e critérios de aceitação.</p>
@@ -256,7 +255,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🔧</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🔧</div>
               <h3>Retrofit farmacêutico</h3>
             </div>
             <p>Atualização de sistemas existentes para aumentar capacidade, melhorar filtragem e adequar à norma com mínimo impacto no processo.</p>
@@ -281,7 +280,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏭</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏭</div>
               <h3>Brainfarma (Injetáveis)</h3>
             </div>
             <p><strong>1.800 m²</strong> • <strong>180 TR</strong><br />Ambientes críticos com controle de pressão, filtragem e estabilidade termo-higrométrica.</p>
@@ -289,7 +288,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧬</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧬</div>
               <h3>Brainfarma COSMED</h3>
             </div>
             <p><strong>1.800 m²</strong> • <strong>160 TR</strong><br />Climatização para áreas produtivas e apoio, com foco em conformidade e operação contínua.</p>
@@ -297,7 +296,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">💊</div>
+              <div class="sector-info-card__icon" aria-hidden="true">💊</div>
               <h3>Geolab</h3>
             </div>
             <p><strong>130 TR</strong><br />Soluções HVAC para indústria farmacêutica com robustez de operação e documentação técnica.</p>
@@ -376,15 +375,15 @@
             <input type="hidden" name="sector" value="Hospitalar & Farmacêutico" />
             <div class="form-group">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+              <input type="text" id="name" name="name" required placeholder="Seu nome" autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" />
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" autocomplete="tel" />
             </div>
             <div class="form-group form-group--full">
               <label for="message">Mensagem</label>

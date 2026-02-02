@@ -31,12 +31,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=2" />
-    <link rel="stylesheet" href="setor.css?v=2" />
+    <link rel="stylesheet" href="../styles.css?v=1769798726" />
+    <link rel="stylesheet" href="setor.css?v=1769798726" />
 
     <script type="application/ld+json">
       {
@@ -72,7 +72,6 @@
             class="logo-img"
             width="180"
             height="48"
-            loading="lazy"
           />
         </a>
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
@@ -215,7 +214,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">📐</div>
+              <div class="sector-info-card__icon" aria-hidden="true">📐</div>
               <h3>Projeto de climatização de precisão</h3>
             </div>
             <p>Dimensionamento térmico, distribuição de ar e seleção de tecnologia (CRAC/CRAH, in-row, chiller, DX, etc.).</p>
@@ -228,7 +227,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🔁</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🔁</div>
               <h3>Redundância e disponibilidade</h3>
             </div>
             <p>Arquitetura N+1/2N, setorização e estratégias de manutenção sem parada conforme criticidade.</p>
@@ -241,7 +240,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">⚡</div>
+              <div class="sector-info-card__icon" aria-hidden="true">⚡</div>
               <h3>Análise de PUE</h3>
             </div>
             <p>Diagnóstico e plano de melhorias para reduzir consumo, otimizar setpoints e balancear fluxo/pressão.</p>
@@ -254,7 +253,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🛰️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🛰️</div>
               <h3>Monitoramento térmico</h3>
             </div>
             <p>Instrumentação e leitura de microclima para identificar hotspots, recirculação e perdas de eficiência.</p>
@@ -335,15 +334,15 @@
             <input type="hidden" name="sector" value="Data Centers" />
             <div class="form-group">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+              <input type="text" id="name" name="name" required placeholder="Seu nome" autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" />
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" autocomplete="tel" />
             </div>
             <div class="form-group form-group--full">
               <label for="message">Mensagem</label>

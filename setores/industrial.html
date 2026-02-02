@@ -30,12 +30,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=2" />
-    <link rel="stylesheet" href="setor.css?v=2" />
+    <link rel="stylesheet" href="../styles.css?v=1769798726" />
+    <link rel="stylesheet" href="setor.css?v=1769798726" />
 
     <script type="application/ld+json">
       {
@@ -71,7 +71,6 @@
             class="logo-img"
             width="180"
             height="48"
-            loading="lazy"
           />
         </a>
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
@@ -216,7 +215,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🌀</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🌀</div>
               <h3>Projeto de exaustão</h3>
             </div>
             <p>Captação de gases, vapores e poeiras com dimensionamento de vazões, dutos, ventiladores e pontos de descarga.</p>
@@ -229,7 +228,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">💨</div>
+              <div class="sector-info-card__icon" aria-hidden="true">💨</div>
               <h3>Ventilação forçada</h3>
             </div>
             <p>Renovação e movimentação de ar para controle térmico e diluição de contaminantes em áreas produtivas.</p>
@@ -242,7 +241,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">💧</div>
+              <div class="sector-info-card__icon" aria-hidden="true">💧</div>
               <h3>Resfriamento evaporativo</h3>
             </div>
             <p>Solução eficiente para redução de temperatura em galpões e áreas industriais, conforme condições climáticas e processo.</p>
@@ -255,7 +254,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧱</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧱</div>
               <h3>Controle de poluentes</h3>
             </div>
             <p>Estratégias para reduzir particulados e emissões, com seleção de filtragem e adequação de dutos conforme SMACNA.</p>
@@ -336,15 +335,15 @@
             <input type="hidden" name="sector" value="Industrial" />
             <div class="form-group">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+              <input type="text" id="name" name="name" required placeholder="Seu nome" autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" />
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" autocomplete="tel" />
             </div>
             <div class="form-group form-group--full">
               <label for="message">Mensagem</label>

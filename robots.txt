@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://siqueiraeblanco.com.br/sitemap.xml

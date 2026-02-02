@@ -30,12 +30,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=2" />
-    <link rel="stylesheet" href="setor.css?v=2" />
+    <link rel="stylesheet" href="../styles.css?v=1769798726" />
+    <link rel="stylesheet" href="setor.css?v=1769798726" />
 
     <script type="application/ld+json">
       {
@@ -71,7 +71,6 @@
             class="logo-img"
             width="180"
             height="48"
-            loading="lazy"
           />
         </a>
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
@@ -215,7 +214,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">📄</div>
+              <div class="sector-info-card__icon" aria-hidden="true">📄</div>
               <h3>Projeto executivo</h3>
             </div>
             <p>Desenvolvimento completo do projeto HVAC, com memorial, especificações, detalhes e compatibilização.</p>
@@ -228,7 +227,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏗️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏗️</div>
               <h3>Modelagem BIM</h3>
             </div>
             <p>Modelos BIM para coordenação e compatibilização multidisciplinar, reduzindo interferências e retrabalho.</p>
@@ -241,7 +240,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧮</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧮</div>
               <h3>Simulação energética (EnergyPlus)</h3>
             </div>
             <p>Estudos para comparar cenários de consumo, setpoints e estratégias de operação, com suporte a metas de eficiência.</p>
@@ -254,7 +253,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧪</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧪</div>
               <h3>Comissionamento</h3>
             </div>
             <p>Verificação de desempenho, testes funcionais e entrega de documentação para garantir operação conforme projeto.</p>
@@ -279,7 +278,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏙️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
               <h3>Linea Vitta</h3>
             </div>
             <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Climatização para empreendimento corporativo de grande porte, com foco em eficiência e conforto.</p>
@@ -287,7 +286,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏛️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏛️</div>
               <h3>ESAF</h3>
             </div>
             <p><strong>18.500 m²</strong> • <strong>1.220 TR</strong><br />Soluções HVAC para alta demanda, com robustez, setorização e critérios de desempenho.</p>
@@ -363,15 +362,15 @@
             <input type="hidden" name="sector" value="Corporativo High-End" />
             <div class="form-group">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+              <input type="text" id="name" name="name" required placeholder="Seu nome" autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" />
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" autocomplete="tel" />
             </div>
             <div class="form-group form-group--full">
               <label for="message">Mensagem</label>

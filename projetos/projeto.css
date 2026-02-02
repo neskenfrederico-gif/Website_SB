@@ -176,10 +176,10 @@
   font-size: var(--font-size-sm);
 }
 
-/* Breadcrumb: quando está FORA do hero (HTML antigo / cache CDN) */
+/* Breadcrumb: quando está FORA do hero */
 .project-breadcrumb {
-  padding-top: calc(var(--header-height) + 0.5rem);
-  padding-bottom: var(--spacing-3);
+  padding-top: calc(var(--header-height) + 0.25rem);
+  padding-bottom: 0.75rem;
   margin-bottom: 0;
   color: var(--color-gray-500);
   font-size: var(--font-size-sm);
@@ -189,7 +189,7 @@
 
 /* Quando breadcrumb vem antes do hero, o hero não precisa limpar o header de novo */
 .project-breadcrumb + .project-hero {
-  padding-top: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 /* Breadcrumb: quando está DENTRO do hero (HTML novo) */
