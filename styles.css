@@ -1163,7 +1163,7 @@ select {
 
 .faq-icon {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   transition: transform 0.3s ease;
 }
 
@@ -1587,7 +1587,7 @@ select {
 
 .footer__mission {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   max-width: 600px;
   margin-bottom: 3rem;
@@ -2439,6 +2439,19 @@ select {
 .faq-question:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* ===== CONTENT VISIBILITY (RENDER PERF) ===== */
+.servicos,
+.spotlight-section,
+.lifecycle,
+.processo,
+.portfolio,
+.faq,
+.contato,
+.footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 /* ===== REDUCED MOTION ===== */
