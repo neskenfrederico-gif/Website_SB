@@ -1675,8 +1675,8 @@ select {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 86%;
-    max-width: 420px;
+    width: 75%;
+    max-width: 340px;
     height: 100vh;
     background: var(--color-white);
     box-shadow: var(--shadow-2xl);
