@@ -13,13 +13,19 @@ const statNumbers = document.querySelectorAll(".stats__number");
 function openMenu() {
   navMenu.classList.add("show");
   document.body.style.overflow = "hidden";
-  if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+  if (navToggle) {
+    navToggle.setAttribute("aria-expanded", "true");
+    navToggle.style.display = "none";
+  }
 }
 
 function closeMenu() {
   navMenu.classList.remove("show");
   document.body.style.overflow = "";
-  if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  if (navToggle) {
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.style.display = "";
+  }
 }
 
 if (navToggle) {

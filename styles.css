@@ -1675,8 +1675,8 @@ select {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 75%;
-    max-width: 340px;
+    width: 65%;
+    max-width: 300px;
     height: 100vh;
     background: var(--color-white);
     box-shadow: var(--shadow-2xl);
@@ -1717,7 +1717,7 @@ select {
   }
 
   .nav__menu.show ~ .nav__toggle {
-    visibility: hidden;
+    display: none;
   }
 
   .hero__stats {
