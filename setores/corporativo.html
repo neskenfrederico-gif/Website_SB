@@ -22,6 +22,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1e3a5f" />
 
     <link rel="canonical" href="https://siqueiraeblanco.com.br/setores/corporativo.html" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
@@ -30,12 +31,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=2" />
-    <link rel="stylesheet" href="setor.css?v=2" />
+    <link rel="stylesheet" href="../styles.css?v=1769798729" />
+    <link rel="stylesheet" href="setor.css?v=1769798729" />
 
     <script type="application/ld+json">
       {
@@ -58,6 +59,17 @@
         }
       }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Setores", "item": "https://siqueiraeblanco.com.br/#setores" },
+    { "@type": "ListItem", "position": 3, "name": "Corporativo High-End", "item": "https://siqueiraeblanco.com.br/setores/corporativo.html" }
+  ]
+}
+    </script>
   </head>
 
   <body>
@@ -71,7 +83,6 @@
             class="logo-img"
             width="180"
             height="48"
-            loading="lazy"
           />
         </a>
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
@@ -215,7 +226,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">📄</div>
+              <div class="sector-info-card__icon" aria-hidden="true">📄</div>
               <h3>Projeto executivo</h3>
             </div>
             <p>Desenvolvimento completo do projeto HVAC, com memorial, especificações, detalhes e compatibilização.</p>
@@ -228,7 +239,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏗️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏗️</div>
               <h3>Modelagem BIM</h3>
             </div>
             <p>Modelos BIM para coordenação e compatibilização multidisciplinar, reduzindo interferências e retrabalho.</p>
@@ -241,7 +252,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧮</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧮</div>
               <h3>Simulação energética (EnergyPlus)</h3>
             </div>
             <p>Estudos para comparar cenários de consumo, setpoints e estratégias de operação, com suporte a metas de eficiência.</p>
@@ -254,7 +265,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🧪</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🧪</div>
               <h3>Comissionamento</h3>
             </div>
             <p>Verificação de desempenho, testes funcionais e entrega de documentação para garantir operação conforme projeto.</p>
@@ -279,7 +290,7 @@
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏙️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
               <h3>Linea Vitta</h3>
             </div>
             <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Climatização para empreendimento corporativo de grande porte, com foco em eficiência e conforto.</p>
@@ -287,7 +298,7 @@
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon">🏛️</div>
+              <div class="sector-info-card__icon" aria-hidden="true">🏛️</div>
               <h3>ESAF</h3>
             </div>
             <p><strong>18.500 m²</strong> • <strong>1.220 TR</strong><br />Soluções HVAC para alta demanda, com robustez, setorização e critérios de desempenho.</p>
@@ -363,20 +374,21 @@
             <input type="hidden" name="sector" value="Corporativo High-End" />
             <div class="form-group">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome" />
+              <input type="text" id="name" name="name" required placeholder="Seu nome" autocomplete="name" />
             </div>
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" autocomplete="email" />
             </div>
             <div class="form-group">
               <label for="phone">Telefone</label>
-              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" />
+              <input type="tel" id="phone" name="phone" required placeholder="(00) 00000-0000" autocomplete="tel" />
             </div>
             <div class="form-group form-group--full">
               <label for="message">Mensagem</label>
               <textarea id="message" name="message" rows="4" required placeholder="Descreva o empreendimento (área, padrão, metas LEED/WELL, prazos...)" ></textarea>
             </div>
+            <div class="form-group form-group--honey" aria-hidden="true"><label for="_honey">Não preencha</label><input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off"></div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Enviar Mensagem</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -447,5 +459,6 @@
     </a>
 
     <script src="../script.js"></script>
+    <script src="../form-validate.js?v=1769798729"></script>
   </body>
 </html>

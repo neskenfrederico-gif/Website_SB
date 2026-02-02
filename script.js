@@ -13,11 +13,19 @@ const statNumbers = document.querySelectorAll(".stats__number");
 function openMenu() {
   navMenu.classList.add("show");
   document.body.style.overflow = "hidden";
+  if (navToggle) {
+    navToggle.setAttribute("aria-expanded", "true");
+    navToggle.style.display = "none";
+  }
 }
 
 function closeMenu() {
   navMenu.classList.remove("show");
   document.body.style.overflow = "";
+  if (navToggle) {
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.style.display = "";
+  }
 }
 
 if (navToggle) {
@@ -85,14 +93,27 @@ function highlightActiveSection() {
   });
 }
 
-window.addEventListener("scroll", highlightActiveSection);
+let sectionTicking = false;
+window.addEventListener("scroll", () => {
+  if (!sectionTicking) {
+    requestAnimationFrame(() => {
+      highlightActiveSection();
+      sectionTicking = false;
+    });
+    sectionTicking = true;
+  }
+}, { passive: true });
 
 // ===== Portfolio Filters =====
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    // Update active button
-    filterBtns.forEach((b) => b.classList.remove("active"));
+    // Update active button and aria-pressed
+    filterBtns.forEach((b) => {
+      b.classList.remove("active");
+      b.setAttribute("aria-pressed", "false");
+    });
     btn.classList.add("active");
+    btn.setAttribute("aria-pressed", "true");
 
     const filter = btn.dataset.filter;
 
@@ -234,20 +255,20 @@ if (contactForm) {
     // 1) Attempt real submission to a configurable endpoint (Formspree, etc.)
     const result = await sendFormToEndpoint(contactForm, formData);
 
-    // 2) Keep the current WhatsApp flow as fallback/secondary channel
     const whatsappMessage = buildWhatsappMessage(data);
-    window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
 
     if (result && result.ok) {
       showNotification(
-        "Mensagem enviada! Você será redirecionado para o WhatsApp.",
+        "Mensagem enviada com sucesso! Abrindo WhatsApp como canal adicional.",
         "success"
       );
+      window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
     } else {
       showNotification(
-        "Mensagem preparada! Se o envio automático não estiver configurado, você será redirecionado para o WhatsApp.",
+        "Envio automático indisponível. Abrindo WhatsApp para contato direto.",
         "info"
       );
+      window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
     }
 
     contactForm.reset();
@@ -297,9 +318,11 @@ function showNotification(message, type = "info") {
         font-weight: 500;
     `;
 
-  // Add slide animation
-  const slideStyle = document.createElement("style");
-  slideStyle.textContent = `
+  // Add slide animation (only once)
+  if (!document.getElementById("notification-styles")) {
+    const slideStyle = document.createElement("style");
+    slideStyle.id = "notification-styles";
+    slideStyle.textContent = `
         @keyframes slideIn {
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -309,7 +332,8 @@ function showNotification(message, type = "info") {
             to { transform: translateX(100%); opacity: 0; }
         }
     `;
-  document.head.appendChild(slideStyle);
+    document.head.appendChild(slideStyle);
+  }
 
   document.body.appendChild(notification);
 
@@ -405,18 +429,23 @@ faqQuestions.forEach((question) => {
 
     // Toggle active class
     item.classList.toggle("active");
+    const isOpen = item.classList.contains("active");
+
+    // Update aria-expanded
+    question.setAttribute("aria-expanded", isOpen);
 
     // Toggle max-height
-    if (item.classList.contains("active")) {
+    if (isOpen) {
       answer.style.maxHeight = answer.scrollHeight + "px";
     } else {
       answer.style.maxHeight = 0;
     }
 
-    // Close other items (optional - accordion effect)
+    // Close other items (accordion effect)
     faqQuestions.forEach((q) => {
       if (q !== question) {
         q.parentElement.classList.remove("active");
+        q.setAttribute("aria-expanded", "false");
         q.nextElementSibling.style.maxHeight = 0;
       }
     });
@@ -429,13 +458,21 @@ function initHeroSlider() {
   if (slides.length === 0) return;
 
   let currentSlide = 0;
-  const slideInterval = 5000; // 5 seconds
+  const slideInterval = 5000;
+  let heroInterval = setInterval(advanceSlide, slideInterval);
 
-  setInterval(() => {
+  function advanceSlide() {
     slides[currentSlide].classList.remove("active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("active");
-  }, slideInterval);
+  }
+
+  // Pause on hover or focus within hero
+  const heroSection = document.getElementById("home");
+  if (heroSection) {
+    heroSection.addEventListener("mouseenter", () => clearInterval(heroInterval));
+    heroSection.addEventListener("mouseleave", () => { heroInterval = setInterval(advanceSlide, slideInterval); });
+  }
 }
 
 
@@ -451,6 +488,7 @@ function preloadHeroSlideBackgrounds() {
     if (!webp || !jpg) return;
     if (slide.style.backgroundImage) return;
 
+    slide.style.backgroundImage = `url('${webp}')`;
     slide.style.backgroundImage = `image-set(url('${webp}') type('image/webp'), url('${jpg}') type('image/jpeg'))`;
   };
 
@@ -586,6 +624,13 @@ function initSpotlightRotator() {
 
   let current = 0;
   let interval = setInterval(nextCase, 6000);
+
+  // Pause on hover
+  const rotator = document.getElementById('spotlight-rotator');
+  if (rotator) {
+    rotator.addEventListener('mouseenter', () => clearInterval(interval));
+    rotator.addEventListener('mouseleave', () => { interval = setInterval(nextCase, 6000); });
+  }
 
   function goToCase(index) {
     current = index;

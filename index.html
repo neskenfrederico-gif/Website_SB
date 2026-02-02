@@ -21,6 +21,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1e3a5f" />
 
     <link rel="canonical" href="https://siqueiraeblanco.com.br/" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -29,22 +30,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=1769798725" />
+    <link rel="stylesheet" href="styles.css?v=1769798729" />
+    <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
 
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": [
-    "LocalBusiness",
-    "EngineeringService"
-  ],
+  "@type": ["LocalBusiness", "EngineeringService"],
   "name": "Siqueira e Blanco Engenharia",
-  "description": "Siqueira e Blanco: engenharia HVAC de alta complexidade para indústrias farmacêuticas, data centers, hotéis e edifícios comerciais. Projetos BIM, áreas limpas ISO 14644 e conformidade ANVISA em Anápolis e todo Brasil.",
+  "alternateName": "SB Engenharia HVAC",
+  "description": "Engenharia HVAC de alta complexidade para indústrias farmacêuticas, data centers, hotéis e edifícios comerciais. Projetos BIM, áreas limpas ISO 14644 e conformidade ANVISA.",
   "url": "https://siqueiraeblanco.com.br/",
-  "telephone": "+55 62 99225-0067",
+  "logo": "https://siqueiraeblanco.com.br/Logomarca.png",
+  "image": "https://siqueiraeblanco.com.br/banner_hero.webp",
+  "telephone": "+55-62-99225-0067",
+  "email": "nesken@fluxo.eng.br",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Av. Contorno nº 751, Qd. 12 Lt. A, Residencial Arco Íris",
@@ -53,18 +57,109 @@
     "postalCode": "75106-377",
     "addressCountry": "BR"
   },
-  "areaServed": "BR"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -16.3281,
+    "longitude": -48.9535
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "BR"
+  },
+  "priceRange": "$$$$",
+  "currenciesAccepted": "BRL",
+  "paymentAccepted": "Transferência Bancária, Boleto, Pix",
+  "knowsAbout": ["HVAC", "Climatização Industrial", "Salas Limpas", "BIM", "Comissionamento", "PMOC"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de Engenharia HVAC",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Projetos Executivos HVAC",
+          "description": "Elaboração de projetos executivos detalhados para sistemas HVAC complexos com conformidade normativa ASHRAE, SMACNA e NBR 16401."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Modelagem BIM 3D",
+          "description": "Modelagem avançada em Revit MEP com LOD 350/400, clash detection e extração automática de quantitativos."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Áreas Limpas e Cleanrooms",
+          "description": "Engenharia para ambientes críticos com classificação ISO 14644 Classes 5-8, controle de cascata de pressão e filtragem HEPA/ULPA."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Consultoria e Comissionamento",
+          "description": "Fiscalização técnica, TAB (testes, ajustes e balanceamento), PMOC e laudos de qualidade do ar interior."
+        }
+      }
+    ]
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qual a importância do PMOC e os riscos legais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O PMOC (Plano de Manutenção, Operação e Controle) é obrigatório por lei (Lei 13.589/2018) para todos os edifícios climatizados. A falta dele pode acarretar multas de até R$ 200 mil, além de riscos à saúde dos ocupantes e processos trabalhistas por qualidade do ar inadequada (Síndrome do Edifício Doente)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como o projeto em BIM reduz custos de obra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O BIM (Building Information Modeling) permite a construção virtual antes da obra real. Através do Clash Detection (detecção de interferências), identificamos conflitos entre ar condicionado, elétrica e hidráulica ainda no projeto, evitando retrabalhos caros e atrasos no canteiro de obras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Retrofit de sistemas antigos vale a pena?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Sistemas antigos (15+ anos) costumam consumir até 40% mais energia. Um retrofit bem planejado, com substituição de chillers e automação, pode ter ROI inferior a 3 anos apenas com a economia de energia, além de reduzir drasticamente custos de manutenção corretiva."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais normas vocês seguem para Áreas Limpas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seguimos rigorosamente a ISO 14644 para classificação de partículas, além das normas da ANVISA (RDC) específicas para fármacos e saúde. Projetamos com controle de cascata de pressão, eclusas e filtragem HEPA/ULPA para garantir a integridade do produto e segurança operacional."
+      }
+    }
+  ]
 }
     </script>
   </head>
   <body>
+    <a class="skip-to-content" href="#main-content">Pular para o conteúdo</a>
     <!-- Header -->
     <header class="header" id="header">
-      <nav class="nav container">
+      <nav class="nav container" aria-label="Menu principal">
         <a href="#home" class="nav__logo">
-          <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48" loading="lazy">
+          <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48">
         </a>
-        <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
+        <div class="nav__menu" id="nav-menu" aria-label="Menu principal">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active">Início</a>
@@ -99,7 +194,7 @@
             </svg>
           </button>
         </div>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
           <svg
             width="24"
             height="24"
@@ -117,9 +212,10 @@
     </header>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section class="hero" id="home">
       <div class="hero__slider" id="hero-slider">
-        <div class="hero__slide active" data-bg-webp="banner_hero.webp" data-bg-jpg="banner_hero.jpg" style="background-image: image-set(url('banner_hero.webp') type('image/webp'), url('banner_hero.jpg') type('image/jpeg'));"></div>
+        <div class="hero__slide active" data-bg-webp="banner_hero.webp" data-bg-jpg="banner_hero.jpg" style="background-image: url('banner_hero.webp'); background-image: image-set(url('banner_hero.webp') type('image/webp'), url('banner_hero.jpg') type('image/jpeg'));"></div>
         <div class="hero__slide" data-bg-webp="banner_hero1.webp" data-bg-jpg="banner_hero1.jpg"></div>
         <div class="hero__slide" data-bg-webp="banner_hero2.webp" data-bg-jpg="banner_hero2.jpg"></div>
       </div>
@@ -248,7 +344,7 @@
             <div class="spotlight__image-overlay"></div>
             <picture>
               <source srcset="spotlight-geolab.webp?v=3" type="image/webp">
-              <img src="spotlight-geolab.webp?v=3" alt="Projeto HVAC em destaque" class="spotlight__img" id="spotlight-img" loading="lazy" width="600" height="400">
+              <img src="spotlight-geolab.jpg?v=3" alt="Projeto HVAC em destaque" class="spotlight__img" id="spotlight-img" loading="lazy" width="600" height="400">
             </picture>
             <div class="spotlight__badge" id="spotlight-badge">
               <span class="s-icon">🏆</span>
@@ -349,11 +445,6 @@
           </h2>
         </div>
         
-        <!-- Process Flow -->
-        <div class="process-preview fade-in">
-           <!-- Added via new section below, keeping this clean -->
-        </div>
-
         <div class="servicos__grid">
           <article class="service-card glass-card fade-in stagger-1">
             <div class="service-card__icon">
@@ -605,25 +696,25 @@
         </div>
         <div class="sectors__grid">
           <a class="sector-card sector-card--link fade-in" href="setores/farmaceutico.html" aria-label="Abrir setor Hospitalar & Farmacêutico">
-            <div class="sector-card__icon">🏥</div>
+            <div class="sector-card__icon" aria-hidden="true">🏥</div>
             <h3>Hospitalar & Farmacêutico</h3>
             <p>Salas limpas, controle de cascata de pressão (NBR 7256), filtragem HEPA e controle rigoroso de umidade.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
           <a class="sector-card sector-card--link fade-in" href="setores/datacenter.html" aria-label="Abrir setor Data Centers">
-            <div class="sector-card__icon">💾</div>
+            <div class="sector-card__icon" aria-hidden="true">💾</div>
             <h3>Data Centers</h3>
             <p>Sistemas de precisão com redundância Tier III/IV, controle de microclima e eficiência energética (PUE).</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
           <a class="sector-card sector-card--link fade-in" href="setores/corporativo.html" aria-label="Abrir setor Corporativo High-End">
-            <div class="sector-card__icon">🏢</div>
+            <div class="sector-card__icon" aria-hidden="true">🏢</div>
             <h3>Corporativo High-End</h3>
             <p>Edifícios Triple A, certificações LEED/WELL, foco em conforto térmico e qualidade do ar interior.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
           <a class="sector-card sector-card--link fade-in" href="setores/industrial.html" aria-label="Abrir setor Industrial">
-            <div class="sector-card__icon">🏭</div>
+            <div class="sector-card__icon" aria-hidden="true">🏭</div>
             <h3>Industrial</h3>
             <p>Ventilação industrial complexa, exaustão de gases, controle de poluentes e sistemas de resfriamento de processo.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
@@ -684,36 +775,36 @@
         </div>
         <div class="faq__grid">
           <div class="faq-item fade-in">
-            <button class="faq-question">
+            <button class="faq-question" aria-expanded="false">
               Qual a importância do PMOC e os riscos legais?
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer">
               <p>O PMOC (Plano de Manutenção, Operação e Controle) é obrigatório por lei (Lei 13.589/2018) para todos os edifícios climatizados. A falta dele pode acarretar multas de até R$ 200 mil, além de riscos à saúde dos ocupantes e processos trabalhistas por qualidade do ar inadequada (Síndrome do Edifício Doente).</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question">
+            <button class="faq-question" aria-expanded="false">
               Como o projeto em BIM reduz custos de obra?
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer">
               <p>O BIM (Building Information Modeling) permite a "construção virtual" antes da obra real. Através do *Clash Detection* (detecção de interferências), identificamos conflitos entre ar condicionado, elétrica e hidráulica ainda no projeto, evitando retrabalhos caros e atrasos no canteiro de obras.</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question">
+            <button class="faq-question" aria-expanded="false">
               Retrofit de sistemas antigos vale a pena?
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer">
               <p>Sim. Sistemas antigos (15+ anos) costumam consumir até 40% mais energia. Um retrofit bem planejado, com substituição de chillers e automação, pode ter ROI (Retorno sobre Investimento) inferior a 3 anos apenas com a economia de energia, além de reduzir drasticamente custos de manutenção corretiva.</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question">
+            <button class="faq-question" aria-expanded="false">
               Quais normas vocês seguem para Áreas Limpas?
-              <span class="faq-icon">+</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer">
               <p>Seguimos rigorosamente a ISO 14644 para classificação de partículas, além das normas da ANVISA (RDC) específicas para fármacos e saúde. Projetamos com controle de cascata de pressão, eclusas e filtragem HEPA/ULPA para garantir a integridade do produto e segurança operacional.</p>
@@ -732,17 +823,17 @@
             Projetos <span class="gradient-text">Realizados</span>
           </h2>
         </div>
-        <div class="portfolio__filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="farmaceutico">
+        <div class="portfolio__filters" role="group" aria-label="Filtrar projetos por categoria">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn" data-filter="farmaceutico" aria-pressed="false">
             Farmacêutico
           </button>
-          <button class="filter-btn" data-filter="hoteleiro">Hoteleiro</button>
-          <button class="filter-btn" data-filter="comercial">Comercial</button>
-          <button class="filter-btn" data-filter="governamental">
+          <button class="filter-btn" data-filter="hoteleiro" aria-pressed="false">Hoteleiro</button>
+          <button class="filter-btn" data-filter="comercial" aria-pressed="false">Comercial</button>
+          <button class="filter-btn" data-filter="governamental" aria-pressed="false">
             Governamental
           </button>
-          <button class="filter-btn" data-filter="industrial">Industrial</button>
+          <button class="filter-btn" data-filter="industrial" aria-pressed="false">Industrial</button>
         </div>
         <div class="portfolio__grid">
           <!-- Projeto 1 -->
@@ -1298,7 +1389,7 @@
               </div>
             </div>
             <a
-              href="https://wa.me/5562992250067?text=Olá! Gostaria de solicitar um orçamento para projeto HVAC."
+              href="https://wa.me/5562992250067?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20projeto%20HVAC."
               class="btn btn--whatsapp"
               target="_blank"
               rel="noopener"
@@ -1324,6 +1415,7 @@
                 type="text"
                 id="name"
                 name="name"
+                autocomplete="name"
                 required
                 placeholder="Seu nome"
               />
@@ -1334,6 +1426,7 @@
                 type="email"
                 id="email"
                 name="email"
+                autocomplete="email"
                 required
                 placeholder="seu@email.com"
               />
@@ -1344,6 +1437,7 @@
                 type="tel"
                 id="phone"
                 name="phone"
+                autocomplete="tel"
                 required
                 placeholder="(00) 00000-0000"
               />
@@ -1369,6 +1463,10 @@
                 placeholder="Descreva seu projeto..."
               ></textarea>
             </div>
+            <div class="form-group form-group--honey" aria-hidden="true">
+              <label for="_honey">Não preencha este campo</label>
+              <input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Enviar Mensagem</span>
               <svg
@@ -1388,6 +1486,7 @@
       </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -1431,7 +1530,7 @@
 
     <!-- WhatsApp Floating Button -->
     <a
-      href="https://wa.me/5562992250067?text=Olá! Gostaria de solicitar um orçamento."
+      href="https://wa.me/5562992250067?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
       class="whatsapp-float"
       id="whatsapp-float"
       target="_blank"
@@ -1443,7 +1542,6 @@
       </svg>
     </a>
 
-    <script src="script.js"></script>
-    <!-- CSS Updated: Force Reload -->
+    <script src="script.js?v=1769798729"></script>
   </body>
 </html>
