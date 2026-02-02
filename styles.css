@@ -1716,7 +1716,9 @@ select {
     z-index: calc(var(--z-header) + 30);
   }
 
-  /* .nav__close mobile sizing handled above */
+  .nav__menu.show ~ .nav__toggle {
+    visibility: hidden;
+  }
 
   .hero__stats {
     grid-template-columns: 1fr;
