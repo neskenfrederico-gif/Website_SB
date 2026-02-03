@@ -46,6 +46,19 @@ if (navClose) {
   navClose.addEventListener("click", closeMenu);
 }
 
+// ===== Mobile Dropdown Toggle =====
+const dropdownParent = document.querySelector(".nav__item--dropdown > .nav__link");
+if (dropdownParent) {
+  dropdownParent.addEventListener("click", (e) => {
+    // Only intercept on mobile (when nav menu is in mobile mode)
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      const parentItem = dropdownParent.closest(".nav__item--dropdown");
+      parentItem.classList.toggle("dropdown-open");
+    }
+  });
+}
+
 // Close menu when clicking on a link
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -103,6 +116,23 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll, { passive: true });
 
+// ===== Portfolio Lazy Loading =====
+const lazyCards = document.querySelectorAll(".project-card__image");
+if (lazyCards.length) {
+  const lazyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("lazy-loaded");
+          lazyObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "200px 0px" }
+  );
+  lazyCards.forEach((card) => lazyObserver.observe(card));
+}
+
 // ===== Portfolio Filters =====
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -116,16 +146,25 @@ filterBtns.forEach((btn) => {
 
     const filter = btn.dataset.filter;
 
+    let visibleCount = 0;
     projectCards.forEach((card) => {
       const category = card.dataset.category;
 
       if (filter === "all" || category === filter) {
         card.classList.remove("hidden");
         card.style.animation = "fadeInUp 0.5s ease forwards";
+        visibleCount++;
       } else {
         card.classList.add("hidden");
       }
     });
+
+    // Announce filter result for screen readers
+    const filterStatus = document.getElementById("filter-status");
+    if (filterStatus) {
+      const label = btn.textContent.trim();
+      filterStatus.textContent = `${visibleCount} projeto${visibleCount !== 1 ? 's' : ''} encontrado${visibleCount !== 1 ? 's' : ''} na categoria "${label}".`;
+    }
   });
 });
 
@@ -231,12 +270,19 @@ ${data.message}`
 
 if (contactForm) {
   let isSubmitting = false;
+  const formLoadTime = Date.now();
 
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     // Prevent double-submit
     if (isSubmitting) return;
+
+    // Anti-spam: reject submissions faster than 3 seconds (bot-like)
+    if (Date.now() - formLoadTime < 3000) {
+      showNotification("Por favor, aguarde um momento antes de enviar.", "error");
+      return;
+    }
 
     contactForm.classList.add("was-submitted");
 
@@ -490,6 +536,7 @@ window.addEventListener("resize", () => {
 
 // ===== Hero Slider =====
 function initHeroSlider() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const slides = document.querySelectorAll(".hero__slide");
   if (slides.length <= 1) return;
 
@@ -584,34 +631,41 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add loaded class to body
   document.body.classList.add("loaded");
 
-  // Initialize Fade-in Observer
+  // Detect if we are on the homepage
+  const isHomepage = !!document.getElementById("home");
+
+  // Initialize Fade-in Observer (all pages)
   initFadeInObserver();
 
-  // Initialize Slider
-  initHeroSlider();
-
-  // Lazy-load hero backgrounds
-  preloadHeroSlideBackgrounds();
-
-  // WhatsApp floating button (hide on contact section)
-  initWhatsappFloatVisibility();
-
-  // Footer current year
+  // Footer current year (all pages)
   const yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Initial active section check
-  highlightActiveSection();
-
-  // Spotlight Cases Rotator
-  initSpotlightRotator();
-
-  // Back to top button
+  // Back to top button (all pages)
   initBackToTop();
+
+  // Homepage-only initializations
+  if (isHomepage) {
+    // Initialize Slider
+    initHeroSlider();
+
+    // Lazy-load hero backgrounds
+    preloadHeroSlideBackgrounds();
+
+    // WhatsApp floating button (hide on contact section)
+    initWhatsappFloatVisibility();
+
+    // Initial active section check
+    highlightActiveSection();
+
+    // Spotlight Cases Rotator
+    initSpotlightRotator();
+  }
 });
 
 // ===== Spotlight Cases Rotator =====
 function initSpotlightRotator() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const cases = [
     {
       title: 'Geolab — <span class="gradient-text">Site II</span>',

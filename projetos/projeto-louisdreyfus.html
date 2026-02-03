@@ -24,10 +24,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
-    <link rel="stylesheet" href="../styles.css?v=1769798734" />
-    <link rel="stylesheet" href="projeto.css?v=1769798734" />
+    <link rel="stylesheet" href="../styles.css?v=1769798735" />
+    <link rel="stylesheet" href="projeto.css?v=1769798735" />
 
     <script type="application/ld+json">
       {
@@ -63,6 +64,7 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
     <!-- Header -->
     <header class="header" id="header">
       <nav class="nav container">
@@ -95,7 +97,7 @@
             </svg>
           </button>
         </div>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -104,6 +106,7 @@
         </button>
       </nav>
     </header><!-- Hero -->
+    <main id="main-content">
     <section class="project-hero" style="background: linear-gradient(180deg, rgba(10,12,16,0.7), rgba(10,12,16,0.85)), url('../portfolio/portfolio-14.webp?v=3') center/cover no-repeat;">
       <div class="project-breadcrumb"><div class="container"><a href="../index.html#portfolio">← Voltar ao portfólio</a></div></div>
       <div class="container">
@@ -181,7 +184,7 @@
             <p style="color: var(--color-gray-600); line-height: 1.8;">
               Atuamos com soluções industriais de HVAC, ventilação e redes de dutos, do projeto à implantação.
             </p>
-            <a href="https://wa.me/5562992250067?text=Olá! Gostaria de solicitar um orçamento." class="btn btn--whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/5562992250067?text=Olá! Gostaria de solicitar um orçamento." class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
               <span>Falar no WhatsApp</span>
             </a>
           </div>
@@ -235,6 +238,7 @@
       </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -263,7 +267,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <p>&copy; <span id="current-year">2025</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
+          <p>&copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
           <p>CNPJ: 16.887.958/0001-86</p>
         </div>
       </div>
@@ -275,7 +279,7 @@
       class="whatsapp-float"
       id="whatsapp-float"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="Abrir conversa no WhatsApp"
     >
       <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -284,6 +288,6 @@
     </a>
 
     <script src="../script.js" defer></script>
-    <script src="../form-validate.js?v=1769798731"></script>
+    <script src="../form-validate.js?v=1769798735"></script>
   </body>
 </html>
