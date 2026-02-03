@@ -293,7 +293,7 @@ select {
 }
 
 .logo-img {
-  height: 48px;
+  height: 64px;
   width: auto;
   transition: transform var(--transition-base);
 }
