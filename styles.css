@@ -1512,12 +1512,12 @@ select {
 }
 
 /* ===== PORTFOLIO ROTATION / COLLAPSE ===== */
-/* In collapsed mode, hide cards without .portfolio-visible */
-.portfolio__grid:not(.portfolio--expanded) .project-card-link {
+/* In collapsed mode (JS-activated), hide cards without .portfolio-visible */
+.portfolio__grid.portfolio--rotating .project-card-link {
   display: none;
 }
 
-.portfolio__grid:not(.portfolio--expanded) .project-card-link.portfolio-visible {
+.portfolio__grid.portfolio--rotating .project-card-link.portfolio-visible {
   display: flex;
 }
 

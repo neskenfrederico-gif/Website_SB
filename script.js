@@ -134,7 +134,7 @@ if (lazyCards.length) {
 }
 
 // ===== Portfolio Rotation + Filters =====
-(function initPortfolioRotation() {
+function initPortfolioRotation() {
   const grid = document.querySelector(".portfolio__grid");
   const showAllBtn = document.getElementById("portfolio-show-all");
   const allLinks = Array.from(document.querySelectorAll(".project-card-link"));
@@ -142,6 +142,9 @@ if (lazyCards.length) {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!grid || !allLinks.length) return;
+
+  // Activate rotation mode — CSS will hide non-visible cards
+  grid.classList.add("portfolio--rotating");
 
   let isExpanded = false;
   let rotationInterval = null;
@@ -238,6 +241,7 @@ if (lazyCards.length) {
     showAllBtn.addEventListener("click", () => {
       isExpanded = true;
       stopRotation();
+      grid.classList.remove("portfolio--rotating");
       grid.classList.add("portfolio--expanded");
       // Re-apply filter visibility
       allLinks.forEach((link) => {
@@ -327,7 +331,7 @@ if (lazyCards.length) {
   // Initial setup
   showPage(0, false);
   startRotation();
-})();
+}
 
 // ===== Animate Numbers on Scroll =====
 function animateNumber(element, target) {
@@ -821,6 +825,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Spotlight Cases Rotator
     initSpotlightRotator();
+
+    // Portfolio rotation
+    initPortfolioRotation();
   }
 });
 
