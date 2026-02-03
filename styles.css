@@ -1511,35 +1511,27 @@ select {
   transform: translateX(4px);
 }
 
-/* ===== PORTFOLIO ROTATION / COLLAPSE ===== */
-/* In collapsed mode (JS-activated), hide cards without .portfolio-visible */
-.portfolio__grid.portfolio--rotating .project-card-link {
+/* ===== PORTFOLIO COLLAPSE / ROTATION ===== */
+/* Hide all cards beyond visible set — JS toggles .portfolio-visible on links */
+.portfolio__grid.portfolio--collapsed .project-card-link {
   display: none;
-}
-
-.portfolio__grid.portfolio--rotating .project-card-link.portfolio-visible {
-  display: flex;
-}
-
-/* Fade transition for rotation */
-.project-card-link {
-  transition: opacity var(--transition-slow);
-}
-
-.project-card-link.portfolio-fade-out {
   opacity: 0;
 }
 
-.project-card-link.portfolio-fade-in {
-  opacity: 1;
-}
-
-/* Expanded mode: show all, hide button */
-.portfolio__grid.portfolio--expanded .project-card-link {
+.portfolio__grid.portfolio--collapsed .project-card-link.portfolio-visible {
   display: flex;
+  opacity: 1;
+  animation: fadeInUp 0.5s ease forwards;
 }
 
-.portfolio__grid.portfolio--expanded ~ .portfolio__actions {
+/* Expanded mode: override — show everything */
+.portfolio__grid.portfolio--expanded .project-card-link {
+  display: flex !important;
+  opacity: 1 !important;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.portfolio--expanded ~ .portfolio__actions {
   display: none;
 }
 

@@ -135,91 +135,71 @@ if (lazyCards.length) {
 
 // ===== Portfolio Rotation + Filters =====
 function initPortfolioRotation() {
-  const grid = document.querySelector(".portfolio__grid");
-  const showAllBtn = document.getElementById("portfolio-show-all");
-  const allLinks = Array.from(document.querySelectorAll(".project-card-link"));
-  const filterStatus = document.getElementById("filter-status");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var grid = document.querySelector(".portfolio__grid");
+  var showAllBtn = document.getElementById("portfolio-show-all");
+  var filterStatus = document.getElementById("filter-status");
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (!grid || !allLinks.length) return;
+  if (!grid) return;
 
-  // Activate rotation mode — CSS will hide non-visible cards
-  grid.classList.add("portfolio--rotating");
+  var allLinks = [];
+  grid.querySelectorAll(".project-card-link").forEach(function(el) {
+    allLinks.push(el);
+  });
 
-  let isExpanded = false;
-  let rotationInterval = null;
-  let currentPage = 0;
-  let activeFilter = "all";
-  const ROTATION_DELAY = 8000;
-  const FADE_DURATION = 400;
+  if (allLinks.length === 0) return;
 
-  // Determine how many cards per "page" based on viewport
+  // Mark first batch visible, then activate collapsed mode
+  var pageSize = getPageSize();
+  for (var i = 0; i < allLinks.length && i < pageSize; i++) {
+    allLinks[i].classList.add("portfolio-visible");
+  }
+  grid.classList.add("portfolio--collapsed");
+
+  var isExpanded = false;
+  var rotationInterval = null;
+  var currentPage = 0;
+  var activeFilter = "all";
+  var ROTATION_DELAY = 8000;
+
   function getPageSize() {
-    if (window.innerWidth >= 1024) return 6;  // 3 cols x 2 rows
-    if (window.innerWidth >= 768) return 4;   // 2 cols x 2 rows
-    return 2;                                  // 1 col x 2 rows
+    if (window.innerWidth >= 1024) return 6;
+    if (window.innerWidth >= 768) return 4;
+    return 2;
   }
 
-  // Get cards matching current filter
   function getFilteredLinks() {
-    return allLinks.filter((link) => {
-      const card = link.querySelector(".project-card");
+    return allLinks.filter(function(link) {
+      var card = link.querySelector(".project-card");
       if (!card) return false;
       if (activeFilter === "all") return true;
       return card.dataset.category === activeFilter;
     });
   }
 
-  // Show a specific page of cards (with fade)
-  function showPage(page, animate) {
-    const filtered = getFilteredLinks();
-    const pageSize = getPageSize();
-    const totalPages = Math.ceil(filtered.length / pageSize);
+  function showPage(page) {
+    var filtered = getFilteredLinks();
+    var size = getPageSize();
+    var totalPages = Math.ceil(filtered.length / size);
     if (totalPages === 0) return;
 
     currentPage = page % totalPages;
-    const start = currentPage * pageSize;
-    const pageCards = filtered.slice(start, start + pageSize);
+    var start = currentPage * size;
+    var visible = filtered.slice(start, start + size);
 
-    if (animate && !reducedMotion) {
-      // Fade out current visible cards
-      allLinks.forEach((l) => {
-        if (l.classList.contains("portfolio-visible")) {
-          l.classList.add("portfolio-fade-out");
-        }
-      });
-
-      setTimeout(() => {
-        // Hide all, then show page cards
-        allLinks.forEach((l) => {
-          l.classList.remove("portfolio-visible", "portfolio-fade-out");
-        });
-        pageCards.forEach((l) => {
-          l.classList.add("portfolio-visible", "portfolio-fade-in");
-        });
-
-        // Remove fade-in class after transition
-        setTimeout(() => {
-          pageCards.forEach((l) => l.classList.remove("portfolio-fade-in"));
-        }, FADE_DURATION);
-      }, FADE_DURATION);
-    } else {
-      // No animation — instant switch
-      allLinks.forEach((l) => l.classList.remove("portfolio-visible"));
-      pageCards.forEach((l) => l.classList.add("portfolio-visible"));
-    }
+    // Remove all visible
+    allLinks.forEach(function(l) { l.classList.remove("portfolio-visible"); });
+    // Add visible to current page
+    visible.forEach(function(l) { l.classList.add("portfolio-visible"); });
   }
 
-  // Rotation control
   function startRotation() {
     stopRotation();
     if (reducedMotion || isExpanded) return;
-    const filtered = getFilteredLinks();
-    const pageSize = getPageSize();
-    // Only rotate if there are more cards than fit on one page
-    if (filtered.length <= pageSize) return;
-    rotationInterval = setInterval(() => {
-      showPage(currentPage + 1, true);
+    var filtered = getFilteredLinks();
+    if (filtered.length <= getPageSize()) return;
+    rotationInterval = setInterval(function() {
+      showPage(currentPage + 1);
     }, ROTATION_DELAY);
   }
 
@@ -232,35 +212,25 @@ function initPortfolioRotation() {
 
   // Pause on hover/touch
   grid.addEventListener("mouseenter", stopRotation);
-  grid.addEventListener("mouseleave", () => { if (!isExpanded) startRotation(); });
+  grid.addEventListener("mouseleave", function() { if (!isExpanded) startRotation(); });
   grid.addEventListener("touchstart", stopRotation, { passive: true });
-  grid.addEventListener("touchend", () => { if (!isExpanded) startRotation(); }, { passive: true });
+  grid.addEventListener("touchend", function() { if (!isExpanded) startRotation(); }, { passive: true });
 
   // "Ver todos" button
   if (showAllBtn) {
-    showAllBtn.addEventListener("click", () => {
+    showAllBtn.addEventListener("click", function() {
       isExpanded = true;
       stopRotation();
-      grid.classList.remove("portfolio--rotating");
+      grid.classList.remove("portfolio--collapsed");
       grid.classList.add("portfolio--expanded");
-      // Re-apply filter visibility
-      allLinks.forEach((link) => {
-        const card = link.querySelector(".project-card");
-        if (!card) return;
-        if (activeFilter === "all" || card.dataset.category === activeFilter) {
-          card.classList.remove("hidden");
-          link.style.display = "";
-          link.style.animation = "fadeInUp 0.5s ease forwards";
-        }
-      });
       showAllBtn.style.display = "none";
     });
   }
 
-  // Filter buttons — integrated with rotation
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach((b) => {
+  // Filter buttons
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      filterBtns.forEach(function(b) {
         b.classList.remove("active");
         b.setAttribute("aria-pressed", "false");
       });
@@ -269,67 +239,51 @@ function initPortfolioRotation() {
 
       activeFilter = btn.dataset.filter;
 
-      // Apply filter to cards
-      let visibleCount = 0;
-      projectCards.forEach((card) => {
-        const category = card.dataset.category;
+      // Apply filter
+      var visibleCount = 0;
+      projectCards.forEach(function(card) {
+        var category = card.dataset.category;
         if (activeFilter === "all" || category === activeFilter) {
           card.classList.remove("hidden");
-          card.style.animation = "fadeInUp 0.5s ease forwards";
           visibleCount++;
         } else {
           card.classList.add("hidden");
         }
       });
 
-      // Also hide/show links for rotation
-      allLinks.forEach((link) => {
-        const card = link.querySelector(".project-card");
-        if (!card) return;
-        if (activeFilter === "all" || card.dataset.category === activeFilter) {
-          link.style.display = "";
-        } else {
-          link.style.display = "none";
-          link.classList.remove("portfolio-visible");
-        }
-      });
-
-      // Announce result
+      // Announce
       if (filterStatus) {
-        const label = btn.textContent.trim();
-        filterStatus.textContent = `${visibleCount} projeto${visibleCount !== 1 ? "s" : ""} encontrado${visibleCount !== 1 ? "s" : ""} na categoria "${label}".`;
+        var label = btn.textContent.trim();
+        filterStatus.textContent = visibleCount + " projeto" + (visibleCount !== 1 ? "s" : "") + " encontrado" + (visibleCount !== 1 ? "s" : "") + ' na categoria "' + label + '".';
       }
 
-      // Reset rotation to first page if collapsed
+      // Reset rotation
       if (!isExpanded) {
         currentPage = 0;
-        showPage(0, false);
+        showPage(0);
         startRotation();
-        // Show button again if there are overflow cards
-        const filtered = getFilteredLinks();
-        const pageSize = getPageSize();
         if (showAllBtn) {
-          showAllBtn.style.display = filtered.length > pageSize ? "" : "none";
+          var filtered = getFilteredLinks();
+          showAllBtn.style.display = filtered.length > getPageSize() ? "" : "none";
         }
       }
     });
   });
 
-  // Re-calculate on resize (page size may change)
-  let resizeTimer;
-  window.addEventListener("resize", () => {
+  // Resize handler
+  var resizeTimer;
+  window.addEventListener("resize", function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
+    resizeTimer = setTimeout(function() {
       if (!isExpanded) {
         currentPage = 0;
-        showPage(0, false);
+        showPage(0);
         startRotation();
       }
     }, 250);
   });
 
-  // Initial setup
-  showPage(0, false);
+  // Start
   startRotation();
 }
 
