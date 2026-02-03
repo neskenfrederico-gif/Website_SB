@@ -1316,6 +1316,9 @@ select {
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -1329,7 +1332,8 @@ select {
 
 /* Make project cards clickable links */
 .project-card-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
@@ -1426,6 +1430,9 @@ select {
 
 .project-card__content {
   padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-card__title {
@@ -1433,6 +1440,10 @@ select {
   font-weight: 600;
   color: var(--color-primary);
   margin-bottom: var(--spacing-1);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card__client {
@@ -1441,6 +1452,9 @@ select {
   font-size: var(--font-size-sm);
   font-weight: 500;
   margin-bottom: var(--spacing-4);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-card__specs {
@@ -1473,13 +1487,18 @@ select {
   font-size: var(--font-size-sm);
   color: var(--color-gray-500);
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card__details {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
-  margin-top: var(--spacing-4);
+  margin-top: auto;
+  padding-top: var(--spacing-4);
   font-size: var(--font-size-sm);
   font-weight: 600;
   color: var(--color-primary);
