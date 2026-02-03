@@ -32,8 +32,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="stylesheet" href="styles.css?v=1769798731" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <link rel="stylesheet" href="styles.css?v=1769798734" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
 
@@ -165,13 +168,21 @@
               <a href="#home" class="nav__link active">Início</a>
             </li>
             <li class="nav__item">
+              <a href="#servicos" class="nav__link">Serviços</a>
+            </li>
+            <li class="nav__item">
               <a href="#sobre" class="nav__link">Sobre</a>
             </li>
-            <li class="nav__item">
-              <a href="#setores" class="nav__link">Setores</a>
-            </li>
-            <li class="nav__item">
-              <a href="#servicos" class="nav__link">Serviços</a>
+            <li class="nav__item nav__item--dropdown">
+              <a href="#setores" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
+              <ul class="nav__dropdown">
+                <li><a href="setores/farmaceutico.html" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
+                <li><a href="setores/datacenter.html" class="nav__dropdown-link">💾 Data Centers</a></li>
+                <li><a href="setores/corporativo.html" class="nav__dropdown-link">🏢 Corporativo</a></li>
+                <li><a href="setores/industrial.html" class="nav__dropdown-link">🏭 Industrial</a></li>
+                <li><a href="setores/pressurizacao.html" class="nav__dropdown-link">🚨 Pressurização</a></li>
+                <li><a href="setores/pos-metais.html" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+              </ul>
             </li>
             <li class="nav__item">
               <a href="#portfolio" class="nav__link">Portfólio</a>
@@ -287,21 +298,21 @@
     <section class="section stats">
       <div class="stats__container container grid">
         <div class="stats__data">
-          <h2 class="stats__number" data-target="200">0</h2>
+          <span class="stats__number" data-target="200" aria-label="200+">0</span>
           <span class="stats__symbol">+</span>
           <p class="stats__title">Projetos <br> Entregues</p>
         </div>
         <div class="stats__data">
-          <h2 class="stats__number" data-target="50">0</h2>
+          <span class="stats__number" data-target="50" aria-label="50k">0</span>
           <span class="stats__symbol">k</span>
           <p class="stats__title">TRs <br> Instalados</p>
         </div>
         <div class="stats__data">
-          <h2 class="stats__number" data-target="12">0</h2>
+          <span class="stats__number" data-target="12" aria-label="12">0</span>
           <p class="stats__title">Estados <br> Atendidos</p>
         </div>
         <div class="stats__data">
-          <h2 class="stats__number" data-target="100">0</h2>
+          <span class="stats__number" data-target="100" aria-label="100%">0</span>
           <span class="stats__symbol">%</span>
           <p class="stats__title">Conformidade <br> Normativa</p>
         </div>
@@ -719,6 +730,18 @@
             <p>Ventilação industrial complexa, exaustão de gases, controle de poluentes e sistemas de resfriamento de processo.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
+          <a class="sector-card sector-card--link fade-in" href="setores/pressurizacao.html" aria-label="Abrir setor Pressurização de Escadas">
+            <div class="sector-card__icon" aria-hidden="true">🚨</div>
+            <h3>Pressurização de Escadas</h3>
+            <p>Sistemas de segurança conforme IT-18 do Corpo de Bombeiros, prevenindo infiltração de fumaça em escadas de emergência.</p>
+            <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
+          </a>
+          <a class="sector-card sector-card--link fade-in" href="setores/pos-metais.html" aria-label="Abrir setor Pós de Metais">
+            <div class="sector-card__icon" aria-hidden="true">⚙️</div>
+            <h3>Ventilação Pós de Metais</h3>
+            <p>Captação e exaustão de partículas metálicas (nióbio) com sistemas de filtragem industrial e prevenção de explosões.</p>
+            <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
+          </a>
         </div>
       </div>
     </section>
@@ -752,7 +775,7 @@
             </div>
           </div>
           <div class="compliance-grid fade-in">
-            <h4>Conformidade Normativa</h4>
+            <h3>Conformidade Normativa</h3>
             <ul>
               <li><strong>ASHRAE 90.1</strong> - Eficiência Energética</li>
               <li><strong>NBR 16401</strong> - Instalações de Ar Condicionado</li>
@@ -775,38 +798,38 @@
         </div>
         <div class="faq__grid">
           <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-q-1">
               Qual a importância do PMOC e os riscos legais?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-q-1">
               <p>O PMOC (Plano de Manutenção, Operação e Controle) é obrigatório por lei (Lei 13.589/2018) para todos os edifícios climatizados. A falta dele pode acarretar multas de até R$ 200 mil, além de riscos à saúde dos ocupantes e processos trabalhistas por qualidade do ar inadequada (Síndrome do Edifício Doente).</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-q-2">
               Como o projeto em BIM reduz custos de obra?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-q-2">
               <p>O BIM (Building Information Modeling) permite a "construção virtual" antes da obra real. Através do *Clash Detection* (detecção de interferências), identificamos conflitos entre ar condicionado, elétrica e hidráulica ainda no projeto, evitando retrabalhos caros e atrasos no canteiro de obras.</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-q-3">
               Retrofit de sistemas antigos vale a pena?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-q-3">
               <p>Sim. Sistemas antigos (15+ anos) costumam consumir até 40% mais energia. Um retrofit bem planejado, com substituição de chillers e automação, pode ter ROI (Retorno sobre Investimento) inferior a 3 anos apenas com a economia de energia, além de reduzir drasticamente custos de manutenção corretiva.</p>
             </div>
           </div>
           <div class="faq-item fade-in">
-            <button class="faq-question" aria-expanded="false">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-q-4">
               Quais normas vocês seguem para Áreas Limpas?
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
-            <div class="faq-answer">
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-q-4">
               <p>Seguimos rigorosamente a ISO 14644 para classificação de partículas, além das normas da ANVISA (RDC) específicas para fármacos e saúde. Projetamos com controle de cascata de pressão, eclusas e filtragem HEPA/ULPA para garantir a integridade do produto e segurança operacional.</p>
             </div>
           </div>
@@ -837,7 +860,7 @@
         </div>
         <div class="portfolio__grid">
           <!-- Projeto 1 -->
-          <a class="project-card-link" href="projetos/projeto-injetaveis.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-injetaveis.html" aria-label="Ver detalhes do projeto Prédio de Injetáveis - Brainfarma">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image">
               <div class="project-card__overlay">
@@ -867,7 +890,7 @@
           </a>
 
           <!-- Projeto 2 -->
-          <a class="project-card-link" href="projetos/projeto-cosmed.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-cosmed.html" aria-label="Ver detalhes do projeto COSMED - Brainfarma">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image project-card__image--2">
               <div class="project-card__overlay">
@@ -897,7 +920,7 @@
           </a>
 
           <!-- Projeto 3 -->
-          <a class="project-card-link" href="projetos/projeto-lakeview.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-lakeview.html" aria-label="Ver detalhes do projeto Lake View Resort">
           <article class="project-card" data-category="hoteleiro">
             <div class="project-card__image project-card__image--3">
               <div class="project-card__overlay">
@@ -927,7 +950,7 @@
           </a>
 
           <!-- Projeto 4 -->
-          <a class="project-card-link" href="projetos/projeto-goinn.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-goinn.html" aria-label="Ver detalhes do projeto Estação Goiânia - GoInn">
           <article class="project-card" data-category="hoteleiro">
             <div class="project-card__image project-card__image--4">
               <div class="project-card__overlay">
@@ -957,7 +980,7 @@
           </a>
 
           <!-- Projeto 5 -->
-          <a class="project-card-link" href="projetos/projeto-lineavitta.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-lineavitta.html" aria-label="Ver detalhes do projeto Linea Vitta">
           <article class="project-card" data-category="comercial">
             <div class="project-card__image project-card__image--5">
               <div class="project-card__overlay">
@@ -987,7 +1010,7 @@
           </a>
 
           <!-- Projeto 5B (Novo) -->
-          <a class="project-card-link" href="projetos/projeto-lineag.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-lineag.html" aria-label="Ver detalhes do projeto Linea G">
             <article class="project-card" data-category="comercial">
               <div class="project-card__image project-card__image--9">
                 <div class="project-card__overlay">
@@ -1016,7 +1039,7 @@
           </a>
 
           <!-- Projeto 6 -->
-          <a class="project-card-link" href="projetos/projeto-esaf.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-esaf.html" aria-label="Ver detalhes do projeto ESAF - Ministério da Fazenda">
           <article class="project-card" data-category="governamental">
             <div class="project-card__image project-card__image--6">
               <div class="project-card__overlay">
@@ -1047,7 +1070,7 @@
           </a>
 
           <!-- Projeto 7 -->
-          <a class="project-card-link" href="projetos/projeto-prf.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-prf.html" aria-label="Ver detalhes do projeto Sede PRF Vitória">
           <article class="project-card" data-category="governamental">
             <div class="project-card__image project-card__image--7">
               <div class="project-card__overlay">
@@ -1079,7 +1102,7 @@
           </a>
 
           <!-- Projeto 8 -->
-          <a class="project-card-link" href="projetos/projeto-geolab.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-geolab.html" aria-label="Ver detalhes do projeto Geolab Site I">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image project-card__image--8">
               <div class="project-card__overlay">
@@ -1108,7 +1131,7 @@
           </a>
 
           <!-- Projeto 9 -->
-          <a class="project-card-link" href="projetos/projeto-ontex.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-ontex.html" aria-label="Ver detalhes do projeto Active Ontex">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--10">
                 <div class="project-card__overlay">
@@ -1137,7 +1160,7 @@
           </a>
 
           <!-- Projeto 10 -->
-          <a class="project-card-link" href="projetos/projeto-geolab-siteii.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-geolab-siteii.html" aria-label="Ver detalhes do projeto Geolab Site II">
             <article class="project-card" data-category="farmaceutico">
               <div class="project-card__image project-card__image--11">
                 <div class="project-card__overlay">
@@ -1166,7 +1189,7 @@
           </a>
 
           <!-- Projeto 11 -->
-          <a class="project-card-link" href="projetos/projeto-brainfarma-fluxos.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-brainfarma-fluxos.html" aria-label="Ver detalhes do projeto Brainfarma - Fluxos Laminares">
             <article class="project-card" data-category="farmaceutico">
               <div class="project-card__image project-card__image--12">
                 <div class="project-card__overlay">
@@ -1195,7 +1218,7 @@
           </a>
 
           <!-- Projeto 12 -->
-          <a class="project-card-link" href="projetos/projeto-savoy.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-savoy.html" aria-label="Ver detalhes do projeto Savoy">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--13">
                 <div class="project-card__overlay">
@@ -1224,7 +1247,7 @@
           </a>
 
           <!-- Projeto 13 -->
-          <a class="project-card-link" href="projetos/projeto-louisdreyfus.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-louisdreyfus.html" aria-label="Ver detalhes do projeto Louis Dreyfus">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--14">
                 <div class="project-card__overlay">
@@ -1253,7 +1276,7 @@
           </a>
 
           <!-- Projeto 14 -->
-          <a class="project-card-link" href="projetos/projeto-hypermarcas.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-hypermarcas.html" aria-label="Ver detalhes do projeto Hypermarcas">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
@@ -1282,7 +1305,7 @@
           </a>
 
           <!-- Projeto 15 -->
-          <a class="project-card-link" href="projetos/projeto-hypera.html" aria-label="Ver detalhes do projeto">
+          <a class="project-card-link" href="projetos/projeto-hypera.html" aria-label="Ver detalhes do projeto Hypera - CD Autoportante">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
@@ -1542,6 +1565,6 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1769798731"></script>
+    <script src="script.js?v=1769798734" defer></script>
   </body>
 </html>

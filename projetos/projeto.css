@@ -20,6 +20,7 @@
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   font-size: var(--font-size-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -131,6 +132,22 @@
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0,0,0,0.12);
   background: rgba(255, 255, 255, 0.85);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-form input:focus,
+.project-form textarea:focus,
+.project-form select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+}
+
+.project-form.was-submitted input:invalid,
+.project-form.was-submitted textarea:invalid,
+.project-form.was-submitted select:invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
 }
 
 .project-related__grid {

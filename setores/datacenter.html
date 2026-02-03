@@ -36,7 +36,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles.css?v=1769798731" />
+    <link rel="stylesheet" href="../styles.css?v=1769798734" />
     <link rel="stylesheet" href="setor.css?v=1769798731" />
 
     <script type="application/ld+json">
@@ -90,7 +90,17 @@
           <ul class="nav__list">
             <li class="nav__item"><a href="../index.html#home" class="nav__link">Início</a></li>
             <li class="nav__item"><a href="../index.html#sobre" class="nav__link">Sobre</a></li>
-            <li class="nav__item"><a href="../index.html#setores" class="nav__link active">Setores</a></li>
+            <li class="nav__item nav__item--dropdown">
+            <a href="../index.html#setores" class="nav__link active">Setores <span class="dropdown-arrow">▼</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="farmaceutico.html" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
+              <li><a href="datacenter.html" class="nav__dropdown-link">💾 Data Centers</a></li>
+              <li><a href="corporativo.html" class="nav__dropdown-link">🏢 Corporativo</a></li>
+              <li><a href="industrial.html" class="nav__dropdown-link">🏭 Industrial</a></li>
+              <li><a href="pressurizacao.html" class="nav__dropdown-link">🚨 Pressurização</a></li>
+              <li><a href="pos-metais.html" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+            </ul>
+          </li>
             <li class="nav__item"><a href="../index.html#servicos" class="nav__link">Serviços</a></li>
             <li class="nav__item"><a href="../index.html#portfolio" class="nav__link">Portfólio</a></li>
             <li class="nav__item"><a href="../index.html#contato" class="nav__link">Contato</a></li>
@@ -430,7 +440,7 @@
       </svg>
     </a>
 
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
     <script src="../form-validate.js?v=1769798731"></script>
   </body>
 </html>

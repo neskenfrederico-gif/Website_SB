@@ -1,4 +1,4 @@
-// ===== DOM Elements =====
+// ===== DOM Elements (cached) =====
 const header = document.getElementById("header");
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
@@ -8,11 +8,16 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 const contactForm = document.getElementById("contact-form");
 const statNumbers = document.querySelectorAll(".stats__number");
+const hero = document.querySelector(".hero");
+const sections = document.querySelectorAll("section[id]");
 
 // ===== Mobile Menu =====
 function openMenu() {
   navMenu.classList.add("show");
-  document.body.style.overflow = "hidden";
+  // iOS fix: use position fixed + top offset to prevent background scroll
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${window.scrollY}px`;
+  document.body.style.width = "100%";
   if (navToggle) {
     navToggle.setAttribute("aria-expanded", "true");
     navToggle.style.display = "none";
@@ -20,8 +25,13 @@ function openMenu() {
 }
 
 function closeMenu() {
+  const scrollY = document.body.style.top;
   navMenu.classList.remove("show");
-  document.body.style.overflow = "";
+  // iOS fix: restore scroll position
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  window.scrollTo(0, parseInt(scrollY || "0") * -1);
   if (navToggle) {
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.style.display = "";
@@ -46,32 +56,17 @@ navLinks.forEach((link) => {
   });
 });
 
-// ===== Header Scroll Effect =====
-let lastScroll = 0;
-let ticking = false;
+// ===== Unified Scroll Handler =====
+let scrollTicking = false;
 
 function updateHeader() {
   const currentScroll = window.scrollY || window.pageYOffset;
-
   if (currentScroll > 50) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
   }
-
-  lastScroll = currentScroll;
-  ticking = false;
 }
-
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    requestAnimationFrame(updateHeader);
-    ticking = true;
-  }
-}, { passive: true });
-
-// ===== Active Section Highlighting =====
-const sections = document.querySelectorAll("section[id]");
 
 function highlightActiveSection() {
   const scrollY = window.pageYOffset;
@@ -93,16 +88,20 @@ function highlightActiveSection() {
   });
 }
 
-let sectionTicking = false;
-window.addEventListener("scroll", () => {
-  if (!sectionTicking) {
+function onScroll() {
+  if (!scrollTicking) {
     requestAnimationFrame(() => {
+      updateHeader();
       highlightActiveSection();
-      sectionTicking = false;
+      updateParallax();
+      updateBackToTop();
+      scrollTicking = false;
     });
-    sectionTicking = true;
+    scrollTicking = true;
   }
-}, { passive: true });
+}
+
+window.addEventListener("scroll", onScroll, { passive: true });
 
 // ===== Portfolio Filters =====
 filterBtns.forEach((btn) => {
@@ -132,10 +131,15 @@ filterBtns.forEach((btn) => {
 
 // ===== Animate Numbers on Scroll =====
 function animateNumber(element, target) {
+  if (!target || isNaN(target) || target <= 0) {
+    element.textContent = target || "0";
+    return;
+  }
+
   let current = 0;
-  const increment = target / 50;
-  const duration = 2000;
-  const stepTime = duration / 50;
+  const steps = 50;
+  const increment = target / steps;
+  const stepTime = 2000 / steps;
 
   const timer = setInterval(() => {
     current += increment;
@@ -226,8 +230,13 @@ ${data.message}`
 }
 
 if (contactForm) {
+  let isSubmitting = false;
+
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    // Prevent double-submit
+    if (isSubmitting) return;
 
     contactForm.classList.add("was-submitted");
 
@@ -238,7 +247,9 @@ if (contactForm) {
     }
 
     const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    // Object.fromEntries fallback for older browsers
+    const data = {};
+    formData.forEach((value, key) => { data[key] = value; });
 
     // Extra email validation (defensive)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -247,38 +258,87 @@ if (contactForm) {
       return;
     }
 
+    isSubmitting = true;
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     submitBtn.innerHTML = "<span>Enviando...</span>";
     submitBtn.disabled = true;
 
-    // 1) Attempt real submission to a configurable endpoint (Formspree, etc.)
-    const result = await sendFormToEndpoint(contactForm, formData);
+    try {
+      // 1) Attempt real submission to a configurable endpoint (Formspree, etc.)
+      const result = await sendFormToEndpoint(contactForm, formData);
 
-    const whatsappMessage = buildWhatsappMessage(data);
+      const whatsappMessage = buildWhatsappMessage(data);
 
-    if (result && result.ok) {
-      showNotification(
-        "Mensagem enviada com sucesso! Abrindo WhatsApp como canal adicional.",
-        "success"
-      );
-      window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
-    } else {
-      showNotification(
-        "Envio automático indisponível. Abrindo WhatsApp para contato direto.",
-        "info"
-      );
-      window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
+      if (result && result.ok) {
+        showNotification(
+          "Mensagem enviada com sucesso! Abrindo WhatsApp como canal adicional.",
+          "success"
+        );
+        window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
+      } else {
+        showNotification(
+          "Envio automático indisponível. Abrindo WhatsApp para contato direto.",
+          "info"
+        );
+        window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
+      }
+
+      contactForm.reset();
+      contactForm.classList.remove("was-submitted");
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+      isSubmitting = false;
     }
-
-    contactForm.reset();
-    contactForm.classList.remove("was-submitted");
-    submitBtn.innerHTML = originalText;
-    submitBtn.disabled = false;
   });
 }
 
 // ===== Notification System =====
+// Inject notification styles once
+(function injectNotificationStyles() {
+  if (document.getElementById("notification-styles")) return;
+  const style = document.createElement("style");
+  style.id = "notification-styles";
+  style.textContent = `
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 16px 24px;
+      color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2001;
+      animation: notifSlideIn 0.3s ease;
+      font-weight: 500;
+    }
+    .notification--success { background: #10B981; }
+    .notification--error { background: #EF4444; }
+    .notification--info { background: #3B82F6; }
+    .notification__close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+    }
+    @keyframes notifSlideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes notifSlideOut {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(100%); opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+})();
+
 function showNotification(message, type = "info") {
   // Remove existing notifications
   const existingNotification = document.querySelector(".notification");
@@ -286,77 +346,29 @@ function showNotification(message, type = "info") {
     existingNotification.remove();
   }
 
-  // Create notification element
+  // Create notification element with accessibility
   const notification = document.createElement("div");
   notification.className = `notification notification--${type}`;
+  notification.setAttribute("role", "alert");
+  notification.setAttribute("aria-live", "assertive");
   notification.innerHTML = `
         <span>${message}</span>
-        <button class="notification__close">&times;</button>
+        <button class="notification__close" aria-label="Fechar notificação">&times;</button>
     `;
-
-  // Add styles
-  notification.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 16px 24px;
-        background: ${
-          type === "success"
-            ? "#10B981"
-            : type === "error"
-            ? "#EF4444"
-            : "#3B82F6"
-        };
-        color: white;
-        border-radius: 12px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        z-index: 9999;
-        animation: slideIn 0.3s ease;
-        font-weight: 500;
-    `;
-
-  // Add slide animation (only once)
-  if (!document.getElementById("notification-styles")) {
-    const slideStyle = document.createElement("style");
-    slideStyle.id = "notification-styles";
-    slideStyle.textContent = `
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-    `;
-    document.head.appendChild(slideStyle);
-  }
 
   document.body.appendChild(notification);
 
   // Close button
   const closeBtn = notification.querySelector(".notification__close");
-  closeBtn.style.cssText = `
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        line-height: 1;
-    `;
-
   closeBtn.addEventListener("click", () => {
-    notification.style.animation = "slideOut 0.3s ease forwards";
+    notification.style.animation = "notifSlideOut 0.3s ease forwards";
     setTimeout(() => notification.remove(), 300);
   });
 
   // Auto remove
   setTimeout(() => {
     if (notification.parentNode) {
-      notification.style.animation = "slideOut 0.3s ease forwards";
+      notification.style.animation = "notifSlideOut 0.3s ease forwards";
       setTimeout(() => notification.remove(), 300);
     }
   }, 5000);
@@ -365,38 +377,45 @@ function showNotification(message, type = "info") {
 // ===== Smooth Scroll for Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    const href = this.getAttribute("href");
+    // Guard against invalid selectors (bare "#" or empty)
+    if (!href || href === "#" || href.length < 2) return;
+
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } catch (err) {
+      // Invalid selector, let browser handle default
     }
   });
 });
 
 // ===== Parallax Effect for Hero =====
-const hero = document.querySelector(".hero");
-let parallaxTicking = false;
+// Cached particles element (resolved once on first call)
+let heroParticles = undefined;
+const isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
 
 function updateParallax() {
-  const scrolled = window.scrollY || window.pageYOffset;
-  if (hero && scrolled < window.innerHeight) {
-    const particles = document.querySelector(".hero__particles");
-    if (particles) {
-      particles.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-  }
-  parallaxTicking = false;
-}
+  // Skip parallax on mobile for performance
+  if (isMobileDevice) return;
 
-window.addEventListener("scroll", () => {
-  if (!parallaxTicking) {
-    requestAnimationFrame(updateParallax);
-    parallaxTicking = true;
+  if (heroParticles === undefined) {
+    heroParticles = document.querySelector(".hero__particles") || null;
   }
-}, { passive: true });
+  if (!hero || !heroParticles) return;
+
+  const scrolled = window.scrollY || window.pageYOffset;
+  if (scrolled < window.innerHeight) {
+    heroParticles.style.transform = `translateY(${scrolled * 0.3}px)`;
+  }
+}
+// Parallax is called from unified scroll handler (onScroll)
 
 // ===== Phone Mask =====
 const phoneInput = document.getElementById("phone");
@@ -416,6 +435,9 @@ if (phoneInput) {
     }
 
     e.target.value = value;
+    // Keep cursor at end after mask formatting
+    const len = value.length;
+    e.target.setSelectionRange(len, len);
   });
 }
 
@@ -452,14 +474,28 @@ faqQuestions.forEach((question) => {
   });
 });
 
+// Recalculate open FAQ heights on window resize
+let faqResizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(faqResizeTimer);
+  faqResizeTimer = setTimeout(() => {
+    faqQuestions.forEach((q) => {
+      if (q.parentElement.classList.contains("active")) {
+        const answer = q.nextElementSibling;
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  }, 200);
+});
+
 // ===== Hero Slider =====
 function initHeroSlider() {
   const slides = document.querySelectorAll(".hero__slide");
-  if (slides.length === 0) return;
+  if (slides.length <= 1) return;
 
   let currentSlide = 0;
   const slideInterval = 5000;
-  let heroInterval = setInterval(advanceSlide, slideInterval);
+  let heroInterval = null;
 
   function advanceSlide() {
     slides[currentSlide].classList.remove("active");
@@ -467,12 +503,28 @@ function initHeroSlider() {
     slides[currentSlide].classList.add("active");
   }
 
-  // Pause on hover or focus within hero
+  function startSlider() {
+    stopSlider();
+    heroInterval = setInterval(advanceSlide, slideInterval);
+  }
+
+  function stopSlider() {
+    if (heroInterval) {
+      clearInterval(heroInterval);
+      heroInterval = null;
+    }
+  }
+
+  // Pause on hover, focus, or touch
   const heroSection = document.getElementById("home");
   if (heroSection) {
-    heroSection.addEventListener("mouseenter", () => clearInterval(heroInterval));
-    heroSection.addEventListener("mouseleave", () => { heroInterval = setInterval(advanceSlide, slideInterval); });
+    heroSection.addEventListener("mouseenter", stopSlider);
+    heroSection.addEventListener("mouseleave", startSlider);
+    heroSection.addEventListener("touchstart", stopSlider, { passive: true });
+    heroSection.addEventListener("touchend", startSlider, { passive: true });
   }
+
+  startSlider();
 }
 
 
@@ -488,7 +540,9 @@ function preloadHeroSlideBackgrounds() {
     if (!webp || !jpg) return;
     if (slide.style.backgroundImage) return;
 
+    // Use image-set with -webkit- prefix fallback, then plain url as final fallback
     slide.style.backgroundImage = `url('${webp}')`;
+    slide.style.backgroundImage = `-webkit-image-set(url('${webp}') 1x)`;
     slide.style.backgroundImage = `image-set(url('${webp}') type('image/webp'), url('${jpg}') type('image/jpeg'))`;
   };
 
@@ -551,6 +605,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Spotlight Cases Rotator
   initSpotlightRotator();
+
+  // Back to top button
+  initBackToTop();
 });
 
 // ===== Spotlight Cases Rotator =====
@@ -558,6 +615,7 @@ function initSpotlightRotator() {
   const cases = [
     {
       title: 'Geolab — <span class="gradient-text">Site II</span>',
+      alt: 'Projeto Geolab Site II - 8.000 m² de salas limpas',
       desc: 'Projeto completo para <strong>8.000 m² de salas limpas Grau B/C</strong>, incluindo central de água gelada com VFD para produção de colírios e laboratório farmacêutico.',
       stat1: '900', stat1Label: 'TR de Capacidade',
       stat2: '8.000 m²', stat2Label: 'Área Climatizada',
@@ -568,6 +626,7 @@ function initSpotlightRotator() {
     },
     {
       title: 'Geolab — <span class="gradient-text">Site I</span>',
+      alt: 'Projeto Geolab Site I - 25.000+ m² de áreas produtivas',
       desc: 'Projeto completo para <strong>25.000+ m² de áreas produtivas</strong>: sólidos, efervescentes e semi-sólidos. CAG de 1.500 TR, UTAs TROX TKZ e desumidificação química para efervescentes.',
       stat1: '1.500', stat1Label: 'TR de Capacidade',
       stat2: '25.000+ m²', stat2Label: 'Área Produtiva',
@@ -578,6 +637,7 @@ function initSpotlightRotator() {
     },
     {
       title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
+      alt: 'Projeto Active Ontex - 15.600 m² de área industrial',
       desc: 'Projeto HVAC para <strong>15.600 m² de área industrial</strong> com alta vazão e automação Siemens. Controle térmico rigoroso para conformidade com NR-15/IBUTG.',
       stat1: '1.050', stat1Label: 'TR de Capacidade',
       stat2: '15.600 m²', stat2Label: 'Área Industrial',
@@ -588,6 +648,7 @@ function initSpotlightRotator() {
     },
     {
       title: 'Linea <span class="gradient-text">Vitta</span>',
+      alt: 'Projeto Linea Vitta - 27.500 m² climatizados em Brasília',
       desc: 'Edifício comercial em Brasília com <strong>27.500 m² climatizados</strong>. Sistema VRF/Split de alta eficiência com pressurização de escadas e conformidade total.',
       stat1: '941', stat1Label: 'TR de Capacidade',
       stat2: '27.500 m²', stat2Label: 'Área Climatizada',
@@ -610,6 +671,7 @@ function initSpotlightRotator() {
   const badgeEl = document.getElementById('spotlight-badge');
   const imgEl = document.getElementById('spotlight-img');
   const dotsContainer = document.getElementById('spotlight-dots');
+  const content = document.querySelector('.spotlight__content');
 
   if (!titleEl || !dotsContainer) return;
 
@@ -623,20 +685,40 @@ function initSpotlightRotator() {
   });
 
   let current = 0;
-  let interval = setInterval(nextCase, 6000);
+  let interval = null;
+  let fadeTimeout = null;
+  const ROTATE_INTERVAL = 6000;
 
-  // Pause on hover
+  function startRotation() {
+    stopRotation();
+    interval = setInterval(nextCase, ROTATE_INTERVAL);
+  }
+
+  function stopRotation() {
+    if (interval) {
+      clearInterval(interval);
+      interval = null;
+    }
+  }
+
+  // Pause on hover and touch
   const rotator = document.getElementById('spotlight-rotator');
   if (rotator) {
-    rotator.addEventListener('mouseenter', () => clearInterval(interval));
-    rotator.addEventListener('mouseleave', () => { interval = setInterval(nextCase, 6000); });
+    rotator.addEventListener('mouseenter', stopRotation);
+    rotator.addEventListener('mouseleave', startRotation);
+    rotator.addEventListener('touchstart', stopRotation, { passive: true });
+    rotator.addEventListener('touchend', startRotation, { passive: true });
   }
 
   function goToCase(index) {
+    // Cancel pending fade-in from previous transition
+    if (fadeTimeout) {
+      clearTimeout(fadeTimeout);
+      fadeTimeout = null;
+    }
     current = index;
     updateCase();
-    clearInterval(interval);
-    interval = setInterval(nextCase, 6000);
+    startRotation();
   }
 
   function nextCase() {
@@ -646,14 +728,13 @@ function initSpotlightRotator() {
 
   function updateCase() {
     const c = cases[current];
-    const content = document.querySelector('.spotlight__content');
-    
+
     // Fade out content + image
     content.style.opacity = '0';
     content.style.transform = 'translateY(10px)';
-    imgEl.style.opacity = '0';
-    
-    setTimeout(() => {
+    if (imgEl) imgEl.style.opacity = '0';
+
+    fadeTimeout = setTimeout(() => {
       titleEl.innerHTML = c.title;
       descEl.innerHTML = c.desc;
       stat1.textContent = c.stat1;
@@ -665,11 +746,14 @@ function initSpotlightRotator() {
       badgeText.textContent = c.badge;
       badgeEl.querySelector('.s-icon').textContent = c.badgeIcon;
 
-      // Update image
-      const picture = imgEl.closest('picture');
-      const source = picture ? picture.querySelector('source') : null;
-      if (source) source.srcset = c.img;
-      imgEl.src = c.img;
+      // Update image + alt text
+      if (imgEl) {
+        const picture = imgEl.closest('picture');
+        const source = picture ? picture.querySelector('source') : null;
+        if (source) source.srcset = c.img;
+        imgEl.src = c.img;
+        imgEl.alt = c.alt;
+      }
 
       // Update dots
       dotsContainer.querySelectorAll('.spotlight__dot').forEach((d, i) => {
@@ -679,7 +763,38 @@ function initSpotlightRotator() {
       // Fade in
       content.style.opacity = '1';
       content.style.transform = 'translateY(0)';
-      imgEl.style.opacity = '1';
+      if (imgEl) imgEl.style.opacity = '1';
+      fadeTimeout = null;
     }, 300);
   }
+
+  startRotation();
+}
+
+// ===== Back to Top Button =====
+let backToTopBtn = null;
+
+function initBackToTop() {
+  // Create button element
+  backToTopBtn = document.createElement('button');
+  backToTopBtn.className = 'back-to-top';
+  backToTopBtn.innerHTML = '↑';
+  backToTopBtn.setAttribute('aria-label', 'Voltar ao topo');
+  backToTopBtn.setAttribute('title', 'Voltar ao topo');
+  document.body.appendChild(backToTopBtn);
+
+  // Scroll to top on click
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Called from unified scroll handler
+function updateBackToTop() {
+  if (!backToTopBtn) return;
+  const scrollY = window.scrollY || window.pageYOffset;
+  backToTopBtn.classList.toggle('visible', scrollY > 500);
 }
