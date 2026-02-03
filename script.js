@@ -133,40 +133,201 @@ if (lazyCards.length) {
   lazyCards.forEach((card) => lazyObserver.observe(card));
 }
 
-// ===== Portfolio Filters =====
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    // Update active button and aria-pressed
-    filterBtns.forEach((b) => {
-      b.classList.remove("active");
-      b.setAttribute("aria-pressed", "false");
+// ===== Portfolio Rotation + Filters =====
+(function initPortfolioRotation() {
+  const grid = document.querySelector(".portfolio__grid");
+  const showAllBtn = document.getElementById("portfolio-show-all");
+  const allLinks = Array.from(document.querySelectorAll(".project-card-link"));
+  const filterStatus = document.getElementById("filter-status");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!grid || !allLinks.length) return;
+
+  let isExpanded = false;
+  let rotationInterval = null;
+  let currentPage = 0;
+  let activeFilter = "all";
+  const ROTATION_DELAY = 8000;
+  const FADE_DURATION = 400;
+
+  // Determine how many cards per "page" based on viewport
+  function getPageSize() {
+    if (window.innerWidth >= 1024) return 6;  // 3 cols x 2 rows
+    if (window.innerWidth >= 768) return 4;   // 2 cols x 2 rows
+    return 2;                                  // 1 col x 2 rows
+  }
+
+  // Get cards matching current filter
+  function getFilteredLinks() {
+    return allLinks.filter((link) => {
+      const card = link.querySelector(".project-card");
+      if (!card) return false;
+      if (activeFilter === "all") return true;
+      return card.dataset.category === activeFilter;
     });
-    btn.classList.add("active");
-    btn.setAttribute("aria-pressed", "true");
+  }
 
-    const filter = btn.dataset.filter;
+  // Show a specific page of cards (with fade)
+  function showPage(page, animate) {
+    const filtered = getFilteredLinks();
+    const pageSize = getPageSize();
+    const totalPages = Math.ceil(filtered.length / pageSize);
+    if (totalPages === 0) return;
 
-    let visibleCount = 0;
-    projectCards.forEach((card) => {
-      const category = card.dataset.category;
+    currentPage = page % totalPages;
+    const start = currentPage * pageSize;
+    const pageCards = filtered.slice(start, start + pageSize);
 
-      if (filter === "all" || category === filter) {
-        card.classList.remove("hidden");
-        card.style.animation = "fadeInUp 0.5s ease forwards";
-        visibleCount++;
-      } else {
-        card.classList.add("hidden");
+    if (animate && !reducedMotion) {
+      // Fade out current visible cards
+      allLinks.forEach((l) => {
+        if (l.classList.contains("portfolio-visible")) {
+          l.classList.add("portfolio-fade-out");
+        }
+      });
+
+      setTimeout(() => {
+        // Hide all, then show page cards
+        allLinks.forEach((l) => {
+          l.classList.remove("portfolio-visible", "portfolio-fade-out");
+        });
+        pageCards.forEach((l) => {
+          l.classList.add("portfolio-visible", "portfolio-fade-in");
+        });
+
+        // Remove fade-in class after transition
+        setTimeout(() => {
+          pageCards.forEach((l) => l.classList.remove("portfolio-fade-in"));
+        }, FADE_DURATION);
+      }, FADE_DURATION);
+    } else {
+      // No animation — instant switch
+      allLinks.forEach((l) => l.classList.remove("portfolio-visible"));
+      pageCards.forEach((l) => l.classList.add("portfolio-visible"));
+    }
+  }
+
+  // Rotation control
+  function startRotation() {
+    stopRotation();
+    if (reducedMotion || isExpanded) return;
+    const filtered = getFilteredLinks();
+    const pageSize = getPageSize();
+    // Only rotate if there are more cards than fit on one page
+    if (filtered.length <= pageSize) return;
+    rotationInterval = setInterval(() => {
+      showPage(currentPage + 1, true);
+    }, ROTATION_DELAY);
+  }
+
+  function stopRotation() {
+    if (rotationInterval) {
+      clearInterval(rotationInterval);
+      rotationInterval = null;
+    }
+  }
+
+  // Pause on hover/touch
+  grid.addEventListener("mouseenter", stopRotation);
+  grid.addEventListener("mouseleave", () => { if (!isExpanded) startRotation(); });
+  grid.addEventListener("touchstart", stopRotation, { passive: true });
+  grid.addEventListener("touchend", () => { if (!isExpanded) startRotation(); }, { passive: true });
+
+  // "Ver todos" button
+  if (showAllBtn) {
+    showAllBtn.addEventListener("click", () => {
+      isExpanded = true;
+      stopRotation();
+      grid.classList.add("portfolio--expanded");
+      // Re-apply filter visibility
+      allLinks.forEach((link) => {
+        const card = link.querySelector(".project-card");
+        if (!card) return;
+        if (activeFilter === "all" || card.dataset.category === activeFilter) {
+          card.classList.remove("hidden");
+          link.style.display = "";
+          link.style.animation = "fadeInUp 0.5s ease forwards";
+        }
+      });
+      showAllBtn.style.display = "none";
+    });
+  }
+
+  // Filter buttons — integrated with rotation
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
+
+      activeFilter = btn.dataset.filter;
+
+      // Apply filter to cards
+      let visibleCount = 0;
+      projectCards.forEach((card) => {
+        const category = card.dataset.category;
+        if (activeFilter === "all" || category === activeFilter) {
+          card.classList.remove("hidden");
+          card.style.animation = "fadeInUp 0.5s ease forwards";
+          visibleCount++;
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+      // Also hide/show links for rotation
+      allLinks.forEach((link) => {
+        const card = link.querySelector(".project-card");
+        if (!card) return;
+        if (activeFilter === "all" || card.dataset.category === activeFilter) {
+          link.style.display = "";
+        } else {
+          link.style.display = "none";
+          link.classList.remove("portfolio-visible");
+        }
+      });
+
+      // Announce result
+      if (filterStatus) {
+        const label = btn.textContent.trim();
+        filterStatus.textContent = `${visibleCount} projeto${visibleCount !== 1 ? "s" : ""} encontrado${visibleCount !== 1 ? "s" : ""} na categoria "${label}".`;
+      }
+
+      // Reset rotation to first page if collapsed
+      if (!isExpanded) {
+        currentPage = 0;
+        showPage(0, false);
+        startRotation();
+        // Show button again if there are overflow cards
+        const filtered = getFilteredLinks();
+        const pageSize = getPageSize();
+        if (showAllBtn) {
+          showAllBtn.style.display = filtered.length > pageSize ? "" : "none";
+        }
       }
     });
-
-    // Announce filter result for screen readers
-    const filterStatus = document.getElementById("filter-status");
-    if (filterStatus) {
-      const label = btn.textContent.trim();
-      filterStatus.textContent = `${visibleCount} projeto${visibleCount !== 1 ? 's' : ''} encontrado${visibleCount !== 1 ? 's' : ''} na categoria "${label}".`;
-    }
   });
-});
+
+  // Re-calculate on resize (page size may change)
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (!isExpanded) {
+        currentPage = 0;
+        showPage(0, false);
+        startRotation();
+      }
+    }, 250);
+  });
+
+  // Initial setup
+  showPage(0, false);
+  startRotation();
+})();
 
 // ===== Animate Numbers on Scroll =====
 function animateNumber(element, target) {

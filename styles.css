@@ -1511,6 +1511,52 @@ select {
   transform: translateX(4px);
 }
 
+/* ===== PORTFOLIO ROTATION / COLLAPSE ===== */
+/* In collapsed mode, hide cards without .portfolio-visible */
+.portfolio__grid:not(.portfolio--expanded) .project-card-link {
+  display: none;
+}
+
+.portfolio__grid:not(.portfolio--expanded) .project-card-link.portfolio-visible {
+  display: flex;
+}
+
+/* Fade transition for rotation */
+.project-card-link {
+  transition: opacity var(--transition-slow);
+}
+
+.project-card-link.portfolio-fade-out {
+  opacity: 0;
+}
+
+.project-card-link.portfolio-fade-in {
+  opacity: 1;
+}
+
+/* Expanded mode: show all, hide button */
+.portfolio__grid.portfolio--expanded .project-card-link {
+  display: flex;
+}
+
+.portfolio__grid.portfolio--expanded ~ .portfolio__actions {
+  display: none;
+}
+
+/* Show all button */
+.portfolio__actions {
+  text-align: center;
+  margin-top: var(--spacing-10);
+}
+
+.portfolio__show-all {
+  gap: var(--spacing-2);
+}
+
+.portfolio__show-all svg {
+  transition: transform var(--transition-base);
+}
+
 /* ===== CONTATO SECTION ===== */
 .contato__grid {
   display: grid;
