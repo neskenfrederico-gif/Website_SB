@@ -8,6 +8,14 @@
     <priority>1.0</priority>
   </url>
   
+  <!-- Política de Privacidade -->
+  <url>
+    <loc>https://siqueiraeblanco.com.br/privacidade.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
   <!-- Setores -->
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/farmaceutico.html</loc>

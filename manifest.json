@@ -1,0 +1,26 @@
+{
+  "name": "Siqueira e Blanco Engenharia",
+  "short_name": "SB Engenharia",
+  "description": "Engenharia HVAC de alta complexidade para indústrias farmacêuticas, data centers e grandes empreendimentos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a5f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "pt-BR"
+}
