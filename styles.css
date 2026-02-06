@@ -2756,12 +2756,10 @@ select {
   height: 45px;
   width: 100px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.7);
   transition: all var(--transition-base);
 }
 
 .clients-carousel__track img:hover {
-  filter: none;
   transform: scale(1.1);
 }
 
