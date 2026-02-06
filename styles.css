@@ -2734,9 +2734,9 @@ select {
 .clients-showcase__card {
   flex: 1;
   background: white;
-  border-radius: var(--radius-2xl);
+  border-radius: 0;
   padding: var(--spacing-6) var(--spacing-8);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   max-width: 700px;
 }
 
