@@ -35,7 +35,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=1770407479" />
+    <link rel="stylesheet" href="styles.css?v=1770407800" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -320,48 +320,31 @@
     </section>
 
     <!-- Clientes Section -->
-    <section class="section clients" id="clientes">
+    <section class="section clients-showcase" id="clientes">
       <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Nossos Clientes</span>
-          <h2 class="section__title">Clientes que <span class="gradient-text">Atendemos</span></h2>
-        </div>
-        <div class="clients__grid">
-          <div class="client-logo" title="Geolab">
-            <img src="clientes/geolab.jpg?v=1770407401" alt="Geolab" loading="lazy" />
+        <div class="clients-showcase__wrapper">
+          <div class="clients-showcase__text">
+            <h2 class="clients-showcase__title">Engenharia para<br>grandes resultados</h2>
+            <p class="clients-showcase__subtitle">Conheça alguns dos clientes que confiam em <strong>nossas soluções.</strong></p>
           </div>
-          <div class="client-logo" title="Brainfarma">
-            <img src="clientes/brainfarma.jpg?v=1770407401" alt="Brainfarma" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Hypera">
-            <img src="clientes/hypera.jpg?v=1770407401" alt="Hypera" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Teuto">
-            <img src="clientes/teuto.jpg?v=1770407401" alt="Teuto" loading="lazy" />
-          </div>
-          <div class="client-logo" title="JRD Uniphar">
-            <img src="clientes/jrd.jpg?v=1770407401" alt="JRD Uniphar" loading="lazy" />
-          </div>
-          <div class="client-logo" title="JA Saúde Animal">
-            <img src="clientes/ja-saude.jpg?v=1770407401" alt="JA Saúde Animal" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Medquímica">
-            <img src="clientes/medquimica.jpg?v=1770407401" alt="Medquímica" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Laboratório Globo">
-            <img src="clientes/lab-globo.jpg?v=1770407401" alt="Laboratório Globo" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Bioscie">
-            <img src="clientes/bioscie.jpg?v=1770407401" alt="Bioscie" loading="lazy" />
-          </div>
-          <div class="client-logo" title="UFG">
-            <img src="clientes/ufg.jpg?v=1770407401" alt="UFG" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Banco do Brasil">
-            <img src="clientes/bb.jpg?v=1770407401" alt="Banco do Brasil" loading="lazy" />
-          </div>
-          <div class="client-logo" title="Halexistar">
-            <img src="clientes/halexistar.jpg?v=1770407401" alt="Halexistar" loading="lazy" />
+          <div class="clients-showcase__card">
+            <div class="clients-carousel" id="clients-carousel">
+              <div class="clients-carousel__track" id="clients-track">
+                <img src="clientes/geolab.jpg" alt="Geolab" />
+                <img src="clientes/brainfarma.jpg" alt="Brainfarma" />
+                <img src="clientes/hypera.jpg" alt="Hypera" />
+                <img src="clientes/teuto.jpg" alt="Teuto" />
+                <img src="clientes/jrd.jpg" alt="JRD Uniphar" />
+                <img src="clientes/ja-saude.jpg" alt="JA Saúde Animal" />
+                <img src="clientes/medquimica.jpg" alt="Medquímica" />
+                <img src="clientes/lab-globo.jpg" alt="Laboratório Globo" />
+                <img src="clientes/bioscie.jpg" alt="Bioscie" />
+                <img src="clientes/ufg.jpg" alt="UFG" />
+                <img src="clientes/bb.jpg" alt="Banco do Brasil" />
+                <img src="clientes/halexistar.jpg" alt="Halexistar" />
+              </div>
+            </div>
+            <div class="clients-carousel__dots" id="clients-dots"></div>
           </div>
         </div>
       </div>
@@ -1702,7 +1685,7 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1769798739" defer></script>
+    <script src="script.js?v=1770407800" defer></script>
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBL037W0QL"></script>

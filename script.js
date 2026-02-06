@@ -975,3 +975,47 @@ function updateBackToTop() {
   const scrollY = window.scrollY || window.pageYOffset;
   backToTopBtn.classList.toggle('visible', scrollY > 500);
 }
+
+// ===== CLIENTS CAROUSEL =====
+function initClientsCarousel() {
+  const track = document.getElementById('clients-track');
+  const dotsContainer = document.getElementById('clients-dots');
+  if (!track || !dotsContainer) return;
+
+  const images = track.querySelectorAll('img');
+  const totalImages = images.length;
+  const imagesPerView = window.innerWidth < 768 ? 3 : 4;
+  const totalPages = Math.ceil(totalImages / imagesPerView);
+  let currentPage = 0;
+
+  // Create dots
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'clients-carousel__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Página ${i + 1}`);
+    dot.addEventListener('click', () => goToPage(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    const imageWidth = images[0].offsetWidth + 24; // width + gap
+    track.style.transform = `translateX(-${page * imagesPerView * imageWidth}px)`;
+    
+    // Update dots
+    document.querySelectorAll('.clients-carousel__dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === page);
+    });
+  }
+
+  // Auto-advance carousel
+  setInterval(() => {
+    currentPage = (currentPage + 1) % totalPages;
+    goToPage(currentPage);
+  }, 4000);
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', initClientsCarousel);
+window.addEventListener('resize', initClientsCarousel);

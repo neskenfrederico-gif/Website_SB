@@ -2689,101 +2689,141 @@ select {
   transform: translateY(-2px);
 }
 
-/* ===== CLIENTS SECTION ===== */
-.clients {
-  background: var(--color-white);
+/* ===== CLIENTS SHOWCASE SECTION ===== */
+.clients-showcase {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a4a5e 100%);
   padding: var(--spacing-16) 0;
-  border-bottom: 1px solid var(--color-gray-100);
+  position: relative;
+  overflow: hidden;
 }
 
-.clients .section__header {
-  margin-bottom: var(--spacing-10);
+.clients-showcase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
 }
 
-.clients__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-8);
-  align-items: center;
-  justify-items: center;
-}
-
-.client-logo {
+.clients-showcase__wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: var(--spacing-6) var(--spacing-8);
-  background: var(--color-white);
-  border: 1px solid var(--color-gray-200);
-  border-radius: var(--radius-xl);
-  min-height: 120px;
-  width: 100%;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
+  justify-content: space-between;
+  gap: var(--spacing-12);
+  position: relative;
+  z-index: 1;
 }
 
-.client-logo:hover {
-  background: var(--color-white);
-  border-color: var(--color-secondary);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+.clients-showcase__text {
+  flex: 0 0 40%;
 }
 
-.client-logo span {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--color-gray-600);
-  text-align: center;
+.clients-showcase__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
 }
 
-.client-logo:hover span {
-  color: var(--color-primary);
+.clients-showcase__subtitle {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
 }
 
-.client-logo img {
-  width: 200px;
-  height: 100px;
+.clients-showcase__subtitle strong {
+  color: var(--color-secondary);
+}
+
+.clients-showcase__card {
+  flex: 0 0 55%;
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-8);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.clients-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-carousel__track {
+  display: flex;
+  gap: var(--spacing-6);
+  transition: transform 0.5s ease;
+}
+
+.clients-carousel__track img {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 60px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.5);
+  filter: grayscale(100%) opacity(0.6);
   transition: all var(--transition-base);
 }
 
-.client-logo:hover img {
+.clients-carousel__track img:hover {
   filter: none;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* Responsive Clients Grid */
+.clients-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-6);
+}
+
+.clients-carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-gray-300);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.clients-carousel__dot.active,
+.clients-carousel__dot:hover {
+  background: var(--color-secondary);
+}
+
+/* Responsive Clients Showcase */
 @media (max-width: 1024px) {
-  .clients__grid {
-    grid-template-columns: repeat(3, 1fr);
+  .clients-showcase__wrapper {
+    flex-direction: column;
+    text-align: center;
   }
   
-  .client-logo {
-    min-height: 100px;
+  .clients-showcase__text {
+    flex: none;
+    width: 100%;
+  }
+  
+  .clients-showcase__card {
+    flex: none;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  .clients__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-4);
+  .clients-showcase {
+    padding: var(--spacing-12) 0;
   }
   
-  .client-logo {
-    min-height: 120px;
-    padding: var(--spacing-5) var(--spacing-4);
+  .clients-showcase__card {
+    padding: var(--spacing-6);
   }
   
-  .client-logo img {
-    width: 140px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  .clients__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .clients-carousel__track img {
+    width: 100px;
+    height: 50px;
   }
 }
 
