@@ -2741,16 +2741,16 @@ select {
 }
 
 .client-logo img {
-  width: 150px;
-  height: 75px;
+  width: 140px;
+  height: 65px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
+  filter: grayscale(100%) opacity(0.5);
   transition: all var(--transition-base);
 }
 
 .client-logo:hover img {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.1);
+  filter: none;
+  transform: scale(1.05);
 }
 
 /* Responsive Clients Grid */
