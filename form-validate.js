@@ -84,18 +84,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Phone mask (XX) XXXXX-XXXX
+  // Phone mask - suporta fixo (8 dígitos) e celular (9 dígitos)
   var phoneInputs = document.querySelectorAll('input[type="tel"]');
   phoneInputs.forEach(function (input) {
     input.addEventListener("input", function () {
       var v = input.value.replace(/\D/g, "").slice(0, 11);
-      if (v.length > 6) {
-        input.value = "(" + v.slice(0, 2) + ") " + v.slice(2, 7) + "-" + v.slice(7);
-      } else if (v.length > 2) {
-        input.value = "(" + v.slice(0, 2) + ") " + v.slice(2);
-      } else if (v.length > 0) {
-        input.value = "(" + v;
+      var formatted = "";
+      if (v.length > 0) {
+        formatted = "(" + v.slice(0, 2);
       }
+      if (v.length > 2) {
+        // Se tem 11 dígitos = celular (9XXXX-XXXX), senão fixo (XXXX-XXXX)
+        formatted += ") " + v.slice(2, v.length > 10 ? 7 : 6);
+      }
+      if (v.length > (v.length > 10 ? 7 : 6)) {
+        formatted += "-" + v.slice(v.length > 10 ? 7 : 6);
+      }
+      input.value = formatted;
     });
   });
 

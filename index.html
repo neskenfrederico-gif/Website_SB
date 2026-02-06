@@ -34,9 +34,10 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=1769798738" />
+    <link rel="stylesheet" href="styles.css?v=1769798739" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
+    <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
 
     <script type="application/ld+json">
 {
@@ -321,7 +322,7 @@
     <!-- Engineering Spotlight Section (New - Authority Builder) -->
     <section class="section spotlight" id="destaque">
       <div class="container">
-        <div class="spotlight__wrapper glass-card fade-in" id="spotlight-rotator">
+        <div class="spotlight__wrapper glass-card fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
           <div class="spotlight__content">
             <div class="spotlight__nav">
               <span class="section__subtitle">Cases em Destaque</span>
@@ -1521,7 +1522,7 @@
       <div class="container">
         <div class="footer__content">
         <div class="footer__logo">
-          <a href="#home" class="nav__logo">
+          <a href="/" class="nav__logo" aria-label="Ir para página inicial">
              <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="60" loading="lazy">
           </a>
           <p class="logo-text">Soluções de engenharia HVAC de alta performance para indústrias e grandes empreendimentos.</p>
@@ -1571,6 +1572,6 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1769798738" defer></script>
+    <script src="script.js?v=1769798739" defer></script>
   </body>
 </html>

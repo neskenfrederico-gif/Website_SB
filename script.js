@@ -582,26 +582,27 @@ function updateParallax() {
 }
 // Parallax is called from unified scroll handler (onScroll)
 
-// ===== Phone Mask =====
+// ===== Phone Mask (suporta fixo e celular) =====
 const phoneInput = document.getElementById("phone");
 if (phoneInput) {
   phoneInput.addEventListener("input", (e) => {
     let value = e.target.value.replace(/\D/g, "");
     if (value.length > 11) value = value.slice(0, 11);
 
+    let formatted = "";
     if (value.length > 0) {
-      value = "(" + value;
+      formatted = "(" + value.slice(0, 2);
     }
-    if (value.length > 3) {
-      value = value.slice(0, 3) + ") " + value.slice(3);
+    if (value.length > 2) {
+      formatted += ") " + value.slice(2, value.length > 10 ? 7 : 6);
     }
-    if (value.length > 10) {
-      value = value.slice(0, 10) + "-" + value.slice(10);
+    if (value.length > (value.length > 10 ? 7 : 6)) {
+      formatted += "-" + value.slice(value.length > 10 ? 7 : 6);
     }
 
-    e.target.value = value;
+    e.target.value = formatted;
     // Keep cursor at end after mask formatting
-    const len = value.length;
+    const len = formatted.length;
     e.target.setSelectionRange(len, len);
   });
 }
