@@ -2742,16 +2742,16 @@ select {
 
 .client-logo img {
   max-width: 150px;
-  max-height: 50px;
+  max-height: 55px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) brightness(0) opacity(0.5);
+  filter: grayscale(100%) opacity(0.6);
   transition: all var(--transition-base);
 }
 
 .client-logo:hover img {
-  filter: grayscale(0%) brightness(1) opacity(1);
+  filter: grayscale(0%) opacity(1);
   transform: scale(1.1);
 }
 
