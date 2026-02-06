@@ -2752,10 +2752,9 @@ select {
 }
 
 .clients-carousel__track img {
-  flex: 0 0 auto;
-  height: 50px;
-  width: auto;
-  max-width: 150px;
+  flex: 0 0 100px;
+  height: 45px;
+  width: 100px;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.7);
   transition: all var(--transition-base);
