@@ -2741,10 +2741,8 @@ select {
 }
 
 .client-logo img {
-  max-width: 160px;
-  max-height: 80px;
-  width: auto;
-  height: auto;
+  width: 150px;
+  height: 75px;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.6);
   transition: all var(--transition-base);
