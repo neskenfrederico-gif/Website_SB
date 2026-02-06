@@ -2771,13 +2771,13 @@ select {
   }
   
   .client-logo {
-    min-height: 80px;
-    padding: var(--spacing-4) var(--spacing-5);
+    min-height: 120px;
+    padding: var(--spacing-5) var(--spacing-4);
   }
   
   .client-logo img {
-    width: 100px;
-    height: 45px;
+    width: 140px;
+    height: 70px;
   }
 }
 
