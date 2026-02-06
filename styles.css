@@ -2697,8 +2697,6 @@ select {
   overflow: hidden;
 }
 
-/* Pattern removed for solid background */
-
 .clients-showcase__wrapper {
   display: flex;
   align-items: center;
@@ -2734,8 +2732,8 @@ select {
 .clients-showcase__card {
   flex: 1;
   background: white;
-  border-radius: 0;
-  padding: var(--spacing-6) var(--spacing-8);
+  border-radius: 16px;
+  padding: var(--spacing-8);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   max-width: 700px;
 }
@@ -2743,46 +2741,44 @@ select {
 .clients-carousel {
   overflow: hidden;
   position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 .clients-carousel__track {
   display: flex;
-  gap: var(--spacing-6);
-  transition: transform 0.5s ease;
+  align-items: center;
+  gap: var(--spacing-10);
+  width: max-content;
+  animation: clients-scroll 30s linear infinite;
+}
+
+.clients-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .clients-carousel__track img {
-  flex: 0 0 100px;
-  height: 45px;
-  width: 100px;
+  flex: 0 0 auto;
+  height: 50px;
+  width: auto;
+  max-width: 160px;
   object-fit: contain;
-  transition: all var(--transition-base);
+  opacity: 0.85;
+  transition: all 0.3s ease;
 }
 
 .clients-carousel__track img:hover {
+  opacity: 1;
   transform: scale(1.1);
 }
 
 .clients-carousel__dots {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-2);
-  margin-top: var(--spacing-6);
-}
-
-.clients-carousel__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-gray-300);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-base);
-}
-
-.clients-carousel__dot.active,
-.clients-carousel__dot:hover {
-  background: var(--color-secondary);
+  display: none;
 }
 
 /* Responsive Clients Showcase */
@@ -2791,15 +2787,16 @@ select {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .clients-showcase__text {
     flex: none;
     width: 100%;
   }
-  
+
   .clients-showcase__card {
     flex: none;
     width: 100%;
+    border-radius: 12px;
   }
 }
 
@@ -2807,14 +2804,18 @@ select {
   .clients-showcase {
     padding: var(--spacing-12) 0;
   }
-  
+
   .clients-showcase__card {
     padding: var(--spacing-6);
   }
-  
+
   .clients-carousel__track img {
-    width: 100px;
-    height: 50px;
+    height: 32px;
+    max-width: 110px;
+  }
+
+  .clients-carousel__track {
+    gap: var(--spacing-8);
   }
 }
 
