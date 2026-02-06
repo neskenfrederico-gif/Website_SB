@@ -2691,22 +2691,13 @@ select {
 
 /* ===== CLIENTS SHOWCASE SECTION ===== */
 .clients-showcase {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #1a4a5e 100%);
+  background: var(--color-primary);
   padding: var(--spacing-10) 0;
   position: relative;
   overflow: hidden;
 }
 
-.clients-showcase::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
+/* Pattern removed for solid background */
 
 .clients-showcase__wrapper {
   display: flex;
