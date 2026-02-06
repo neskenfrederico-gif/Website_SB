@@ -34,8 +34,8 @@
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
   
-  # HTML - 1 hora
-  ExpiresByType text/html "access plus 1 hour"
+  # HTML - 5 minutos (updates rápidos)
+  ExpiresByType text/html "access plus 5 minutes"
   
   # Manifest e SW - 1 dia
   ExpiresByType application/manifest+json "access plus 1 day"
@@ -55,9 +55,9 @@
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
   
-  # HTML dinâmico
+  # HTML dinâmico - cache curto para updates rápidos
   <FilesMatch "\.(html)$">
-    Header set Cache-Control "public, max-age=3600, must-revalidate"
+    Header set Cache-Control "public, max-age=300, must-revalidate"
   </FilesMatch>
   
   # Service Worker sem cache
