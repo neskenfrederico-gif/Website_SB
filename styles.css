@@ -2718,7 +2718,8 @@ select {
 }
 
 .clients-showcase__text {
-  flex: 0 0 40%;
+  flex: 0 0 35%;
+  min-width: 280px;
 }
 
 .clients-showcase__title {
@@ -2740,11 +2741,12 @@ select {
 }
 
 .clients-showcase__card {
-  flex: 0 0 55%;
+  flex: 1;
   background: white;
   border-radius: var(--radius-2xl);
-  padding: var(--spacing-8);
+  padding: var(--spacing-6) var(--spacing-8);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
 }
 
 .clients-carousel {
@@ -2760,10 +2762,11 @@ select {
 
 .clients-carousel__track img {
   flex: 0 0 auto;
-  width: 120px;
-  height: 60px;
+  height: 50px;
+  width: auto;
+  max-width: 150px;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
+  filter: grayscale(100%) opacity(0.7);
   transition: all var(--transition-base);
 }
 
