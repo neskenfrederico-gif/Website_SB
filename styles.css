@@ -1995,11 +1995,43 @@ select {
   box-shadow: var(--shadow-error-focus);
 }
 
-.contato__form .btn--full {
+/* CTA Bar Button (mesmo formato do WhatsApp CTA) */
+.btn-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  width: 100%;
+  padding: var(--spacing-5) var(--spacing-6);
+  border: none;
   border-radius: var(--radius-xl);
-  padding: var(--spacing-5) var(--spacing-8);
+  color: var(--color-white);
+  cursor: pointer;
+  text-align: left;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-cta--primary {
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.btn-cta--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow-lg);
+}
+
+.btn-cta__icon {
+  flex-shrink: 0;
+}
+
+.btn-cta__content strong {
+  display: block;
   font-size: var(--font-size-lg);
-  font-weight: 600;
+}
+
+.btn-cta__content span {
+  font-size: var(--font-size-sm);
+  opacity: 0.85;
 }
 
 .form-group input:focus,
