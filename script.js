@@ -16,7 +16,7 @@ const sections = document.querySelectorAll("section[id]");
 const navOverlay = document.createElement("div");
 navOverlay.classList.add("nav__overlay");
 navOverlay.id = "nav-overlay";
-document.body.appendChild(navOverlay);
+header.appendChild(navOverlay);
 
 function openMenu() {
   navMenu.classList.add("show");
