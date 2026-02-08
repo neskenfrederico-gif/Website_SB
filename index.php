@@ -403,18 +403,18 @@
           <div class="clients-showcase__card">
             <div class="clients-carousel" id="clients-carousel">
               <div class="clients-carousel__track" id="clients-track">
-                <img src="clientes/geolab.png" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/brainfarma.png" alt="Logo Brainfarma - Cliente de projetos de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/hypera.svg" alt="Logo Hypera Pharma - Cliente de climatização industrial" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/teuto.png" alt="Logo Teuto - Cliente de HVAC farmacêutico" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/jrd-uniphar.svg" alt="Logo JRD Uniphar - Cliente de engenharia de climatização" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/ja-saude-animal.png" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/medquimica.png" alt="Logo Medquímica - Cliente de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/laboratorio-globo.png" alt="Logo Laboratório Globo - Cliente de climatização" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/bioscie.png" alt="Logo Bioscie - Cliente de HVAC industrial" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/ufg.svg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/banco-do-brasil.png" alt="Logo Banco do Brasil - Cliente de climatização corporativa" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/halexistar.svg" alt="Logo Halexistar - Cliente de engenharia HVAC" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" loading="lazy" decoding="async" width="120" height="60" />
               </div>
             </div>
             <div class="clients-carousel__dots" id="clients-dots"></div>
