@@ -111,7 +111,7 @@
   color: var(--color-primary);
 }
 
-.project-cta .btn--whatsapp {
+.project-cta .btn-cta--whatsapp {
   width: auto;
   margin-top: var(--spacing-6);
 }

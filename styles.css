@@ -2833,19 +2833,19 @@ select {
 
 /* ===== CERTIFICATIONS BAR ===== */
 .certifications {
-  padding: var(--spacing-8) 0;
+  background: var(--gradient-dark);
+  padding: var(--spacing-10) 0;
   overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .certifications__track {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-8);
-  flex-wrap: wrap;
-  background: var(--color-gray-900);
-  padding: var(--spacing-8) var(--spacing-10);
-  border-radius: var(--radius-xl);
+  gap: var(--spacing-10);
 }
 
 .certifications__badge {
@@ -2863,7 +2863,9 @@ select {
 
 .certifications__badge svg {
   flex-shrink: 0;
-  opacity: 0.6;
+  opacity: 0.5;
+  width: 22px;
+  height: 22px;
 }
 
 .certifications__badge:hover svg {
@@ -2885,27 +2887,44 @@ select {
 
 .certifications__sublabel {
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 @media (max-width: 768px) {
   .certifications {
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-8) 0;
   }
 
   .certifications__track {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-5);
-    padding: var(--spacing-6) var(--spacing-5);
-    border-radius: var(--radius-lg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-6) var(--spacing-4);
+    justify-items: center;
+  }
+
+  .certifications__badge {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-2);
   }
 
   .certifications__badge svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+  }
+
+  .certifications__text {
+    align-items: center;
+  }
+
+  .certifications__label {
+    font-size: var(--font-size-xs);
+  }
+
+  .certifications__sublabel {
+    font-size: 0.625rem;
   }
 }
 

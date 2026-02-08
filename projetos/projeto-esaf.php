@@ -8,7 +8,7 @@ $og_description   = 'Projeto executivo HVAC com sistema híbrido VRF + Chiller/F
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-6.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-esaf.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770581541'];
+$extra_css        = ['projeto.css?v=1770600000'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

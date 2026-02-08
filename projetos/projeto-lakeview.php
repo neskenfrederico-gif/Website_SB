@@ -8,7 +8,7 @@ $og_description   = 'Projeto executivo de HVAC para apart hotel com 246 apartame
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-3.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-lakeview.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770581541'];
+$extra_css        = ['projeto.css?v=1770600000'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

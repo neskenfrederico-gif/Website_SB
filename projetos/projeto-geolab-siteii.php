@@ -8,7 +8,7 @@ $og_description   = 'Sistema HVAC com salas limpas Grau B/C, UTAs com filtragem 
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-geolab-siteii.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770581541'];
+$extra_css        = ['projeto.css?v=1770600000'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

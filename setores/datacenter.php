@@ -8,7 +8,7 @@ $og_description   = 'Projetos HVAC de precisão: redundância Tier III/IV, micro
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/datacenter.php';
 $canonical        = $og_url;
-$extra_css        = ['setor.css?v=1770574139'];
+$extra_css        = ['setor.css?v=1770600000'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
