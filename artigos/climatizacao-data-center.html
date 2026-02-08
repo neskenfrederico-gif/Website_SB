@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Climatização de Data Centers: CRAC, CRAH, In-Row e Free Cooling | Siqueira e Blanco</title>
+    <meta name="description" content="Guia técnico sobre climatização de data centers: sistemas CRAC, CRAH, In-Row, contenção de corredores, PUE e redundância Tier III/IV. Projetos de precisão para TI." />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Climatização de Data Centers: Guia Técnico" />
+    <meta property="og:description" content="CRAC, CRAH, In-Row, contenção de corredores e eficiência energética (PUE)." />
+    <meta property="og:url" content="https://siqueiraeblanco.com.br/artigos/climatizacao-data-center.html" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1e3a5f" />
+
+    <link rel="canonical" href="https://siqueiraeblanco.com.br/artigos/climatizacao-data-center.html" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+    <link rel="stylesheet" href="../styles.css?v=2" />
+    <link rel="stylesheet" href="artigo.css?v=2" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Climatização de Data Centers: CRAC, CRAH, In-Row e Free Cooling",
+      "datePublished": "2026-02-08",
+      "author": { "@type": "Organization", "name": "Siqueira e Blanco Engenharia HVAC" }
+    }
+    </script>
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
+    
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="../index.html" class="nav__logo">
+          <img src="../Logomarca.png" alt="Siqueira e Blanco" class="logo-img" width="180" height="48" />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="../index.html#home" class="nav__link">Início</a></li>
+            <li class="nav__item"><a href="../index.html#servicos" class="nav__link">Serviços</a></li>
+            <li class="nav__item"><a href="../index.html#sobre" class="nav__link">Sobre</a></li>
+            <li class="nav__item"><a href="../index.html#setores" class="nav__link">Setores</a></li>
+            <li class="nav__item"><a href="../index.html#portfolio" class="nav__link">Portfólio</a></li>
+            <li class="nav__item"><a href="./" class="nav__link active">Artigos</a></li>
+            <li class="nav__item"><a href="../index.html#contato" class="nav__link">Contato</a></li>
+          </ul>
+          <button class="nav__close" id="nav-close" aria-label="Fechar menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="article-breadcrumb">
+        <div class="container">
+          <a href="./">← Voltar aos artigos</a>
+        </div>
+      </div>
+
+      <section class="article-hero">
+        <div class="container">
+          <span class="article-hero__category">Data Centers</span>
+          <h1 class="article-hero__title">Climatização de Data Centers: Guia Técnico</h1>
+          <div class="article-hero__meta">
+            <span>📅 Fevereiro 2026</span>
+            <span>⏱️ 14 min de leitura</span>
+            <span>✍️ Equipe Técnica S&B</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-content">
+        <div class="container">
+          <div class="article-content__wrapper">
+            
+            <p>A <strong>climatização de data centers</strong> é uma das aplicações mais críticas da engenharia HVAC. Servidores e equipamentos de TI geram grande quantidade de calor e exigem <strong>temperatura e umidade controladas 24/7</strong>, com alta confiabilidade e redundância.</p>
+
+            <p>Neste guia, exploramos as principais tecnologias, estratégias de eficiência e requisitos para projetos de climatização de ambientes de missão crítica.</p>
+
+            <h2>Requisitos Térmicos (ASHRAE)</h2>
+
+            <p>A <strong>ASHRAE TC 9.9</strong> define as condições recomendadas para ambientes de TI:</p>
+
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Parâmetro</th>
+                  <th>Classe A1 (Recomendado)</th>
+                  <th>Classe A2 (Permitido)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Temperatura</strong></td>
+                  <td>18-27°C</td>
+                  <td>10-35°C</td>
+                </tr>
+                <tr>
+                  <td><strong>Umidade Relativa</strong></td>
+                  <td>≤60% e ponto de orvalho ≤15°C</td>
+                  <td>20-80%</td>
+                </tr>
+                <tr>
+                  <td><strong>Taxa de variação</strong></td>
+                  <td>≤5°C/hora</td>
+                  <td>≤20°C/hora</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="info-box">
+              <div class="info-box__title">💡 Tendência Atual</div>
+              <p>Data centers modernos operam com temperaturas mais altas (24-27°C) para economizar energia. A cada 1°C de aumento no setpoint, economia de <strong>4-5% no consumo de refrigeração</strong>.</p>
+            </div>
+
+            <h2>Sistemas de Climatização</h2>
+
+            <h3>CRAC (Computer Room Air Conditioner)</h3>
+            <ul>
+              <li>Unidade de ar condicionado de precisão com <strong>compressor próprio</strong></li>
+              <li>Condensação a ar (externa) ou a água (torre/chiller)</li>
+              <li>Ideal para salas de servidores pequenas/médias</li>
+              <li>Capacidades: 5-100 kW por unidade</li>
+            </ul>
+
+            <h3>CRAH (Computer Room Air Handler)</h3>
+            <ul>
+              <li>Unidade de tratamento de ar conectada a <strong>central de água gelada</strong></li>
+              <li>Maior eficiência em grandes instalações</li>
+              <li>Permite free cooling com economizadores</li>
+              <li>Capacidades: 30-300+ kW por unidade</li>
+            </ul>
+
+            <h3>In-Row Cooling</h3>
+            <ul>
+              <li>Unidades instaladas <strong>entre os racks</strong>, na própria fileira</li>
+              <li>Resfriamento próximo à fonte de calor</li>
+              <li>Ideal para alta densidade (>10 kW/rack)</li>
+              <li>Menor mistura de ar quente/frio</li>
+            </ul>
+
+            <h3>Rear Door Heat Exchanger</h3>
+            <ul>
+              <li>Trocador de calor na <strong>porta traseira do rack</strong></li>
+              <li>Remove calor diretamente na saída do servidor</li>
+              <li>Para densidades extremas (20-40 kW/rack)</li>
+            </ul>
+
+            <h2>Estratégias de Eficiência</h2>
+
+            <h3>Contenção de Corredores</h3>
+            <p>Separação física entre corredores quentes e frios:</p>
+            <ul>
+              <li><strong>Contenção de corredor frio</strong> — Isola a entrada de ar frio nos servidores</li>
+              <li><strong>Contenção de corredor quente</strong> — Isola o retorno de ar quente</li>
+              <li>Reduz mistura e melhora eficiência em <strong>20-40%</strong></li>
+            </ul>
+
+            <h3>Free Cooling</h3>
+            <ul>
+              <li><strong>Economizador a ar</strong> — Usa ar externo quando temperatura permite</li>
+              <li><strong>Economizador a água</strong> — Bypass do chiller em temperaturas baixas</li>
+              <li>Economia de <strong>30-70%</strong> dependendo do clima</li>
+            </ul>
+
+            <h3>PUE (Power Usage Effectiveness)</h3>
+            <p>Métrica de eficiência energética de data centers:</p>
+            <ul>
+              <li><strong>PUE = Energia Total / Energia de TI</strong></li>
+              <li>PUE 2.0 — Data center típico antigo</li>
+              <li>PUE 1.5 — Bom desempenho</li>
+              <li>PUE 1.2 — Excelente (hyperscale moderno)</li>
+            </ul>
+
+            <h2>Redundância e Classificação Tier</h2>
+
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Redundância</th>
+                  <th>Disponibilidade</th>
+                  <th>Downtime/Ano</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Tier I</strong></td>
+                  <td>N (sem redundância)</td>
+                  <td>99.67%</td>
+                  <td>28.8 horas</td>
+                </tr>
+                <tr>
+                  <td><strong>Tier II</strong></td>
+                  <td>N+1 (componentes)</td>
+                  <td>99.75%</td>
+                  <td>22 horas</td>
+                </tr>
+                <tr>
+                  <td><strong>Tier III</strong></td>
+                  <td>N+1 (manutenção concorrente)</td>
+                  <td>99.98%</td>
+                  <td>1.6 horas</td>
+                </tr>
+                <tr>
+                  <td><strong>Tier IV</strong></td>
+                  <td>2N (tolerante a falhas)</td>
+                  <td>99.99%</td>
+                  <td>26 minutos</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2>Nossos Projetos de Data Center</h2>
+
+            <ul>
+              <li><strong><a href="../setores/datacenter.html">Setor Data Centers</a></strong> — Atuamos em projetos de climatização de precisão para data centers corporativos e colocations, com redundância Tier III/IV.</li>
+              <li><strong><a href="../projetos/projeto-hypera.html">Hypera Pharma</a></strong> — Sala de servidores com sistema CRAC redundante N+1, atendendo infraestrutura crítica de sistemas de produção farmacêutica.</li>
+              <li><strong><a href="../projetos/projeto-esaf.html">ESAF Brasília</a></strong> — Data center governamental com refrigeração de precisão e backup de climatização.</li>
+              <li><strong>Banco do Brasil</strong> — Projetos de climatização para agências e CPDs regionais com requisitos de alta disponibilidade.</li>
+              <li><strong>UFG</strong> — Data center acadêmico com sistema de contenção de corredores e monitoramento ambiental.</li>
+            </ul>
+
+            <div class="warning-box">
+              <div class="warning-box__title">⚠️ Criticidade</div>
+              <p>Falha na climatização de data center pode causar <strong>desligamento de emergência (EPO)</strong> dos servidores em minutos, resultando em perda de dados e interrupção de serviços. Redundância não é opcional.</p>
+            </div>
+
+            <h2>Monitoramento e Automação</h2>
+
+            <ul>
+              <li><strong>Sensores de temperatura/umidade</strong> — Em cada rack e corredor</li>
+              <li><strong>CFD (Computational Fluid Dynamics)</strong> — Simulação de fluxo de ar</li>
+              <li><strong>DCIM (Data Center Infrastructure Management)</strong> — Gestão integrada</li>
+              <li><strong>Alarmes e notificações</strong> — 24/7 para equipe de operação</li>
+            </ul>
+
+            <div class="article-cta">
+              <h3>Projeto de Data Center?</h3>
+              <p>Projetamos sistemas de climatização de precisão para data centers de qualquer porte, com redundância Tier II a IV.</p>
+              <a href="../index.html#contato" class="btn">Solicitar Orçamento</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="related-articles">
+        <div class="container">
+          <h2 class="section__title">Artigos <span class="gradient-text">Relacionados</span></h2>
+          <div class="related-articles__grid">
+            <a href="sistemas-agua-gelada-cag.html" class="related-card">
+              <span class="related-card__category">Sistemas HVAC</span>
+              <h3 class="related-card__title">Sistemas de Água Gelada</h3>
+              <p class="related-card__excerpt">Chillers e CRAH para grandes data centers.</p>
+            </a>
+            <a href="o-que-e-pmoc.html" class="related-card">
+              <span class="related-card__category">Legislação</span>
+              <h3 class="related-card__title">O que é PMOC?</h3>
+              <p class="related-card__excerpt">Manutenção obrigatória para ambientes climatizados.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="../Logomarca.png" alt="Siqueira e Blanco" class="footer__logo" width="150" height="40" loading="lazy" />
+            <p>Engenharia HVAC de alta complexidade para data centers e missão crítica.</p>
+          </div>
+          <div class="footer__contact">
+            <h4>Contato</h4>
+            <p>📍 Anápolis - GO</p>
+            <p>📞 (62) 99225-0067</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2026 Siqueira e Blanco Engenharia.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../script.js" defer></script>
+  </body>
+</html>

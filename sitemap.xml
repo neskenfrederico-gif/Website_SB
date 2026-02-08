@@ -16,6 +16,80 @@
     <priority>0.3</priority>
   </url>
   
+  <!-- Artigos -->
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/classificacao-salas-limpas-iso-14644.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-vrf.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-split.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/climatizacao-data-center.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/pressurizacao-escadas.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/ventilacao-industrial.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/bim-hvac-projetos.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://siqueiraeblanco.com.br/artigos/calculo-carga-termica.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Setores -->
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/farmaceutico.html</loc>
