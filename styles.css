@@ -522,7 +522,8 @@ select {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-10);
-  padding: var(--spacing-12) 0 var(--spacing-20);
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-20);
   min-height: calc(100vh - var(--header-height));
   justify-content: center;
 }
@@ -2016,7 +2017,8 @@ select {
   }
 
   .hero__content {
-    padding: var(--spacing-8) 0 var(--spacing-6);
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-6);
     min-height: auto;
     gap: var(--spacing-6);
   }
