@@ -3,11 +3,11 @@
   <!-- Homepage -->
   <url>
     <loc>https://siqueiraeblanco.com.br/</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- Páginas Principais -->
   <url>
     <loc>https://siqueiraeblanco.com.br/sobre/</loc>
@@ -33,7 +33,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+  <url>
+    <loc>https://siqueiraeblanco.com.br/setores/</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Política de Privacidade -->
   <url>
     <loc>https://siqueiraeblanco.com.br/privacidade.html</loc>
@@ -41,7 +47,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  
+
   <!-- Artigos -->
   <url>
     <loc>https://siqueiraeblanco.com.br/artigos/</loc>
@@ -115,139 +121,139 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <!-- Setores -->
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/farmaceutico.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/datacenter.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/corporativo.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/industrial.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/pressurizacao.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/setores/pos-metais.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Projetos -->
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-injetaveis.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-cosmed.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-lakeview.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-goinn.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineavitta.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineag.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-esaf.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-prf.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab-siteii.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-ontex.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-brainfarma-fluxos.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-savoy.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-louisdreyfus.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypermarcas.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypera.html</loc>
-    <lastmod>2026-02-06</lastmod>
+    <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
