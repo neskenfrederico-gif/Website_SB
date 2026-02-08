@@ -2735,8 +2735,8 @@ select {
 /* ===== BACK TO TOP BUTTON ===== */
 .back-to-top {
   position: fixed;
-  bottom: 90px;
-  right: 20px;
+  bottom: calc(var(--spacing-6) + 56px + var(--spacing-3));
+  right: calc(var(--spacing-6) + 4px);
   width: 48px;
   height: 48px;
   background: var(--gradient-primary);
