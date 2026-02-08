@@ -66,11 +66,24 @@ document.addEventListener("keydown", (e) => {
 
 // Close menu when clicking on a link
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
     closeMenu();
     // Update active link
     navLinks.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
+
+    // Anchor links: scroll after body reflow (position:fixed removal)
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#") && href.length > 1) {
+      e.preventDefault();
+      e.stopImmediatePropagation(); // Prevent duplicate smooth-scroll handler
+      requestAnimationFrame(() => {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
   });
 });
 
