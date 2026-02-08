@@ -64,19 +64,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// ===== Mobile Dropdown Toggle =====
-const dropdownParent = document.querySelector(".nav__item--dropdown > .nav__link");
-if (dropdownParent) {
-  dropdownParent.addEventListener("click", (e) => {
-    // Only intercept on mobile (when nav menu is in mobile mode)
-    if (window.innerWidth < 768) {
-      e.preventDefault();
-      const parentItem = dropdownParent.closest(".nav__item--dropdown");
-      parentItem.classList.toggle("dropdown-open");
-    }
-  });
-}
-
 // Close menu when clicking on a link
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -85,11 +72,6 @@ navLinks.forEach((link) => {
     navLinks.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
   });
-});
-
-// Close menu when clicking dropdown links (sub-items)
-document.querySelectorAll(".nav__dropdown-link").forEach((link) => {
-  link.addEventListener("click", closeMenu);
 });
 
 // ===== Unified Scroll Handler =====
