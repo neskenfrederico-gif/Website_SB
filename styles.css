@@ -3619,6 +3619,8 @@ select {
   overflow: hidden;
   position: relative;
   cursor: grab;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
 }
 
 .clients-carousel:active {
