@@ -2954,21 +2954,24 @@ select {
 
 /* Page Hero */
 .page-hero {
-  background: var(--gradient-dark);
-  padding: calc(var(--header-height) + var(--spacing-16)) 0 var(--spacing-16);
+  background: linear-gradient(135deg, #152942 0%, #0f172a 100%);
+  padding-top: 160px;
+  padding-bottom: 64px;
   text-align: center;
-  color: var(--color-white);
+  color: #ffffff;
+  min-height: 280px;
 }
 
 .page-hero__title {
-  font-size: var(--font-size-5xl);
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: var(--spacing-4);
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .page-hero__subtitle {
-  font-size: var(--font-size-xl);
-  color: var(--color-gray-300);
+  font-size: 1.25rem;
+  color: #cbd5e1;
   max-width: 600px;
   margin: 0 auto;
 }
