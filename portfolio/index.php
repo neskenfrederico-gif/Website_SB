@@ -95,7 +95,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Geolab Site II -->
           <a class="project-card-link" href="../projetos/projeto-geolab-siteii.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--11">
+              <div class="project-card__image project-card__image--1">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -122,7 +122,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Brainfarma Injetáveis -->
           <a class="project-card-link" href="../projetos/projeto-injetaveis.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image">
+              <div class="project-card__image project-card__image--2">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -149,7 +149,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- COSMED -->
           <a class="project-card-link" href="../projetos/projeto-cosmed.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--2">
+              <div class="project-card__image project-card__image--3">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -176,7 +176,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Geolab -->
           <a class="project-card-link" href="../projetos/projeto-geolab.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--8">
+              <div class="project-card__image project-card__image--4">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -203,7 +203,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Brainfarma Fluxos -->
           <a class="project-card-link" href="../projetos/projeto-brainfarma-fluxos.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--11">
+              <div class="project-card__image project-card__image--5">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -230,7 +230,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Hypera -->
           <a class="project-card-link" href="../projetos/projeto-hypera.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--15">
+              <div class="project-card__image project-card__image--6">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -257,7 +257,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Hypermarcas -->
           <a class="project-card-link" href="../projetos/projeto-hypermarcas.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--16">
+              <div class="project-card__image project-card__image--7">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -284,7 +284,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Lake View Resort -->
           <a class="project-card-link" href="../projetos/projeto-lakeview.php">
             <article class="project-card" data-category="hoteleiro">
-              <div class="project-card__image project-card__image--3">
+              <div class="project-card__image project-card__image--8">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Hoteleiro</span>
                 </div>
@@ -311,7 +311,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- GoInn -->
           <a class="project-card-link" href="../projetos/projeto-goinn.php">
             <article class="project-card" data-category="hoteleiro">
-              <div class="project-card__image project-card__image--4">
+              <div class="project-card__image project-card__image--9">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Hoteleiro</span>
                 </div>
@@ -338,7 +338,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Linea Vitta -->
           <a class="project-card-link" href="../projetos/projeto-lineavitta.php">
             <article class="project-card" data-category="comercial">
-              <div class="project-card__image project-card__image--5">
+              <div class="project-card__image project-card__image--10">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Comercial</span>
                 </div>
@@ -365,7 +365,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Linea G -->
           <a class="project-card-link" href="../projetos/projeto-lineag.php">
             <article class="project-card" data-category="comercial">
-              <div class="project-card__image project-card__image--9">
+              <div class="project-card__image project-card__image--11">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Comercial</span>
                 </div>
@@ -392,7 +392,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- ESAF -->
           <a class="project-card-link" href="../projetos/projeto-esaf.php">
             <article class="project-card" data-category="governamental">
-              <div class="project-card__image project-card__image--6">
+              <div class="project-card__image project-card__image--12">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Governamental</span>
                 </div>
@@ -419,7 +419,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- PRF -->
           <a class="project-card-link" href="../projetos/projeto-prf.php">
             <article class="project-card" data-category="governamental">
-              <div class="project-card__image project-card__image--7">
+              <div class="project-card__image project-card__image--13">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Governamental</span>
                 </div>
@@ -446,7 +446,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Ontex -->
           <a class="project-card-link" href="../projetos/projeto-ontex.php">
             <article class="project-card" data-category="industrial">
-              <div class="project-card__image project-card__image--12">
+              <div class="project-card__image project-card__image--14">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Industrial</span>
                 </div>
@@ -473,7 +473,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Savoy -->
           <a class="project-card-link" href="../projetos/projeto-savoy.php">
             <article class="project-card" data-category="industrial">
-              <div class="project-card__image project-card__image--13">
+              <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Industrial</span>
                 </div>
@@ -500,7 +500,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Louis Dreyfus -->
           <a class="project-card-link" href="../projetos/projeto-louisdreyfus.php">
             <article class="project-card" data-category="industrial">
-              <div class="project-card__image project-card__image--14">
+              <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Industrial</span>
                 </div>

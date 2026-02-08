@@ -1745,6 +1745,8 @@ select {
 
 /* Background images applied on demand via IntersectionObserver */
 .project-card__image.lazy-loaded { background-image: url("portfolio/portfolio-1.webp?v=3"); }
+.project-card__image--1.lazy-loaded { background-image: url("portfolio/portfolio-1.webp?v=3"); }
+.project-card__image--1 { background-color: var(--color-primary); }
 .project-card__image--2.lazy-loaded { background-image: url("portfolio/portfolio-2.webp?v=3"); }
 .project-card__image--3.lazy-loaded { background-image: url("portfolio/portfolio-3.webp?v=3"); }
 .project-card__image--4.lazy-loaded { background-image: url("portfolio/portfolio-4.webp?v=3"); }
