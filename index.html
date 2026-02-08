@@ -35,7 +35,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=13" />
+    <link rel="stylesheet" href="styles.css?v=14" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -272,11 +272,14 @@
         <div class="hero__slide active" data-bg-webp="banner_hero.webp" data-bg-jpg="banner_hero.jpg" style="background-image: url('banner_hero.webp'); background-image: image-set(url('banner_hero.webp') type('image/webp'), url('banner_hero.jpg') type('image/jpeg'));"></div>
         <div class="hero__slide" data-bg-webp="banner_hero1.webp" data-bg-jpg="banner_hero1.jpg"></div>
         <div class="hero__slide" data-bg-webp="banner_hero2.webp" data-bg-jpg="banner_hero2.jpg"></div>
+        <div class="hero__slide" data-bg-webp="banner_hero.webp" data-bg-jpg="banner_hero.jpg"></div>
+        <div class="hero__slide" data-bg-webp="banner_hero1.webp" data-bg-jpg="banner_hero1.jpg"></div>
       </div>
       <div class="hero__overlay"></div>
       <div class="hero__particles" id="particles"></div>
       <div class="hero__content container">
-        <div class="hero__data">
+        <!-- Slide 1: Institucional -->
+        <div class="hero__page active" data-hero-page="0">
           <span class="hero__subtitle">Engenharia HVAC Especializada</span>
           <h1 class="hero__title">
             Engenharia <span class="gradient-text">HVAC</span> para<br>
@@ -284,56 +287,85 @@
           </h1>
           <p class="hero__description">
             <strong>Salas limpas, data centers e grandes plantas industriais.</strong>
-            Projetos executivos, modelagem BIM e comissionamento para ambientes que exigem controle absoluto de temperatura, umidade e contaminação — da viabilidade técnica à entrega da obra.
+            Projetos executivos, modelagem BIM e comissionamento para ambientes que exigem controle absoluto de temperatura, umidade e contaminação.
           </p>
-          <div class="hero__norms-bar">
-            <span class="hero__norms">ANVISA</span>
-            <span class="hero__norms">ASHRAE</span>
-            <span class="hero__norms">ISO&nbsp;14644</span>
-            <span class="hero__norms">NBR&nbsp;16401</span>
-            <span class="hero__norms">SMACNA</span>
-          </div>
-          <div class="hero__trust">
-            <div class="hero__trust-item">
-              <span class="hero__trust-value">200+</span>
-              <span class="hero__trust-label">Projetos</span>
-            </div>
-            <div class="hero__trust-divider"></div>
-            <div class="hero__trust-item">
-              <span class="hero__trust-value">50k+</span>
-              <span class="hero__trust-label">TRs Projetados</span>
-            </div>
-            <div class="hero__trust-divider"></div>
-            <div class="hero__trust-item">
-              <span class="hero__trust-value">12</span>
-              <span class="hero__trust-label">Estados</span>
-            </div>
-          </div>
           <div class="hero__buttons">
-            <a href="#contato" class="btn btn--primary">
-              <span>Solicitar Orçamento</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="portfolio/" class="hero__link">
-              Ver Projetos
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
+            <a href="contato/" class="btn btn--primary"><span>Solicitar Orçamento</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="portfolio/" class="hero__link">Ver Projetos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+        <!-- Slide 2: Salas Limpas -->
+        <div class="hero__page" data-hero-page="1">
+          <span class="hero__subtitle">Setor Farmacêutico</span>
+          <h2 class="hero__title">
+            <span class="gradient-text">Salas Limpas</span> ISO 14644<br>
+            para a Indústria <span class="gradient-text">Farmacêutica</span>
+          </h2>
+          <p class="hero__description">
+            <strong>Classificação ISO 5 a 8, filtração HEPA/ULPA e cascata de pressão.</strong>
+            Projetos que garantem conformidade ANVISA e FDA para produção de medicamentos, cosméticos e dispositivos médicos.
+          </p>
+          <div class="hero__buttons">
+            <a href="setores/farmaceutico.html" class="btn btn--primary"><span>Projetos Farmacêuticos</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="hero__link">Guia ISO 14644 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+        <!-- Slide 3: Data Centers -->
+        <div class="hero__page" data-hero-page="2">
+          <span class="hero__subtitle">Climatização de Precisão</span>
+          <h2 class="hero__title">
+            <span class="gradient-text">Data Centers</span> com<br>
+            Redundância <span class="gradient-text">Tier III/IV</span>
+          </h2>
+          <p class="hero__description">
+            <strong>CRAC, CRAH e In-Row Cooling para missão crítica.</strong>
+            Sistemas de precisão com PUE otimizado, contenção de corredores quente/frio e monitoramento contínuo 24/7.
+          </p>
+          <div class="hero__buttons">
+            <a href="setores/datacenter.html" class="btn btn--primary"><span>Explorar Soluções</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="artigos/climatizacao-data-center.html" class="hero__link">Artigo Data Centers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+        <!-- Slide 4: BIM -->
+        <div class="hero__page" data-hero-page="3">
+          <span class="hero__subtitle">Tecnologia de Projeto</span>
+          <h2 class="hero__title">
+            Projetos <span class="gradient-text">BIM</span> com<br>
+            <span class="gradient-text">Clash Detection</span> e LOD 400
+          </h2>
+          <p class="hero__description">
+            <strong>Modelagem 3D paramétrica em Revit MEP.</strong>
+            Detecção de interferências antes da obra, extração automática de quantitativos e coordenação multidisciplinar que elimina retrabalho no canteiro.
+          </p>
+          <div class="hero__buttons">
+            <a href="servicos/" class="btn btn--primary"><span>Conheça a Tecnologia</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="artigos/bim-hvac-projetos.html" class="hero__link">Artigo sobre BIM <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+        <!-- Slide 5: Retrofit -->
+        <div class="hero__page" data-hero-page="4">
+          <span class="hero__subtitle">Modernização Industrial</span>
+          <h2 class="hero__title">
+            <span class="gradient-text">Retrofit</span> Inteligente:<br>
+            Reduza até <span class="gradient-text">40%</span> dos Custos
+          </h2>
+          <p class="hero__description">
+            <strong>Substitua chillers obsoletos e automatize sem parar a produção.</strong>
+            Diagnóstico técnico completo, ROI em menos de 3 anos e adequação normativa com intervenção mínima na operação.
+          </p>
+          <div class="hero__buttons">
+            <a href="contato/" class="btn btn--primary"><span>Solicitar Diagnóstico</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="artigos/retrofit-hvac-quando-fazer.html" class="hero__link">Guia de Retrofit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
 
+        <!-- Hero Navigation -->
+        <div class="hero__nav" id="hero-nav">
+          <div class="hero__dots" id="hero-dots"></div>
+          <div class="hero__progress">
+            <div class="hero__progress-bar" id="hero-progress"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -388,6 +420,56 @@
               </div>
             </div>
             <div class="clients-carousel__dots" id="clients-dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificações & Credenciais -->
+    <section class="certifications" aria-label="Certificações e credenciais técnicas">
+      <div class="container">
+        <div class="certifications__track">
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">CREA-GO</span>
+              <span class="certifications__sublabel">Registro Ativo</span>
+            </div>
+          </div>
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">ASHRAE</span>
+              <span class="certifications__sublabel">Member</span>
+            </div>
+          </div>
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">ISO 14644</span>
+              <span class="certifications__sublabel">Compliance</span>
+            </div>
+          </div>
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">ANVISA</span>
+              <span class="certifications__sublabel">RDC Conforme</span>
+            </div>
+          </div>
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">NBR 16401</span>
+              <span class="certifications__sublabel">ABNT</span>
+            </div>
+          </div>
+          <div class="certifications__badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            <div class="certifications__text">
+              <span class="certifications__label">SMACNA</span>
+              <span class="certifications__sublabel">Standards</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1521,6 +1603,68 @@
       </div>
     </section>
 
+    <!-- Artigos em Destaque -->
+    <section class="section articles-home" id="artigos-home">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__subtitle">Base de Conhecimento</span>
+          <h2 class="section__title">Artigos <span class="gradient-text">Técnicos</span></h2>
+        </div>
+        <div class="articles-home__grid">
+          <a href="artigos/o-que-e-pmoc.html" class="article-home-card glass-card fade-in stagger-1">
+            <div class="article-home-card__category">Legislação</div>
+            <div class="article-home-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <h3 class="article-home-card__title">O que é PMOC? Guia Completo sobre a Lei 13.589</h3>
+            <p class="article-home-card__excerpt">Entenda a obrigatoriedade do Plano de Manutenção, Operação e Controle, as multas por descumprimento e como implementar.</p>
+            <div class="article-home-card__meta">
+              <span>8 min de leitura</span>
+              <span class="article-home-card__arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="article-home-card glass-card fade-in stagger-2">
+            <div class="article-home-card__category">Salas Limpas</div>
+            <div class="article-home-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            </div>
+            <h3 class="article-home-card__title">Classificação de Salas Limpas: ISO 14644 Explicada</h3>
+            <p class="article-home-card__excerpt">Classes ISO 5 a 8, contagem de partículas, requisitos de filtragem HEPA/ULPA e como especificar para sua aplicação.</p>
+            <div class="article-home-card__meta">
+              <span>12 min de leitura</span>
+              <span class="article-home-card__arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="artigos/retrofit-hvac-quando-fazer.html" class="article-home-card glass-card fade-in stagger-3">
+            <div class="article-home-card__category">Retrofit</div>
+            <div class="article-home-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <h3 class="article-home-card__title">Retrofit de HVAC: Quando Vale a Pena Modernizar?</h3>
+            <p class="article-home-card__excerpt">Análise de ROI, sinais de que seu sistema precisa de retrofit, e como planejar a modernização sem parar a operação.</p>
+            <div class="article-home-card__meta">
+              <span>10 min de leitura</span>
+              <span class="article-home-card__arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="articles-home__cta">
+          <a href="artigos/" class="btn btn--outline">
+            Ver Todos os Artigos
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Contato Section -->
     <section class="section contato" id="contato">
       <div class="container">
@@ -1708,20 +1852,60 @@
       </div>
     </section>
 
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+      <div class="container">
+        <div class="newsletter__wrapper">
+          <div class="newsletter__content">
+            <span class="newsletter__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <h2 class="newsletter__title">Receba Conteúdo <span class="gradient-text">Técnico</span></h2>
+            <p class="newsletter__description">Normas atualizadas, cases de engenharia e white papers direto no seu e-mail. Sem spam — apenas conteúdo relevante para profissionais de HVAC.</p>
+          </div>
+          <form class="newsletter__form" id="newsletter-form" action="https://formspree.io/f/mjgropnr" method="POST">
+            <input type="hidden" name="_subject" value="Nova inscrição newsletter SB">
+            <input type="hidden" name="form_type" value="newsletter">
+            <div class="newsletter__fields">
+              <input type="text" name="name" placeholder="Seu nome" required class="newsletter__input" autocomplete="name">
+              <input type="email" name="email" placeholder="seu@email.com" required class="newsletter__input" autocomplete="email">
+              <button type="submit" class="btn btn--primary newsletter__btn">
+                <span>Inscrever-se</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+            <p class="newsletter__privacy">Ao se inscrever, você concorda com nossa <a href="/privacidade.html">Política de Privacidade</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     </main>
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
-        <div class="footer__logo">
-          <a href="/" class="nav__logo" aria-label="Ir para página inicial">
-             <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="60" loading="lazy">
-          </a>
-          <p class="logo-text">Soluções de engenharia HVAC de alta performance para indústrias e grandes empreendimentos.</p>
-        </div>
-          <div class="footer__links">
-            <h4>Links Rápidos</h4>
-            <ul>
+          <div class="footer__brand">
+            <a href="/" class="nav__logo" aria-label="Ir para página inicial">
+              <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="60" loading="lazy">
+            </a>
+            <p class="footer__description">Soluções de engenharia HVAC de alta performance para indústrias e grandes empreendimentos.</p>
+            <div class="footer__social">
+              <a href="https://www.linkedin.com/company/siqueiraeblanco/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/saborengenharia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__col footer__col--accordion">
+            <button class="footer__col-toggle" aria-expanded="false">
+              <h4>Links Rápidos</h4>
+              <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="footer__col-body">
               <li><a href="#home">Início</a></li>
               <li><a href="sobre/">Sobre Nós</a></li>
               <li><a href="servicos/">Serviços</a></li>
@@ -1729,19 +1913,40 @@
               <li><a href="contato/">Contato</a></li>
             </ul>
           </div>
-          <div class="footer__contact">
-            <h4>Contato</h4>
-            <p>
-              Av. Contorno nº 751, Qd. 12 Lt. A<br />Res. Arco Íris<br />Anápolis – GO
-            </p>
-            <p>(62) 99225-0067</p>
-            <p>nesken@fluxo.eng.br</p>
+
+          <div class="footer__col footer__col--accordion">
+            <button class="footer__col-toggle" aria-expanded="false">
+              <h4>Conteúdo</h4>
+              <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <ul class="footer__col-body">
+              <li><a href="artigos/">Artigos Técnicos</a></li>
+              <li><a href="artigos/o-que-e-pmoc.html">Guia PMOC</a></li>
+              <li><a href="artigos/classificacao-salas-limpas-iso-14644.html">Salas Limpas ISO</a></li>
+              <li><a href="setores/farmaceutico.html">Setor Farmacêutico</a></li>
+              <li><a href="setores/datacenter.html">Data Centers</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--accordion">
+            <button class="footer__col-toggle" aria-expanded="false">
+              <h4>Contato</h4>
+              <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="footer__col-body">
+              <p>Av. Contorno nº 751, Qd. 12 Lt. A<br>Res. Arco Íris — Anápolis, GO</p>
+              <p>(62) 99225-0067</p>
+              <p>nesken@fluxo.eng.br</p>
+              <p class="footer__hours">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Seg–Sex: 08h–18h
+              </p>
+            </div>
           </div>
         </div>
+
         <div class="footer__bottom">
-          <p>
-            &copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.
-          </p>
+          <p>&copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
           <p>CNPJ: 16.887.958/0001-86 | <a href="/privacidade.html" class="footer__privacy-link">Política de Privacidade</a></p>
         </div>
       </div>
@@ -1764,7 +1969,7 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1770408001" defer></script>
+    <script src="script.js?v=1770408002" defer></script>
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBL037W0QL"></script>
