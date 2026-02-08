@@ -8,7 +8,7 @@ $og_description   = 'Climatização VRF e automação integrada para galpão aut
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-hypera.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770581541'];
+$extra_css        = ['projeto.css?v=1770600000'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
