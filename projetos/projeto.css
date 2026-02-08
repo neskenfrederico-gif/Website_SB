@@ -3,35 +3,15 @@
 */
 
 .project-hero {
-  padding: calc(var(--header-height) + 1rem) 0 var(--spacing-6);
-  background: radial-gradient(1200px 600px at 10% 0%, rgba(78, 205, 196, 0.18), transparent 60%),
-              radial-gradient(1000px 500px at 90% 10%, rgba(37, 99, 235, 0.22), transparent 55%),
-              linear-gradient(180deg, rgba(10, 12, 16, 0.95), rgba(10, 12, 16, 0.92));
+  padding: calc(var(--header-height) + var(--spacing-16)) 0 var(--spacing-16);
+  background: var(--gradient-dark);
   color: var(--color-white);
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.project-hero__badge {
-  display: inline-flex;
-  align-items: center;
-  padding: var(--spacing-2) var(--spacing-4);
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: var(--backdrop-blur-base);
-  -webkit-backdrop-filter: var(--backdrop-blur-base);
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.project-hero__title {
-  margin: var(--spacing-4) 0 var(--spacing-3);
-  font-size: clamp(1.8rem, 3vw, 3rem);
-  line-height: 1.1;
-}
+/* Hero usa .page-hero__title, .page-hero__subtitle, .section__subtitle, .breadcrumb de styles.css */
 
 .project-hero__meta {
   display: grid;
@@ -211,65 +191,7 @@
   font-size: var(--font-size-sm);
 }
 
-/* Breadcrumb: quando está FORA do hero */
-.project-breadcrumb {
-  padding-top: calc(var(--header-height) + 0.25rem);
-  padding-bottom: 0.75rem;
-  margin-bottom: 0;
-  color: var(--color-gray-500);
-  font-size: var(--font-size-sm);
-  position: relative;
-  z-index: 1;
-}
-
-/* Quando breadcrumb vem antes do hero, o hero não precisa limpar o header de novo */
-.project-breadcrumb + .project-hero {
-  padding-top: 0.5rem;
-}
-
-/* Breadcrumb: quando está DENTRO do hero (HTML novo) */
-.project-hero > .project-breadcrumb {
-  padding-top: 0;
-  padding-bottom: var(--spacing-4);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.project-breadcrumb a {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-hero > .project-breadcrumb a {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.project-breadcrumb a:hover {
-  color: var(--color-primary-dark);
-  text-decoration: underline;
-}
-
-.project-hero > .project-breadcrumb a:hover {
-  color: rgba(255, 255, 255, 0.95);
-}
-
 @media (max-width: 768px) {
-  .project-hero {
-    padding: calc(var(--header-height) + 0.75rem) 0 var(--spacing-4);
-  }
-
-  .project-breadcrumb {
-    padding-top: calc(var(--header-height) + 0.25rem);
-  }
-
-  .project-breadcrumb + .project-hero {
-    padding-top: 0.5rem;
-  }
-
-  .project-hero__title {
-    font-size: clamp(1.6rem, 6vw, 2.4rem);
-  }
-
   .project-text p,
   .project-list {
     overflow-wrap: anywhere;
