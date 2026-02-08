@@ -2020,6 +2020,18 @@ select {
   box-shadow: var(--shadow-xl), var(--shadow-glow-lg);
 }
 
+.btn-cta--whatsapp {
+  background: #25d366;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.btn-cta--whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: #1ebe5b;
+}
+
 .btn-cta__icon {
   flex-shrink: 0;
 }
