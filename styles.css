@@ -1895,40 +1895,13 @@ select {
     display: none;
   }
 
-  /* Dropdown no mobile — escondido por padrão, abre via JS toggle */
+  /* Mobile: esconde dropdown e seta — Setores vira link direto */
   .nav__dropdown {
-    position: static;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-    box-shadow: none;
-    background: transparent;
-    padding: 0 0 0 var(--spacing-6);
-    margin-top: 0;
-    min-width: auto;
-    transition: max-height var(--transition-base), opacity var(--transition-base), visibility var(--transition-base), padding var(--transition-base);
-  }
-
-  .nav__item--dropdown.dropdown-open .nav__dropdown {
-    opacity: 1;
-    visibility: visible;
-    max-height: 400px;
-    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-6);
-  }
-
-  .nav__dropdown-link {
-    padding: var(--spacing-2) var(--spacing-4);
-    font-size: var(--font-size-base);
+    display: none;
   }
 
   .dropdown-arrow {
-    transition: transform var(--transition-fast);
-  }
-
-  .nav__item--dropdown.dropdown-open .dropdown-arrow {
-    transform: rotate(180deg);
+    display: none;
   }
 
   .hero__stats {
