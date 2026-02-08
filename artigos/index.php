@@ -1,99 +1,49 @@
+<?php
+$base             = '..';
+$active_page      = 'artigos';
+$page_title       = 'Artigos Técnicos sobre HVAC e Climatização | Siqueira e Blanco';
+$page_description = 'Artigos técnicos sobre engenharia HVAC: salas limpas, PMOC, BIM na construção civil, retrofit de sistemas e normas ISO 14644. Conteúdo para profissionais.';
+$og_title         = 'Artigos Técnicos HVAC | Siqueira e Blanco';
+$og_description   = 'Conteúdo técnico sobre climatização industrial, salas limpas e boas práticas de engenharia HVAC.';
+$og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
+$og_url           = 'https://siqueiraeblanco.com.br/artigos/';
+$canonical        = 'https://siqueiraeblanco.com.br/artigos/';
+$extra_css        = ['artigo.css?v=1770574139'];
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Artigos Técnicos sobre HVAC e Climatização | Siqueira e Blanco</title>
-    <meta name="description" content="Artigos técnicos sobre engenharia HVAC: salas limpas, PMOC, BIM na construção civil, retrofit de sistemas e normas ISO 14644. Conteúdo para profissionais." />
-    <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content="Artigos Técnicos HVAC | Siqueira e Blanco" />
-    <meta property="og:description" content="Conteúdo técnico sobre climatização industrial, salas limpas e boas práticas de engenharia HVAC." />
-    <meta property="og:image" content="https://siqueiraeblanco.com.br/banner_hero.webp" />
-    <meta property="og:url" content="https://siqueiraeblanco.com.br/artigos/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#1e3a5f" />
-
-    <link rel="canonical" href="https://siqueiraeblanco.com.br/artigos/" />
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-
-    <link rel="stylesheet" href="../styles.css?v=16" />
-    <link rel="stylesheet" href="artigo.css?v=1770574139" />
-
+    <?php include '../includes/head.php'; ?>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Artigos Técnicos sobre HVAC",
-      "description": "Artigos técnicos sobre engenharia HVAC, salas limpas, PMOC e climatização industrial.",
-      "url": "https://siqueiraeblanco.com.br/artigos/",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Siqueira e Blanco Engenharia HVAC",
-        "url": "https://siqueiraeblanco.com.br/"
-      }
-    }
-    </script>
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Artigos Técnicos sobre HVAC",
+          "description": "Artigos técnicos sobre engenharia HVAC, salas limpas, PMOC e climatização industrial.",
+          "url": "https://siqueiraeblanco.com.br/artigos/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Siqueira e Blanco Engenharia HVAC",
+            "url": "https://siqueiraeblanco.com.br/"
+          }
+        }
+        </script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
-        { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://siqueiraeblanco.com.br/artigos/" }
-      ]
-    }
-    </script>
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://siqueiraeblanco.com.br/artigos/" }
+          ]
+        }
+        </script>
   </head>
 
   <body>
-    <a href="#main-content" class="skip-to-content">Pular para o conteúdo</a>
-    
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="../" class="nav__logo">
-          <img src="../Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48" />
-        </a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-          <li class="nav__item"><a href="../" class="nav__link">Início</a></li>
-          <li class="nav__item"><a href="../servicos/" class="nav__link">Serviços</a></li>
-          <li class="nav__item"><a href="../sobre/" class="nav__link">Sobre</a></li>
-          <li class="nav__item nav__item--dropdown">
-            <a href="../setores/" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
-            <ul class="nav__dropdown">
-              <li><a href="../setores/farmaceutico.html" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-              <li><a href="../setores/datacenter.html" class="nav__dropdown-link">💾 Data Centers</a></li>
-              <li><a href="../setores/corporativo.html" class="nav__dropdown-link">🏢 Corporativo</a></li>
-              <li><a href="../setores/industrial.html" class="nav__dropdown-link">🏭 Industrial</a></li>
-              <li><a href="../setores/pressurizacao.html" class="nav__dropdown-link">🚨 Pressurização</a></li>
-              <li><a href="../setores/pos-metais.html" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="../portfolio/" class="nav__link">Portfólio</a></li>
-          <li class="nav__item"><a href="../artigos/" class="nav__link active">Artigos</a></li>
-          <li class="nav__item"><a href="../contato/" class="nav__link">Contato</a></li>
-        </ul>
-          <button class="nav__close" id="nav-close" aria-label="Fechar menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-          </button>
-        </div>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </nav>
-    </header>
+    <?php include '../includes/header.php'; ?>
 
-    <main id="main-content">
+<main id="main-content">
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -112,7 +62,7 @@
           <div class="articles-grid">
             
             <!-- Artigo 1 -->
-            <a href="o-que-e-pmoc.html" class="article-card">
+            <a href="o-que-e-pmoc.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
                 <span class="article-card__category">Legislação</span>
@@ -126,7 +76,7 @@
             </a>
 
             <!-- Artigo 2 -->
-            <a href="classificacao-salas-limpas-iso-14644.html" class="article-card">
+            <a href="classificacao-salas-limpas-iso-14644.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
                 <span class="article-card__category">Salas Limpas</span>
@@ -140,7 +90,7 @@
             </a>
 
             <!-- Artigo 3 -->
-            <a href="retrofit-hvac-quando-fazer.html" class="article-card">
+            <a href="retrofit-hvac-quando-fazer.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
                 <span class="article-card__category">Retrofit</span>
@@ -154,7 +104,7 @@
             </a>
 
             <!-- Artigo 4 -->
-            <a href="sistemas-agua-gelada-cag.html" class="article-card">
+            <a href="sistemas-agua-gelada-cag.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
                 <span class="article-card__category">Sistemas HVAC</span>
@@ -168,7 +118,7 @@
             </a>
 
             <!-- Artigo 5 -->
-            <a href="sistemas-vrf.html" class="article-card">
+            <a href="sistemas-vrf.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div>
                 <span class="article-card__category">Sistemas HVAC</span>
@@ -182,7 +132,7 @@
             </a>
 
             <!-- Artigo 6 -->
-            <a href="sistemas-split.html" class="article-card">
+            <a href="sistemas-split.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 17v2M18 17v2M12 7V5"/></svg></div>
                 <span class="article-card__category">Sistemas HVAC</span>
@@ -196,7 +146,7 @@
             </a>
 
             <!-- Artigo 7 -->
-            <a href="climatizacao-data-center.html" class="article-card">
+            <a href="climatizacao-data-center.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg></div>
                 <span class="article-card__category">Data Centers</span>
@@ -210,7 +160,7 @@
             </a>
 
             <!-- Artigo 8 -->
-            <a href="pressurizacao-escadas.html" class="article-card">
+            <a href="pressurizacao-escadas.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                 <span class="article-card__category">Segurança</span>
@@ -224,7 +174,7 @@
             </a>
 
             <!-- Artigo 9 -->
-            <a href="ventilacao-industrial.html" class="article-card">
+            <a href="ventilacao-industrial.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div>
                 <span class="article-card__category">Industrial</span>
@@ -238,7 +188,7 @@
             </a>
 
             <!-- Artigo 10 -->
-            <a href="bim-hvac-projetos.html" class="article-card">
+            <a href="bim-hvac-projetos.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                 <span class="article-card__category">Tecnologia</span>
@@ -252,7 +202,7 @@
             </a>
 
             <!-- Artigo 11 -->
-            <a href="calculo-carga-termica.html" class="article-card">
+            <a href="calculo-carga-termica.php" class="article-card">
               <div class="article-card__content">
                 <div class="article-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
                 <span class="article-card__category">Engenharia</span>
@@ -280,7 +230,7 @@
             Veja como aplicamos esses conceitos em projetos reais para indústrias farmacêuticas, data centers e grandes empreendimentos.
           </p>
           <div class="articles-grid">
-            <a href="../projetos/projeto-geolab-siteii.html" class="article-card">
+            <a href="../projetos/projeto-geolab-siteii.php" class="article-card">
               <div class="article-card__content" style="padding-top: 1.5rem;">
                 <span class="article-card__category">Farmacêutico</span>
                 <h3 class="article-card__title">Geolab Site II — Salas Limpas ISO 7/8</h3>
@@ -291,7 +241,7 @@
                 </div>
               </div>
             </a>
-            <a href="../projetos/projeto-hypera.html" class="article-card">
+            <a href="../projetos/projeto-hypera.php" class="article-card">
               <div class="article-card__content" style="padding-top: 1.5rem;">
                 <span class="article-card__category">Retrofit</span>
                 <h3 class="article-card__title">Hypera Pharma — Modernização CAG</h3>
@@ -302,7 +252,7 @@
                 </div>
               </div>
             </a>
-            <a href="../projetos/projeto-injetaveis.html" class="article-card">
+            <a href="../projetos/projeto-injetaveis.php" class="article-card">
               <div class="article-card__content" style="padding-top: 1.5rem;">
                 <span class="article-card__category">Salas Limpas</span>
                 <h3 class="article-card__title">Brainfarma — Prédio de Injetáveis</h3>
@@ -329,45 +279,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="../" class="nav__logo" aria-label="Ir para página inicial">
-            <img src="../Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="60" loading="lazy">
-          </a>
-          <p class="logo-text">Soluções de engenharia HVAC de alta performance para indústrias e grandes empreendimentos.</p>
-        </div>
-        <div class="footer__links">
-          <h4>Links Rápidos</h4>
-          <ul>
-            <li><a href="../">Início</a></li>
-            <li><a href="../sobre/">Sobre Nós</a></li>
-            <li><a href="../servicos/">Serviços</a></li>
-            <li><a href="../portfolio/">Portfólio</a></li>
-            <li><a href="../contato/">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer__contact">
-          <h4>Contato</h4>
-          <p>Av. Contorno nº 751, Qd. 12 Lt. A<br>Res. Arco Íris<br>Anápolis – GO</p>
-          <p>(62) 99225-0067</p>
-          <p>nesken@fluxo.eng.br</p>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
-        <p>CNPJ: 16.887.958/0001-86 | <a href="../privacidade.html" style="color: var(--color-secondary);">Política de Privacidade</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <a href="https://wa.me/5562992250067?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-    <script src="../script.js" defer></script>
+    <?php include '../includes/footer.php'; ?>
+    <?php include '../includes/whatsapp-float.php'; ?>
+    <?php include '../includes/scripts.php'; ?>
   </body>
 </html>

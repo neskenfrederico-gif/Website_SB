@@ -216,12 +216,12 @@
             <li class="nav__item nav__item--dropdown">
               <a href="setores/" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
               <ul class="nav__dropdown">
-                <li><a href="setores/farmaceutico.html" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-                <li><a href="setores/datacenter.html" class="nav__dropdown-link">💾 Data Centers</a></li>
-                <li><a href="setores/corporativo.html" class="nav__dropdown-link">🏢 Corporativo</a></li>
-                <li><a href="setores/industrial.html" class="nav__dropdown-link">🏭 Industrial</a></li>
-                <li><a href="setores/pressurizacao.html" class="nav__dropdown-link">🚨 Pressurização</a></li>
-                <li><a href="setores/pos-metais.html" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+                <li><a href="setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
+                <li><a href="setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
+                <li><a href="setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
+                <li><a href="setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
+                <li><a href="setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
+                <li><a href="setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
               </ul>
             </li>
             <li class="nav__item">
@@ -299,8 +299,8 @@
               <h2 class="hero__title hero__stagger"><span class="gradient-text">Salas Limpas</span> ISO 14644<br>para a Indústria <span class="gradient-text">Farmacêutica</span></h2>
               <p class="hero__description hero__stagger"><strong>Classificação ISO 5 a 8, filtração HEPA/ULPA e cascata de pressão.</strong> Projetos que garantem conformidade ANVISA e FDA para produção de medicamentos, cosméticos e dispositivos médicos.</p>
               <div class="hero__buttons hero__stagger">
-                <a href="setores/farmaceutico.html" class="btn btn--primary"><span>Projetos Farmacêuticos</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-                <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="hero__link">Guia ISO 14644 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="setores/farmaceutico.php" class="btn btn--primary"><span>Projetos Farmacêuticos</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/classificacao-salas-limpas-iso-14644.php" class="hero__link">Guia ISO 14644 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
               </div>
             </div>
             <!-- Slide 3 -->
@@ -309,8 +309,8 @@
               <h2 class="hero__title hero__stagger"><span class="gradient-text">Data Centers</span> com<br>Redundância <span class="gradient-text">Tier III/IV</span></h2>
               <p class="hero__description hero__stagger"><strong>CRAC, CRAH e In-Row Cooling para missão crítica.</strong> Sistemas de precisão com PUE otimizado, contenção de corredores quente/frio e monitoramento contínuo 24/7.</p>
               <div class="hero__buttons hero__stagger">
-                <a href="setores/datacenter.html" class="btn btn--primary"><span>Explorar Soluções</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-                <a href="artigos/climatizacao-data-center.html" class="hero__link">Artigo Data Centers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="setores/datacenter.php" class="btn btn--primary"><span>Explorar Soluções</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/climatizacao-data-center.php" class="hero__link">Artigo Data Centers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
               </div>
             </div>
             <!-- Slide 4 -->
@@ -320,7 +320,7 @@
               <p class="hero__description hero__stagger"><strong>Modelagem 3D paramétrica em Revit MEP.</strong> Detecção de interferências antes da obra, extração automática de quantitativos e coordenação multidisciplinar que elimina retrabalho.</p>
               <div class="hero__buttons hero__stagger">
                 <a href="servicos/" class="btn btn--primary"><span>Conheça a Tecnologia</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-                <a href="artigos/bim-hvac-projetos.html" class="hero__link">Artigo sobre BIM <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/bim-hvac-projetos.php" class="hero__link">Artigo sobre BIM <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
               </div>
             </div>
             <!-- Slide 5 -->
@@ -330,7 +330,7 @@
               <p class="hero__description hero__stagger"><strong>Substitua chillers obsoletos e automatize sem parar a produção.</strong> Diagnóstico técnico completo, ROI em menos de 3 anos e adequação normativa com intervenção mínima na operação.</p>
               <div class="hero__buttons hero__stagger">
                 <a href="contato/" class="btn btn--primary"><span>Solicitar Diagnóstico</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-                <a href="artigos/retrofit-hvac-quando-fazer.html" class="hero__link">Guia de Retrofit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/retrofit-hvac-quando-fazer.php" class="hero__link">Guia de Retrofit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
               </div>
             </div>
           </div>
@@ -859,37 +859,37 @@
           <h2 class="section__title">Setores de <span class="gradient-text">Atuação</span></h2>
         </div>
         <div class="sectors__grid">
-          <a class="sector-card sector-card--link fade-in" href="setores/farmaceutico.html" aria-label="Abrir setor Hospitalar & Farmacêutico">
+          <a class="sector-card sector-card--link fade-in" href="setores/farmaceutico.php" aria-label="Abrir setor Hospitalar & Farmacêutico">
             <div class="sector-card__icon" aria-hidden="true">🏥</div>
             <h3>Hospitalar & Farmacêutico</h3>
             <p>Salas limpas, controle de cascata de pressão (NBR 7256), filtragem HEPA e controle rigoroso de umidade.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
-          <a class="sector-card sector-card--link fade-in" href="setores/datacenter.html" aria-label="Abrir setor Data Centers">
+          <a class="sector-card sector-card--link fade-in" href="setores/datacenter.php" aria-label="Abrir setor Data Centers">
             <div class="sector-card__icon" aria-hidden="true">💾</div>
             <h3>Data Centers</h3>
             <p>Sistemas de precisão com redundância Tier III/IV, controle de microclima e eficiência energética (PUE).</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
-          <a class="sector-card sector-card--link fade-in" href="setores/corporativo.html" aria-label="Abrir setor Corporativo High-End">
+          <a class="sector-card sector-card--link fade-in" href="setores/corporativo.php" aria-label="Abrir setor Corporativo High-End">
             <div class="sector-card__icon" aria-hidden="true">🏢</div>
             <h3>Corporativo High-End</h3>
             <p>Edifícios Triple A, certificações LEED/WELL, foco em conforto térmico e qualidade do ar interior.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
-          <a class="sector-card sector-card--link fade-in" href="setores/industrial.html" aria-label="Abrir setor Industrial">
+          <a class="sector-card sector-card--link fade-in" href="setores/industrial.php" aria-label="Abrir setor Industrial">
             <div class="sector-card__icon" aria-hidden="true">🏭</div>
             <h3>Industrial</h3>
             <p>Ventilação industrial complexa, exaustão de gases, controle de poluentes e sistemas de resfriamento de processo.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
-          <a class="sector-card sector-card--link fade-in" href="setores/pressurizacao.html" aria-label="Abrir setor Pressurização de Escadas">
+          <a class="sector-card sector-card--link fade-in" href="setores/pressurizacao.php" aria-label="Abrir setor Pressurização de Escadas">
             <div class="sector-card__icon" aria-hidden="true">🚨</div>
             <h3>Pressurização de Escadas</h3>
             <p>Sistemas de segurança conforme IT-18 do Corpo de Bombeiros, prevenindo infiltração de fumaça em escadas de emergência.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
-          <a class="sector-card sector-card--link fade-in" href="setores/pos-metais.html" aria-label="Abrir setor Pós de Metais">
+          <a class="sector-card sector-card--link fade-in" href="setores/pos-metais.php" aria-label="Abrir setor Pós de Metais">
             <div class="sector-card__icon" aria-hidden="true">⚙️</div>
             <h3>Ventilação Pós de Metais</h3>
             <p>Captação e exaustão de partículas metálicas (nióbio) com sistemas de filtragem industrial e prevenção de explosões.</p>
@@ -1050,7 +1050,7 @@
         </div>
         <div class="portfolio__grid">
           <!-- Projeto 1 -->
-          <a class="project-card-link" href="projetos/projeto-injetaveis.html" aria-label="Ver detalhes do projeto Prédio de Injetáveis - Brainfarma">
+          <a class="project-card-link" href="projetos/projeto-injetaveis.php" aria-label="Ver detalhes do projeto Prédio de Injetáveis - Brainfarma">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image">
               <div class="project-card__overlay">
@@ -1080,7 +1080,7 @@
           </a>
 
           <!-- Projeto 2 -->
-          <a class="project-card-link" href="projetos/projeto-cosmed.html" aria-label="Ver detalhes do projeto COSMED - Brainfarma">
+          <a class="project-card-link" href="projetos/projeto-cosmed.php" aria-label="Ver detalhes do projeto COSMED - Brainfarma">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image project-card__image--2">
               <div class="project-card__overlay">
@@ -1110,7 +1110,7 @@
           </a>
 
           <!-- Projeto 3 -->
-          <a class="project-card-link" href="projetos/projeto-lakeview.html" aria-label="Ver detalhes do projeto Lake View Resort">
+          <a class="project-card-link" href="projetos/projeto-lakeview.php" aria-label="Ver detalhes do projeto Lake View Resort">
           <article class="project-card" data-category="hoteleiro">
             <div class="project-card__image project-card__image--3">
               <div class="project-card__overlay">
@@ -1140,7 +1140,7 @@
           </a>
 
           <!-- Projeto 4 -->
-          <a class="project-card-link" href="projetos/projeto-goinn.html" aria-label="Ver detalhes do projeto Estação Goiânia - GoInn">
+          <a class="project-card-link" href="projetos/projeto-goinn.php" aria-label="Ver detalhes do projeto Estação Goiânia - GoInn">
           <article class="project-card" data-category="hoteleiro">
             <div class="project-card__image project-card__image--4">
               <div class="project-card__overlay">
@@ -1170,7 +1170,7 @@
           </a>
 
           <!-- Projeto 5 -->
-          <a class="project-card-link" href="projetos/projeto-lineavitta.html" aria-label="Ver detalhes do projeto Linea Vitta">
+          <a class="project-card-link" href="projetos/projeto-lineavitta.php" aria-label="Ver detalhes do projeto Linea Vitta">
           <article class="project-card" data-category="comercial">
             <div class="project-card__image project-card__image--5">
               <div class="project-card__overlay">
@@ -1200,7 +1200,7 @@
           </a>
 
           <!-- Projeto 5B (Novo) -->
-          <a class="project-card-link" href="projetos/projeto-lineag.html" aria-label="Ver detalhes do projeto Linea G">
+          <a class="project-card-link" href="projetos/projeto-lineag.php" aria-label="Ver detalhes do projeto Linea G">
             <article class="project-card" data-category="comercial">
               <div class="project-card__image project-card__image--9">
                 <div class="project-card__overlay">
@@ -1229,7 +1229,7 @@
           </a>
 
           <!-- Projeto 6 -->
-          <a class="project-card-link" href="projetos/projeto-esaf.html" aria-label="Ver detalhes do projeto ESAF - Ministério da Fazenda">
+          <a class="project-card-link" href="projetos/projeto-esaf.php" aria-label="Ver detalhes do projeto ESAF - Ministério da Fazenda">
           <article class="project-card" data-category="governamental">
             <div class="project-card__image project-card__image--6">
               <div class="project-card__overlay">
@@ -1261,7 +1261,7 @@
           </a>
 
           <!-- Projeto 7 -->
-          <a class="project-card-link" href="projetos/projeto-prf.html" aria-label="Ver detalhes do projeto Sede PRF Vitória">
+          <a class="project-card-link" href="projetos/projeto-prf.php" aria-label="Ver detalhes do projeto Sede PRF Vitória">
           <article class="project-card" data-category="governamental">
             <div class="project-card__image project-card__image--7">
               <div class="project-card__overlay">
@@ -1293,7 +1293,7 @@
           </a>
 
           <!-- Projeto 8 -->
-          <a class="project-card-link" href="projetos/projeto-geolab.html" aria-label="Ver detalhes do projeto Geolab Site I">
+          <a class="project-card-link" href="projetos/projeto-geolab.php" aria-label="Ver detalhes do projeto Geolab Site I">
           <article class="project-card" data-category="farmaceutico">
             <div class="project-card__image project-card__image--8">
               <div class="project-card__overlay">
@@ -1322,7 +1322,7 @@
           </a>
 
           <!-- Projeto 9 -->
-          <a class="project-card-link" href="projetos/projeto-ontex.html" aria-label="Ver detalhes do projeto Active Ontex">
+          <a class="project-card-link" href="projetos/projeto-ontex.php" aria-label="Ver detalhes do projeto Active Ontex">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--10">
                 <div class="project-card__overlay">
@@ -1351,7 +1351,7 @@
           </a>
 
           <!-- Projeto 10 -->
-          <a class="project-card-link" href="projetos/projeto-geolab-siteii.html" aria-label="Ver detalhes do projeto Geolab Site II">
+          <a class="project-card-link" href="projetos/projeto-geolab-siteii.php" aria-label="Ver detalhes do projeto Geolab Site II">
             <article class="project-card" data-category="farmaceutico">
               <div class="project-card__image project-card__image--11">
                 <div class="project-card__overlay">
@@ -1380,7 +1380,7 @@
           </a>
 
           <!-- Projeto 11 -->
-          <a class="project-card-link" href="projetos/projeto-brainfarma-fluxos.html" aria-label="Ver detalhes do projeto Brainfarma - Fluxos Laminares">
+          <a class="project-card-link" href="projetos/projeto-brainfarma-fluxos.php" aria-label="Ver detalhes do projeto Brainfarma - Fluxos Laminares">
             <article class="project-card" data-category="farmaceutico">
               <div class="project-card__image project-card__image--12">
                 <div class="project-card__overlay">
@@ -1409,7 +1409,7 @@
           </a>
 
           <!-- Projeto 12 -->
-          <a class="project-card-link" href="projetos/projeto-savoy.html" aria-label="Ver detalhes do projeto Savoy">
+          <a class="project-card-link" href="projetos/projeto-savoy.php" aria-label="Ver detalhes do projeto Savoy">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--13">
                 <div class="project-card__overlay">
@@ -1438,7 +1438,7 @@
           </a>
 
           <!-- Projeto 13 -->
-          <a class="project-card-link" href="projetos/projeto-louisdreyfus.html" aria-label="Ver detalhes do projeto Louis Dreyfus">
+          <a class="project-card-link" href="projetos/projeto-louisdreyfus.php" aria-label="Ver detalhes do projeto Louis Dreyfus">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--14">
                 <div class="project-card__overlay">
@@ -1467,7 +1467,7 @@
           </a>
 
           <!-- Projeto 14 -->
-          <a class="project-card-link" href="projetos/projeto-hypermarcas.html" aria-label="Ver detalhes do projeto Hypermarcas">
+          <a class="project-card-link" href="projetos/projeto-hypermarcas.php" aria-label="Ver detalhes do projeto Hypermarcas">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
@@ -1496,7 +1496,7 @@
           </a>
 
           <!-- Projeto 15 -->
-          <a class="project-card-link" href="projetos/projeto-hypera.html" aria-label="Ver detalhes do projeto Hypera - CD Autoportante">
+          <a class="project-card-link" href="projetos/projeto-hypera.php" aria-label="Ver detalhes do projeto Hypera - CD Autoportante">
             <article class="project-card" data-category="industrial">
               <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
@@ -1609,7 +1609,7 @@
           <h2 class="section__title">Artigos <span class="gradient-text">Técnicos</span></h2>
         </div>
         <div class="articles-home__grid">
-          <a href="artigos/o-que-e-pmoc.html" class="article-home-card glass-card fade-in stagger-1">
+          <a href="artigos/o-que-e-pmoc.php" class="article-home-card glass-card fade-in stagger-1">
             <div class="article-home-card__category">Legislação</div>
             <div class="article-home-card__icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
@@ -1624,7 +1624,7 @@
             </div>
           </a>
 
-          <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="article-home-card glass-card fade-in stagger-2">
+          <a href="artigos/classificacao-salas-limpas-iso-14644.php" class="article-home-card glass-card fade-in stagger-2">
             <div class="article-home-card__category">Salas Limpas</div>
             <div class="article-home-card__icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
@@ -1639,7 +1639,7 @@
             </div>
           </a>
 
-          <a href="artigos/retrofit-hvac-quando-fazer.html" class="article-home-card glass-card fade-in stagger-3">
+          <a href="artigos/retrofit-hvac-quando-fazer.php" class="article-home-card glass-card fade-in stagger-3">
             <div class="article-home-card__category">Retrofit</div>
             <div class="article-home-card__icon">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
@@ -1870,7 +1870,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
             </div>
-            <p class="newsletter__privacy">Ao se inscrever, você concorda com nossa <a href="/privacidade.html">Política de Privacidade</a>.</p>
+            <p class="newsletter__privacy">Ao se inscrever, você concorda com nossa <a href="/privacidade.php">Política de Privacidade</a>.</p>
           </form>
         </div>
       </div>
@@ -1917,10 +1917,10 @@
             </button>
             <ul class="footer__col-body">
               <li><a href="artigos/">Artigos Técnicos</a></li>
-              <li><a href="artigos/o-que-e-pmoc.html">Guia PMOC</a></li>
-              <li><a href="artigos/classificacao-salas-limpas-iso-14644.html">Salas Limpas ISO</a></li>
-              <li><a href="setores/farmaceutico.html">Setor Farmacêutico</a></li>
-              <li><a href="setores/datacenter.html">Data Centers</a></li>
+              <li><a href="artigos/o-que-e-pmoc.php">Guia PMOC</a></li>
+              <li><a href="artigos/classificacao-salas-limpas-iso-14644.php">Salas Limpas ISO</a></li>
+              <li><a href="setores/farmaceutico.php">Setor Farmacêutico</a></li>
+              <li><a href="setores/datacenter.php">Data Centers</a></li>
             </ul>
           </div>
 
@@ -1943,7 +1943,7 @@
 
         <div class="footer__bottom">
           <p>&copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
-          <p>CNPJ: 16.887.958/0001-86 | <a href="/privacidade.html" class="footer__privacy-link">Política de Privacidade</a></p>
+          <p>CNPJ: 16.887.958/0001-86 | <a href="/privacidade.php" class="footer__privacy-link">Política de Privacidade</a></p>
         </div>
       </div>
     </footer>

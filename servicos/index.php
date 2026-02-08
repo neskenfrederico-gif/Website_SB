@@ -1,135 +1,77 @@
+<?php
+$base             = '..';
+$active_page      = 'servicos';
+$page_title       = 'Serviços de Engenharia HVAC | Projetos, BIM e Comissionamento';
+$page_description = 'Serviços de engenharia HVAC: projetos executivos, modelagem BIM LOD 400, salas limpas ISO 14644, consultoria e comissionamento. Soluções completas para climatização industrial.';
+$og_title         = 'Serviços de Engenharia HVAC | Siqueira e Blanco';
+$og_description   = 'Projetos executivos, BIM, salas limpas e comissionamento. Engenharia HVAC completa para indústrias farmacêuticas, data centers e ambientes críticos.';
+$og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
+$og_url           = 'https://siqueiraeblanco.com.br/servicos/';
+$canonical        = 'https://siqueiraeblanco.com.br/servicos/';
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Serviços de engenharia HVAC: projetos executivos, modelagem BIM LOD 400, salas limpas ISO 14644, consultoria e comissionamento. Soluções completas para climatização industrial.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Siqueira e Blanco Engenharia">
-
-  <meta property="og:title" content="Serviços de Engenharia HVAC | Siqueira e Blanco">
-  <meta property="og:description" content="Projetos executivos, BIM, salas limpas e comissionamento. Engenharia HVAC completa para indústrias farmacêuticas, data centers e ambientes críticos.">
-  <meta property="og:image" content="https://siqueiraeblanco.com.br/banner_hero.webp">
-  <meta property="og:url" content="https://siqueiraeblanco.com.br/servicos/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#1e3a5f">
-
-  <link rel="canonical" href="https://siqueiraeblanco.com.br/servicos/">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/x-icon" href="../favicon-light.ico" media="(prefers-color-scheme: dark)">
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-  
-  <title>Serviços de Engenharia HVAC | Projetos, BIM e Comissionamento</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="../styles.css?v=16">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "provider": {
-      "@type": "Organization",
-      "name": "Siqueira e Blanco Engenharia"
-    },
-    "serviceType": "Engenharia HVAC",
-    "areaServed": {
-      "@type": "Country",
-      "name": "BR"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços de Engenharia HVAC",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Projetos Executivos HVAC",
-            "description": "Elaboração de projetos executivos detalhados para sistemas HVAC complexos com conformidade normativa ASHRAE, SMACNA e NBR 16401."
-          }
+  <head>
+    <?php include '../includes/head.php'; ?>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": {
+          "@type": "Organization",
+          "name": "Siqueira e Blanco Engenharia"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Modelagem BIM 3D",
-            "description": "Modelagem avançada em Revit MEP com LOD 350/400, clash detection e extração automática de quantitativos."
-          }
+        "serviceType": "Engenharia HVAC",
+        "areaServed": {
+          "@type": "Country",
+          "name": "BR"
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Áreas Limpas e Cleanrooms",
-            "description": "Engenharia para ambientes críticos com classificação ISO 14644 Classes 5-8, controle de cascata de pressão e filtragem HEPA/ULPA."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Consultoria e Comissionamento",
-            "description": "Fiscalização técnica, TAB, PMOC e laudos de qualidade do ar interior."
-          }
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços de Engenharia HVAC",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Projetos Executivos HVAC",
+                "description": "Elaboração de projetos executivos detalhados para sistemas HVAC complexos com conformidade normativa ASHRAE, SMACNA e NBR 16401."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Modelagem BIM 3D",
+                "description": "Modelagem avançada em Revit MEP com LOD 350/400, clash detection e extração automática de quantitativos."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Áreas Limpas e Cleanrooms",
+                "description": "Engenharia para ambientes críticos com classificação ISO 14644 Classes 5-8, controle de cascata de pressão e filtragem HEPA/ULPA."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Consultoria e Comissionamento",
+                "description": "Fiscalização técnica, TAB, PMOC e laudos de qualidade do ar interior."
+              }
+            }
+          ]
         }
-      ]
-    }
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-to-content" href="#main-content">Pular para o conteúdo</a>
+      }
+      </script>
+  </head>
 
-  <!-- Header -->
-  <header class="header" id="header">
-    <nav class="nav container" aria-label="Menu principal">
-      <a href="../" class="nav__logo">
-        <img src="../Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48">
-      </a>
-      <div class="nav__menu" id="nav-menu" aria-label="Menu principal">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="../" class="nav__link">Início</a></li>
-          <li class="nav__item"><a href="./" class="nav__link active">Serviços</a></li>
-          <li class="nav__item"><a href="../sobre/" class="nav__link">Sobre</a></li>
-          <li class="nav__item nav__item--dropdown">
-            <a href="../setores/" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
-            <ul class="nav__dropdown">
-              <li><a href="../setores/farmaceutico.html" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-              <li><a href="../setores/datacenter.html" class="nav__dropdown-link">💾 Data Centers</a></li>
-              <li><a href="../setores/corporativo.html" class="nav__dropdown-link">🏢 Corporativo</a></li>
-              <li><a href="../setores/industrial.html" class="nav__dropdown-link">🏭 Industrial</a></li>
-              <li><a href="../setores/pressurizacao.html" class="nav__dropdown-link">🚨 Pressurização</a></li>
-              <li><a href="../setores/pos-metais.html" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="../portfolio/" class="nav__link">Portfólio</a></li>
-          <li class="nav__item"><a href="../artigos/" class="nav__link">Artigos</a></li>
-          <li class="nav__item"><a href="../contato/" class="nav__link">Contato</a></li>
-        </ul>
-        <button class="nav__close" id="nav-close" aria-label="Fechar menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </nav>
-  </header>
+  <body>
+    <?php include '../includes/header.php'; ?>
 
-  <main id="main-content">
+<main id="main-content">
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="container">
@@ -252,7 +194,7 @@
                 <span class="stat-label">menos retrabalho em obra</span>
               </div>
               <p>O Clash Detection identifica conflitos antes da construção, evitando custos de correção em campo.</p>
-              <a href="../artigos/bim-hvac-projetos-climatizacao.html" class="btn btn--secondary btn--full">Ler Artigo sobre BIM</a>
+              <a href="../artigos/bim-hvac-projetos-climatizacao.php" class="btn btn--secondary btn--full">Ler Artigo sobre BIM</a>
             </div>
           </div>
         </div>
@@ -303,7 +245,7 @@
                 <tr><td>ISO 7</td><td>10.000 partículas/m³</td></tr>
                 <tr><td>ISO 8</td><td>100.000 partículas/m³</td></tr>
               </table>
-              <a href="../artigos/iso-14644-salas-limpas-hvac.html" class="btn btn--secondary btn--full">Ler Artigo sobre ISO 14644</a>
+              <a href="../artigos/iso-14644-salas-limpas-hvac.php" class="btn btn--secondary btn--full">Ler Artigo sobre ISO 14644</a>
             </div>
           </div>
         </div>
@@ -346,7 +288,7 @@
               </div>
               <h3 class="service-card__title">PMOC Obrigatório</h3>
               <p>A Lei 13.589/2018 exige PMOC para todos os edifícios climatizados. Multas podem chegar a <strong>R$ 200 mil</strong>.</p>
-              <a href="../artigos/pmoc-obrigatorio-lei-13589.html" class="btn btn--secondary btn--full">Ler Artigo sobre PMOC</a>
+              <a href="../artigos/pmoc-obrigatorio-lei-13589.php" class="btn btn--secondary btn--full">Ler Artigo sobre PMOC</a>
             </div>
           </div>
         </div>
@@ -364,32 +306,32 @@
           <div class="mini-service-card glass-card fade-in">
             <h3>Retrofit de Sistemas</h3>
             <p>Modernização de instalações existentes para adequação normativa, eficiência energética e redução de custos operacionais.</p>
-            <a href="../artigos/retrofit-hvac-quando-fazer.html">Saiba mais →</a>
+            <a href="../artigos/retrofit-hvac-quando-fazer.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Sistemas VRF/VRV</h3>
             <p>Projetos para sistemas de volume de refrigerante variável em edifícios comerciais e corporativos.</p>
-            <a href="../artigos/sistemas-vrf.html">Saiba mais →</a>
+            <a href="../artigos/sistemas-vrf.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Centrais de Água Gelada</h3>
             <p>Dimensionamento e projeto de CAGs com chillers, torres de resfriamento e sistemas de distribuição.</p>
-            <a href="../artigos/central-agua-gelada-chiller.html">Saiba mais →</a>
+            <a href="../artigos/central-agua-gelada-chiller.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Data Centers</h3>
             <p>Climatização de precisão com redundância Tier III/IV e otimização de PUE.</p>
-            <a href="../artigos/climatizacao-data-center.html">Saiba mais →</a>
+            <a href="../artigos/climatizacao-data-center.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Ventilação Industrial</h3>
             <p>Sistemas de exaustão, captação de poluentes e controle de temperatura em processos industriais.</p>
-            <a href="../artigos/ventilacao-industrial.html">Saiba mais →</a>
+            <a href="../artigos/ventilacao-industrial.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Pressurização de Escadas</h3>
             <p>Sistemas de segurança contra incêndio conforme IT-18 do Corpo de Bombeiros.</p>
-            <a href="../artigos/pressurizacao-escadas-it18.html">Saiba mais →</a>
+            <a href="../artigos/pressurizacao-escadas-it18.php">Saiba mais →</a>
           </div>
         </div>
       </div>
@@ -464,47 +406,8 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <a href="../" class="nav__logo" aria-label="Ir para página inicial">
-            <img src="../Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="60" loading="lazy">
-          </a>
-          <p class="logo-text">Soluções de engenharia HVAC de alta performance para indústrias e grandes empreendimentos.</p>
-        </div>
-        <div class="footer__links">
-          <h4>Links Rápidos</h4>
-          <ul>
-            <li><a href="../">Início</a></li>
-            <li><a href="../sobre/">Sobre Nós</a></li>
-            <li><a href="./">Serviços</a></li>
-            <li><a href="../portfolio/">Portfólio</a></li>
-            <li><a href="../contato/">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer__contact">
-          <h4>Contato</h4>
-          <p>Av. Contorno nº 751, Qd. 12 Lt. A<br>Res. Arco Íris<br>Anápolis – GO</p>
-          <p>(62) 99225-0067</p>
-          <p>nesken@fluxo.eng.br</p>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; <span id="current-year">2026</span> Siqueira e Blanco Ltda. Todos os direitos reservados.</p>
-        <p>CNPJ: 16.887.958/0001-86 | <a href="../privacidade.html" style="color: var(--color-secondary);">Política de Privacidade</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/5562992250067?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <script src="../script.js"></script>
-</body>
+    <?php include '../includes/footer.php'; ?>
+    <?php include '../includes/whatsapp-float.php'; ?>
+    <?php include '../includes/scripts.php'; ?>
+  </body>
 </html>
