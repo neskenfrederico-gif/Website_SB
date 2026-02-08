@@ -91,7 +91,7 @@ navLinks.forEach((link) => {
 let scrollTicking = false;
 
 function updateHeader() {
-  const currentScroll = window.scrollY || window.pageYOffset;
+  const currentScroll = window.scrollY;
   if (currentScroll > 50) {
     header.classList.add("scrolled");
   } else {
@@ -100,18 +100,28 @@ function updateHeader() {
 }
 
 function highlightActiveSection() {
-  const scrollY = window.pageYOffset;
+  const scrollY = window.scrollY;
+
+  // Map section IDs to nav link selectors (supports both anchor and route-based links)
+  const sectionToNavMap = {
+    home: '.nav__link[href="#home"], .nav__link[href="/"]',
+    servicos: '.nav__link[href="servicos/"], .nav__link[href="#servicos"]',
+    sobre: '.nav__link[href="sobre/"], .nav__link[href="#sobre"]',
+    setores: '.nav__link[href="setores/"], .nav__link[href="#setores"]',
+    portfolio: '.nav__link[href="portfolio/"], .nav__link[href="#portfolio"]',
+    contato: '.nav__link[href="contato/"], .nav__link[href="#contato"]',
+  };
 
   sections.forEach((section) => {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 100;
     const sectionId = section.getAttribute("id");
-    const correspondingLink = document.querySelector(
-      `.nav__link[href="#${sectionId}"]`
-    );
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       navLinks.forEach((link) => link.classList.remove("active"));
+      // Try mapped selector first, then fallback to anchor selector
+      const selector = sectionToNavMap[sectionId] || `.nav__link[href="#${sectionId}"]`;
+      const correspondingLink = document.querySelector(selector);
       if (correspondingLink) {
         correspondingLink.classList.add("active");
       }
@@ -499,9 +509,9 @@ if (contactForm) {
       animation: notifSlideIn 0.3s ease;
       font-weight: 500;
     }
-    .notification--success { background: #10B981; }
-    .notification--error { background: #EF4444; }
-    .notification--info { background: #3B82F6; }
+    .notification--success { background: var(--color-whatsapp-dark, #10B981); }
+    .notification--error { background: var(--color-error, #EF4444); }
+    .notification--info { background: var(--color-primary-light, #3B82F6); }
     .notification__close {
       background: none;
       border: none;
@@ -593,7 +603,7 @@ function updateParallax() {
   }
   if (!hero || !heroParticles) return;
 
-  const scrolled = window.scrollY || window.pageYOffset;
+  const scrolled = window.scrollY;
   if (scrolled < window.innerHeight) {
     heroParticles.style.transform = `translateY(${scrolled * 0.3}px)`;
   }
@@ -990,7 +1000,7 @@ function initBackToTop() {
 // Called from unified scroll handler
 function updateBackToTop() {
   if (!backToTopBtn) return;
-  const scrollY = window.scrollY || window.pageYOffset;
+  const scrollY = window.scrollY;
   backToTopBtn.classList.toggle('visible', scrollY > 500);
 }
 
