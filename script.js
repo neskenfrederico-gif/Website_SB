@@ -12,8 +12,15 @@ const hero = document.querySelector(".hero");
 const sections = document.querySelectorAll("section[id]");
 
 // ===== Mobile Menu =====
+// Create overlay element for mobile menu backdrop
+const navOverlay = document.createElement("div");
+navOverlay.classList.add("nav__overlay");
+navOverlay.id = "nav-overlay";
+document.body.appendChild(navOverlay);
+
 function openMenu() {
   navMenu.classList.add("show");
+  navOverlay.classList.add("show");
   // iOS fix: use position fixed + top offset to prevent background scroll
   document.body.style.position = "fixed";
   document.body.style.top = `-${window.scrollY}px`;
@@ -27,6 +34,7 @@ function openMenu() {
 function closeMenu() {
   const scrollY = document.body.style.top;
   navMenu.classList.remove("show");
+  navOverlay.classList.remove("show");
   // iOS fix: restore scroll position
   document.body.style.position = "";
   document.body.style.top = "";
@@ -45,6 +53,16 @@ if (navToggle) {
 if (navClose) {
   navClose.addEventListener("click", closeMenu);
 }
+
+// Close menu when clicking overlay (outside menu)
+navOverlay.addEventListener("click", closeMenu);
+
+// Close menu with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navMenu.classList.contains("show")) {
+    closeMenu();
+  }
+});
 
 // ===== Mobile Dropdown Toggle =====
 const dropdownParent = document.querySelector(".nav__item--dropdown > .nav__link");
@@ -67,6 +85,11 @@ navLinks.forEach((link) => {
     navLinks.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
   });
+});
+
+// Close menu when clicking dropdown links (sub-items)
+document.querySelectorAll(".nav__dropdown-link").forEach((link) => {
+  link.addEventListener("click", closeMenu);
 });
 
 // ===== Unified Scroll Handler =====
