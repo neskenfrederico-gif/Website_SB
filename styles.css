@@ -1044,12 +1044,12 @@ select {
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: var(--spacing-24) 0;
+  padding: var(--spacing-20) 0;
 }
 
 .section__header {
   text-align: center;
-  margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-12);
 }
 
 .section__subtitle {
@@ -1296,7 +1296,7 @@ select {
 
 /* ===== PROCESS SECTION ===== */
 .process {
-  padding: var(--spacing-24) 0;
+  padding: var(--spacing-16) 0;
   background: var(--color-gray-50);
 }
 
@@ -2207,7 +2207,11 @@ select {
   }
 
   .section {
-    padding: var(--spacing-20) 0;
+    padding: var(--spacing-12) 0;
+  }
+
+  .section__header {
+    margin-bottom: var(--spacing-8);
   }
 
   .hero__description {
@@ -2930,7 +2934,7 @@ select {
 
 /* ===== ENGINEERING SPOTLIGHT SECTION ===== */
 .spotlight {
-  padding: var(--spacing-20) 0;
+  padding: var(--spacing-16) 0;
   background: var(--color-gray-50);
   position: relative;
   z-index: 1; /* Ensure it stays below stats if they overlap */
@@ -3204,7 +3208,6 @@ select {
 }
 
 @media (max-width: 768px) {
-  .stats__container, 
   .lifecycle__grid {
     grid-template-columns: 1fr;
   }
@@ -3669,7 +3672,7 @@ select {
 
 @media (max-width: 768px) {
   .clients-showcase {
-    padding: var(--spacing-12) 0;
+    padding: var(--spacing-8) 0;
   }
 
   .clients-showcase__card {

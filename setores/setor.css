@@ -229,4 +229,11 @@
   .sector-cta__grid {
     grid-template-columns: 1fr;
   }
+
+  .sector-content__grid,
+  .standards-grid,
+  .sector-cards__grid,
+  .sector-cta__grid {
+    margin-top: var(--spacing-6);
+  }
 }
