@@ -290,18 +290,7 @@
 }
 
 .article-card__image {
-  height: 100px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--bg-dark) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.article-card__image svg {
-  width: 40px;
-  height: 40px;
-  stroke: var(--accent);
-  opacity: 0.5;
+  display: none;
 }
 
 .article-card__content {
@@ -355,15 +344,6 @@
   .articles-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-  
-  .article-card__image {
-    height: 80px;
-  }
-  
-  .article-card__image svg {
-    width: 32px;
-    height: 32px;
   }
   
   .article-card__content {
