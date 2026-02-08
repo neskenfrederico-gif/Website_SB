@@ -36,6 +36,7 @@
 .project-text__paragraph {
   color: var(--color-gray-600);
   line-height: 1.8;
+  margin-bottom: var(--spacing-6);
 }
 
 .footer__privacy-link {
