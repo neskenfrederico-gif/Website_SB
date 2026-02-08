@@ -38,7 +38,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.html"
+            "@id": "https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.php"
           }
         }
         </script>
@@ -49,7 +49,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
             { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://siqueiraeblanco.com.br/artigos/" },
-            { "@type": "ListItem", "position": 3, "name": "O que é PMOC?", "item": "https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.html" }
+            { "@type": "ListItem", "position": 3, "name": "O que é PMOC?", "item": "https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.php" }
           ]
         }
         </script>

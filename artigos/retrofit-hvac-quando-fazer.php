@@ -44,7 +44,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
             { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://siqueiraeblanco.com.br/artigos/" },
-            { "@type": "ListItem", "position": 3, "name": "Retrofit HVAC", "item": "https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.html" }
+            { "@type": "ListItem", "position": 3, "name": "Retrofit HVAC", "item": "https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.php" }
           ]
         }
         </script>

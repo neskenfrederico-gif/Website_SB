@@ -1,6 +1,6 @@
 // ===== Sub-page Form Validation & Anti-Spam =====
 // Lightweight script for projetos/ and setores/ pages.
-// Mirrors the validation logic from script.js (index.html).
+// Mirrors the validation logic from script.js (index.php).
 
 document.addEventListener("DOMContentLoaded", function () {
   var forms = document.querySelectorAll(

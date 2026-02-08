@@ -42,7 +42,7 @@
 
   <!-- Política de Privacidade -->
   <url>
-    <loc>https://siqueiraeblanco.com.br/privacidade.html</loc>
+    <loc>https://siqueiraeblanco.com.br/privacidade.php</loc>
     <lastmod>2026-02-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -56,67 +56,67 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/classificacao-salas-limpas-iso-14644.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/classificacao-salas-limpas-iso-14644.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-vrf.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-vrf.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-split.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/sistemas-split.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/climatizacao-data-center.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/climatizacao-data-center.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/pressurizacao-escadas.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/pressurizacao-escadas.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/ventilacao-industrial.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/ventilacao-industrial.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/bim-hvac-projetos.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/bim-hvac-projetos.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/artigos/calculo-carga-termica.html</loc>
+    <loc>https://siqueiraeblanco.com.br/artigos/calculo-carga-termica.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -124,37 +124,37 @@
 
   <!-- Setores -->
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/farmaceutico.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/farmaceutico.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/datacenter.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/datacenter.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/corporativo.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/corporativo.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/industrial.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/industrial.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/pressurizacao.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/pressurizacao.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/setores/pos-metais.html</loc>
+    <loc>https://siqueiraeblanco.com.br/setores/pos-metais.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -162,97 +162,97 @@
 
   <!-- Projetos -->
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-injetaveis.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-injetaveis.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-cosmed.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-cosmed.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lakeview.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lakeview.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-goinn.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-goinn.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineavitta.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineavitta.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineag.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-lineag.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-esaf.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-esaf.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-prf.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-prf.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab-siteii.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-geolab-siteii.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-ontex.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-ontex.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-brainfarma-fluxos.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-brainfarma-fluxos.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-savoy.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-savoy.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-louisdreyfus.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-louisdreyfus.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypermarcas.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypermarcas.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypera.html</loc>
+    <loc>https://siqueiraeblanco.com.br/projetos/projeto-hypera.php</loc>
     <lastmod>2026-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

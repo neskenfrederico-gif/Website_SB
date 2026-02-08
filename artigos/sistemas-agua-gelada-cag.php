@@ -34,7 +34,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
             { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://siqueiraeblanco.com.br/artigos/" },
-            { "@type": "ListItem", "position": 3, "name": "Sistemas de Água Gelada", "item": "https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.html" }
+            { "@type": "ListItem", "position": 3, "name": "Sistemas de Água Gelada", "item": "https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.php" }
           ]
         }
         </script>
