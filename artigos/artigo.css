@@ -289,8 +289,23 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-.article-card__image {
-  display: none;
+.article-card__icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), rgba(0, 212, 255, 0.6));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.article-card__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--bg-dark);
+  stroke-width: 2;
 }
 
 .article-card__content {
