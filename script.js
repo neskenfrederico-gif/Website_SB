@@ -505,7 +505,7 @@ if (contactForm) {
       display: flex;
       align-items: center;
       gap: 12px;
-      z-index: 2001;
+      z-index: var(--z-modal, 2000);
       animation: notifSlideIn 0.3s ease;
       font-weight: 500;
     }
@@ -539,20 +539,25 @@ function showNotification(message, type = "info") {
     existingNotification.remove();
   }
 
-  // Create notification element with accessibility
+  // Create notification element with accessibility (textContent to prevent XSS)
   const notification = document.createElement("div");
   notification.className = `notification notification--${type}`;
   notification.setAttribute("role", "alert");
   notification.setAttribute("aria-live", "assertive");
-  notification.innerHTML = `
-        <span>${message}</span>
-        <button class="notification__close" aria-label="Fechar notificação">&times;</button>
-    `;
+
+  const msgSpan = document.createElement("span");
+  msgSpan.textContent = message;
+  notification.appendChild(msgSpan);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "notification__close";
+  closeBtn.setAttribute("aria-label", "Fechar notificação");
+  closeBtn.textContent = "\u00D7";
+  notification.appendChild(closeBtn);
 
   document.body.appendChild(notification);
 
   // Close button
-  const closeBtn = notification.querySelector(".notification__close");
   closeBtn.addEventListener("click", () => {
     notification.style.animation = "notifSlideOut 0.3s ease forwards";
     setTimeout(() => notification.remove(), 300);
@@ -592,7 +597,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // ===== Parallax Effect for Hero =====
 // Cached particles element (resolved once on first call)
 let heroParticles = undefined;
-const isMobileDevice = window.matchMedia("(max-width: 768px)").matches;
+const mobileQuery = window.matchMedia("(max-width: 768px)");
+let isMobileDevice = mobileQuery.matches;
+mobileQuery.addEventListener("change", (e) => { isMobileDevice = e.matches; });
 
 function updateParallax() {
   // Skip parallax on mobile for performance
@@ -1017,6 +1024,13 @@ function initClientsCarousel() {
       track.appendChild(clone);
     });
     track.dataset.cloned = 'true';
+  }
+
+  // Pause animation on keyboard focus within carousel (accessibility)
+  const carousel = track.closest('.clients-carousel');
+  if (carousel) {
+    carousel.addEventListener('focusin', () => { track.style.animationPlayState = 'paused'; });
+    carousel.addEventListener('focusout', () => { track.style.animationPlayState = ''; });
   }
 }
 
