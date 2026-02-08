@@ -3617,8 +3617,11 @@ select {
 .clients-carousel {
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  cursor: grab;
+}
+
+.clients-carousel:active {
+  cursor: grabbing;
 }
 
 .clients-carousel__track {
@@ -3631,6 +3634,11 @@ select {
 
 .clients-carousel__track:hover {
   animation-play-state: paused;
+}
+
+.clients-carousel__track.dragging {
+  animation: none;
+  transition: none;
 }
 
 @keyframes clients-scroll {

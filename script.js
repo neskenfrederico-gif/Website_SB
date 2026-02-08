@@ -1200,6 +1200,60 @@ function initClientsCarousel() {
     carousel.addEventListener('focusin', () => { track.style.animationPlayState = 'paused'; });
     carousel.addEventListener('focusout', () => { track.style.animationPlayState = ''; });
   }
+
+  // Drag & Touch support
+  if (carousel) {
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let dragOffset = 0;
+
+    function getTranslateX() {
+      const style = window.getComputedStyle(track);
+      const matrix = new DOMMatrixReadOnly(style.transform);
+      return matrix.m41;
+    }
+
+    function startDrag(x) {
+      isDragging = true;
+      startX = x;
+      currentTranslate = getTranslateX();
+      track.classList.add('dragging');
+      track.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function moveDrag(x) {
+      if (!isDragging) return;
+      const diff = x - startX;
+      dragOffset = diff;
+      track.style.transform = `translateX(${currentTranslate + diff}px)`;
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      track.classList.remove('dragging');
+      track.style.transform = '';
+      track.style.animationPlayState = '';
+    }
+
+    // Mouse events
+    carousel.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      startDrag(e.clientX);
+    });
+    window.addEventListener('mousemove', (e) => moveDrag(e.clientX));
+    window.addEventListener('mouseup', endDrag);
+
+    // Touch events
+    carousel.addEventListener('touchstart', (e) => {
+      startDrag(e.touches[0].clientX);
+    }, { passive: true });
+    carousel.addEventListener('touchmove', (e) => {
+      moveDrag(e.touches[0].clientX);
+    }, { passive: true });
+    carousel.addEventListener('touchend', endDrag);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initClientsCarousel);
