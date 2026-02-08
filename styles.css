@@ -1992,9 +1992,16 @@ select {
 
   /* Hero trust bar mobile */
   .hero__trust {
-    padding: var(--spacing-3) var(--spacing-4);
-    gap: var(--spacing-3);
+    padding: var(--spacing-3);
+    gap: var(--spacing-2);
     margin-bottom: var(--spacing-6);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero__trust-item {
+    flex: 1;
+    min-width: 0;
   }
 
   .hero__trust-value {
@@ -2007,6 +2014,7 @@ select {
 
   .hero__trust-divider {
     height: 28px;
+    flex-shrink: 0;
   }
 
   /* Hero mais compacto no mobile */
