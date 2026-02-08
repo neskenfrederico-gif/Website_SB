@@ -60,7 +60,7 @@
   /* Typography */
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
-  --font-size-2xs: 0.65rem;
+  --font-size-2xs: 0.7rem;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -126,6 +126,14 @@
   --transition-slow: 500ms ease;
   --transition-xslow: 600ms ease-out;
   --duration-hero-slide: 1.5s;
+
+  /* Secondary color alpha variants */
+  --color-secondary-a10: rgba(78, 205, 196, 0.1);
+  --color-secondary-a15: rgba(78, 205, 196, 0.15);
+  --color-secondary-a18: rgba(78, 205, 196, 0.18);
+  --color-secondary-a30: rgba(78, 205, 196, 0.3);
+  --color-secondary-a35: rgba(78, 205, 196, 0.35);
+  --color-secondary-a55: rgba(78, 205, 196, 0.55);
 
   /* Backdrop Filters */
   --backdrop-blur-xs: blur(4px);
@@ -316,6 +324,19 @@ select {
   width: 100%;
 }
 
+.btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(0.3);
+}
+
 /* ===== HEADER ===== */
 .header {
   position: fixed;
@@ -463,6 +484,7 @@ select {
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;
+  z-index: var(--z-base);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -530,8 +552,8 @@ select {
 .hero__subtitle {
   display: inline-block;
   padding: var(--spacing-2) var(--spacing-4);
-  background: rgba(78, 205, 196, 0.1);
-  border: 1px solid rgba(78, 205, 196, 0.3);
+  background: var(--color-secondary-a10);
+  border: 1px solid var(--color-secondary-a30);
   border-radius: var(--radius-full);
   color: var(--color-secondary);
   font-size: var(--font-size-sm);
@@ -576,8 +598,8 @@ select {
 .hero__norms {
   display: inline-block;
   padding: var(--spacing-1) var(--spacing-3);
-  background: rgba(78, 205, 196, 0.18);
-  border: 1px solid rgba(78, 205, 196, 0.35);
+  background: var(--color-secondary-a18);
+  border: 1px solid var(--color-secondary-a35);
   border-radius: var(--radius-full);
   color: var(--color-secondary-light);
   font-weight: 700;
@@ -747,7 +769,7 @@ select {
 .section__subtitle {
   display: inline-block;
   padding: var(--spacing-2) var(--spacing-4);
-  background: rgba(78, 205, 196, 0.1);
+  background: var(--color-secondary-a10);
   border-radius: var(--radius-full);
   color: var(--color-secondary);
   font-size: var(--font-size-sm);
@@ -815,7 +837,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(78, 205, 196, 0.1);
+  background: var(--color-secondary-a10);
   border-radius: var(--radius-md);
   color: var(--color-secondary);
   flex-shrink: 0;
@@ -901,8 +923,8 @@ select {
 }
 
 .servicos .section__subtitle {
-  background: rgba(78, 205, 196, 0.15);
-  border: 1px solid rgba(78, 205, 196, 0.3);
+  background: var(--color-secondary-a15);
+  border: 1px solid var(--color-secondary-a30);
   backdrop-filter: var(--backdrop-blur-xs);
   -webkit-backdrop-filter: var(--backdrop-blur-xs);
 }
@@ -980,7 +1002,7 @@ select {
   justify-content: center;
   width: 20px;
   height: 20px;
-  background: rgba(78, 205, 196, 0.1);
+  background: var(--color-secondary-a10);
   border-radius: var(--radius-full);
   font-size: var(--font-size-2xs);
   flex-shrink: 0;
@@ -1078,7 +1100,7 @@ select {
 .sector-card__icon {
   font-size: var(--font-size-4xl);
   margin-bottom: var(--spacing-4);
-  background: rgba(78, 205, 196, 0.1);
+  background: var(--color-secondary-a10);
   width: 60px;
   height: 60px;
   display: flex;
@@ -1108,7 +1130,7 @@ select {
 }
 
 .sector-card--link:focus-visible {
-  outline: 3px solid rgba(78, 205, 196, 0.55);
+  outline: 3px solid var(--color-secondary-a55);
   outline-offset: 4px;
 }
 
@@ -1142,7 +1164,7 @@ select {
 .sector-card--link:hover::after {
   opacity: 1;
   transform: translateX(0);
-  background: rgba(78, 205, 196, 0.14);
+  background: var(--color-secondary-a15);
   color: var(--color-primary);
 }
 
@@ -1622,7 +1644,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(78, 205, 196, 0.1);
+  background: var(--color-secondary-a10);
   border-radius: var(--radius-lg);
   color: var(--color-secondary);
   flex-shrink: 0;
@@ -1793,10 +1815,6 @@ select {
   gap: var(--spacing-2);
   text-align: center;
   font-size: var(--font-size-sm);
-}
-
-@media (max-width: 1024px) {
-  /* No changes needed for grid columns as base is now 2 cols */
 }
 
 @media (max-width: 768px) {
@@ -2033,14 +2051,6 @@ select {
     margin-bottom: var(--spacing-4);
   }
 }
-
-/* Ensure Hero has a lower stacking context but allows overflow */
-.hero {
-  position: relative;
-  z-index: var(--z-base);
-}
-
-/* Hero padding (desktop reaffirm — mobile override lives in @media block above) */
 
 /* ===== STATS SECTION ===== */
 .stats {
