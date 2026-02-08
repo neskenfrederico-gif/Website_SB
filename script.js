@@ -696,8 +696,31 @@ function initHeroSlider() {
   const pages = document.querySelectorAll(".hero__page");
   const dotsContainer = document.getElementById("hero-dots");
   const progressBar = document.getElementById("hero-progress");
+  const counterCurrent = document.getElementById("hero-counter-current");
+  const counterTotal = document.getElementById("hero-counter-total");
+  const floatValue = document.getElementById("hero-float-value");
+  const floatLabel = document.getElementById("hero-float-label");
+  const floatIcon = document.getElementById("hero-float-icon");
+  const floatFill = document.querySelector(".hero__float-card-fill");
 
   if (slides.length <= 1 || pages.length <= 1 || !dotsContainer) return;
+
+  // Data for float card per slide
+  const cardData = [
+    { value: "200+", label: "Projetos Entregues", fill: 85, icon: "shield" },
+    { value: "8.000", label: "m² de Salas Limpas", fill: 70, icon: "flask" },
+    { value: "99.99%", label: "Uptime Garantido", fill: 95, icon: "server" },
+    { value: "LOD 400", label: "Detalhamento BIM", fill: 80, icon: "cube" },
+    { value: "40%", label: "Redução de Custos", fill: 65, icon: "trending" }
+  ];
+
+  const iconSVGs = {
+    shield: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    flask: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>',
+    server: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>',
+    cube: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+    trending: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
+  };
 
   let currentSlide = 0;
   const totalSlides = pages.length;
@@ -705,6 +728,9 @@ function initHeroSlider() {
   let heroInterval = null;
   let progressRAF = null;
   let progressStart = 0;
+
+  // Set counter total
+  if (counterTotal) counterTotal.textContent = String(totalSlides).padStart(2, "0");
 
   // Create dots
   for (let i = 0; i < totalSlides; i++) {
@@ -715,22 +741,44 @@ function initHeroSlider() {
     dotsContainer.appendChild(dot);
   }
 
+  function updateFloatCard(index) {
+    const d = cardData[index];
+    if (!d || !floatValue) return;
+    floatValue.textContent = d.value;
+    floatLabel.textContent = d.label;
+    if (floatIcon) floatIcon.innerHTML = iconSVGs[d.icon] || iconSVGs.shield;
+    if (floatFill) floatFill.style.width = d.fill + "%";
+  }
+
   function goToSlide(index) {
-    // Update background slides
-    slides[currentSlide].classList.remove("active");
-    slides[index].classList.add("active");
+    if (index === currentSlide) return;
 
-    // Update content pages
-    pages[currentSlide].classList.remove("active");
-    pages[index].classList.add("active");
+    // Exit animation on current page
+    pages[currentSlide].classList.add("hero--exiting");
 
-    // Update dots
-    const dots = dotsContainer.querySelectorAll(".hero__dot");
-    dots[currentSlide].classList.remove("active");
-    dots[index].classList.add("active");
+    setTimeout(() => {
+      // Update background
+      slides[currentSlide].classList.remove("active");
+      slides[index].classList.add("active");
 
-    currentSlide = index;
-    resetProgress();
+      // Switch pages
+      pages[currentSlide].classList.remove("active", "hero--exiting");
+      pages[index].classList.add("active");
+
+      // Dots
+      const dots = dotsContainer.querySelectorAll(".hero__dot");
+      dots[currentSlide].classList.remove("active");
+      dots[index].classList.add("active");
+
+      // Counter
+      if (counterCurrent) counterCurrent.textContent = String(index + 1).padStart(2, "0");
+
+      // Float card
+      updateFloatCard(index);
+
+      currentSlide = index;
+      resetProgress();
+    }, reducedMotion ? 0 : 300);
   }
 
   function nextSlide() {
@@ -778,6 +826,8 @@ function initHeroSlider() {
     heroSection.addEventListener("touchend", startSlider, { passive: true });
   }
 
+  // Initialize first card
+  updateFloatCard(0);
   startSlider();
 }
 

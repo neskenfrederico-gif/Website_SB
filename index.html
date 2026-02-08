@@ -35,7 +35,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=14" />
+    <link rel="stylesheet" href="styles.css?v=15" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -276,95 +276,93 @@
         <div class="hero__slide" data-bg-webp="banner_hero1.webp" data-bg-jpg="banner_hero1.jpg"></div>
       </div>
       <div class="hero__overlay"></div>
-      <div class="hero__particles" id="particles"></div>
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--3" aria-hidden="true"></div>
+
       <div class="hero__content container">
-        <!-- Slide 1: Institucional -->
-        <div class="hero__page active" data-hero-page="0">
-          <span class="hero__subtitle">Engenharia HVAC Especializada</span>
-          <h1 class="hero__title">
-            Engenharia <span class="gradient-text">HVAC</span> para<br>
-            <span class="gradient-text">Ambientes Críticos</span>
-          </h1>
-          <p class="hero__description">
-            <strong>Salas limpas, data centers e grandes plantas industriais.</strong>
-            Projetos executivos, modelagem BIM e comissionamento para ambientes que exigem controle absoluto de temperatura, umidade e contaminação.
-          </p>
-          <div class="hero__buttons">
-            <a href="contato/" class="btn btn--primary"><span>Solicitar Orçamento</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="portfolio/" class="hero__link">Ver Projetos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="hero__layout">
+          <div class="hero__text">
+            <!-- Slide 1 -->
+            <div class="hero__page active" data-hero-page="0">
+              <span class="hero__subtitle hero__stagger">Engenharia HVAC Especializada</span>
+              <h1 class="hero__title hero__stagger">Engenharia <span class="gradient-text">HVAC</span> para<br><span class="gradient-text">Ambientes Críticos</span></h1>
+              <p class="hero__description hero__stagger"><strong>Salas limpas, data centers e grandes plantas industriais.</strong> Projetos executivos, modelagem BIM e comissionamento para ambientes que exigem controle absoluto de temperatura, umidade e contaminação.</p>
+              <div class="hero__buttons hero__stagger">
+                <a href="contato/" class="btn btn--primary"><span>Solicitar Orçamento</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="portfolio/" class="hero__link">Ver Projetos <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hero__page" data-hero-page="1">
+              <span class="hero__subtitle hero__stagger">Setor Farmacêutico</span>
+              <h2 class="hero__title hero__stagger"><span class="gradient-text">Salas Limpas</span> ISO 14644<br>para a Indústria <span class="gradient-text">Farmacêutica</span></h2>
+              <p class="hero__description hero__stagger"><strong>Classificação ISO 5 a 8, filtração HEPA/ULPA e cascata de pressão.</strong> Projetos que garantem conformidade ANVISA e FDA para produção de medicamentos, cosméticos e dispositivos médicos.</p>
+              <div class="hero__buttons hero__stagger">
+                <a href="setores/farmaceutico.html" class="btn btn--primary"><span>Projetos Farmacêuticos</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="hero__link">Guia ISO 14644 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero__page" data-hero-page="2">
+              <span class="hero__subtitle hero__stagger">Climatização de Precisão</span>
+              <h2 class="hero__title hero__stagger"><span class="gradient-text">Data Centers</span> com<br>Redundância <span class="gradient-text">Tier III/IV</span></h2>
+              <p class="hero__description hero__stagger"><strong>CRAC, CRAH e In-Row Cooling para missão crítica.</strong> Sistemas de precisão com PUE otimizado, contenção de corredores quente/frio e monitoramento contínuo 24/7.</p>
+              <div class="hero__buttons hero__stagger">
+                <a href="setores/datacenter.html" class="btn btn--primary"><span>Explorar Soluções</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/climatizacao-data-center.html" class="hero__link">Artigo Data Centers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="hero__page" data-hero-page="3">
+              <span class="hero__subtitle hero__stagger">Tecnologia de Projeto</span>
+              <h2 class="hero__title hero__stagger">Projetos <span class="gradient-text">BIM</span> com<br><span class="gradient-text">Clash Detection</span> e LOD 400</h2>
+              <p class="hero__description hero__stagger"><strong>Modelagem 3D paramétrica em Revit MEP.</strong> Detecção de interferências antes da obra, extração automática de quantitativos e coordenação multidisciplinar que elimina retrabalho.</p>
+              <div class="hero__buttons hero__stagger">
+                <a href="servicos/" class="btn btn--primary"><span>Conheça a Tecnologia</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/bim-hvac-projetos.html" class="hero__link">Artigo sobre BIM <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="hero__page" data-hero-page="4">
+              <span class="hero__subtitle hero__stagger">Modernização Industrial</span>
+              <h2 class="hero__title hero__stagger"><span class="gradient-text">Retrofit</span> Inteligente:<br>Reduza até <span class="gradient-text">40%</span> dos Custos</h2>
+              <p class="hero__description hero__stagger"><strong>Substitua chillers obsoletos e automatize sem parar a produção.</strong> Diagnóstico técnico completo, ROI em menos de 3 anos e adequação normativa com intervenção mínima na operação.</p>
+              <div class="hero__buttons hero__stagger">
+                <a href="contato/" class="btn btn--primary"><span>Solicitar Diagnóstico</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                <a href="artigos/retrofit-hvac-quando-fazer.html" class="hero__link">Guia de Retrofit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <!-- Slide 2: Salas Limpas -->
-        <div class="hero__page" data-hero-page="1">
-          <span class="hero__subtitle">Setor Farmacêutico</span>
-          <h2 class="hero__title">
-            <span class="gradient-text">Salas Limpas</span> ISO 14644<br>
-            para a Indústria <span class="gradient-text">Farmacêutica</span>
-          </h2>
-          <p class="hero__description">
-            <strong>Classificação ISO 5 a 8, filtração HEPA/ULPA e cascata de pressão.</strong>
-            Projetos que garantem conformidade ANVISA e FDA para produção de medicamentos, cosméticos e dispositivos médicos.
-          </p>
-          <div class="hero__buttons">
-            <a href="setores/farmaceutico.html" class="btn btn--primary"><span>Projetos Farmacêuticos</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="artigos/classificacao-salas-limpas-iso-14644.html" class="hero__link">Guia ISO 14644 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-        <!-- Slide 3: Data Centers -->
-        <div class="hero__page" data-hero-page="2">
-          <span class="hero__subtitle">Climatização de Precisão</span>
-          <h2 class="hero__title">
-            <span class="gradient-text">Data Centers</span> com<br>
-            Redundância <span class="gradient-text">Tier III/IV</span>
-          </h2>
-          <p class="hero__description">
-            <strong>CRAC, CRAH e In-Row Cooling para missão crítica.</strong>
-            Sistemas de precisão com PUE otimizado, contenção de corredores quente/frio e monitoramento contínuo 24/7.
-          </p>
-          <div class="hero__buttons">
-            <a href="setores/datacenter.html" class="btn btn--primary"><span>Explorar Soluções</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="artigos/climatizacao-data-center.html" class="hero__link">Artigo Data Centers <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-        <!-- Slide 4: BIM -->
-        <div class="hero__page" data-hero-page="3">
-          <span class="hero__subtitle">Tecnologia de Projeto</span>
-          <h2 class="hero__title">
-            Projetos <span class="gradient-text">BIM</span> com<br>
-            <span class="gradient-text">Clash Detection</span> e LOD 400
-          </h2>
-          <p class="hero__description">
-            <strong>Modelagem 3D paramétrica em Revit MEP.</strong>
-            Detecção de interferências antes da obra, extração automática de quantitativos e coordenação multidisciplinar que elimina retrabalho no canteiro.
-          </p>
-          <div class="hero__buttons">
-            <a href="servicos/" class="btn btn--primary"><span>Conheça a Tecnologia</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="artigos/bim-hvac-projetos.html" class="hero__link">Artigo sobre BIM <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-        <!-- Slide 5: Retrofit -->
-        <div class="hero__page" data-hero-page="4">
-          <span class="hero__subtitle">Modernização Industrial</span>
-          <h2 class="hero__title">
-            <span class="gradient-text">Retrofit</span> Inteligente:<br>
-            Reduza até <span class="gradient-text">40%</span> dos Custos
-          </h2>
-          <p class="hero__description">
-            <strong>Substitua chillers obsoletos e automatize sem parar a produção.</strong>
-            Diagnóstico técnico completo, ROI em menos de 3 anos e adequação normativa com intervenção mínima na operação.
-          </p>
-          <div class="hero__buttons">
-            <a href="contato/" class="btn btn--primary"><span>Solicitar Diagnóstico</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="artigos/retrofit-hvac-quando-fazer.html" class="hero__link">Guia de Retrofit <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+
+          <!-- Card flutuante glassmorphism -->
+          <div class="hero__aside">
+            <div class="hero__float-card" id="hero-float-card">
+              <div class="hero__float-card-icon" id="hero-float-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="hero__float-card-value" id="hero-float-value">200+</div>
+              <div class="hero__float-card-label" id="hero-float-label">Projetos Entregues</div>
+              <div class="hero__float-card-bar"><div class="hero__float-card-fill"></div></div>
+            </div>
+            <div class="hero__float-badge">
+              <span class="hero__float-badge-dot"></span>
+              <span>ANVISA &bull; ASHRAE &bull; ISO 14644</span>
+            </div>
           </div>
         </div>
 
-        <!-- Hero Navigation -->
+        <!-- Navegação numerada -->
         <div class="hero__nav" id="hero-nav">
-          <div class="hero__dots" id="hero-dots"></div>
-          <div class="hero__progress">
+          <div class="hero__counter">
+            <span class="hero__counter-current" id="hero-counter-current">01</span>
+            <span class="hero__counter-sep">/</span>
+            <span class="hero__counter-total" id="hero-counter-total">05</span>
+          </div>
+          <div class="hero__progress" id="hero-progress-wrap">
             <div class="hero__progress-bar" id="hero-progress"></div>
           </div>
+          <div class="hero__dots" id="hero-dots"></div>
         </div>
       </div>
     </section>
@@ -1969,7 +1967,7 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1770408002" defer></script>
+    <script src="script.js?v=1770408003" defer></script>
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBL037W0QL"></script>
