@@ -5,7 +5,7 @@
 .sector-hero {
   position: relative;
   padding: calc(var(--header-height) + var(--spacing-14)) 0 var(--spacing-14);
-  background: #0f172a;
+  background: var(--color-gray-900);
   color: var(--color-white);
   overflow: hidden;
 }
@@ -125,7 +125,7 @@
   height: 44px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   background: rgba(78, 205, 196, 0.12);
   color: var(--color-secondary);
   font-weight: 700;
@@ -134,7 +134,7 @@
 .sector-highlight__title {
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-1);
 }
 
 .sector-highlight__desc {
@@ -217,11 +217,11 @@
 .sector-info-card__icon {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   background: rgba(78, 205, 196, 0.12);
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: var(--font-size-2xl);
 }
 
 .sector-info-card h3 {
@@ -238,14 +238,14 @@
 
 .sector-info-card ul {
   margin-top: var(--spacing-4);
-  padding-left: 18px;
+  padding-left: var(--spacing-5);
   color: var(--color-gray-600);
   font-size: var(--font-size-sm);
 }
 
 /* CTA */
 .sector-cta {
-  background: #0f172a;
+  background: var(--color-gray-900);
   color: var(--color-white);
   position: relative;
   overflow: hidden;

@@ -19,8 +19,8 @@
   border-radius: var(--radius-full);
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: var(--backdrop-blur-base);
+  -webkit-backdrop-filter: var(--backdrop-blur-base);
   font-size: var(--font-size-xs);
   font-weight: 700;
   text-transform: uppercase;
@@ -47,6 +47,19 @@
 
 .project-section {
   padding: var(--spacing-14) 0;
+}
+
+.project-section--flush {
+  padding-top: 0;
+}
+
+.project-text__paragraph {
+  color: var(--color-gray-600);
+  line-height: 1.8;
+}
+
+.footer__privacy-link {
+  color: var(--color-secondary);
 }
 
 .project-section__title {
@@ -94,7 +107,12 @@
 
 .project-list {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: var(--spacing-4);
+  color: var(--color-gray-600);
+  line-height: 1.8;
+}
+
+.project-cta__description {
   color: var(--color-gray-600);
   line-height: 1.8;
 }
@@ -140,14 +158,14 @@
 .project-form select:focus {
   outline: none;
   border-color: var(--color-secondary);
-  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+  box-shadow: var(--shadow-focus-ring);
 }
 
 .project-form.was-submitted input:invalid,
 .project-form.was-submitted textarea:invalid,
 .project-form.was-submitted select:invalid {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+  border-color: var(--color-error);
+  box-shadow: var(--shadow-error);
 }
 
 .project-related__grid {
