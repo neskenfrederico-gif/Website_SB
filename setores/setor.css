@@ -4,76 +4,14 @@
 
 .sector-hero {
   position: relative;
-  padding: calc(var(--header-height) + var(--spacing-14)) 0 var(--spacing-14);
-  background: var(--color-gray-900);
+  padding: calc(var(--header-height) + var(--spacing-16)) 0 var(--spacing-16);
+  background: var(--gradient-dark);
   color: var(--color-white);
+  text-align: center;
   overflow: hidden;
 }
 
-.sector-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(800px 400px at 20% 10%, rgba(78, 205, 196, 0.18), transparent 60%),
-    radial-gradient(700px 350px at 80% 20%, rgba(67, 97, 238, 0.18), transparent 55%),
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: auto, auto, 28px 28px, 28px 28px;
-  opacity: 1;
-}
-
-.sector-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9));
-}
-
-.sector-hero__content {
-  position: relative;
-  z-index: 2;
-}
-
-.sector-hero__subtitle {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  color: var(--color-secondary);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.sector-hero__title {
-  margin-top: var(--spacing-3);
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.1;
-}
-
-.sector-hero__lead {
-  margin-top: var(--spacing-4);
-  max-width: 72ch;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.sector-breadcrumbs {
-  margin-top: var(--spacing-6);
-  display: flex;
-  gap: var(--spacing-2);
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.sector-breadcrumbs a {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.sector-breadcrumbs a:hover {
-  border-bottom-color: var(--color-secondary);
-}
+/* Hero usa .page-hero__title, .page-hero__subtitle, .section__subtitle, .breadcrumb de styles.css */
 
 /* Conteúdo com ícones */
 .sector-content {
@@ -287,10 +225,6 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .sector-hero {
-    padding: calc(var(--header-height) + var(--spacing-10)) 0 var(--spacing-10);
-  }
-
   .sector-content__grid,
   .sector-cta__grid {
     grid-template-columns: 1fr;
