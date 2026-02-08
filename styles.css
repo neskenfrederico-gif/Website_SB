@@ -1805,7 +1805,7 @@ select {
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--spacing-4);
+    padding: 0 var(--spacing-5);
   }
 
   .section {
@@ -2038,11 +2038,7 @@ select {
   z-index: var(--z-base);
 }
 
-/* Reset Hero padding */
-.hero__content {
-  padding: var(--spacing-12) 0 var(--spacing-20);
-  min-height: calc(100vh - var(--header-height));
-}
+/* Hero padding (desktop reaffirm — mobile override lives in @media block above) */
 
 /* ===== STATS SECTION ===== */
 .stats {
