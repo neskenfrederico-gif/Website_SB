@@ -3502,7 +3502,8 @@ select {
   gap: var(--spacing-6);
 }
 
-.contact-card {
+.contact-info .contact-card {
+  display: block;
   padding: var(--spacing-8);
 }
 
