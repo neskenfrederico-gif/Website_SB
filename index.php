@@ -407,11 +407,11 @@
                 <img src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/jrd-uniphar.svg" alt="Logo JRD Uniphar - Cliente de engenharia de climatização" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/jrd.jpg" alt="Logo JRD Uniphar - Cliente de engenharia de climatização" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" loading="lazy" decoding="async" width="120" height="60" />
-                <img src="clientes/bioscie.png" alt="Logo Bioscie - Cliente de HVAC industrial" loading="lazy" decoding="async" width="120" height="60" />
+                <img src="clientes/bioscie.jpg" alt="Logo Bioscie - Cliente de HVAC industrial" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" loading="lazy" decoding="async" width="120" height="60" />
                 <img src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" loading="lazy" decoding="async" width="120" height="60" />
