@@ -2020,6 +2020,18 @@ select {
   box-shadow: var(--shadow-xl), var(--shadow-glow-lg);
 }
 
+.btn-cta--whatsapp {
+  background: #25d366;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+}
+
+.btn-cta--whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: #1ebe5b;
+}
+
 .btn-cta__icon {
   flex-shrink: 0;
 }
@@ -2821,8 +2833,7 @@ select {
 
 /* ===== CERTIFICATIONS BAR ===== */
 .certifications {
-  background: var(--color-gray-900);
-  padding: var(--spacing-6) 0;
+  padding: var(--spacing-8) 0;
   overflow: hidden;
 }
 
@@ -2830,8 +2841,11 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-10);
+  gap: var(--spacing-8);
   flex-wrap: wrap;
+  background: var(--color-gray-900);
+  padding: var(--spacing-8) var(--spacing-10);
+  border-radius: var(--radius-xl);
 }
 
 .certifications__badge {
@@ -2878,12 +2892,15 @@ select {
 
 @media (max-width: 768px) {
   .certifications {
-    padding: var(--spacing-6) 0;
+    padding: var(--spacing-2) var(--spacing-4);
   }
 
   .certifications__track {
-    gap: var(--spacing-6) var(--spacing-8);
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-5);
+    padding: var(--spacing-6) var(--spacing-5);
+    border-radius: var(--radius-lg);
   }
 
   .certifications__badge svg {
