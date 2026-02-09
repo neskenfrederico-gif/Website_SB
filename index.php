@@ -1088,7 +1088,7 @@
           <article class="testimonial-card glass-card fade-in">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
-              "A equipe da Siqueira e Blanco demonstrou excelência técnica e comprometimento com prazos. O projeto de climatização da nossa nova planta foi entregue com qualidade impecável e dentro do cronograma."
+              "Trabalho na gestão dos contratos com a empresa Siqueira e Blanco há mais de 20 anos, e posso atestar a competência para a execução de obras de climatização industrial em um nicho tão exigente como a Farmacêutica! A equipe possui sólidos conhecimentos técnicos, a documentação produzida é robusta e estão preparados tanto na gestão administrativa das obras, segurança do trabalho quanto na estrutura de oficina e ferramental. A Siqueira e Blanco assegura a qualidade requerida em atendimento às demandas do nosso time de Garantia da Qualidade e fiscalização dos órgãos reguladores no Brasil."
             </blockquote>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
@@ -1098,8 +1098,8 @@
                 </svg>
               </div>
               <div class="testimonial-card__info">
-                <strong>Diretor de Engenharia</strong>
-                <span>Indústria Farmacêutica</span>
+                <strong>Thatiane Cristina dos Santos</strong>
+                <span>Brainfarma</span>
               </div>
             </div>
           </article>
