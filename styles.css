@@ -3127,8 +3127,11 @@ select {
 }
 
 .spotlight__content {
-  padding: var(--spacing-12);
+  padding: var(--spacing-10) var(--spacing-12);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .spotlight__title {
@@ -3182,8 +3185,15 @@ select {
 
 .spotlight__image {
   position: relative;
-  min-height: 400px;
+  min-height: 350px;
   overflow: hidden;
+}
+
+.spotlight__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 30%);
+  z-index: 1;
 }
 
 .spotlight__img {
