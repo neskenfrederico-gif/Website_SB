@@ -187,14 +187,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">5.500 m²</span>
+                    <span class="spec__value">25.000 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">450 TR</span>
+                    <span class="spec__value">1.500 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Expansão de salas limpas para produção de sólidos e semissólidos.</p>
+                <p class="project-card__description">Salas limpas para sólidos, efervescentes, semissólidos, líquidos e colírios com filtragem HEPA.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -214,14 +214,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">3.200 m²</span>
+                    <span class="spec__value">800 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">280 TR</span>
+                    <span class="spec__value">264 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Adequação de fluxos produtivos e sistema de ar com controle de contaminação cruzada.</p>
+                <p class="project-card__description">Fluxos laminares e UTAs com expansão indireta para controle de contaminação cruzada.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -241,14 +241,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">4.800 m²</span>
+                    <span class="spec__value">4.000 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">520 TR</span>
+                    <span class="spec__value">200 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Modernização do sistema HVAC e adequação às normas ANVISA.</p>
+                <p class="project-card__description">Modernização do sistema HVAC com VRF e automação Siemens integrada.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -268,14 +268,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">6.200 m²</span>
+                    <span class="spec__value">20.000 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">680 TR</span>
+                    <span class="spec__value">500 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Projeto completo de climatização para produção farmacêutica.</p>
+                <p class="project-card__description">Climatização completa com expansão direta (Splitão) e automação Schneider.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -430,14 +430,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">12.400 m²</span>
+                    <span class="spec__value">6.872 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">420 TR</span>
+                    <span class="spec__value">343 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Sede da PRF em Brasília com sistema VRF e controle de temperatura por zonas.</p>
+                <p class="project-card__description">Sede da PRF em Vitória-ES com sistema VRF-Split para alojamentos, adm. e auditório.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -456,15 +456,15 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <span class="project-card__client">Ontex Global</span>
                 <div class="project-card__specs">
                   <div class="spec">
-                    <span class="spec__label">Vazão</span>
-                    <span class="spec__value">710.000 m³/h</span>
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">15.600 m²</span>
                   </div>
                   <div class="spec">
-                    <span class="spec__label">Sistema</span>
-                    <span class="spec__value">IBUTG</span>
+                    <span class="spec__label">Capacidade</span>
+                    <span class="spec__value">1.050 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Controle de IBUTG para produção de fraldas descartáveis, automação Siemens.</p>
+                <p class="project-card__description">Controle de IBUTG com 710.000 m³/h para produção de fraldas, automação Siemens.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -483,15 +483,15 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <span class="project-card__client">Savoy</span>
                 <div class="project-card__specs">
                   <div class="spec">
-                    <span class="spec__label">Sistema</span>
-                    <span class="spec__value">100% Exaustão</span>
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">953 m²</span>
                   </div>
                   <div class="spec">
-                    <span class="spec__label">Aplicação</span>
-                    <span class="spec__value">Aerosol</span>
+                    <span class="spec__label">Vazão</span>
+                    <span class="spec__value">110.000 m³/h</span>
                   </div>
                 </div>
-                <p class="project-card__description">Ventilação mecânica para linha de envase de aerosóis na indústria de cosméticos.</p>
+                <p class="project-card__description">Ventilação e exaustão 100% para linha de envase de aerosóis com girotubo.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
@@ -511,14 +511,14 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 <div class="project-card__specs">
                   <div class="spec">
                     <span class="spec__label">Área</span>
-                    <span class="spec__value">2.800 m²</span>
+                    <span class="spec__value">577 m²</span>
                   </div>
                   <div class="spec">
                     <span class="spec__label">Capacidade</span>
-                    <span class="spec__value">180 TR</span>
+                    <span class="spec__value">150 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Climatização do laboratório de controle de qualidade e áreas administrativas.</p>
+                <p class="project-card__description">Climatização com expansão direta e 03 condicionadores Splitão (91.800 m³/h).</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
