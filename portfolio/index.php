@@ -122,7 +122,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Brainfarma Injetáveis -->
           <a class="project-card-link" href="../projetos/projeto-injetaveis.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image">
+              <div class="project-card__image project-card__image--1">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -203,7 +203,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Brainfarma Fluxos -->
           <a class="project-card-link" href="../projetos/projeto-brainfarma-fluxos.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--11">
+              <div class="project-card__image project-card__image--12">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -446,7 +446,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Ontex -->
           <a class="project-card-link" href="../projetos/projeto-ontex.php">
             <article class="project-card" data-category="industrial">
-              <div class="project-card__image project-card__image--12">
+              <div class="project-card__image project-card__image--10">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Industrial</span>
                 </div>
