@@ -498,6 +498,33 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
             </article>
           </a>
 
+          <!-- Vitamedic -->
+          <a class="project-card-link" href="../projetos/projeto-vitamedic.php">
+            <article class="project-card" data-category="logistico">
+              <div class="project-card__image project-card__image--17">
+                <div class="project-card__overlay">
+                  <span class="project-card__category">Logístico</span>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Vitamedic</h3>
+                <span class="project-card__client">Vitamedic Indústria Farmacêutica</span>
+                <div class="project-card__specs">
+                  <div class="spec">
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">7.000 m²</span>
+                  </div>
+                  <div class="spec">
+                    <span class="spec__label">Capacidade</span>
+                    <span class="spec__value">250 TR</span>
+                  </div>
+                </div>
+                <p class="project-card__description">CD logístico com expansão direta (splitão), dutos em MPU e automação Siemens.</p>
+                <span class="project-card__details">Ver detalhes</span>
+              </div>
+            </article>
+          </a>
+
           <!-- Louis Dreyfus -->
           <a class="project-card-link" href="../projetos/projeto-louisdreyfus.php">
             <article class="project-card" data-category="industrial">
