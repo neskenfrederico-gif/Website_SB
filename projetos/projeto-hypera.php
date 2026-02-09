@@ -60,7 +60,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
           <span aria-hidden="true">›</span>
           <span aria-current="page">Hypera — CD Autoportante</span>
         </nav>
-        <span class="section__subtitle">Industrial</span>
+        <span class="section__subtitle">Logístico</span>
         <h1 class="page-hero__title">Hypera — <span class="gradient-text">CD Autoportante</span></h1>
         <p class="page-hero__subtitle">Cliente: Hypera S.A. | Local: Anápolis-GO | Climatização VRF + automação integrada</p>
       </div>

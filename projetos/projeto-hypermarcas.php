@@ -60,7 +60,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
           <span aria-hidden="true">›</span>
           <span aria-current="page">Hypermarcas — CD Ar-Condicionado</span>
         </nav>
-        <span class="section__subtitle">Industrial</span>
+        <span class="section__subtitle">Logístico</span>
         <h1 class="page-hero__title">Hypermarcas — <span class="gradient-text">CD Ar-Condicionado</span></h1>
         <p class="page-hero__subtitle">Cliente: Hypermarcas S.A | Local: Anápolis-GO | Área: 20.000 m²</p>
       </div>
