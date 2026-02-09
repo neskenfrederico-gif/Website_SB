@@ -3131,8 +3131,8 @@ select {
 }
 
 .spotlight__title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.1;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  line-height: 1.15;
   font-weight: 600;
   margin-bottom: var(--spacing-4);
   color: var(--color-primary);
