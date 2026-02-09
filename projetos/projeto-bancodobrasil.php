@@ -93,7 +93,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Sistema</span>
-            <span class="project-spec__value">Água gelada (chillers centrífugos, parafuso e scroll backup)</span>
+            <span class="project-spec__value">Água gelada (chillers parafuso Sedes I/II, centrífugo Sede III, scroll backup)</span>
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Equipamentos terminais</span>
@@ -124,7 +124,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
         <p>
           O <strong>Edifício Sede I</strong>, o mais icônico do trio, possui 26 pavimentos — 21 andares de escritórios,
           térreo, sobreloja e 3 subsolos — com lajes de aproximadamente 800 m² por andar. É o prédio histórico do Banco
-          do Brasil em Brasília, e sua central de água gelada de 1.900 TR foi projetada com chillers centrífugos de alta
+          do Brasil em Brasília, e sua central de água gelada de 1.900 TR foi projetada com chillers tipo parafuso de alta
           eficiência, garantindo estabilidade térmica para milhares de funcionários e operações bancárias que exigem
           ambiente controlado 24 horas.
         </p>
@@ -137,7 +137,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
         <p>
           A <strong>Sede III</strong> é o edifício mais moderno do complexo — 20 pavimentos com as maiores lajes corporativas
           individuais, de aproximadamente 1.585 m² cada. Com 1.700 TR de capacidade, o projeto contemplou chillers centrífugos
-          e parafuso operando em paralelo, com backup scroll para garantir redundância total. As lajes amplas exigiram
+          como equipamento principal, com backup scroll para garantir redundância total. As lajes amplas exigiram
           distribuição criteriosa de fancoils para manter uniformidade térmica sem zonas quentes ou frias.
         </p>
         <p>
