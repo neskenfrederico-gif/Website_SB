@@ -503,7 +503,7 @@
             </div>
             <div class="spotlight__counter">
               <span class="spotlight__counter-text"><span id="spotlight-current">01</span> <span class="spotlight__counter-sep">/ 05</span></span>
-              <div class="spotlight__counter-line"></div>
+              <div class="spotlight__counter-line animating"></div>
               <div class="spotlight__dots" id="spotlight-dots"></div>
             </div>
           </div>

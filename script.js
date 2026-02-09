@@ -1116,6 +1116,7 @@ function initSpotlightRotator() {
     }
     current = index;
     updateCase();
+    startRotation();
   }
 
   function nextCase() {
@@ -1147,6 +1148,14 @@ function initSpotlightRotator() {
       if (linkEl && c.link) linkEl.href = c.link;
       if (currentEl) currentEl.textContent = String(current + 1).padStart(2, '0');
 
+      // Reset progress bar animation
+      const progressLine = document.querySelector('.spotlight__counter-line');
+      if (progressLine) {
+        progressLine.classList.remove('animating');
+        void progressLine.offsetHeight;
+        progressLine.classList.add('animating');
+      }
+
       // Update image + alt text
       if (imgEl) {
         const picture = imgEl.closest('picture');
@@ -1169,7 +1178,7 @@ function initSpotlightRotator() {
     }, 300);
   }
 
-  // Manual navigation only – no auto-rotation
+  startRotation();
 }
 
 // ===== Back to Top Button =====
