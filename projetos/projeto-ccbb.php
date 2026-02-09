@@ -112,37 +112,50 @@ $extra_css        = ['projeto.css?v=1770600000'];
       <div class="container project-text">
         <h2 class="project-section__title">Descrição do projeto</h2>
         <p>
-          O Centro Cultural Banco do Brasil em Brasília é um dos espaços culturais mais importantes do país e um dos
-          CCBBs mais visitados do mundo. Instalado no Edifício Tancredo Neves — obra de Oscar Niemeyer com sua inconfundível
-          fachada curva em concreto aparente e janelas orgânicas — o complexo ocupa um terreno de 380.000 m² e abriga
-          galerias de arte, teatro, cinema, espaços educativos e áreas de convivência que recebem milhões de visitantes
-          por ano.
+          Poucos projetos de engenharia HVAC no Brasil carregam tanta responsabilidade simbólica quanto a climatização do
+          CCBB Brasília. O Centro Cultural Banco do Brasil funciona dentro do Edifício Tancredo Neves — projetado por
+          Oscar Niemeyer, com sua icônica fachada curva em concreto aparente e janelas de formas orgânicas que se tornaram
+          cartão-postal da capital federal. O complexo ocupa um terreno de 380.000 m² às margens do Eixo Monumental e é
+          um dos centros culturais mais visitados do mundo, recebendo milhões de pessoas por ano em suas galerias, teatro,
+          cinema e espaços educativos.
         </p>
         <p>
-          A climatização de um centro cultural dessa envergadura impõe desafios que vão muito além do conforto térmico
-          convencional. As quatro galerias de exposição, que somam aproximadamente 1.200 m², abrigam acervos de arte
-          contemporânea, instalações e obras itinerantes internacionais que exigem controle rigoroso e ininterrupto de
-          temperatura e umidade relativa — qualquer oscilação pode causar danos irreversíveis a pinturas, esculturas e
-          peças históricas. Para isso, foram especificados equipamentos <strong>dual fluid de precisão</strong>,
-          capazes de manter setpoints estáveis com variação mínima, operando com serpentinas de água gelada e aquecimento
-          simultâneo para desumidificação controlada.
+          Climatizar um espaço cultural desse porte não é apenas uma questão de conforto — é uma questão de preservação
+          patrimonial. As quatro galerias de exposição, que somam cerca de 1.200 m², recebem acervos itinerantes de
+          museus internacionais, instalações de arte contemporânea e peças históricas de valor inestimável. Uma tela de
+          Monet, uma escultura em bronze do século XVIII ou uma fotografia original de Sebastião Salgado exigem condições
+          ambientais absolutamente estáveis — tipicamente 21°C ± 1°C e 50% ± 5% de umidade relativa, 24 horas por dia,
+          365 dias por ano. Qualquer desvio pode provocar craqueamento de tintas, oxidação de metais, deformação de
+          suportes em madeira ou degradação irreversível de materiais orgânicos.
         </p>
         <p>
-          O teatro com 262 lugares e o cinema com 70 espectadores demandam tratamento acústico integrado ao sistema de
-          climatização — baixa velocidade de ar, difusão sem ruído e renovação de ar dimensionada para ocupação plena,
-          garantindo conforto sem interferir na experiência cultural.
+          Para atender essa exigência, as galerias foram equipadas com unidades <strong>dual fluid de precisão</strong> —
+          equipamentos que operam simultaneamente com serpentinas de água gelada (resfriamento) e resistências ou serpentinas
+          de água quente (reaquecimento), permitindo desumidificação ativa sem queda de temperatura. Essa tecnologia
+          garante controle fino e contínuo dos setpoints, com variação mínima mesmo durante as transições de carga térmica
+          causadas pelo fluxo variável de visitantes ao longo do dia.
         </p>
         <p>
-          O sistema principal é de água gelada, com chiller de condensação a água tipo parafuso — escolha que elimina a
-          necessidade de torre de resfriamento, simplificando a operação e o tratamento de água em um edifício tombado
-          onde intervenções externas são restritas. A distribuição nos ambientes do edifício é feita por fancoils e
-          fancoletes, permitindo zoneamento e controle individualizado de temperatura conforme a ocupação e o uso de
-          cada espaço.
+          O teatro, com capacidade para 262 espectadores, e o cinema, com 70 lugares, impõem outro nível de complexidade:
+          a climatização precisa ser imperceptível. Difusores de baixa velocidade, dutos com atenuadores acústicos e
+          equipamentos selecionados por nível de pressão sonora garantem que o sistema opere em silêncio absoluto durante
+          apresentações, projeções e concertos. A renovação de ar é dimensionada para ocupação plena, mantendo qualidade
+          do ar interior (QAI) dentro dos parâmetros da RE ANVISA nº 09 mesmo nas sessões lotadas.
         </p>
         <p>
-          Com 900 TR de capacidade instalada, o projeto equilibra a preservação da arquitetura modernista de Niemeyer
-          com as exigências técnicas de conservação de acervos e conforto de público — um dos desafios mais singulares
-          do portfólio da Siqueira e Blanco.
+          A central térmica é composta por chillers tipo parafuso com condensação a água, alimentados por torre de
+          resfriamento dedicada com tratamento químico automatizado. A escolha por condensação a água — e não a ar —
+          proporciona maior eficiência energética (COP superior) e operação mais silenciosa, fundamental em um edifício
+          cultural onde o ruído externo de condensadores a ar seria inaceitável. A distribuição nos ambientes é feita
+          por fancoils e fancoletes, com zoneamento que permite controle independente de temperatura em cada espaço
+          conforme sua ocupação e finalidade.
+        </p>
+        <p>
+          Com 900 TR de capacidade instalada nos 15.000 m² do Edifício Tancredo Neves, este projeto representa a
+          convergência entre engenharia de precisão e respeito à arquitetura modernista brasileira — onde cada decisão
+          técnica foi tomada para ser invisível ao visitante, mas absolutamente determinante para a preservação do
+          patrimônio cultural que o CCBB abriga. Um dos projetos mais singulares e exigentes do portfólio da Siqueira
+          e Blanco.
         </p>
       </div>
     </section>
