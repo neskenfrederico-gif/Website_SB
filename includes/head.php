@@ -18,7 +18,7 @@ $og_title       = $og_title ?? $page_title;
 $og_description = $og_description ?? $page_description;
 $extra_css      = $extra_css ?? [];
 $extra_head     = $extra_head ?? '';
-$css_version    = '37';
+$css_version    = '38';
 $sep            = ($base === '') ? '' : '/';
 ?>
     <meta charset="UTF-8" />

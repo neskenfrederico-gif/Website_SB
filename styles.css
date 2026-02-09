@@ -3118,7 +3118,7 @@ select {
 
 .spotlight__wrapper {
   position: relative;
-  border-radius: var(--radius-xl);
+  border-radius: 0;
   overflow: hidden;
   min-height: 480px;
   display: flex;
