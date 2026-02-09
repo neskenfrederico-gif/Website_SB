@@ -1289,3 +1289,21 @@ function initClientsCarousel() {
 }
 
 document.addEventListener('DOMContentLoaded', initClientsCarousel);
+
+/* Testimonial "Ver mais" */
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.testimonial-card__quote').forEach(function(quote) {
+    if (quote.scrollHeight > quote.clientHeight + 2) {
+      quote.classList.add('clamped');
+      var btn = quote.parentElement.querySelector('.testimonial-card__toggle');
+      if (btn) btn.classList.add('visible');
+    }
+  });
+  document.querySelectorAll('.testimonial-card__toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var quote = this.parentElement.querySelector('.testimonial-card__quote');
+      quote.classList.toggle('expanded');
+      this.textContent = quote.classList.contains('expanded') ? 'Ver menos ←' : 'Ver mais →';
+    });
+  });
+});

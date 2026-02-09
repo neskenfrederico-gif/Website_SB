@@ -1090,6 +1090,7 @@
             <blockquote class="testimonial-card__quote">
               "Trabalho na gestão dos contratos com a empresa Siqueira e Blanco há mais de 20 anos, e posso atestar a competência para a execução de obras de climatização industrial em um nicho tão exigente como a Farmacêutica! A equipe possui sólidos conhecimentos técnicos, a documentação produzida é robusta e estão preparados tanto na gestão administrativa das obras, segurança do trabalho quanto na estrutura de oficina e ferramental. A Siqueira e Blanco assegura a qualidade requerida em atendimento às demandas do nosso time de Garantia da Qualidade e fiscalização dos órgãos reguladores no Brasil."
             </blockquote>
+            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1109,6 +1110,7 @@
             <blockquote class="testimonial-card__quote">
               "Profissionais altamente capacitados. O retrofit do nosso sistema de HVAC resultou em uma economia de energia de aproximadamente 35%, superando nossas expectativas iniciais."
             </blockquote>
+            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1128,6 +1130,7 @@
             <blockquote class="testimonial-card__quote">
               "Trabalhamos com a Siqueira e Blanco há mais de 10 anos e a confiança é total. A equipe possui vasta experiência em HVAC aplicado à indústria, especialmente no complexo segmento farmacêutico. Eles garantem que todo o projeto e montagem estejam em conformidade até a etapa final de qualificações."
             </blockquote>
+            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
