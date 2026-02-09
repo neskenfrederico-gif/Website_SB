@@ -1053,8 +1053,121 @@
             Governamental
           </button>
           <button class="filter-btn" data-filter="industrial" aria-pressed="false">Industrial</button>
+          <button class="filter-btn" data-filter="logistico" aria-pressed="false">Logístico</button>
+          <button class="filter-btn" data-filter="hospitalar" aria-pressed="false">Hospitalar</button>
+          <button class="filter-btn" data-filter="corporativo" aria-pressed="false">Corporativo</button>
+          <button class="filter-btn" data-filter="cultural" aria-pressed="false">Cultural</button>
         </div>
         <div class="portfolio__grid">
+
+          <!-- HC-UFG -->
+          <a class="project-card-link" href="projetos/projeto-hcufg.php" aria-label="Ver detalhes do projeto HC-UFG Hospital das Clínicas">
+          <article class="project-card" data-category="hospitalar">
+            <div class="project-card__image project-card__image--18">
+              <div class="project-card__overlay">
+                <span class="project-card__category">Hospitalar</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">HC-UFG Hospital das Clínicas</h3>
+              <span class="project-card__client">Universidade Federal de Goiás</span>
+              <div class="project-card__specs">
+                <div class="spec">
+                  <span class="spec__label">Área</span>
+                  <span class="spec__value">44.000 m²</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__label">Capacidade</span>
+                  <span class="spec__value">1.500 TR</span>
+                </div>
+              </div>
+              <p class="project-card__description">Hospital referência em GO com 20 pavimentos, filtragem HEPA, centro cirúrgico, UTIs e transplantados (H13).</p>
+              <span class="project-card__details">Ver detalhes</span>
+            </div>
+          </article>
+          </a>
+
+          <!-- Banco do Brasil -->
+          <a class="project-card-link" href="projetos/projeto-bancodobrasil.php" aria-label="Ver detalhes do projeto Banco do Brasil Sedes SBS">
+          <article class="project-card" data-category="corporativo">
+            <div class="project-card__image project-card__image--19">
+              <div class="project-card__overlay">
+                <span class="project-card__category">Corporativo</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Banco do Brasil — Sedes SBS</h3>
+              <span class="project-card__client">Banco do Brasil S.A.</span>
+              <div class="project-card__specs">
+                <div class="spec">
+                  <span class="spec__label">Área</span>
+                  <span class="spec__value">96.135 m²</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__label">Capacidade</span>
+                  <span class="spec__value">4.350 TR</span>
+                </div>
+              </div>
+              <p class="project-card__description">3 sedes no Setor Bancário Sul de Brasília com chillers centrífugos, parafuso e scroll, fancoils e pressurização.</p>
+              <span class="project-card__details">Ver detalhes</span>
+            </div>
+          </article>
+          </a>
+
+          <!-- CCBB -->
+          <a class="project-card-link" href="projetos/projeto-ccbb.php" aria-label="Ver detalhes do projeto CCBB Brasília">
+          <article class="project-card" data-category="cultural">
+            <div class="project-card__image project-card__image--20">
+              <div class="project-card__overlay">
+                <span class="project-card__category">Cultural</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">CCBB Brasília</h3>
+              <span class="project-card__client">Banco do Brasil S.A.</span>
+              <div class="project-card__specs">
+                <div class="spec">
+                  <span class="spec__label">Área</span>
+                  <span class="spec__value">15.000 m²</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__label">Capacidade</span>
+                  <span class="spec__value">900 TR</span>
+                </div>
+              </div>
+              <p class="project-card__description">Centro Cultural Banco do Brasil com dual fluid de precisão para galerias, teatro (262 lugares) e cinema.</p>
+              <span class="project-card__details">Ver detalhes</span>
+            </div>
+          </article>
+          </a>
+
+          <!-- Vitamedic -->
+          <a class="project-card-link" href="projetos/projeto-vitamedic.php" aria-label="Ver detalhes do projeto Vitamedic">
+          <article class="project-card" data-category="logistico">
+            <div class="project-card__image project-card__image--17">
+              <div class="project-card__overlay">
+                <span class="project-card__category">Logístico</span>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Vitamedic</h3>
+              <span class="project-card__client">Vitamedic Indústria Farmacêutica</span>
+              <div class="project-card__specs">
+                <div class="spec">
+                  <span class="spec__label">Área</span>
+                  <span class="spec__value">7.000 m²</span>
+                </div>
+                <div class="spec">
+                  <span class="spec__label">Capacidade</span>
+                  <span class="spec__value">250 TR</span>
+                </div>
+              </div>
+              <p class="project-card__description">CD logístico com expansão direta (splitão), dutos em MPU e automação Siemens.</p>
+              <span class="project-card__details">Ver detalhes</span>
+            </div>
+          </article>
+          </a>
+
           <!-- Projeto 1 -->
           <a class="project-card-link" href="projetos/projeto-injetaveis.php" aria-label="Ver detalhes do projeto Prédio de Injetáveis - Brainfarma">
           <article class="project-card" data-category="farmaceutico">
@@ -1474,7 +1587,7 @@
 
           <!-- Projeto 14 -->
           <a class="project-card-link" href="projetos/projeto-hypermarcas.php" aria-label="Ver detalhes do projeto Hypermarcas">
-            <article class="project-card" data-category="industrial">
+            <article class="project-card" data-category="logistico">
               <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Industrial</span>
@@ -1503,10 +1616,10 @@
 
           <!-- Projeto 15 -->
           <a class="project-card-link" href="projetos/projeto-hypera.php" aria-label="Ver detalhes do projeto Hypera - CD Autoportante">
-            <article class="project-card" data-category="industrial">
+            <article class="project-card" data-category="logistico">
               <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
-                  <span class="project-card__category">Industrial</span>
+                  <span class="project-card__category">Logístico</span>
                 </div>
               </div>
               <div class="project-card__content">
