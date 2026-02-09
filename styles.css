@@ -1147,6 +1147,7 @@ select {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   background: var(--color-white);
+  max-width: 720px;
 }
 
 .team-hero {
@@ -1154,6 +1155,31 @@ select {
   display: flex;
   align-items: flex-end;
   padding: var(--spacing-5);
+}
+
+@media (min-width: 768px) {
+  .sobre__card--team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 720px;
+  }
+
+  .team-hero {
+    height: 100%;
+    min-height: 320px;
+    border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  }
+
+  .team-hero__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .team-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .team-hero__content {
