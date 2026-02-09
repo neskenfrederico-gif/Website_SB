@@ -500,9 +500,10 @@
                 <span class="s-stat__label" id="stat-3-label">Edifícios</span>
               </div>
             </div>
-            <a href="portfolio/" class="btn btn--primary">
-              Ver Detalhes Técnicos
-            </a>
+            <div class="spotlight__buttons">
+              <a href="portfolio/" class="btn btn--primary">Solicitar Orçamento →</a>
+              <a href="portfolio/" class="spotlight__link" id="spotlight-link">Ver Projetos →</a>
+            </div>
           </div>
           <div class="spotlight__image">
             <div class="spotlight__image-overlay"></div>

@@ -1002,7 +1002,8 @@ function initSpotlightRotator() {
       stat3: '3', stat3Label: 'Edifícios',
       badge: 'Maior Projeto',
       badgeIcon: '🏦',
-      img: 'spotlight-bb.webp?v=4'
+      img: 'spotlight-bb.webp?v=4',
+      link: 'projetos/projeto-bancodobrasil.php'
     },
     {
       title: 'HC-UFG — <span class="gradient-text">Hospital das Clínicas</span>',
@@ -1013,7 +1014,8 @@ function initSpotlightRotator() {
       stat3: '600', stat3Label: 'Leitos',
       badge: 'Ref. em Hospitalar',
       badgeIcon: '🏥',
-      img: 'spotlight-hcufg.webp?v=4'
+      img: 'spotlight-hcufg.webp?v=4',
+      link: 'projetos/projeto-hcufg.php'
     },
     {
       title: 'CCBB — <span class="gradient-text">Centro Cultural</span>',
@@ -1024,7 +1026,8 @@ function initSpotlightRotator() {
       stat3: 'Precisão', stat3Label: 'Controle Ambiental',
       badge: 'Ref. em Cultural',
       badgeIcon: '🎭',
-      img: 'spotlight-ccbb.webp?v=4'
+      img: 'spotlight-ccbb.webp?v=4',
+      link: 'projetos/projeto-ccbb.php'
     },
     {
       title: 'Geolab — <span class="gradient-text">Site I</span>',
@@ -1035,7 +1038,8 @@ function initSpotlightRotator() {
       stat3: 'TROX TKZ', stat3Label: 'UTAs',
       badge: 'Ref. em Farmacêutica',
       badgeIcon: '⚗️',
-      img: 'spotlight-geolab1.webp?v=3'
+      img: 'spotlight-geolab1.webp?v=3',
+      link: 'projetos/projeto-geolab.php'
     },
     {
       title: 'Ontex — <span class="gradient-text">IBUTG</span>',
@@ -1046,7 +1050,8 @@ function initSpotlightRotator() {
       stat3: 'Siemens', stat3Label: 'Automação',
       badge: 'Ref. em Industrial',
       badgeIcon: '🏭',
-      img: 'spotlight-ontex.webp?v=3'
+      img: 'spotlight-ontex.webp?v=3',
+      link: 'projetos/projeto-ontex.php'
     }
   ];
 
@@ -1062,6 +1067,7 @@ function initSpotlightRotator() {
   const badgeEl = document.getElementById('spotlight-badge');
   const imgEl = document.getElementById('spotlight-img');
   const dotsContainer = document.getElementById('spotlight-dots');
+  const linkEl = document.getElementById('spotlight-link');
   const content = document.querySelector('.spotlight__content');
 
   if (!titleEl || !dotsContainer) return;
@@ -1136,6 +1142,9 @@ function initSpotlightRotator() {
       stat3Label.textContent = c.stat3Label;
       badgeText.textContent = c.badge;
       badgeEl.querySelector('.s-icon').textContent = c.badgeIcon;
+
+      // Update link
+      if (linkEl && c.link) linkEl.href = c.link;
 
       // Update image + alt text
       if (imgEl) {

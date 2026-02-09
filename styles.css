@@ -3184,6 +3184,24 @@ select {
   margin-top: var(--spacing-1);
 }
 
+.spotlight__buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.spotlight__link {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.spotlight__link:hover {
+  color: var(--color-primary);
+}
+
 .spotlight__image {
   position: relative;
   min-height: 350px;
