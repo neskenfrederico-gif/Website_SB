@@ -3124,6 +3124,11 @@ select {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: var(--backdrop-blur-md);
+  -webkit-backdrop-filter: var(--backdrop-blur-md);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 .spotlight__content {

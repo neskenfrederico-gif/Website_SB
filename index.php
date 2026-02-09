@@ -476,7 +476,7 @@
     <!-- Engineering Spotlight Section (New - Authority Builder) -->
     <section class="section spotlight" id="destaque">
       <div class="container">
-        <div class="spotlight__wrapper glass-card fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
+        <div class="spotlight__wrapper fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
           <div class="spotlight__content">
             <div class="spotlight__nav">
               <span class="section__subtitle">Cases em Destaque</span>
