@@ -1036,6 +1036,39 @@ function initSpotlightRotator() {
       badge: 'Maior Área',
       badgeIcon: '🏢',
       img: 'spotlight-linea.webp?v=3'
+    },
+    {
+      title: 'HC-UFG — <span class="gradient-text">Hospital das Clínicas</span>',
+      alt: 'HC-UFG Hospital das Clínicas - 44.000 m², 600 leitos',
+      desc: 'Hospital referência em Goiás com <strong>600 leitos e 20 pavimentos</strong>. Filtragem HEPA em centros cirúrgicos e UTIs, filtros H13 para transplantados.',
+      stat1: '1.500', stat1Label: 'TR de Capacidade',
+      stat2: '44.000 m²', stat2Label: 'Área Climatizada',
+      stat3: '600', stat3Label: 'Leitos',
+      badge: 'Ref. em Hospitalar',
+      badgeIcon: '🏥',
+      img: 'spotlight-hcufg.webp?v=4'
+    },
+    {
+      title: 'Banco do Brasil — <span class="gradient-text">Sedes SBS</span>',
+      alt: 'Banco do Brasil - 3 Sedes SBS Brasília, 96.135 m²',
+      desc: 'As <strong>3 sedes do BB no Setor Bancário Sul de Brasília</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.',
+      stat1: '4.350', stat1Label: 'TR de Capacidade',
+      stat2: '96.135 m²', stat2Label: 'Área Total',
+      stat3: '3', stat3Label: 'Edifícios',
+      badge: 'Maior Projeto',
+      badgeIcon: '🏦',
+      img: 'spotlight-bb.webp?v=4'
+    },
+    {
+      title: 'CCBB — <span class="gradient-text">Centro Cultural</span>',
+      alt: 'CCBB Brasília - Centro Cultural Banco do Brasil, Niemeyer',
+      desc: 'Edifício Tancredo Neves de <strong>Oscar Niemeyer</strong>. Dual fluid de precisão para galerias de arte, teatro (262 lugares) e cinema, com controle rigoroso de temperatura e umidade.',
+      stat1: '900', stat1Label: 'TR de Capacidade',
+      stat2: '15.000 m²', stat2Label: 'Área Construída',
+      stat3: 'Precisão', stat3Label: 'Controle Ambiental',
+      badge: 'Ref. em Cultural',
+      badgeIcon: '🎭',
+      img: 'spotlight-ccbb.webp?v=4'
     }
   ];
 
