@@ -3450,38 +3450,18 @@ select {
 
   /* Spotlight wrapper mobile */
   .spotlight {
-    padding: var(--spacing-12) 0;
+    padding: var(--spacing-8) 0;
   }
 
   .spotlight__wrapper {
-    padding: var(--spacing-5);
-    gap: var(--spacing-6);
+    padding: var(--spacing-4);
+    gap: var(--spacing-4);
     background: rgba(255, 255, 255, 0.95);
     overflow: hidden;
   }
 
   .spotlight__image {
-    min-height: 220px;
-  }
-
-  .spotlight__title {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--spacing-4);
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .spotlight__description {
-    font-size: var(--font-size-base);
-    margin-bottom: var(--spacing-5);
-    line-height: 1.7;
-  }
-
-  /* Botão com largura auto no spotlight */
-  .spotlight .spotlight__content .btn.btn--primary {
-    width: auto;
-    align-self: flex-start;
-    padding: var(--spacing-3) var(--spacing-6);
+    min-height: 200px;
   }
 
   .spotlight__content {
@@ -3489,14 +3469,48 @@ select {
     flex-direction: column;
     overflow: hidden;
     max-width: 100%;
+    padding: var(--spacing-2) var(--spacing-2) var(--spacing-4);
+  }
+
+  .spotlight__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .spotlight__description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-4);
+    line-height: 1.6;
+  }
+
+  .spotlight__buttons {
+    flex-direction: row;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-5);
+  }
+
+  .spotlight .spotlight__content .btn.btn--primary {
+    width: auto;
+    padding: var(--spacing-3) var(--spacing-5);
+    font-size: var(--font-size-sm);
+  }
+
+  .spotlight__link {
+    font-size: var(--font-size-sm);
+  }
+
+  .spotlight__nav.hero__nav {
+    gap: var(--spacing-3);
   }
 
   /* Badge mais compacto */
   .spotlight__badge {
-    bottom: var(--spacing-4);
-    left: var(--spacing-4);
-    padding: var(--spacing-2) var(--spacing-4);
-    font-size: var(--font-size-sm);
+    bottom: var(--spacing-3);
+    left: var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
   }
 
   .pillar-card:last-child {
