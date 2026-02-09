@@ -4006,7 +4006,7 @@ select {
   color: var(--color-gray-600);
   font-style: italic;
   flex-grow: 1;
-  max-height: 18em;
+  max-height: 14.4em;
   overflow: hidden;
   position: relative;
   transition: max-height 0.4s ease;
