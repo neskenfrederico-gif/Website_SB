@@ -81,7 +81,11 @@ $extra_css        = ['projeto.css?v=1770600000'];
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Pavimentos</span>
-            <span class="project-spec__value">20 pavimentos</span>
+            <span class="project-spec__value">20 (2 subsolos, térreo, mezanino, 1º ao 16º)</span>
+          </div>
+          <div class="project-spec glass-card">
+            <span class="project-spec__label">Leitos</span>
+            <span class="project-spec__value">600 leitos de internação</span>
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Filtragem</span>
@@ -89,7 +93,11 @@ $extra_css        = ['projeto.css?v=1770600000'];
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Áreas críticas</span>
-            <span class="project-spec__value">UTIs, centro cirúrgico, transplantados</span>
+            <span class="project-spec__value">UTIs (76 leitos), centro cirúrgico, transplantados</span>
+          </div>
+          <div class="project-spec glass-card">
+            <span class="project-spec__label">Inauguração</span>
+            <span class="project-spec__value">Dezembro/2020</span>
           </div>
         </div>
       </div>
@@ -100,15 +108,17 @@ $extra_css        = ['projeto.css?v=1770600000'];
       <div class="container project-text">
         <h2 class="project-section__title">Descrição do projeto</h2>
         <p>
-          O Hospital das Clínicas da Universidade Federal de Goiás é o maior e mais complexo hospital público do estado,
-          referência em atendimento de alta complexidade, ensino e pesquisa. Com 20 pavimentos e 44.000 m² de área construída,
-          o HC-UFG concentra desde ambulatórios e enfermarias até centros cirúrgicos de grande porte, UTIs adulto e neonatal,
-          e a unidade de transplante de medula óssea — uma das poucas do Centro-Oeste.
+          O novo bloco de internação do Hospital das Clínicas da UFG/Ebserh é uma das maiores obras já realizadas pela
+          universidade e referência em saúde de alta complexidade no Centro-Oeste. Inaugurado em dezembro de 2020, o edifício
+          possui 20 pavimentos — 2 subsolos, térreo, mezanino e andares do 1º ao 16º — com mais de 44.000 m² de área
+          construída e capacidade para 600 leitos de internação.
         </p>
         <p>
-          O desafio de climatização de um hospital dessa magnitude vai muito além do conforto térmico. Cada ambiente possui
-          requisitos específicos de temperatura, umidade, renovação de ar e nível de filtragem, definidos por normas da ANVISA
-          e pela NBR 7256. O projeto demandou zoneamento rigoroso, com cascatas de pressão entre áreas limpas e contaminadas,
+          A estrutura conta com oito pavimentos de internação geral (60 leitos cada), andares específicos para UTIs
+          com 76 leitos e unidade dedicada a pacientes transplantados. O desafio de climatização de um hospital dessa
+          magnitude vai muito além do conforto térmico — cada ambiente possui requisitos específicos de temperatura,
+          umidade, renovação de ar e nível de filtragem, definidos por normas da ANVISA e pela NBR 7256.
+          O projeto demandou zoneamento rigoroso, com cascatas de pressão entre áreas limpas e contaminadas,
           garantindo que o fluxo de ar proteja pacientes e profissionais de saúde.
         </p>
         <p>
