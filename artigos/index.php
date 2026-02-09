@@ -241,13 +241,13 @@ $extra_css        = ['artigo.css?v=1770574139'];
                 </div>
               </div>
             </a>
-            <a href="../projetos/projeto-hypera.php" class="article-card">
+            <a href="../projetos/projeto-bancodobrasil.php" class="article-card">
               <div class="article-card__content" style="padding-top: 1.5rem;">
                 <span class="article-card__category">Retrofit</span>
-                <h3 class="article-card__title">Hypera Pharma — Modernização CAG</h3>
-                <p class="article-card__excerpt">Retrofit de central de água gelada em planta de 60.000 m², com economia de 35% em energia.</p>
+                <h3 class="article-card__title">Banco do Brasil — Sedes SBS Brasília</h3>
+                <p class="article-card__excerpt">Retrofit das 3 sedes com 96.135 m² e 4.350 TR, chillers parafuso e centrífugo, automação Siemens/Trane.</p>
                 <div class="article-card__meta">
-                  <span>Anápolis - GO</span>
+                  <span>Brasília - DF</span>
                   <span>Ver projeto →</span>
                 </div>
               </div>

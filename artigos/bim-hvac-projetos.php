@@ -151,7 +151,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
             <ul>
               <li><strong><a href="../projetos/projeto-geolab.php">Geolab Site I</a></strong> — Modelagem BIM LOD 400 para 25.000 m² de área. Coordenação 3D com arquitetura, estrutura, elétrica e hidráulica. Zero interferências na obra.</li>
               <li><strong><a href="../projetos/projeto-geolab-siteii.php">Geolab Site II</a></strong> — Projeto BIM completo para salas limpas, incluindo dutos, tubulações e suportes. Modelo usado para pré-fabricação de dutos.</li>
-              <li><strong><a href="../projetos/projeto-hypera.php">Hypera CD Autoportante</a></strong> — Modelagem BIM para CD de 40m de altura, com coordenação de sistema VRF e estrutura metálica autoportante.</li>
+              <li><strong><a href="../projetos/projeto-bancodobrasil.php">Banco do Brasil — Sedes SBS</a></strong> — Modelagem BIM para 96.135 m² com coordenação de chillers parafuso e centrífugo, fancoils, exaustão e pressurização em 3 edifícios.</li>
               <li><strong><a href="../projetos/projeto-goinn.php">Hotel GoInn</a></strong> — BIM LOD 350 para sistema VRF + pressurização, com detecção de interferências em 172 apartamentos.</li>
               <li><strong><a href="../projetos/projeto-lakeview.php">Lake View Resort</a></strong> — Modelo BIM integrado ao cronograma 4D para planejamento de obra.</li>
             </ul>

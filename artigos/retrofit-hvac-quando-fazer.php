@@ -269,12 +269,8 @@ $extra_css        = ['artigo.css?v=1770574139'];
             <p>Confira alguns projetos de retrofit e modernização que executamos:</p>
 
             <ul>
-              <li><strong><a href="../projetos/projeto-hypera.php">Hypera CD Autoportante</a></strong> — Sistema VRF com automação Siemens para centro de distribuição de <strong>40 metros de altura</strong>, com UTAs TROX TKZ e controle por zoneamento.</li>
-              <li><strong><a href="../projetos/projeto-hypermarcas.php">Hypermarcas CD</a></strong> — Sistema de expansão direta com splitões, <strong>500 TR</strong> de capacidade, alta vazão e automação Schneider.</li>
-              <li><strong><a href="../projetos/projeto-geolab.php">Geolab Site I</a></strong> — CAG completa com <strong>1.500 TR</strong>, UTAs TROX TKZ, desumidificador químico para efervescentes e áreas classificadas.</li>
-              <li><strong><a href="../projetos/projeto-ontex.php">Ontex</a></strong> — Sistema HVAC industrial com <strong>710.000 m³/h</strong> para controle de IBUTG em área de produção, garantindo conforto térmico e conformidade NR-15.</li>
-              <li><strong><a href="../projetos/projeto-esaf.php">ESAF Brasília</a></strong> — Sistema híbrido VRF-Split (350 TR) + Chiller/Fancoil (870 TR) para <strong>18.500 m²</strong> da Escola de Administração Fazendária.</li>
-              <li><strong><a href="../projetos/projeto-louisdreyfus.php">Louis Dreyfus</a></strong> — HVAC para enclausuramento do envase de óleo em Jataí-GO, com splitões e rede de dutos padrão TDC.</li>
+              <li><strong><a href="../projetos/projeto-bancodobrasil.php">Banco do Brasil — Sedes SBS Brasília</a></strong> — Retrofit das 3 sedes no Setor Bancário Sul com <strong>96.135 m²</strong> e <strong>4.350 TR</strong>. Modernização dos sistemas de água gelada com chillers parafuso (Sedes I e II) e centrífugo (Sede III), fancoils, fancoletes, automação Siemens/Trane, exaustão de garagens e pressurização de escadas.</li>
+              <li><strong><a href="../projetos/projeto-ccbb.php">CCBB Brasília — Centro Cultural Banco do Brasil</a></strong> — Retrofit do sistema HVAC do Edifício Tancredo Neves (Oscar Niemeyer) com <strong>15.000 m²</strong> e <strong>900 TR</strong>. Chiller parafuso condensação a água, dual fluid de precisão para galerias de arte com controle rigoroso de temperatura e umidade para preservação de acervos.</li>
             </ul>
 
             <div class="info-box">

@@ -160,7 +160,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
               <li><strong><a href="../projetos/projeto-lakeview.php">Lake View Resort</a></strong> — Apart hotel com <strong>246 apartamentos</strong> em Brasília. Sistema VRF combinado com splits para áreas comuns, totalizando 502 TR.</li>
               <li><strong><a href="../projetos/projeto-lineavitta.php">Linea Vitta</a></strong> — Empreendimento comercial/residencial com VRF em áreas comuns e preparação para splits nos apartamentos.</li>
               <li><strong><a href="../projetos/projeto-prf.php">PRF Vitória</a></strong> — Sistema VRF-Split para Sede da PRF em Vitória-ES, <strong>343 TR</strong> com controle zoneado por departamentos.</li>
-              <li><strong><a href="../projetos/projeto-hypera.php">Hypera CD Autoportante</a></strong> — Sistema VRF com UTAs TROX TKZ para CD de <strong>40m de altura</strong>, automação Siemens e controle por zoneamento.</li>
+              <li><strong><a href="../projetos/projeto-prf.php">PRF Vitória</a></strong> — Sistema VRF-Split de <strong>343 TR</strong> para 6.872 m², com controle por zoneamento em alojamentos, administrativo e auditório.</li>
             </ul>
 
             <h2>Dimensionamento e Projeto</h2>

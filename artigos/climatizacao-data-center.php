@@ -190,7 +190,7 @@ $extra_css        = ['artigo.css?v=1770574139'];
 
             <ul>
               <li><strong><a href="../setores/datacenter.php">Setor Data Centers</a></strong> — Atuamos em projetos de climatização de precisão para data centers corporativos e colocations, com redundância Tier III/IV.</li>
-              <li><strong><a href="../projetos/projeto-hypera.php">Hypera Pharma</a></strong> — Sala de servidores com sistema CRAC redundante N+1, atendendo infraestrutura crítica de sistemas de produção farmacêutica.</li>
+              <li><strong><a href="../projetos/projeto-bancodobrasil.php">Banco do Brasil — Sedes SBS</a></strong> — Infraestrutura de climatização para CPDs das 3 sedes no Setor Bancário Sul de Brasília, com 4.350 TR e redundância operacional.</li>
               <li><strong><a href="../projetos/projeto-esaf.php">ESAF Brasília</a></strong> — Data center governamental com refrigeração de precisão e backup de climatização.</li>
               <li><strong>Banco do Brasil</strong> — Projetos de climatização para agências e CPDs regionais com requisitos de alta disponibilidade.</li>
               <li><strong>UFG</strong> — Data center acadêmico com sistema de contenção de corredores e monitoramento ambiental.</li>
