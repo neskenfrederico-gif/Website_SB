@@ -2980,7 +2980,7 @@ select {
   font-size: var(--font-size-lg);
   color: var(--color-gray-600);
   margin-bottom: var(--spacing-8);
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .spotlight__description strong {
@@ -3269,6 +3269,7 @@ select {
     padding: var(--spacing-5);
     gap: var(--spacing-6);
     background: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
   }
 
   .spotlight__image {
@@ -3299,6 +3300,8 @@ select {
   .spotlight__content {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    max-width: 100%;
   }
 
   /* Badge mais compacto */
