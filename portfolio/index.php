@@ -426,7 +426,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                 </div>
               </div>
               <div class="project-card__content">
-                <h3 class="project-card__title">PRF Brasília</h3>
+                <h3 class="project-card__title">PRF Vitória</h3>
                 <span class="project-card__client">Polícia Rodoviária Federal</span>
                 <div class="project-card__specs">
                   <div class="spec">
