@@ -88,11 +88,39 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <button class="filter-btn" data-filter="governamental" aria-pressed="false">Governamental</button>
           <button class="filter-btn" data-filter="industrial" aria-pressed="false">Industrial</button>
           <button class="filter-btn" data-filter="logistico" aria-pressed="false">Logístico</button>
+          <button class="filter-btn" data-filter="hospitalar" aria-pressed="false">Hospitalar</button>
         </div>
 
         <!-- Projects Grid -->
         <div class="portfolio__grid">
           
+          <!-- HC-UFG -->
+          <a class="project-card-link" href="../projetos/projeto-hcufg.php">
+            <article class="project-card" data-category="hospitalar">
+              <div class="project-card__image project-card__image--18">
+                <div class="project-card__overlay">
+                  <span class="project-card__category">Hospitalar</span>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">HC-UFG Hospital das Clínicas</h3>
+                <span class="project-card__client">Universidade Federal de Goiás</span>
+                <div class="project-card__specs">
+                  <div class="spec">
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">44.000 m²</span>
+                  </div>
+                  <div class="spec">
+                    <span class="spec__label">Capacidade</span>
+                    <span class="spec__value">1.500 TR</span>
+                  </div>
+                </div>
+                <p class="project-card__description">Hospital referência em GO com 20 pavimentos, filtragem HEPA, centro cirúrgico, UTIs e transplantados (H13).</p>
+                <span class="project-card__details">Ver detalhes</span>
+              </div>
+            </article>
+          </a>
+
           <!-- Geolab Site II -->
           <a class="project-card-link" href="../projetos/projeto-geolab-siteii.php">
             <article class="project-card" data-category="farmaceutico">
