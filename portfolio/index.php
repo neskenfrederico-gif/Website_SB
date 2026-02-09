@@ -230,7 +230,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Hypera -->
           <a class="project-card-link" href="../projetos/projeto-hypera.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--15">
+              <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
@@ -257,7 +257,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <!-- Hypermarcas -->
           <a class="project-card-link" href="../projetos/projeto-hypermarcas.php">
             <article class="project-card" data-category="farmaceutico">
-              <div class="project-card__image project-card__image--16">
+              <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
                   <span class="project-card__category">Farmacêutico</span>
                 </div>
