@@ -1116,7 +1116,6 @@ function initSpotlightRotator() {
     }
     current = index;
     updateCase();
-    startRotation();
   }
 
   function nextCase() {
@@ -1170,7 +1169,7 @@ function initSpotlightRotator() {
     }, 300);
   }
 
-  startRotation();
+  // Manual navigation only – no auto-rotation
 }
 
 // ===== Back to Top Button =====
