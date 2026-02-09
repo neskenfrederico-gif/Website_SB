@@ -89,6 +89,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <button class="filter-btn" data-filter="industrial" aria-pressed="false">Industrial</button>
           <button class="filter-btn" data-filter="logistico" aria-pressed="false">Logístico</button>
           <button class="filter-btn" data-filter="hospitalar" aria-pressed="false">Hospitalar</button>
+          <button class="filter-btn" data-filter="corporativo" aria-pressed="false">Corporativo</button>
         </div>
 
         <!-- Projects Grid -->
@@ -116,6 +117,33 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                   </div>
                 </div>
                 <p class="project-card__description">Hospital referência em GO com 20 pavimentos, filtragem HEPA, centro cirúrgico, UTIs e transplantados (H13).</p>
+                <span class="project-card__details">Ver detalhes</span>
+              </div>
+            </article>
+          </a>
+
+          <!-- Banco do Brasil -->
+          <a class="project-card-link" href="../projetos/projeto-bancodobrasil.php">
+            <article class="project-card" data-category="corporativo">
+              <div class="project-card__image project-card__image--19">
+                <div class="project-card__overlay">
+                  <span class="project-card__category">Corporativo</span>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Banco do Brasil — Sedes SBS</h3>
+                <span class="project-card__client">Banco do Brasil S.A.</span>
+                <div class="project-card__specs">
+                  <div class="spec">
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">96.135 m²</span>
+                  </div>
+                  <div class="spec">
+                    <span class="spec__label">Capacidade</span>
+                    <span class="spec__value">4.350 TR</span>
+                  </div>
+                </div>
+                <p class="project-card__description">3 sedes no Setor Bancário Sul de Brasília com chillers centrífugos, parafuso e scroll, fancoils e pressurização.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
