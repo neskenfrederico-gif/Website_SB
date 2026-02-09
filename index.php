@@ -415,6 +415,7 @@
                 <img fetchpriority="high" src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" decoding="async" />
                 <img fetchpriority="high" src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" decoding="async" />
                 <img fetchpriority="high" src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" decoding="async" />
+                <img fetchpriority="high" src="clientes/aublack.jpg" alt="Logo Au Black Industrial Consulting - Cliente de consultoria HVAC" decoding="async" />
               </div>
             </div>
             <div class="clients-carousel__dots" id="clients-dots"></div>
