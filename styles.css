@@ -1136,26 +1136,34 @@ select {
 }
 
 .sobre__card {
-  padding: var(--spacing-8);
+  padding: var(--spacing-6);
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .team-member {
   text-align: center;
-  margin-bottom: var(--spacing-6);
-  padding-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
   border-bottom: 1px solid var(--color-gray-200);
 }
 
 .team-member__avatar {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto var(--spacing-4);
+  width: 72px;
+  height: 72px;
+  margin: 0 auto var(--spacing-3);
   background: var(--gradient-primary);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 178, 169, 0.3);
+}
+
+.team-member__avatar svg {
+  width: 32px;
+  height: 32px;
 }
 
 .team-member__name {
@@ -1181,14 +1189,16 @@ select {
 
 .sobre__info {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-3);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-3) var(--spacing-6);
+  justify-content: center;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-3);
+  gap: var(--spacing-2);
   color: var(--color-gray-600);
   font-size: var(--font-size-sm);
 }
