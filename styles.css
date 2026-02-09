@@ -3982,10 +3982,10 @@ select {
 }
 
 .testimonial-card {
-  padding: var(--spacing-8);
+  padding: var(--spacing-6);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-6);
+  gap: var(--spacing-3);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -4039,7 +4039,7 @@ select {
   font-weight: 600;
   cursor: pointer;
   padding: 0;
-  margin-top: var(--spacing-2);
+  margin-top: 0;
   display: none;
 }
 
