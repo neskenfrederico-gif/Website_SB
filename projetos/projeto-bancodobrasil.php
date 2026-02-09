@@ -100,6 +100,10 @@ $extra_css        = ['projeto.css?v=1770600000'];
             <span class="project-spec__value">Fancoils e fancoletes</span>
           </div>
           <div class="project-spec glass-card">
+            <span class="project-spec__label">Automação</span>
+            <span class="project-spec__value">Siemens / Trane</span>
+          </div>
+          <div class="project-spec glass-card">
             <span class="project-spec__label">Complementares</span>
             <span class="project-spec__value">Exaustão de garagens e pressurização de escadas</span>
           </div>
@@ -143,10 +147,13 @@ $extra_css        = ['projeto.css?v=1770600000'];
           incêndio e pânico (IT do Corpo de Bombeiros e NBR 14880).
         </p>
         <p>
-          A operação integrada das três centrais de água gelada, com diferentes tecnologias de compressão
-          (centrífugos, parafuso e scroll), proporciona flexibilidade operacional e otimização energética — permitindo
-          que cada planta opere no ponto de maior eficiência conforme a demanda real, reduzindo desperdício e custos
-          operacionais de um dos maiores consumidores de energia do setor público federal.
+          A automação projetada com tecnologia Siemens e Trane integra as três centrais em um sistema de supervisão
+          e controle unificado, permitindo gerenciamento centralizado de todas as plantas de água gelada, monitoramento
+          em tempo real de temperaturas, pressões e consumo energético, além de rotinas automáticas de rodízio e partida
+          sequencial dos chillers conforme a demanda. A operação integrada com diferentes tecnologias de compressão
+          (centrífugos, parafuso e scroll) proporciona flexibilidade operacional e otimização energética — permitindo
+          que cada planta opere no ponto de maior eficiência, reduzindo desperdício e custos operacionais de um dos
+          maiores consumidores de energia do setor público federal.
         </p>
       </div>
     </section>
