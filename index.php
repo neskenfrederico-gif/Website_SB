@@ -484,7 +484,7 @@
             </div>
             <h2 class="spotlight__title" id="spotlight-title">Banco do Brasil — <span class="gradient-text">Sedes SBS</span></h2>
             <p class="spotlight__description" id="spotlight-desc">
-              <strong>3 sedes no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo.
+              As <strong>3 sedes do BB no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.
             </p>
             <div class="spotlight__stats" id="spotlight-stats">
               <div class="s-stat">

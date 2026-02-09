@@ -996,7 +996,7 @@ function initSpotlightRotator() {
     {
       title: 'Banco do Brasil — <span class="gradient-text">Sedes SBS</span>',
       alt: 'Banco do Brasil - 3 Sedes SBS Brasília, 96.135 m²',
-      desc: '<strong>3 sedes no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo.',
+      desc: '<strong>3 sedes no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.',
       stat1: '4.350', stat1Label: 'TR de Capacidade',
       stat2: '96.135 m²', stat2Label: 'Área Total',
       stat3: '3', stat3Label: 'Edifícios',
@@ -1007,7 +1007,7 @@ function initSpotlightRotator() {
     {
       title: 'HC-UFG — <span class="gradient-text">Hospital das Clínicas</span>',
       alt: 'HC-UFG Hospital das Clínicas - 44.000 m², 600 leitos',
-      desc: 'Hospital referência em Goiás: <strong>600 leitos, 20 pavimentos</strong> e filtragem HEPA (H13) em centros cirúrgicos e UTIs.',
+      desc: 'Hospital referência em Goiás com <strong>600 leitos e 20 pavimentos</strong>. Filtragem HEPA em centros cirúrgicos e UTIs, filtros H13 para transplantados.',
       stat1: '1.500', stat1Label: 'TR de Capacidade',
       stat2: '44.000 m²', stat2Label: 'Área Climatizada',
       stat3: '600', stat3Label: 'Leitos',
@@ -1018,7 +1018,7 @@ function initSpotlightRotator() {
     {
       title: 'CCBB — <span class="gradient-text">Centro Cultural</span>',
       alt: 'CCBB Brasília - Centro Cultural Banco do Brasil, Niemeyer',
-      desc: 'Edifício Tancredo Neves de <strong>Oscar Niemeyer</strong>. Climatização de precisão para galerias, teatro e cinema.',
+      desc: 'Edifício Tancredo Neves de <strong>Oscar Niemeyer</strong>. Dual fluid de precisão para galerias de arte, teatro e cinema com controle rigoroso de temperatura e umidade.',
       stat1: '900', stat1Label: 'TR de Capacidade',
       stat2: '15.000 m²', stat2Label: 'Área Construída',
       stat3: 'Precisão', stat3Label: 'Controle Ambiental',
@@ -1029,7 +1029,7 @@ function initSpotlightRotator() {
     {
       title: 'Geolab — <span class="gradient-text">Site I</span>',
       alt: 'Projeto Geolab Site I - 25.000+ m² de áreas produtivas',
-      desc: '<strong>25.000+ m² produtivos</strong>: sólidos, efervescentes e semissólidos. CAG de 1.500 TR com UTAs TROX TKZ.',
+      desc: 'Projeto completo para <strong>25.000+ m² de áreas produtivas</strong>: sólidos, efervescentes e semissólidos. CAG de 1.500 TR, UTAs TROX TKZ e desumidificação química.',
       stat1: '1.500', stat1Label: 'TR de Capacidade',
       stat2: '25.000+ m²', stat2Label: 'Área Produtiva',
       stat3: 'TROX TKZ', stat3Label: 'UTAs',
@@ -1040,7 +1040,7 @@ function initSpotlightRotator() {
     {
       title: 'Ontex — <span class="gradient-text">IBUTG</span>',
       alt: 'Projeto Ontex - 15.600 m² de área industrial',
-      desc: '<strong>15.600 m² industriais</strong> com 710.000 m³/h de vazão e automação Siemens para conformidade NR-15/IBUTG.',
+      desc: 'Projeto HVAC para <strong>15.600 m² de área industrial</strong> com 710.000 m³/h de vazão e automação Siemens. Controle térmico para conformidade NR-15/IBUTG.',
       stat1: '1.050', stat1Label: 'TR de Capacidade',
       stat2: '15.600 m²', stat2Label: 'Área Industrial',
       stat3: 'Siemens', stat3Label: 'Automação',
