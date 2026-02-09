@@ -2,7 +2,7 @@
 $base             = '..';
 $active_page      = 'portfolio';
 $page_title       = 'CCBB Brasília — Centro Cultural Banco do Brasil | Siqueira e Blanco Engenharia HVAC';
-$page_description = 'Sistema de HVAC para o CCBB Brasília: 15.000 m² construídos, 900 TR, chiller parafuso condensação a ar, dual fluid de precisão para galerias com controle de temperatura e umidade.';
+$page_description = 'Sistema de HVAC para o CCBB Brasília: 15.000 m² construídos, 900 TR, chiller parafuso condensação a água, dual fluid de precisão para galerias com controle de temperatura e umidade.';
 $og_title         = $page_title;
 $og_description   = 'Climatização do Centro Cultural Banco do Brasil em Brasília — 15.000 m², 900 TR, controle de precisão para galerias de arte.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
@@ -85,7 +85,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Sistema principal</span>
-            <span class="project-spec__value">Água gelada — chiller parafuso condensação a ar</span>
+            <span class="project-spec__value">Água gelada — chiller parafuso condensação a água</span>
           </div>
           <div class="project-spec glass-card">
             <span class="project-spec__label">Equipamentos terminais</span>
@@ -133,7 +133,7 @@ $extra_css        = ['projeto.css?v=1770600000'];
           garantindo conforto sem interferir na experiência cultural.
         </p>
         <p>
-          O sistema principal é de água gelada, com chiller de condensação a ar tipo parafuso — escolha que elimina a
+          O sistema principal é de água gelada, com chiller de condensação a água tipo parafuso — escolha que elimina a
           necessidade de torre de resfriamento, simplificando a operação e o tratamento de água em um edifício tombado
           onde intervenções externas são restritas. A distribuição nos ambientes do edifício é feita por fancoils e
           fancoletes, permitindo zoneamento e controle individualizado de temperatura conforme a ocupação e o uso de
