@@ -100,18 +100,32 @@ $extra_css        = ['projeto.css?v=1770600000'];
       <div class="container project-text">
         <h2 class="project-section__title">Descrição do projeto</h2>
         <p>
-          O Hospital das Clínicas da Universidade Federal de Goiás é referência em saúde no estado, com 20 pavimentos e
-          44.000 m² de área atendida. O projeto de climatização contemplou a totalidade do edifício, incluindo áreas comuns,
-          ambulatórios, internações, UTIs, centro cirúrgico e a unidade de transplantados.
+          O Hospital das Clínicas da Universidade Federal de Goiás é o maior e mais complexo hospital público do estado,
+          referência em atendimento de alta complexidade, ensino e pesquisa. Com 20 pavimentos e 44.000 m² de área construída,
+          o HC-UFG concentra desde ambulatórios e enfermarias até centros cirúrgicos de grande porte, UTIs adulto e neonatal,
+          e a unidade de transplante de medula óssea — uma das poucas do Centro-Oeste.
         </p>
         <p>
-          Para as áreas críticas — centro cirúrgico e UTIs — foram especificados sistemas com filtragem HEPA, garantindo
-          controle rigoroso de partículas e biossegurança. A área de transplantados recebeu filtragem classe H13,
-          atendendo aos requisitos mais exigentes de qualidade do ar para pacientes imunossuprimidos.
+          O desafio de climatização de um hospital dessa magnitude vai muito além do conforto térmico. Cada ambiente possui
+          requisitos específicos de temperatura, umidade, renovação de ar e nível de filtragem, definidos por normas da ANVISA
+          e pela NBR 7256. O projeto demandou zoneamento rigoroso, com cascatas de pressão entre áreas limpas e contaminadas,
+          garantindo que o fluxo de ar proteja pacientes e profissionais de saúde.
         </p>
         <p>
-          Com capacidade instalada de 1.500 TR, o sistema atende a demanda térmica de todo o complexo hospitalar,
-          com controles de pressurização, renovação de ar e temperatura diferenciados por zona e criticidade.
+          Nos centros cirúrgicos e UTIs, o sistema opera com filtragem absoluta HEPA, assegurando contagem de partículas
+          compatível com os procedimentos mais críticos — cirurgias cardíacas, neurocirurgias e transplantes. A unidade de
+          transplantados recebeu tratamento diferenciado com filtros classe H13, criando ambientes de pressão positiva com
+          renovação de ar intensiva, essenciais para pacientes imunossuprimidos onde qualquer contaminação pode ser fatal.
+        </p>
+        <p>
+          A capacidade instalada de 1.500 TR atende a carga térmica de todo o complexo, distribuída por sistemas dimensionados
+          para operação contínua 24/7 — como exige um hospital que não pode parar. Os controles contemplam monitoramento
+          de temperatura e umidade por zona, alarmes de desvio, redundância em áreas críticas e integração com o sistema
+          predial do hospital.
+        </p>
+        <p>
+          Este é um dos projetos mais completos e desafiadores do portfólio da Siqueira e Blanco — unindo escala, complexidade
+          normativa e responsabilidade direta com a vida dos pacientes.
         </p>
       </div>
     </section>
