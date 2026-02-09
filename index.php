@@ -478,10 +478,7 @@
       <div class="container">
         <div class="spotlight__wrapper glass-card fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
           <div class="spotlight__content">
-            <div class="spotlight__nav">
-              <span class="section__subtitle">Cases em Destaque</span>
-              <div class="spotlight__dots" id="spotlight-dots"></div>
-            </div>
+            <span class="section__subtitle">Cases em Destaque</span>
             <h2 class="spotlight__title" id="spotlight-title">Banco do Brasil — <span class="gradient-text">Sedes SBS</span></h2>
             <p class="spotlight__description" id="spotlight-desc">
               As <strong>3 sedes do BB no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.
@@ -503,6 +500,11 @@
             <div class="spotlight__buttons">
               <a href="portfolio/" class="btn btn--primary">Solicitar Orçamento →</a>
               <a href="portfolio/" class="spotlight__link" id="spotlight-link">Ver Projetos →</a>
+            </div>
+            <div class="spotlight__counter">
+              <span class="spotlight__counter-text"><span id="spotlight-current">01</span> <span class="spotlight__counter-sep">/ 05</span></span>
+              <div class="spotlight__counter-line"></div>
+              <div class="spotlight__dots" id="spotlight-dots"></div>
             </div>
           </div>
           <div class="spotlight__image">

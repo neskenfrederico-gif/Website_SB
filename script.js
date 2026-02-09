@@ -1068,6 +1068,7 @@ function initSpotlightRotator() {
   const imgEl = document.getElementById('spotlight-img');
   const dotsContainer = document.getElementById('spotlight-dots');
   const linkEl = document.getElementById('spotlight-link');
+  const currentEl = document.getElementById('spotlight-current');
   const content = document.querySelector('.spotlight__content');
 
   if (!titleEl || !dotsContainer) return;
@@ -1143,8 +1144,9 @@ function initSpotlightRotator() {
       badgeText.textContent = c.badge;
       badgeEl.querySelector('.s-icon').textContent = c.badgeIcon;
 
-      // Update link
+      // Update link + counter
       if (linkEl && c.link) linkEl.href = c.link;
+      if (currentEl) currentEl.textContent = String(current + 1).padStart(2, '0');
 
       // Update image + alt text
       if (imgEl) {
