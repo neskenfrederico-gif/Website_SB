@@ -3191,50 +3191,36 @@ select {
   margin-bottom: var(--spacing-8);
 }
 
-.spotlight__nav {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-5);
+/* Hero nav on light background */
+.hero__nav--light {
+  position: relative;
+  bottom: auto;
+  left: auto;
 }
 
-.spotlight__counter {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.spotlight__counter-current {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
+.hero__nav--light .hero__counter-current {
   color: var(--color-primary);
-  min-width: 2ch;
 }
 
-.spotlight__counter-sep {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray-400);
-  margin: 0 2px;
-}
-
-.spotlight__counter-total {
-  font-size: var(--font-size-sm);
+.hero__nav--light .hero__counter-sep,
+.hero__nav--light .hero__counter-total {
   color: var(--color-gray-400);
 }
 
-.spotlight__progress {
-  width: 80px;
-  height: 2px;
+.hero__nav--light .hero__progress {
   background: var(--color-gray-200);
-  border-radius: var(--radius-full);
-  overflow: hidden;
 }
 
-.spotlight__progress-bar {
-  height: 100%;
-  width: 0%;
+.hero__nav--light .hero__dot::after {
+  background: var(--color-gray-300);
+}
+
+.hero__nav--light .hero__dot.active::after {
   background: var(--color-secondary);
-  border-radius: var(--radius-full);
-  transition: width 0.1s linear;
+}
+
+.hero__nav--light .hero__dot:hover::after {
+  background: var(--color-gray-400);
 }
 
 .spotlight__link {
@@ -3286,43 +3272,7 @@ select {
   margin-bottom: var(--spacing-4);
 }
 
-.spotlight__dots {
-  display: flex;
-  gap: var(--spacing-1);
-}
-
-.spotlight__dot {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-full);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spotlight__dot::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: var(--radius-full);
-  background: var(--color-gray-300);
-  transition: background var(--transition-base), width var(--transition-base), border-radius var(--transition-base);
-}
-
-.spotlight__dot.active::after {
-  background: var(--color-secondary);
-  width: 20px;
-  border-radius: 3px;
-}
-
-.spotlight__dot:hover::after {
-  background: var(--color-gray-400);
-}
+/* spotlight dots now use hero__dot classes */
 
 .spotlight__badge {
   position: absolute;

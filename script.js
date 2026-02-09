@@ -1076,7 +1076,7 @@ function initSpotlightRotator() {
   // Create dots
   cases.forEach((_, i) => {
     const dot = document.createElement('button');
-    dot.className = 'spotlight__dot' + (i === 0 ? ' active' : '');
+    dot.className = 'hero__dot' + (i === 0 ? ' active' : '');
     dot.setAttribute('aria-label', 'Case ' + (i + 1));
     dot.addEventListener('click', () => goToCase(i));
     dotsContainer.appendChild(dot);
@@ -1168,7 +1168,7 @@ function initSpotlightRotator() {
       }
 
       // Update dots
-      dotsContainer.querySelectorAll('.spotlight__dot').forEach((d, i) => {
+      dotsContainer.querySelectorAll('.hero__dot').forEach((d, i) => {
         d.classList.toggle('active', i === current);
       });
 
