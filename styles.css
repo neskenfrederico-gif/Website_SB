@@ -3454,8 +3454,8 @@ select {
   }
 
   .spotlight__wrapper {
-    padding: var(--spacing-4);
-    gap: var(--spacing-4);
+    padding: 0;
+    gap: 0;
     background: rgba(255, 255, 255, 0.95);
     overflow: hidden;
   }
@@ -3469,7 +3469,7 @@ select {
     flex-direction: column;
     overflow: hidden;
     max-width: 100%;
-    padding: var(--spacing-2) var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-5);
   }
 
   .spotlight__title {
