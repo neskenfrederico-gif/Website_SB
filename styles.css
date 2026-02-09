@@ -3448,161 +3448,69 @@ select {
     font-size: var(--font-size-2xs);
   }
 
-  /* Spotlight mobile: hero-style fullscreen */
+  /* Spotlight mobile */
   .spotlight {
-    padding: 0;
-  }
-
-  .spotlight > .container {
-    padding: 0;
-    max-width: 100%;
+    padding: var(--spacing-8) 0;
   }
 
   .spotlight__wrapper {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    min-height: 85vh;
     padding: 0;
     gap: 0;
-    border-radius: 0;
     overflow: hidden;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-  }
-
-  .spotlight__wrapper.glass-card {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    box-shadow: none;
   }
 
   .spotlight__image {
-    position: absolute;
-    inset: 0;
-    min-height: auto;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-  }
-
-  .spotlight__image::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,20,40,0.92) 0%, rgba(0,20,40,0.6) 50%, rgba(0,20,40,0.3) 100%);
-    z-index: 1;
+    min-height: 220px;
+    order: -1;
   }
 
   .spotlight__content {
-    position: relative;
-    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-    padding: var(--spacing-6);
-    padding-top: var(--spacing-16);
-    max-width: 100%;
     overflow: hidden;
-  }
-
-  .spotlight .section__subtitle {
-    color: var(--color-accent);
+    max-width: 100%;
+    padding: var(--spacing-5);
   }
 
   .spotlight__title {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--spacing-4);
-    color: #fff;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-3);
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 
-  .spotlight__title .gradient-text {
-    background: linear-gradient(135deg, var(--color-accent), #5de0e6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .spotlight__description {
     font-size: var(--font-size-sm);
-    color: rgba(255,255,255,0.8);
-    margin-bottom: var(--spacing-5);
+    margin-bottom: var(--spacing-4);
     line-height: 1.6;
   }
 
-  .spotlight__description strong {
-    color: #fff;
-  }
-
-  .spotlight__stats {
-    border-top-color: rgba(255,255,255,0.2) !important;
-  }
-
-  .s-stat__value {
-    color: #fff !important;
-  }
-
-  .s-stat__label {
-    color: rgba(255,255,255,0.5) !important;
-  }
-
-  .spotlight__stats .s-stat:not(:last-child)::after {
-    background: rgba(255,255,255,0.2) !important;
-  }
-
   .spotlight__buttons {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-3);
-    margin-bottom: var(--spacing-6);
+    flex-direction: row;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-5);
   }
 
   .spotlight .spotlight__content .btn.btn--primary {
     width: auto;
-    padding: var(--spacing-4) var(--spacing-8);
-  }
-
-  .spotlight__link {
-    color: var(--color-accent);
+    padding: var(--spacing-3) var(--spacing-5);
     font-size: var(--font-size-sm);
   }
 
-  .spotlight__nav.hero__nav,
-  .spotlight__nav.hero__nav--light {
-    position: relative;
-    gap: var(--spacing-4);
+  .spotlight__link {
+    font-size: var(--font-size-sm);
   }
 
-  .spotlight__nav .hero__counter-current {
-    color: #fff !important;
+  .spotlight__nav.hero__nav {
+    gap: var(--spacing-3);
   }
 
-  .spotlight__nav .hero__counter-sep,
-  .spotlight__nav .hero__counter-total {
-    color: rgba(255,255,255,0.35) !important;
-  }
-
-  .spotlight__nav .hero__progress {
-    background: rgba(255,255,255,0.12) !important;
-  }
-
-  .spotlight__nav .hero__dot::after {
-    background: rgba(255,255,255,0.25) !important;
-  }
-
-  .spotlight__nav .hero__dot.active::after {
-    background: var(--color-secondary) !important;
-  }
-
-  /* Badge no mobile */
+  /* Badge mais compacto */
   .spotlight__badge {
-    display: none;
+    bottom: var(--spacing-3);
+    left: var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
   }
 
   .pillar-card:last-child {
