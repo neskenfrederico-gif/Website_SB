@@ -229,18 +229,26 @@ $extra_css        = ['setor.css?v=1770600000'];
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
-              <h3>Linea Vitta</h3>
+              <div class="sector-info-card__icon" aria-hidden="true">🏦</div>
+              <h3>Banco do Brasil — Sedes SBS</h3>
             </div>
-            <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Climatização para empreendimento corporativo de grande porte, com foco em eficiência e conforto.</p>
+            <p><strong>96.135 m²</strong> • <strong>4.350 TR</strong><br />3 sedes no Setor Bancário Sul de Brasília com chillers parafuso e centrífugo, fancoils e pressurização.</p>
           </article>
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏛️</div>
-              <h3>ESAF</h3>
+              <div class="sector-info-card__icon" aria-hidden="true">🎭</div>
+              <h3>CCBB Brasília</h3>
             </div>
-            <p><strong>18.500 m²</strong> • <strong>1.220 TR</strong><br />Soluções HVAC para alta demanda, com robustez, setorização e critérios de desempenho.</p>
+            <p><strong>15.000 m²</strong> • <strong>900 TR</strong><br />Centro Cultural Banco do Brasil com dual fluid de precisão para galerias de arte, teatro e cinema.</p>
+          </article>
+
+          <article class="sector-info-card fade-in">
+            <div class="sector-info-card__top">
+              <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
+              <h3>Linea Vitta</h3>
+            </div>
+            <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Edifício comercial em Brasília com VRF/Split e pressurização de escadas.</p>
           </article>
         </div>
       </div>

@@ -230,26 +230,26 @@ $extra_css        = ['setor.css?v=1770600000'];
         <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏭</div>
-              <h3>Brainfarma (Injetáveis)</h3>
+              <div class="sector-info-card__icon" aria-hidden="true">🏥</div>
+              <h3>HC-UFG Hospital das Clínicas</h3>
             </div>
-            <p><strong>1.800 m²</strong> • <strong>180 TR</strong><br />Ambientes críticos com controle de pressão, filtragem e estabilidade termo-higrométrica.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🧬</div>
-              <h3>Brainfarma COSMED</h3>
-            </div>
-            <p><strong>1.800 m²</strong> • <strong>160 TR</strong><br />Climatização para áreas produtivas e apoio, com foco em conformidade e operação contínua.</p>
+            <p><strong>44.000 m²</strong> • <strong>1.500 TR</strong><br />Hospital referência com 600 leitos, filtragem HEPA em centros cirúrgicos e UTIs, H13 para transplantados.</p>
           </article>
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">💊</div>
-              <h3>Geolab</h3>
+              <h3>Geolab — Site I</h3>
             </div>
-            <p><strong>130 TR</strong><br />Soluções HVAC para indústria farmacêutica com robustez de operação e documentação técnica.</p>
+            <p><strong>25.000 m²</strong> • <strong>1.500 TR</strong><br />Salas limpas para sólidos, efervescentes, semissólidos, líquidos e colírios com UTAs TROX TKZ e filtragem HEPA.</p>
+          </article>
+
+          <article class="sector-info-card fade-in">
+            <div class="sector-info-card__top">
+              <div class="sector-info-card__icon" aria-hidden="true">🧬</div>
+              <h3>Geolab — Site II</h3>
+            </div>
+            <p><strong>8.000 m²</strong> • <strong>900 TR</strong><br />Salas limpas Grau B/C para produção de colírios, central de água gelada com VFD.</p>
           </article>
         </div>
       </div>
