@@ -476,10 +476,12 @@
     <!-- Engineering Spotlight Section (New - Authority Builder) -->
     <section class="section spotlight" id="destaque">
       <div class="container">
-        <div class="spotlight__wrapper glass-card fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
+        <div class="spotlight__wrapper fade-in" id="spotlight-rotator" aria-live="polite" aria-atomic="true">
+          <img src="spotlight-bb.webp?v=4" alt="Banco do Brasil Sedes SBS Brasília" class="spotlight__bg" id="spotlight-img" loading="lazy">
+          <div class="spotlight__overlay"></div>
           <div class="spotlight__content">
             <div class="spotlight__nav">
-              <span class="section__subtitle">Cases em Destaque</span>
+              <span class="section__subtitle section__subtitle--light">Cases em Destaque</span>
               <div class="spotlight__dots" id="spotlight-dots"></div>
             </div>
             <h2 class="spotlight__title" id="spotlight-title">Banco do Brasil — <span class="gradient-text">Sedes SBS</span></h2>
@@ -500,19 +502,12 @@
                 <span class="s-stat__label" id="stat-3-label">Edifícios</span>
               </div>
             </div>
-            <a href="portfolio/" class="btn btn--primary">
-              Ver Detalhes Técnicos
-            </a>
-          </div>
-          <div class="spotlight__image">
-            <div class="spotlight__image-overlay"></div>
-            <picture>
-              <source srcset="spotlight-bb.webp?v=4" type="image/webp">
-              <img src="spotlight-bb.webp?v=4" alt="Banco do Brasil Sedes SBS Brasília" class="spotlight__img" id="spotlight-img" loading="lazy" width="600" height="400">
-            </picture>
-            <div class="spotlight__badge" id="spotlight-badge">
-              <span class="s-icon">🏆</span>
-              <span id="spotlight-badge-text">Maior Projeto</span>
+            <div class="spotlight__actions">
+              <a href="portfolio/" class="btn btn--primary">Ver Detalhes Técnicos</a>
+              <div class="spotlight__badge" id="spotlight-badge">
+                <span class="s-icon">🏆</span>
+                <span id="spotlight-badge-text">Maior Projeto</span>
+              </div>
             </div>
           </div>
         </div>
