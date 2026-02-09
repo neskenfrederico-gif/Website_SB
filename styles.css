@@ -3505,7 +3505,15 @@ select {
     position: relative;
     bottom: auto;
     left: auto;
+    transform: none;
     gap: var(--spacing-3);
+    display: flex;
+    align-items: center;
+  }
+
+  .spotlight__nav .hero__counter,
+  .spotlight__nav .hero__progress {
+    display: flex;
   }
 
   /* Badge mais compacto */
