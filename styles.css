@@ -4571,10 +4571,12 @@ select {
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
-  padding: var(--spacing-6);
+  min-height: 64px;
+  padding: var(--spacing-4) var(--spacing-6);
   background: var(--color-whatsapp);
   color: var(--color-white);
   text-decoration: none;
+  border-radius: var(--radius-xl);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
