@@ -3277,7 +3277,7 @@ select {
   }
 
   .spotlight__title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-4);
     word-wrap: break-word;
     overflow-wrap: break-word;

@@ -482,22 +482,22 @@
               <span class="section__subtitle">Cases em Destaque</span>
               <div class="spotlight__dots" id="spotlight-dots"></div>
             </div>
-            <h2 class="spotlight__title" id="spotlight-title">Geolab — <span class="gradient-text">Site II</span></h2>
+            <h2 class="spotlight__title" id="spotlight-title">Banco do Brasil — <span class="gradient-text">Sedes SBS</span></h2>
             <p class="spotlight__description" id="spotlight-desc">
-              Projeto completo para <strong>8.000 m² de salas limpas Grau B/C</strong>, incluindo central de água gelada com VFD para produção de colírios e laboratório farmacêutico.
+              As <strong>3 sedes do BB no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.
             </p>
             <div class="spotlight__stats" id="spotlight-stats">
               <div class="s-stat">
-                <span class="s-stat__value" id="stat-1">900</span>
+                <span class="s-stat__value" id="stat-1">4.350</span>
                 <span class="s-stat__label" id="stat-1-label">TR de Capacidade</span>
               </div>
               <div class="s-stat">
-                <span class="s-stat__value" id="stat-2">8.000 m²</span>
-                <span class="s-stat__label" id="stat-2-label">Área Climatizada</span>
+                <span class="s-stat__value" id="stat-2">96.135 m²</span>
+                <span class="s-stat__label" id="stat-2-label">Área Total</span>
               </div>
               <div class="s-stat">
-                <span class="s-stat__value" id="stat-3">ISO 7/8</span>
-                <span class="s-stat__label" id="stat-3-label">Classe de Limpeza</span>
+                <span class="s-stat__value" id="stat-3">3</span>
+                <span class="s-stat__label" id="stat-3-label">Edifícios</span>
               </div>
             </div>
             <a href="portfolio/" class="btn btn--primary">
@@ -507,12 +507,12 @@
           <div class="spotlight__image">
             <div class="spotlight__image-overlay"></div>
             <picture>
-              <source srcset="spotlight-geolab.webp?v=3" type="image/webp">
-              <img src="spotlight-geolab.webp?v=3" alt="Projeto HVAC em destaque" class="spotlight__img" id="spotlight-img" loading="lazy" width="600" height="400">
+              <source srcset="spotlight-bb.webp?v=4" type="image/webp">
+              <img src="spotlight-bb.webp?v=4" alt="Banco do Brasil Sedes SBS Brasília" class="spotlight__img" id="spotlight-img" loading="lazy" width="600" height="400">
             </picture>
             <div class="spotlight__badge" id="spotlight-badge">
               <span class="s-icon">🏆</span>
-              <span id="spotlight-badge-text">Ref. em Farmacêutica</span>
+              <span id="spotlight-badge-text">Maior Projeto</span>
             </div>
           </div>
         </div>

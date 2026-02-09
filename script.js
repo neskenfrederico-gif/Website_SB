@@ -994,48 +994,15 @@ function initSpotlightRotator() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const cases = [
     {
-      title: 'Geolab — <span class="gradient-text">Site II</span>',
-      alt: 'Projeto Geolab Site II - 8.000 m² de salas limpas',
-      desc: 'Projeto completo para <strong>8.000 m² de salas limpas Grau B/C</strong>, incluindo central de água gelada com VFD para produção de colírios e laboratório farmacêutico.',
-      stat1: '900', stat1Label: 'TR de Capacidade',
-      stat2: '8.000 m²', stat2Label: 'Área Climatizada',
-      stat3: 'ISO 7/8', stat3Label: 'Classe de Limpeza',
-      badge: 'Ref. em Farmacêutica',
-      badgeIcon: '🏆',
-      img: 'spotlight-geolab.webp?v=3'
-    },
-    {
-      title: 'Geolab — <span class="gradient-text">Site I</span>',
-      alt: 'Projeto Geolab Site I - 25.000+ m² de áreas produtivas',
-      desc: 'Projeto completo para <strong>25.000+ m² de áreas produtivas</strong>: sólidos, efervescentes e semi-sólidos. CAG de 1.500 TR, UTAs TROX TKZ e desumidificação química para efervescentes.',
-      stat1: '1.500', stat1Label: 'TR de Capacidade',
-      stat2: '25.000+ m²', stat2Label: 'Área Produtiva',
-      stat3: 'TROX TKZ', stat3Label: 'UTAs',
-      badge: 'Maior Capacidade',
-      badgeIcon: '⚡',
-      img: 'spotlight-geolab1.webp?v=3'
-    },
-    {
-      title: 'Active Ontex — <span class="gradient-text">IBUTG</span>',
-      alt: 'Projeto Active Ontex - 15.600 m² de área industrial',
-      desc: 'Projeto HVAC para <strong>15.600 m² de área industrial</strong> com alta vazão e automação Siemens. Controle térmico rigoroso para conformidade com NR-15/IBUTG.',
-      stat1: '1.050', stat1Label: 'TR de Capacidade',
-      stat2: '15.600 m²', stat2Label: 'Área Industrial',
-      stat3: 'Siemens', stat3Label: 'Automação',
-      badge: 'Ref. em Industrial',
-      badgeIcon: '🏭',
-      img: 'spotlight-ontex.webp?v=3'
-    },
-    {
-      title: 'Linea <span class="gradient-text">Vitta</span>',
-      alt: 'Projeto Linea Vitta - 27.500 m² climatizados em Brasília',
-      desc: 'Edifício comercial em Brasília com <strong>27.500 m² climatizados</strong>. Sistema VRF/Split de alta eficiência com pressurização de escadas e conformidade total.',
-      stat1: '941', stat1Label: 'TR de Capacidade',
-      stat2: '27.500 m²', stat2Label: 'Área Climatizada',
-      stat3: 'VRF', stat3Label: 'Sistema Adotado',
-      badge: 'Maior Área',
-      badgeIcon: '🏢',
-      img: 'spotlight-linea.webp?v=3'
+      title: 'Banco do Brasil — <span class="gradient-text">Sedes SBS</span>',
+      alt: 'Banco do Brasil - 3 Sedes SBS Brasília, 96.135 m²',
+      desc: 'As <strong>3 sedes do BB no Setor Bancário Sul</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.',
+      stat1: '4.350', stat1Label: 'TR de Capacidade',
+      stat2: '96.135 m²', stat2Label: 'Área Total',
+      stat3: '3', stat3Label: 'Edifícios',
+      badge: 'Maior Projeto',
+      badgeIcon: '🏦',
+      img: 'spotlight-bb.webp?v=4'
     },
     {
       title: 'HC-UFG — <span class="gradient-text">Hospital das Clínicas</span>',
@@ -1049,26 +1016,37 @@ function initSpotlightRotator() {
       img: 'spotlight-hcufg.webp?v=4'
     },
     {
-      title: 'Banco do Brasil — <span class="gradient-text">Sedes SBS</span>',
-      alt: 'Banco do Brasil - 3 Sedes SBS Brasília, 96.135 m²',
-      desc: 'As <strong>3 sedes do BB no Setor Bancário Sul de Brasília</strong>: 96.135 m² e 4.350 TR com chillers parafuso e centrífugo, fancoils, exaustão e pressurização.',
-      stat1: '4.350', stat1Label: 'TR de Capacidade',
-      stat2: '96.135 m²', stat2Label: 'Área Total',
-      stat3: '3', stat3Label: 'Edifícios',
-      badge: 'Maior Projeto',
-      badgeIcon: '🏦',
-      img: 'spotlight-bb.webp?v=4'
-    },
-    {
       title: 'CCBB — <span class="gradient-text">Centro Cultural</span>',
       alt: 'CCBB Brasília - Centro Cultural Banco do Brasil, Niemeyer',
-      desc: 'Edifício Tancredo Neves de <strong>Oscar Niemeyer</strong>. Dual fluid de precisão para galerias de arte, teatro (262 lugares) e cinema, com controle rigoroso de temperatura e umidade.',
+      desc: 'Edifício Tancredo Neves de <strong>Oscar Niemeyer</strong>. Dual fluid de precisão para galerias de arte, teatro e cinema com controle rigoroso de temperatura e umidade.',
       stat1: '900', stat1Label: 'TR de Capacidade',
       stat2: '15.000 m²', stat2Label: 'Área Construída',
       stat3: 'Precisão', stat3Label: 'Controle Ambiental',
       badge: 'Ref. em Cultural',
       badgeIcon: '🎭',
       img: 'spotlight-ccbb.webp?v=4'
+    },
+    {
+      title: 'Geolab — <span class="gradient-text">Site I</span>',
+      alt: 'Projeto Geolab Site I - 25.000+ m² de áreas produtivas',
+      desc: 'Projeto completo para <strong>25.000+ m² de áreas produtivas</strong>: sólidos, efervescentes e semissólidos. CAG de 1.500 TR, UTAs TROX TKZ e desumidificação química.',
+      stat1: '1.500', stat1Label: 'TR de Capacidade',
+      stat2: '25.000+ m²', stat2Label: 'Área Produtiva',
+      stat3: 'TROX TKZ', stat3Label: 'UTAs',
+      badge: 'Ref. em Farmacêutica',
+      badgeIcon: '⚗️',
+      img: 'spotlight-geolab1.webp?v=3'
+    },
+    {
+      title: 'Ontex — <span class="gradient-text">IBUTG</span>',
+      alt: 'Projeto Ontex - 15.600 m² de área industrial',
+      desc: 'Projeto HVAC para <strong>15.600 m² de área industrial</strong> com 710.000 m³/h de vazão e automação Siemens. Controle térmico para conformidade NR-15/IBUTG.',
+      stat1: '1.050', stat1Label: 'TR de Capacidade',
+      stat2: '15.600 m²', stat2Label: 'Área Industrial',
+      stat3: 'Siemens', stat3Label: 'Automação',
+      badge: 'Ref. em Industrial',
+      badgeIcon: '🏭',
+      img: 'spotlight-ontex.webp?v=3'
     }
   ];
 
