@@ -2176,8 +2176,9 @@ select {
   align-items: center;
   gap: var(--spacing-4);
   width: 100%;
-  min-height: 64px;
+  height: 64px;
   padding: var(--spacing-4) var(--spacing-6);
+  box-sizing: border-box;
   border: none;
   border-radius: var(--radius-xl);
   color: var(--color-white);
