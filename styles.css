@@ -2972,6 +2972,8 @@ select {
   font-weight: 600;
   margin-bottom: var(--spacing-6);
   color: var(--color-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .spotlight__description {
@@ -3277,6 +3279,8 @@ select {
   .spotlight__title {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--spacing-4);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .spotlight__description {
