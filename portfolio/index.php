@@ -87,6 +87,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <button class="filter-btn" data-filter="comercial" aria-pressed="false">Comercial</button>
           <button class="filter-btn" data-filter="governamental" aria-pressed="false">Governamental</button>
           <button class="filter-btn" data-filter="industrial" aria-pressed="false">Industrial</button>
+          <button class="filter-btn" data-filter="logistico" aria-pressed="false">Logístico</button>
         </div>
 
         <!-- Projects Grid -->
@@ -229,10 +230,10 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
 
           <!-- Hypera -->
           <a class="project-card-link" href="../projetos/projeto-hypera.php">
-            <article class="project-card" data-category="farmaceutico">
+            <article class="project-card" data-category="logistico">
               <div class="project-card__image project-card__image--16">
                 <div class="project-card__overlay">
-                  <span class="project-card__category">Farmacêutico</span>
+                  <span class="project-card__category">Logístico</span>
                 </div>
               </div>
               <div class="project-card__content">
@@ -248,7 +249,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                     <span class="spec__value">200 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Modernização do sistema HVAC com VRF e automação Siemens integrada.</p>
+                <p class="project-card__description">CD Autoportante com climatização VRF e automação integrada Siemens.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
