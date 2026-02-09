@@ -90,6 +90,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
           <button class="filter-btn" data-filter="logistico" aria-pressed="false">Logístico</button>
           <button class="filter-btn" data-filter="hospitalar" aria-pressed="false">Hospitalar</button>
           <button class="filter-btn" data-filter="corporativo" aria-pressed="false">Corporativo</button>
+          <button class="filter-btn" data-filter="cultural" aria-pressed="false">Cultural</button>
         </div>
 
         <!-- Projects Grid -->
@@ -144,6 +145,33 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                   </div>
                 </div>
                 <p class="project-card__description">3 sedes no Setor Bancário Sul de Brasília com chillers centrífugos, parafuso e scroll, fancoils e pressurização.</p>
+                <span class="project-card__details">Ver detalhes</span>
+              </div>
+            </article>
+          </a>
+
+          <!-- CCBB Brasília -->
+          <a class="project-card-link" href="../projetos/projeto-ccbb.php">
+            <article class="project-card" data-category="cultural">
+              <div class="project-card__image project-card__image--20">
+                <div class="project-card__overlay">
+                  <span class="project-card__category">Cultural</span>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">CCBB Brasília</h3>
+                <span class="project-card__client">Banco do Brasil S.A.</span>
+                <div class="project-card__specs">
+                  <div class="spec">
+                    <span class="spec__label">Área</span>
+                    <span class="spec__value">15.000 m²</span>
+                  </div>
+                  <div class="spec">
+                    <span class="spec__label">Capacidade</span>
+                    <span class="spec__value">900 TR</span>
+                  </div>
+                </div>
+                <p class="project-card__description">Centro Cultural Banco do Brasil com dual fluid de precisão para galerias, teatro (262 lugares) e cinema.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>

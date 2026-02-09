@@ -1765,6 +1765,7 @@ select {
 .project-card__image--17.lazy-loaded { background-image: url("portfolio/portfolio-17.webp?v=4"); }
 .project-card__image--18.lazy-loaded { background-image: url("portfolio/portfolio-18.webp?v=4"); }
 .project-card__image--19.lazy-loaded { background-image: url("portfolio/portfolio-19.webp?v=4"); }
+.project-card__image--20.lazy-loaded { background-image: url("portfolio/portfolio-20.webp?v=4"); }
 
 .project-card__overlay {
   position: absolute;
