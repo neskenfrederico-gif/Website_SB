@@ -215,7 +215,8 @@
   word-break: break-word;
 }
 
-.sector-cta__info .btn {
+.sector-cta__info .btn,
+.sector-cta__info .btn-cta--whatsapp {
   margin-top: var(--spacing-6);
 }
 
