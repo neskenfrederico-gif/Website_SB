@@ -1125,7 +1125,7 @@
           <article class="testimonial-card glass-card fade-in">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
-              "Parceria de longa data. Já são mais de 10 projetos executados juntos, sempre com a mesma qualidade e atenção aos detalhes. Recomendo sem ressalvas."
+              "Trabalhamos com a Siqueira e Blanco há mais de 10 anos e a confiança é total. A equipe possui vasta experiência em HVAC aplicado à indústria, especialmente no complexo segmento farmacêutico. Eles garantem que todo o projeto e montagem estejam em conformidade até a etapa final de qualificações."
             </blockquote>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
@@ -1135,8 +1135,8 @@
                 </svg>
               </div>
               <div class="testimonial-card__info">
-                <strong>Coordenador de Projetos</strong>
-                <span>Construtora Nacional</span>
+                <strong>Fábio Pereira</strong>
+                <span>Au Black</span>
               </div>
             </div>
           </article>
