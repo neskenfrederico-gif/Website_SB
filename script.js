@@ -1148,12 +1148,14 @@ function initSpotlightRotator() {
       if (linkEl && c.link) linkEl.href = c.link;
       if (currentEl) currentEl.textContent = String(current + 1).padStart(2, '0');
 
-      // Reset progress bar animation
-      const progressLine = document.querySelector('.spotlight__counter-line');
-      if (progressLine) {
-        progressLine.classList.remove('animating');
-        void progressLine.offsetHeight;
-        progressLine.classList.add('animating');
+      // Reset progress bar
+      const progressBar = document.getElementById('spotlight-progress');
+      if (progressBar) {
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0%';
+        void progressBar.offsetHeight;
+        progressBar.style.transition = 'width ' + (ROTATE_INTERVAL / 1000) + 's linear';
+        progressBar.style.width = '100%';
       }
 
       // Update image + alt text
