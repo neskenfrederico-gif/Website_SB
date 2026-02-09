@@ -104,7 +104,7 @@
 
 .project-cta__left {
   background: var(--color-gray-900);
-  padding: var(--spacing-10);
+  padding: var(--spacing-8);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,8 +130,8 @@
 .project-cta__desc {
   font-size: var(--font-size-sm);
   color: rgba(255,255,255,0.7);
-  line-height: 1.7;
-  margin-bottom: var(--spacing-8);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-5);
 }
 
 .project-cta__buttons {
@@ -180,18 +180,18 @@
 
 .project-cta__right {
   background: var(--color-white);
-  padding: var(--spacing-10);
+  padding: var(--spacing-8);
 }
 
 .project-cta__form-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
 }
 
 .project-form .form-group {
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
 }
 
 .project-form__row {
