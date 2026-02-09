@@ -3501,19 +3501,43 @@ select {
     font-size: var(--font-size-sm);
   }
 
-  .spotlight__nav.hero__nav {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
+  .spotlight__nav.hero__nav.hero__nav--light {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
     gap: var(--spacing-3);
-    display: flex;
+    display: flex !important;
     align-items: center;
+    width: 100%;
   }
 
-  .spotlight__nav .hero__counter,
+  .spotlight__nav .hero__counter {
+    display: flex !important;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .spotlight__nav .hero__counter-current {
+    font-size: var(--font-size-2xl) !important;
+    font-weight: 700;
+    color: var(--color-primary) !important;
+    min-width: 2ch;
+  }
+
+  .spotlight__nav .hero__counter-sep {
+    color: var(--color-gray-400) !important;
+  }
+
+  .spotlight__nav .hero__counter-total {
+    color: var(--color-gray-400) !important;
+  }
+
   .spotlight__nav .hero__progress {
-    display: flex;
+    display: block !important;
+    width: 60px;
+    height: 2px;
+    background: var(--color-gray-200) !important;
   }
 
   /* Badge mais compacto */
