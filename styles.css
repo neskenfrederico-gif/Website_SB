@@ -3502,6 +3502,9 @@ select {
   }
 
   .spotlight__nav.hero__nav {
+    position: relative;
+    bottom: auto;
+    left: auto;
     gap: var(--spacing-3);
   }
 
