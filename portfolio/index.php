@@ -257,10 +257,10 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
 
           <!-- Hypermarcas -->
           <a class="project-card-link" href="../projetos/projeto-hypermarcas.php">
-            <article class="project-card" data-category="farmaceutico">
+            <article class="project-card" data-category="logistico">
               <div class="project-card__image project-card__image--15">
                 <div class="project-card__overlay">
-                  <span class="project-card__category">Farmacêutico</span>
+                  <span class="project-card__category">Logístico</span>
                 </div>
               </div>
               <div class="project-card__content">
@@ -276,7 +276,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/portfolio/';
                     <span class="spec__value">500 TR</span>
                   </div>
                 </div>
-                <p class="project-card__description">Climatização completa com expansão direta (Splitão) e automação Schneider.</p>
+                <p class="project-card__description">CD Ar-Condicionado com expansão direta (Splitão) e automação Schneider.</p>
                 <span class="project-card__details">Ver detalhes</span>
               </div>
             </article>
