@@ -24,7 +24,12 @@ function nav_active($page, $current) {
         <div class="nav__menu" id="nav-menu" role="navigation" aria-label="Menu principal">
           <ul class="nav__list">
             <li class="nav__item"><a href="<?= $home_link ?>" class="nav__link<?= nav_active('home', $active_page) ?>">Início</a></li>
-            <li class="nav__item"><a href="<?= $base . $sep ?>servicos/" class="nav__link<?= nav_active('servicos', $active_page) ?>">Serviços</a></li>
+            <li class="nav__item nav__item--dropdown"><a href="<?= $base . $sep ?>servicos/" class="nav__link<?= nav_active('servicos', $active_page) ?>">Serviços <span class="dropdown-arrow">▼</span></a>
+              <ul class="nav__dropdown">
+                <li><a href="<?= $base . $sep ?>servicos/" class="nav__dropdown-link">📋 Visão Geral</a></li>
+                <li><a href="<?= $base . $sep ?>servicos/tab-comissionamento.php" class="nav__dropdown-link">🔬 TAB & Comissionamento</a></li>
+              </ul>
+            </li>
             <li class="nav__item"><a href="<?= $base . $sep ?>sobre/" class="nav__link<?= nav_active('sobre', $active_page) ?>">Sobre</a></li>
             <li class="nav__item nav__item--dropdown">
               <a href="<?= $base . $sep ?>setores/" class="nav__link<?= nav_active('setores', $active_page) ?>">Setores <span class="dropdown-arrow">▼</span></a>
