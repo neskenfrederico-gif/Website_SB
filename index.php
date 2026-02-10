@@ -768,22 +768,18 @@
          </div>
          <div class="process__steps">
            <div class="process__step fade-in stagger-1">
-             <span class="process__number" aria-hidden="true">01</span>
              <h3>Estudo Preliminar</h3>
              <p>Análise de viabilidade técnica, estimativa de carga térmica inicial e seleção de tecnologias.</p>
            </div>
            <div class="process__step fade-in stagger-2">
-             <span class="process__number" aria-hidden="true">02</span>
              <h3>Anteprojeto</h3>
              <p>Definição detalhada do sistema, dimensionamento de equipamentos principais e layout de casas de máquinas.</p>
            </div>
            <div class="process__step fade-in stagger-3">
-             <span class="process__number" aria-hidden="true">03</span>
              <h3>Projeto Executivo</h3>
              <p>Modelagem BIM LOD 400, detalhamento de dutos, hidráulica e elétrica, e emissão de memoriais.</p>
            </div>
            <div class="process__step fade-in stagger-4">
-             <span class="process__number" aria-hidden="true">04</span>
              <h3>Obra & Entrega</h3>
              <p>Acompanhamento técnico, testes de start-up, balanceamento (TAB) e documentação As-Built.</p>
            </div>
