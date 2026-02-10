@@ -35,7 +35,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=17" />
+    <link rel="stylesheet" href="styles.css?v=72" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -392,6 +392,13 @@
       </div>
     </section>
 
+    <!-- Impact Quote 1 -->
+    <div class="impact-quote fade-in" aria-hidden="true">
+      <div class="container">
+        <p class="impact-quote__text">Engenharia que funciona.</p>
+      </div>
+    </div>
+
     <!-- Clientes Section -->
     <section class="section clients-showcase" id="clientes">
       <div class="container">
@@ -608,6 +615,13 @@
       </div>
     </section>
 
+    <!-- Impact Quote 2 -->
+    <div class="impact-quote fade-in" aria-hidden="true">
+      <div class="container">
+        <p class="impact-quote__text">Controle absoluto. Zero improviso.</p>
+      </div>
+    </div>
+
     <!-- Serviços Section -->
     <section class="section servicos" id="servicos">
       <div class="container">
@@ -738,8 +752,15 @@
       </div>
     </section>
 
+    <!-- Impact Quote 3 -->
+    <div class="impact-quote fade-in" aria-hidden="true">
+      <div class="container">
+        <p class="impact-quote__text">Do projeto à operação. Sem surpresas.</p>
+      </div>
+    </div>
+
     <!-- Engineering Process Section -->
-    <section class="section process" id="processo">
+    <section class="section process process--airflow" id="processo">
       <div class="container">
          <div class="section__header">
            <span class="section__subtitle">Metodologia</span>
@@ -747,22 +768,57 @@
          </div>
          <div class="process__steps">
            <div class="process__step fade-in stagger-1">
+             <span class="process__number" aria-hidden="true">01</span>
              <h3>Estudo Preliminar</h3>
              <p>Análise de viabilidade técnica, estimativa de carga térmica inicial e seleção de tecnologias.</p>
            </div>
            <div class="process__step fade-in stagger-2">
+             <span class="process__number" aria-hidden="true">02</span>
              <h3>Anteprojeto</h3>
              <p>Definição detalhada do sistema, dimensionamento de equipamentos principais e layout de casas de máquinas.</p>
            </div>
            <div class="process__step fade-in stagger-3">
+             <span class="process__number" aria-hidden="true">03</span>
              <h3>Projeto Executivo</h3>
              <p>Modelagem BIM LOD 400, detalhamento de dutos, hidráulica e elétrica, e emissão de memoriais.</p>
            </div>
            <div class="process__step fade-in stagger-4">
+             <span class="process__number" aria-hidden="true">04</span>
              <h3>Obra & Entrega</h3>
              <p>Acompanhamento técnico, testes de start-up, balanceamento (TAB) e documentação As-Built.</p>
            </div>
          </div>
+      </div>
+    </section>
+
+    <!-- O Que Nos Move Section -->
+    <section class="section manifesto" id="manifesto">
+      <div class="manifesto__airflow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__header">
+          <span class="section__subtitle">Filosofia</span>
+          <h2 class="section__title">O Que Nos <span class="gradient-text">Move</span></h2>
+        </div>
+        <div class="manifesto__grid">
+          <div class="manifesto__pillar glass-card fade-in stagger-1">
+            <span class="manifesto__number" aria-hidden="true">01</span>
+            <h3 class="manifesto__title">Projetar</h3>
+            <p class="manifesto__text">Cada traço nasce de cálculo, experiência e intenção. Projetamos sistemas que antecipam problemas antes que eles existam — porque improvisar não é engenharia.</p>
+            <p class="manifesto__mantra">"Projetar é mais do que calcular."</p>
+          </div>
+          <div class="manifesto__pillar glass-card fade-in stagger-2">
+            <span class="manifesto__number" aria-hidden="true">02</span>
+            <h3 class="manifesto__title">Construir</h3>
+            <p class="manifesto__text">Do modelo BIM ao canteiro de obras, cada etapa é coordenada com precisão milimétrica. Construímos com método, rastreabilidade e zero tolerância a desvios.</p>
+            <p class="manifesto__mantra">"Construir é materializar confiança."</p>
+          </div>
+          <div class="manifesto__pillar glass-card fade-in stagger-3">
+            <span class="manifesto__number" aria-hidden="true">03</span>
+            <h3 class="manifesto__title">Entregar</h3>
+            <p class="manifesto__text">Um sistema comissionado, documentado e funcionando conforme o projeto. Entregamos performance validada — não promessas. O cliente liga o sistema e ele funciona.</p>
+            <p class="manifesto__mantra">"Entregar é provar que funciona."</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -843,6 +899,12 @@
                   <span class="team-stat__value">12</span>
                   <span class="team-stat__label">Estados atendidos</span>
                 </div>
+              </div>
+              <div class="team-roles">
+                <div class="team-role"><span class="team-role__icon">📐</span><span>Projetistas HVAC</span></div>
+                <div class="team-role"><span class="team-role__icon">🧊</span><span>Coordenadores BIM</span></div>
+                <div class="team-role"><span class="team-role__icon">⚙️</span><span>Eng. de Comissionamento</span></div>
+                <div class="team-role"><span class="team-role__icon">🔧</span><span>Técnicos de Campo</span></div>
               </div>
               <div class="team-contact">
                 <div class="info-item">
