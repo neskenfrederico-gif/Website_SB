@@ -802,19 +802,28 @@
         <div class="manifesto__grid">
           <div class="manifesto__pillar glass-card fade-in stagger-1">
             <span class="manifesto__number" aria-hidden="true">01</span>
-            <h3 class="manifesto__title">Projetar</h3>
+            <div class="manifesto__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V7l7-4 7 4v13"/><path d="M9 20v-5h6v5"/><path d="M9 11h.01M15 11h.01"/><path d="M12 11h.01"/></svg>
+            </div>
+            <h3 class="manifesto__title">Projetar<span class="manifesto__accent-bar"></span></h3>
             <p class="manifesto__text">Cada traço nasce de cálculo, experiência e intenção. Projetamos sistemas que antecipam problemas antes que eles existam — porque improvisar não é engenharia.</p>
             <p class="manifesto__mantra">"Projetar é mais do que calcular."</p>
           </div>
           <div class="manifesto__pillar glass-card fade-in stagger-2">
             <span class="manifesto__number" aria-hidden="true">02</span>
-            <h3 class="manifesto__title">Construir</h3>
+            <div class="manifesto__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 class="manifesto__title">Construir<span class="manifesto__accent-bar"></span></h3>
             <p class="manifesto__text">Do modelo BIM ao canteiro de obras, cada etapa é coordenada com precisão milimétrica. Construímos com método, rastreabilidade e zero tolerância a desvios.</p>
             <p class="manifesto__mantra">"Construir é materializar confiança."</p>
           </div>
           <div class="manifesto__pillar glass-card fade-in stagger-3">
             <span class="manifesto__number" aria-hidden="true">03</span>
-            <h3 class="manifesto__title">Entregar</h3>
+            <div class="manifesto__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="manifesto__title">Entregar<span class="manifesto__accent-bar"></span></h3>
             <p class="manifesto__text">Um sistema comissionado, documentado e funcionando conforme o projeto. Entregamos performance validada — não promessas. O cliente liga o sistema e ele funciona.</p>
             <p class="manifesto__mantra">"Entregar é provar que funciona."</p>
           </div>
@@ -900,11 +909,48 @@
                   <span class="team-stat__label">Estados atendidos</span>
                 </div>
               </div>
+              <p class="team-roles__headline">Cada projeto é tão bom quanto a equipe por trás dele.</p>
               <div class="team-roles">
-                <div class="team-role"><span class="team-role__icon">📐</span><span>Projetistas HVAC</span></div>
-                <div class="team-role"><span class="team-role__icon">🧊</span><span>Coordenadores BIM</span></div>
-                <div class="team-role"><span class="team-role__icon">⚙️</span><span>Eng. de Comissionamento</span></div>
-                <div class="team-role"><span class="team-role__icon">🔧</span><span>Técnicos de Campo</span></div>
+                <div class="team-role-card">
+                  <div class="team-role-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V7l7-4 7 4v13"/><path d="M9 20v-5h6v5"/></svg>
+                  </div>
+                  <div class="team-role-card__info">
+                    <h4 class="team-role-card__title">Projetistas HVAC</h4>
+                    <p class="team-role-card__desc">Dimensionamento, carga térmica e especificação técnica</p>
+                  </div>
+                  <span class="team-role-card__count">4+ profissionais</span>
+                </div>
+                <div class="team-role-card">
+                  <div class="team-role-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l4 4-4 4"/><path d="M16 6H4v6"/><path d="M12 22l-4-4 4-4"/><path d="M8 18h12v-6"/></svg>
+                  </div>
+                  <div class="team-role-card__info">
+                    <h4 class="team-role-card__title">Coordenadores BIM</h4>
+                    <p class="team-role-card__desc">Modelagem 3D, clash detection e compatibilização</p>
+                  </div>
+                  <span class="team-role-card__count">2+ profissionais</span>
+                </div>
+                <div class="team-role-card">
+                  <div class="team-role-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+                  </div>
+                  <div class="team-role-card__info">
+                    <h4 class="team-role-card__title">Eng. de Comissionamento</h4>
+                    <p class="team-role-card__desc">Validação, TAB e qualificação de sistemas</p>
+                  </div>
+                  <span class="team-role-card__count">3+ profissionais</span>
+                </div>
+                <div class="team-role-card">
+                  <div class="team-role-card__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  </div>
+                  <div class="team-role-card__info">
+                    <h4 class="team-role-card__title">Técnicos de Campo</h4>
+                    <p class="team-role-card__desc">Instalação, start-up e manutenção especializada</p>
+                  </div>
+                  <span class="team-role-card__count">6+ profissionais</span>
+                </div>
               </div>
               <div class="team-contact">
                 <div class="info-item">

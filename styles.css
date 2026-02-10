@@ -4966,23 +4966,47 @@ select {
   z-index: 1;
 }
 .manifesto__pillar {
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   position: relative;
   text-align: left;
+  border: 1px solid rgba(100, 180, 255, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.manifesto__pillar:hover {
+  transform: scale(1.02);
+  border-color: rgba(100, 180, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(100, 180, 255, 0.08);
 }
 .manifesto__number {
   display: block;
-  font-size: clamp(3rem, 5vw, 4.5rem);
-  font-weight: 700;
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 800;
   line-height: 1;
-  color: rgba(100, 180, 255, 0.15);
-  margin-bottom: 0.75rem;
+  color: rgba(100, 180, 255, 0.25);
+  margin-bottom: 0.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.manifesto__icon {
+  color: rgba(100, 180, 255, 0.7);
+  margin-bottom: 1rem;
 }
 .manifesto__title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.manifesto__accent-bar {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(100, 180, 255, 0.8), rgba(100, 180, 255, 0.2));
+  border-radius: 2px;
 }
 .manifesto__text {
   font-size: 0.95rem;
@@ -4992,11 +5016,12 @@ select {
 }
 .manifesto__mantra {
   font-style: italic;
-  font-weight: 500;
-  font-size: 1rem;
-  color: rgba(100, 180, 255, 0.85);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba(100, 180, 255, 0.95);
   padding-left: 1rem;
-  border-left: 2px solid rgba(100, 180, 255, 0.3);
+  border-left: 3px solid rgba(100, 180, 255, 0.5);
+  letter-spacing: -0.01em;
 }
 @media (max-width: 768px) {
   .manifesto__grid {
@@ -5030,27 +5055,64 @@ select {
 }
 
 /* --- 4. TEAM ROLES --- */
+.team-roles__headline {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(100, 180, 255, 0.7);
+  text-align: center;
+  padding: 0 1.25rem;
+  margin-bottom: 0.75rem;
+}
 .team-roles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.6rem;
+  gap: 0.75rem;
   padding: 0 1.25rem;
   margin-bottom: 1rem;
 }
-.team-role {
+.team-role-card {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.75);
-  padding: 0.45rem 0.6rem;
-  background: rgba(255,255,255,0.04);
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255,255,255,0.06);
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(100, 180, 255, 0.06), rgba(255,255,255,0.03));
+  border-radius: 0.75rem;
+  border: 1px solid rgba(100, 180, 255, 0.1);
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
-.team-role__icon {
-  font-size: 1rem;
+.team-role-card:hover {
+  border-color: rgba(100, 180, 255, 0.25);
+  transform: translateY(-2px);
+}
+.team-role-card__icon {
+  color: rgba(100, 180, 255, 0.7);
   flex-shrink: 0;
+}
+.team-role-card__info {
+  flex: 1;
+}
+.team-role-card__title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.2rem 0;
+}
+.team-role-card__desc {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  line-height: 1.4;
+}
+.team-role-card__count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(100, 180, 255, 0.8);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 480px) {
+  .team-roles {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --- 5. AIRFLOW BACKGROUND (process section) --- */
