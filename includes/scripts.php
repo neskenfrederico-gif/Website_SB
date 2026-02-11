@@ -9,7 +9,7 @@
 $extra_scripts = $extra_scripts ?? [];
 $sep           = ($base === '') ? '' : '/';
 ?>
-    <script src="<?= $base . $sep ?>script.js?v=16" defer></script>
+    <script src="<?= $base . $sep ?>script.js?v=17" defer></script>
 <?php foreach ($extra_scripts as $script): ?>
     <script src="<?= $script ?>"></script>
 <?php endforeach; ?>

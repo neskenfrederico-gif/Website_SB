@@ -967,6 +967,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Newsletter form (all pages with newsletter)
   initNewsletterForm();
 
+  // Portfolio rotation (all pages with portfolio grid)
+  initPortfolioRotation();
+
   // Homepage-only initializations
   if (isHomepage) {
     // Initialize Slider
@@ -983,9 +986,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Spotlight Cases Rotator
     initSpotlightRotator();
-
-    // Portfolio rotation
-    initPortfolioRotation();
   }
 });
 
