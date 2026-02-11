@@ -277,19 +277,18 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
               <li><strong>Laudos de QAI</strong> — Qualidade do Ar Interior conforme RE nº 9 ANVISA</li>
               <li><strong>Treinamento Operacional</strong> — Capacitação da equipe de manutenção</li>
             </ul>
-            <a href="tab-comissionamento.php" class="btn btn--primary btn--full">Ver página completa de TAB & Comissionamento →</a>
           </div>
           <div class="service-detail__aside fade-in">
             <div class="service-card glass-card">
               <div class="service-card__icon">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
                 </svg>
               </div>
-              <h3 class="service-card__title">PMOC Obrigatório</h3>
-              <p>A Lei 13.589/2018 exige PMOC para todos os edifícios climatizados. Multas podem chegar a <strong>R$ 200 mil</strong>.</p>
-              <a href="../artigos/o-que-e-pmoc.php" class="btn btn--secondary btn--full">Ler Artigo sobre PMOC</a>
+              <h3 class="service-card__title">TAB & Comissionamento</h3>
+              <p>Validação de performance, balanceamento de vazões e documentação completa conforme <strong>ASHRAE 111</strong> e <strong>NEBB</strong>.</p>
+              <a href="tab-comissionamento.php" class="btn btn--secondary btn--full">Ver Página Completa</a>
             </div>
           </div>
         </div>
