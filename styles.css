@@ -5146,3 +5146,16 @@ select {
 @media (max-width: 768px) {
   .mobile-only { display: block; }
 }
+
+/* --- SECTOR CASE CARDS CLICKABLE --- */
+.sector-info-card--link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sector-info-card--link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}

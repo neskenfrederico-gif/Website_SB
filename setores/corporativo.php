@@ -227,29 +227,29 @@ $extra_css        = ['setor.css?v=1770600000'];
         </div>
 
         <div class="sector-cards__grid">
-          <article class="sector-info-card fade-in">
+          <a href="../projetos/projeto-bancodobrasil.php" class="sector-info-card sector-info-card--link fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">🏦</div>
               <h3>Banco do Brasil — Sedes SBS</h3>
             </div>
             <p><strong>96.135 m²</strong> • <strong>4.350 TR</strong><br />3 sedes no Setor Bancário Sul de Brasília com chillers parafuso e centrífugo, fancoils e pressurização.</p>
-          </article>
+          </a>
 
-          <article class="sector-info-card fade-in">
+          <a href="../projetos/projeto-ccbb.php" class="sector-info-card sector-info-card--link fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">🎭</div>
               <h3>CCBB Brasília</h3>
             </div>
             <p><strong>15.000 m²</strong> • <strong>900 TR</strong><br />Centro Cultural Banco do Brasil com dual fluid de precisão para galerias de arte, teatro e cinema.</p>
-          </article>
+          </a>
 
-          <article class="sector-info-card fade-in">
+          <a href="../projetos/projeto-lineavitta.php" class="sector-info-card sector-info-card--link fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
               <h3>Linea Vitta</h3>
             </div>
             <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Edifício comercial em Brasília com VRF/Split e pressurização de escadas.</p>
-          </article>
+          </a>
         </div>
       </div>
     </section>

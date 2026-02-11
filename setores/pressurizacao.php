@@ -229,13 +229,13 @@ $extra_css        = ['setor.css?v=1770600000'];
         </div>
 
         <div class="sector-cards__grid">
-          <article class="sector-info-card fade-in">
+          <a href="../projetos/projeto-lineavitta.php" class="sector-info-card sector-info-card--link fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">🏬</div>
               <h3>Linea Vitta</h3>
             </div>
             <p><strong>27.500 m²</strong> &bull; <strong>110.160 m³/h</strong><br />Edifício comercial de grande porte em Brasília com sistema de pressurização de escadas, climatização Split e exaustão mecânica.</p>
-          </article>
+          </a>
 
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
