@@ -138,20 +138,16 @@ $extra_css        = ['setor.css?v=1770600000'];
     </section>
 
     <!-- Normas -->
-    <section class="section sector-standards">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Referências técnicas</span>
-          <h2 class="section__title">Normas e <span class="gradient-text">guidelines</span></h2>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>ASHRAE TC 9.9</strong><span>Recomendações para data centers</span></div>
-          <div class="standard-badge fade-in"><strong>TIA-942</strong><span>Infraestrutura de telecom/data centers</span></div>
-          <div class="standard-badge fade-in"><strong>Uptime Institute</strong><span>Classificação Tier e resiliência</span></div>
-        </div>
-      </div>
-    </section>
+<?php
+$norms_subtitle = 'Referências técnicas';
+$norms_title = 'Normas e <span class="gradient-text">guidelines</span>';
+$norms = [
+    ['code' => 'ASHRAE TC 9.9',  'desc' => 'Recomendações para data centers'],
+    ['code' => 'TIA-942',        'desc' => 'Infraestrutura de telecom/data centers'],
+    ['code' => 'Uptime Institute','desc' => 'Classificação Tier e resiliência'],
+];
+include '../includes/sector-norms.php';
+?>
 
     <!-- Serviços específicos -->
     <section class="section sector-cards" id="servicos-setor">

@@ -137,22 +137,17 @@ $extra_css        = ['setor.css?v=1770600000'];
     </section>
 
     <!-- Normas -->
-    <section class="section sector-standards">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Base normativa</span>
-          <h2 class="section__title">Normas e <span class="gradient-text">certificações</span></h2>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>ASHRAE 90.1</strong><span>Eficiência energética</span></div>
-          <div class="standard-badge fade-in"><strong>ASHRAE 62.1</strong><span>Ventilação e IAQ</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de ar-condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>LEED</strong><span>Green building</span></div>
-          <div class="standard-badge fade-in"><strong>WELL</strong><span>Bem-estar e saúde</span></div>
-        </div>
-      </div>
-    </section>
+<?php
+$norms_title = 'Normas e <span class="gradient-text">certificações</span>';
+$norms = [
+    ['code' => 'ASHRAE 90.1', 'desc' => 'Eficiência energética'],
+    ['code' => 'ASHRAE 62.1', 'desc' => 'Ventilação e IAQ'],
+    ['code' => 'NBR 16401',   'desc' => 'Instalações de ar-condicionado'],
+    ['code' => 'LEED',        'desc' => 'Green building'],
+    ['code' => 'WELL',        'desc' => 'Bem-estar e saúde'],
+];
+include '../includes/sector-norms.php';
+?>
 
     <!-- Serviços específicos -->
     <section class="section sector-cards" id="servicos-setor">
@@ -218,41 +213,14 @@ $extra_css        = ['setor.css?v=1770600000'];
       </div>
     </section>
 
-    <!-- Cases -->
-    <section class="section sector-cards" id="cases">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Experiência comprovada</span>
-          <h2 class="section__title">Cases <span class="gradient-text">relacionados</span></h2>
-        </div>
-
-        <div class="sector-cards__grid">
-          <a href="../projetos/projeto-bancodobrasil.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏦</div>
-              <h3>Banco do Brasil — Sedes SBS</h3>
-            </div>
-            <p><strong>96.135 m²</strong> • <strong>4.350 TR</strong><br />3 sedes no Setor Bancário Sul de Brasília com chillers parafuso e centrífugo, fancoils e pressurização.</p>
-          </a>
-
-          <a href="../projetos/projeto-ccbb.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🎭</div>
-              <h3>CCBB Brasília</h3>
-            </div>
-            <p><strong>15.000 m²</strong> • <strong>900 TR</strong><br />Centro Cultural Banco do Brasil com dual fluid de precisão para galerias de arte, teatro e cinema.</p>
-          </a>
-
-          <a href="../projetos/projeto-lineavitta.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏙️</div>
-              <h3>Linea Vitta</h3>
-            </div>
-            <p><strong>27.500 m²</strong> • <strong>941 TR</strong><br />Edifício comercial em Brasília com VRF/Split e pressurização de escadas.</p>
-          </a>
-        </div>
-      </div>
-    </section>
+<?php
+$cases = [
+    ['href' => '../projetos/projeto-bancodobrasil.php', 'title' => 'Banco do Brasil — Sedes SBS', 'specs' => '96.135 m² • 4.350 TR', 'desc' => '3 sedes no Setor Bancário Sul de Brasília com chillers parafuso e centrífugo, fancoils e pressurização.'],
+    ['href' => '../projetos/projeto-ccbb.php', 'title' => 'CCBB Brasília', 'specs' => '15.000 m² • 900 TR', 'desc' => 'Centro Cultural Banco do Brasil com dual fluid de precisão para galerias de arte, teatro e cinema.'],
+    ['href' => '../projetos/projeto-lineavitta.php', 'title' => 'Linea Vitta', 'specs' => '27.500 m² • 941 TR', 'desc' => 'Edifício comercial em Brasília com VRF/Split e pressurização de escadas.'],
+];
+include '../includes/sector-cases.php';
+?>
 
     <!-- FAQ -->
     <section class="section faq" id="faq-setor">

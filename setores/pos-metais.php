@@ -141,23 +141,18 @@ $extra_css        = ['setor.css?v=1770600000'];
     </section>
 
     <!-- Normas -->
-    <section class="section sector-standards">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Base normativa</span>
-          <h2 class="section__title">Normas e guias <span class="gradient-text">aplicáveis</span></h2>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>NR-15</strong><span>Atividades e operações insalubres</span></div>
-          <div class="standard-badge fade-in"><strong>NR-9 (PGR)</strong><span>Programa de gerenciamento de riscos</span></div>
-          <div class="standard-badge fade-in"><strong>NFPA 654</strong><span>Prevenção de explosões de poeiras combustíveis</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de ar-condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>ACGIH</strong><span>Limites de exposição ocupacional (TLV)</span></div>
-          <div class="standard-badge fade-in"><strong>CONAMA 491</strong><span>Padrões de qualidade do ar (emissões)</span></div>
-        </div>
-      </div>
-    </section>
+<?php
+$norms_title = 'Normas e guias <span class="gradient-text">aplicáveis</span>';
+$norms = [
+    ['code' => 'NR-15',      'desc' => 'Atividades e operações insalubres'],
+    ['code' => 'NR-9 (PGR)', 'desc' => 'Programa de gerenciamento de riscos'],
+    ['code' => 'NFPA 654',   'desc' => 'Prevenção de explosões de poeiras combustíveis'],
+    ['code' => 'NBR 16401',  'desc' => 'Instalações de ar-condicionado'],
+    ['code' => 'ACGIH',      'desc' => 'Limites de exposição ocupacional (TLV)'],
+    ['code' => 'CONAMA 491', 'desc' => 'Padrões de qualidade do ar (emissões)'],
+];
+include '../includes/sector-norms.php';
+?>
 
     <!-- Serviços específicos -->
     <section class="section sector-cards" id="servicos-setor">

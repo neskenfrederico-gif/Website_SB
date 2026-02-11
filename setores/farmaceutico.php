@@ -137,23 +137,18 @@ $extra_css        = ['setor.css?v=1770600000'];
     </section>
 
     <!-- Normas -->
-    <section class="section sector-standards">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Base normativa</span>
-          <h2 class="section__title">Normas e guias <span class="gradient-text">aplicáveis</span></h2>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>ANVISA RDC 301</strong><span>Boas Práticas (foco farmacêutico)</span></div>
-          <div class="standard-badge fade-in"><strong>ANVISA RDC 50</strong><span>Projetos físicos assistenciais</span></div>
-          <div class="standard-badge fade-in"><strong>ISO 14644</strong><span>Salas limpas e ambientes controlados</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 7256</strong><span>Tratamento de ar em estabelecimentos assistenciais</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de ar-condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>ASHRAE</strong><span>Boas práticas internacionais HVAC</span></div>
-        </div>
-      </div>
-    </section>
+<?php
+$norms_title = 'Normas e guias <span class="gradient-text">aplicáveis</span>';
+$norms = [
+    ['code' => 'ANVISA RDC 301', 'desc' => 'Boas Práticas (foco farmacêutico)'],
+    ['code' => 'ANVISA RDC 50',  'desc' => 'Projetos físicos assistenciais'],
+    ['code' => 'ISO 14644',      'desc' => 'Salas limpas e ambientes controlados'],
+    ['code' => 'NBR 7256',       'desc' => 'Tratamento de ar em EAS'],
+    ['code' => 'NBR 16401',      'desc' => 'Instalações de ar-condicionado'],
+    ['code' => 'ASHRAE',         'desc' => 'Boas práticas internacionais HVAC'],
+];
+include '../includes/sector-norms.php';
+?>
 
     <!-- Serviços específicos -->
     <section class="section sector-cards" id="servicos-setor">
@@ -219,41 +214,14 @@ $extra_css        = ['setor.css?v=1770600000'];
       </div>
     </section>
 
-    <!-- Cases -->
-    <section class="section sector-cards" id="cases">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Experiência comprovada</span>
-          <h2 class="section__title">Cases <span class="gradient-text">relacionados</span></h2>
-        </div>
-
-        <div class="sector-cards__grid">
-          <a href="../projetos/projeto-hcufg.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏥</div>
-              <h3>HC-UFG Hospital das Clínicas</h3>
-            </div>
-            <p><strong>44.000 m²</strong> • <strong>1.500 TR</strong><br />Hospital referência com 600 leitos, filtragem HEPA em centros cirúrgicos e UTIs, H13 para transplantados.</p>
-          </a>
-
-          <a href="../projetos/projeto-geolab.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">💊</div>
-              <h3>Geolab — Site I</h3>
-            </div>
-            <p><strong>25.000 m²</strong> • <strong>1.500 TR</strong><br />Salas limpas para sólidos, efervescentes, semissólidos, líquidos e colírios com UTAs TROX TKZ e filtragem HEPA.</p>
-          </a>
-
-          <a href="../projetos/projeto-geolab-siteii.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🧬</div>
-              <h3>Geolab — Site II</h3>
-            </div>
-            <p><strong>8.000 m²</strong> • <strong>900 TR</strong><br />Salas limpas Grau B/C para produção de colírios, central de água gelada com VFD.</p>
-          </a>
-        </div>
-      </div>
-    </section>
+<?php
+$cases = [
+    ['href' => '../projetos/projeto-hcufg.php', 'title' => 'HC-UFG Hospital das Clínicas', 'specs' => '44.000 m² • 1.500 TR', 'desc' => 'Hospital referência com 600 leitos, filtragem HEPA em centros cirúrgicos e UTIs, H13 para transplantados.'],
+    ['href' => '../projetos/projeto-geolab.php', 'title' => 'Geolab — Site I', 'specs' => '25.000 m² • 1.500 TR', 'desc' => 'Salas limpas para sólidos, efervescentes, semissólidos, líquidos e colírios com UTAs TROX TKZ e filtragem HEPA.'],
+    ['href' => '../projetos/projeto-geolab-siteii.php', 'title' => 'Geolab — Site II', 'specs' => '8.000 m² • 900 TR', 'desc' => 'Salas limpas Grau B/C para produção de colírios, central de água gelada com VFD.'],
+];
+include '../includes/sector-cases.php';
+?>
 
     <!-- FAQ -->
     <section class="section faq" id="faq-setor">

@@ -138,23 +138,18 @@ $extra_css        = ['setor.css?v=1770600000'];
     </section>
 
     <!-- Normas -->
-    <section class="section sector-standards">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Base normativa</span>
-          <h2 class="section__title">Normas e guias <span class="gradient-text">aplicáveis</span></h2>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>IT-18</strong><span>Instrução Técnica do Corpo de Bombeiros</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 9079</strong><span>Pressurização de escadas de segurança</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 14873</strong><span>Proteção contra incêndio em túneis</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de ar-condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>NFPA 92</strong><span>Controle de fumaça em edificações</span></div>
-          <div class="standard-badge fade-in"><strong>BS EN 12101-6</strong><span>Sistemas de pressurização diferencial</span></div>
-        </div>
-      </div>
-    </section>
+<?php
+$norms_title = 'Normas e guias <span class="gradient-text">aplicáveis</span>';
+$norms = [
+    ['code' => 'IT-18',         'desc' => 'Instrução Técnica do Corpo de Bombeiros'],
+    ['code' => 'NBR 9079',      'desc' => 'Pressurização de escadas de segurança'],
+    ['code' => 'NBR 14873',     'desc' => 'Proteção contra incêndio em túneis'],
+    ['code' => 'NBR 16401',     'desc' => 'Instalações de ar-condicionado'],
+    ['code' => 'NFPA 92',       'desc' => 'Controle de fumaça em edificações'],
+    ['code' => 'BS EN 12101-6', 'desc' => 'Pressurização diferencial'],
+];
+include '../includes/sector-norms.php';
+?>
 
     <!-- Serviços específicos -->
     <section class="section sector-cards" id="servicos-setor">
@@ -220,41 +215,14 @@ $extra_css        = ['setor.css?v=1770600000'];
       </div>
     </section>
 
-    <!-- Cases -->
-    <section class="section sector-cards" id="cases">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Experiência comprovada</span>
-          <h2 class="section__title">Cases <span class="gradient-text">relacionados</span></h2>
-        </div>
-
-        <div class="sector-cards__grid">
-          <a href="../projetos/projeto-lineavitta.php" class="sector-info-card sector-info-card--link fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏬</div>
-              <h3>Linea Vitta</h3>
-            </div>
-            <p><strong>27.500 m²</strong> &bull; <strong>110.160 m³/h</strong><br />Edifício comercial de grande porte em Brasília com sistema de pressurização de escadas, climatização Split e exaustão mecânica.</p>
-          </a>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏬</div>
-              <h3>Linea G</h3>
-            </div>
-            <p><strong>14.600 m²</strong> &bull; <strong>93.780 m³/h</strong><br />Empreendimento misto (comercial/apart hotel) em Brasília com 208 apartamentos e pressurização de escadas.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">🏬</div>
-              <h3>Hotel GoInn</h3>
-            </div>
-            <p><strong>15.199 m²</strong> &bull; <strong>108.960 m³/h</strong><br />Hotel com 172 apartamentos em Goiânia, incluindo pressurização de escadas, climatização e exaustão mecânica.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+<?php
+$cases = [
+    ['href' => '../projetos/projeto-lineavitta.php', 'title' => 'Linea Vitta', 'specs' => '27.500 m² • 110.160 m³/h', 'desc' => 'Edifício comercial em Brasília com pressurização de escadas, climatização Split e exaustão mecânica.'],
+    ['href' => '../projetos/projeto-lineag.php', 'title' => 'Linea G', 'specs' => '14.600 m² • 93.780 m³/h', 'desc' => 'Empreendimento misto (comercial/apart hotel) em Brasília com 208 apartamentos e pressurização de escadas.'],
+    ['href' => '../projetos/projeto-goinn.php', 'title' => 'Hotel GoInn', 'specs' => '15.199 m² • 108.960 m³/h', 'desc' => 'Hotel com 172 apartamentos em Goiânia, pressurização de escadas, climatização e exaustão mecânica.'],
+];
+include '../includes/sector-cases.php';
+?>
 
     <!-- FAQ -->
     <section class="section faq" id="faq-setor">
