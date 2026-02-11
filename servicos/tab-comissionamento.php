@@ -243,7 +243,7 @@ $extra_css        = ['../setores/setor.css?v=1770600000'];
           <h2 class="section__title">Equipamentos &amp; <span class="gradient-text">Normas</span></h2>
         </div>
 
-        <div class="sector-cards__grid" style="margin-bottom: var(--spacing-10);">
+        <div class="sector-cards__grid">
           <article class="sector-info-card fade-in">
             <div class="sector-info-card__top">
               <div class="sector-info-card__icon" aria-hidden="true">A</div>
