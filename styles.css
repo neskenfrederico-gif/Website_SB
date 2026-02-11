@@ -1160,8 +1160,8 @@ select {
 @media (min-width: 768px) {
   .sobre__card--team {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    max-width: 780px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 860px;
   }
 
   .team-hero {
