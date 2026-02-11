@@ -1416,6 +1416,9 @@ select {
   color: var(--color-primary);
   margin-bottom: var(--spacing-4);
 }
+.service-card .btn {
+  margin-top: var(--spacing-4);
+}
 
 .service-card__description {
   color: var(--color-gray-600);
