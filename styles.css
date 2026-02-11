@@ -1162,7 +1162,7 @@ select {
   .sobre__card--team {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 960px;
+    max-width: 100%;
   }
 
   .team-hero {
