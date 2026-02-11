@@ -1075,6 +1075,7 @@ select {
 /* ===== SOBRE SECTION ===== */
 .sobre {
   background: var(--color-gray-50);
+  padding-bottom: var(--spacing-10);
 }
 
 .sobre__grid {
