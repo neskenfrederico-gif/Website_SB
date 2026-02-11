@@ -147,12 +147,6 @@ $norms = [
     ['code' => 'SMACNA',    'desc' => 'Dimensionamento de dutos'],
 ];
 include '../includes/sector-norms.php';
-
-$cases = [
-    ['href' => '../projetos/projeto-ontex.php', 'title' => 'Ontex', 'specs' => '15.600 m² • 1.050 TR', 'desc' => 'Controle de IBUTG com 710.000 m³/h para produção de fraldas, automação Siemens e resfriamento evaporativo.'],
-    ['href' => '../projetos/projeto-savoy.php', 'title' => 'Savoy Cosméticos', 'specs' => '953 m² • 110.000 m³/h', 'desc' => 'Ventilação e exaustão 100% para linha de envase de aerosóis com girotubo e controle de poluentes.'],
-];
-include '../includes/sector-cases.php';
 ?>
 
     <!-- Serviços específicos -->
@@ -218,6 +212,14 @@ include '../includes/sector-cases.php';
         </div>
       </div>
     </section>
+
+<?php
+$cases = [
+    ['href' => '../projetos/projeto-ontex.php', 'title' => 'Ontex', 'specs' => '15.600 m² • 1.050 TR', 'desc' => 'Controle de IBUTG com 710.000 m³/h para produção de fraldas, automação Siemens e resfriamento evaporativo.'],
+    ['href' => '../projetos/projeto-savoy.php', 'title' => 'Savoy Cosméticos', 'specs' => '953 m² • 110.000 m³/h', 'desc' => 'Ventilação e exaustão 100% para linha de envase de aerosóis com girotubo e controle de poluentes.'],
+];
+include '../includes/sector-cases.php';
+?>
 
     <!-- FAQ -->
     <section class="section faq" id="faq-setor">
