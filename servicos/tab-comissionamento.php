@@ -27,23 +27,7 @@ $extra_css        = ['../setores/setor.css?v=1770600000'];
         },
         "areaServed": "BR",
         "url": "https://siqueiraeblanco.com.br/servicos/tab-comissionamento.php",
-        "description": "Teste, Ajuste, Balanceamento (TAB) e Comissionamento (Cx) de sistemas HVAC conforme ASHRAE 111, NEBB, ASHRAE Guideline 0 e NBR 16401.",
-        "availableChannel": {
-          "@type": "ServiceChannel",
-          "serviceUrl": "https://wa.me/5562992250067?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20TAB%20e%20Comissionamento.",
-          "availableLanguage": "pt-BR"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://siqueiraeblanco.com.br/servicos/" },
-          { "@type": "ListItem", "position": 3, "name": "TAB & Comissionamento", "item": "https://siqueiraeblanco.com.br/servicos/tab-comissionamento.php" }
-        ]
+        "description": "Teste, Ajuste, Balanceamento (TAB) e Comissionamento (Cx) de sistemas HVAC conforme ASHRAE 111, NEBB, ASHRAE Guideline 0 e NBR 16401."
       }
     </script>
   </head>
@@ -69,237 +53,154 @@ $extra_css        = ['../setores/setor.css?v=1770600000'];
       </div>
     </section>
 
-    <!-- TAB & Comissionamento -->
-    <section class="section sector-content">
+    <!-- TAB -->
+    <section class="section" id="tab">
       <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Validação completa de sistemas</span>
-          <h2 class="section__title">Teste, Ajuste, Balanceamento &amp; <span class="gradient-text">Comissionamento</span></h2>
-        </div>
+        <div class="service-detail">
+          <div class="service-detail__content fade-in">
+            <span class="section__subtitle">Calibração de Sistemas</span>
+            <h2 class="section__title">Teste, Ajuste &amp; <span class="gradient-text">Balanceamento</span></h2>
+            <p>O TAB calibra vazões de ar e água, ajusta dampers e válvulas e garante que o sistema opere conforme projetado. Sem esse processo, até <strong>30% dos sistemas HVAC</strong> operam abaixo da performance esperada.</p>
 
-        <div class="sector-content__grid">
-          <div class="sector-content__text fade-in">
-            <p>
-              <strong>TAB (Teste, Ajuste e Balanceamento)</strong> calibra vazões de ar e água, ajusta dampers e válvulas e garante que o sistema opere conforme projetado. O <strong>Comissionamento (Cx)</strong> vai além: verifica controles, automação, sequências de operação e safeties — do conceito à pós-ocupação.
-            </p>
-            <p>
-              Juntos, eliminam o gap entre projeto e realidade. Sem esse processo, até <strong>30% dos sistemas HVAC</strong> operam abaixo da performance esperada, desperdiçando energia e comprometendo ambientes críticos.
-            </p>
+            <ul class="service-features">
+              <li><strong>Medição de Vazões</strong> — Ar em difusores/dutos e água em circuitos hidráulicos</li>
+              <li><strong>Balanceamento Aeráulico</strong> — Ajuste de dampers para distribuição uniforme</li>
+              <li><strong>Balanceamento Hidráulico</strong> — Ajuste de válvulas em circuitos de água gelada</li>
+              <li><strong>Verificação Térmica</strong> — Temperatura, umidade e cascata de pressão</li>
+              <li><strong>Relatórios</strong> — Valores projetados vs. medidos com critérios de aceitação</li>
+            </ul>
           </div>
-
-          <aside class="sector-highlights glass-card fade-in" aria-label="Destaques técnicos">
-            <h3>Escopo de atuação</h3>
-            <div class="sector-highlights__list">
-              <div class="sector-highlight">
-                <div class="sector-highlight__icon">01</div>
-                <div>
-                  <div class="sector-highlight__title">Medição &amp; Balanceamento</div>
-                  <div class="sector-highlight__desc">Vazões de ar e água, ajuste de dampers e válvulas de balanceamento.</div>
-                </div>
+          <div class="service-detail__aside fade-in">
+            <div class="service-card glass-card">
+              <div class="service-card__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 20V10"></path>
+                  <path d="M18 20V4"></path>
+                  <path d="M6 20v-4"></path>
+                </svg>
               </div>
-              <div class="sector-highlight">
-                <div class="sector-highlight__icon">02</div>
-                <div>
-                  <div class="sector-highlight__title">Verificação de Controles</div>
-                  <div class="sector-highlight__desc">Automação, sequências de operação, safeties e intertravamentos.</div>
-                </div>
-              </div>
-              <div class="sector-highlight">
-                <div class="sector-highlight__icon">03</div>
-                <div>
-                  <div class="sector-highlight__title">Validação de Performance</div>
-                  <div class="sector-highlight__desc">Comparação real vs. projeto com critérios de aceitação definidos.</div>
-                </div>
-              </div>
-              <div class="sector-highlight">
-                <div class="sector-highlight__icon">04</div>
-                <div>
-                  <div class="sector-highlight__title">Documentação &amp; Treinamento</div>
-                  <div class="sector-highlight__desc">Relatórios rastreáveis, manuais e capacitação da equipe de O&amp;M.</div>
-                </div>
-              </div>
-              <div class="sector-highlight">
-                <div class="sector-highlight__icon">05</div>
-                <div>
-                  <div class="sector-highlight__title">Conformidade Normativa</div>
-                  <div class="sector-highlight__desc">ASHRAE 111, NEBB, Guideline 0, Standard 202 e NBR 16401.</div>
-                </div>
-              </div>
+              <h3 class="service-card__title">Economia de 15–25%</h3>
+              <p>Sistemas balanceados eliminam desperdícios por excesso de vazão e pressão, reduzindo o consumo energético em até <strong>25%</strong>.</p>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Por que é crítico -->
-    <section class="section sector-cards">
+    <!-- Comissionamento -->
+    <section class="section section--alt" id="comissionamento">
       <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Impacto real</span>
-          <h2 class="section__title">Por que TAB &amp; Cx são <span class="gradient-text">críticos</span>?</h2>
-        </div>
+        <div class="service-detail service-detail--reverse">
+          <div class="service-detail__content fade-in">
+            <span class="section__subtitle">Validação Completa</span>
+            <h2 class="section__title"><span class="gradient-text">Comissionamento</span> (Cx)</h2>
+            <p>O Cx vai além do TAB: verifica controles, automação, sequências de operação e safeties — do conceito à pós-ocupação. Garante que o sistema entregue exatamente o que foi projetado.</p>
 
-        <div class="sector-cards__grid">
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">01</div>
-              <h3>30% dos sistemas falham</h3>
+            <h3>Fases do Comissionamento</h3>
+            <ul class="service-features">
+              <li><strong>Pré-Design</strong> — Definição de OPR (Owner's Project Requirements)</li>
+              <li><strong>Design</strong> — Revisão de projeto e Basis of Design (BoD)</li>
+              <li><strong>Construção</strong> — Inspeções, checklists e verificação de instalação</li>
+              <li><strong>Aceitação</strong> — Testes funcionais, TAB e validação de performance</li>
+              <li><strong>Pós-Ocupação</strong> — Verificação sazonal e otimização contínua</li>
+            </ul>
+          </div>
+          <div class="service-detail__aside fade-in">
+            <div class="service-card glass-card">
+              <div class="service-card__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 11l3 3L22 4"></path>
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Conformidade Regulatória</h3>
+              <p>Documentação rastreável para auditorias <strong>ANVISA</strong>, certificações hospitalares e exigências de qualidade industrial.</p>
             </div>
-            <p>Sem comissionamento, até 30% dos sistemas HVAC não atingem a performance projetada — problemas invisíveis que geram custos reais.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">02</div>
-              <h3>15–25% de economia</h3>
-            </div>
-            <p>Sistemas balanceados eliminam desperdícios por excesso de vazão e pressão, reduzindo o consumo energético em até 25%.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">03</div>
-              <h3>Conformidade regulatória</h3>
-            </div>
-            <p>Documentação rastreável para auditorias ANVISA, certificações hospitalares e exigências de qualidade industrial.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">04</div>
-              <h3>Prevenção de problemas</h3>
-            </div>
-            <p>Identifica e corrige defeitos antes da operação, reduzindo manutenção corretiva e paradas não programadas.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Nosso Processo -->
-    <section class="section sector-content">
+    <section class="section" id="processo">
       <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Metodologia</span>
-          <h2 class="section__title">Nosso <span class="gradient-text">Processo</span></h2>
-        </div>
+        <div class="service-detail">
+          <div class="service-detail__content fade-in">
+            <span class="section__subtitle">Metodologia</span>
+            <h2 class="section__title">Nosso <span class="gradient-text">Processo</span></h2>
+            <p>Seis etapas estruturadas para garantir que cada sistema seja validado com rigor técnico e documentação completa.</p>
 
-        <div class="sector-cards__grid">
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">01</div>
-              <h3>Planejamento</h3>
+            <ul class="service-features">
+              <li><strong>01 — Planejamento</strong> — Revisão de projeto, critérios de aceitação e plano de Cx</li>
+              <li><strong>02 — Verificação de Instalação</strong> — Inspeção visual e conferência contra projeto executivo</li>
+              <li><strong>03 — Testes Funcionais</strong> — Start-up, sequências de automação e safeties</li>
+              <li><strong>04 — TAB</strong> — Medição de vazões e balanceamento conforme ASHRAE 111</li>
+              <li><strong>05 — Validação</strong> — Performance real vs. projeto, relatórios de desvio</li>
+              <li><strong>06 — Entrega</strong> — Relatório final, manual de O&amp;M e treinamento da equipe</li>
+            </ul>
+          </div>
+          <div class="service-detail__aside fade-in">
+            <div class="service-card glass-card">
+              <div class="service-card__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-card__title">Prevenção de Problemas</h3>
+              <p>Identifica e corrige defeitos <strong>antes da operação</strong>, reduzindo manutenção corretiva e paradas não programadas.</p>
             </div>
-            <p>Revisão de projeto, critérios de aceitação e plano de comissionamento com cronograma definido.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">02</div>
-              <h3>Verificação de Instalação</h3>
-            </div>
-            <p>Inspeção visual, checklists de montagem e conferência contra o projeto executivo.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">03</div>
-              <h3>Testes Funcionais</h3>
-            </div>
-            <p>Start-up, sequências de automação, safeties e intertravamentos.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">04</div>
-              <h3>TAB</h3>
-            </div>
-            <p>Medição de vazões, ajuste de dampers e válvulas, balanceamento conforme ASHRAE 111 e NEBB.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">05</div>
-              <h3>Validação</h3>
-            </div>
-            <p>Performance real vs. projeto, relatórios de desvio e ajustes finais.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">06</div>
-              <h3>Entrega &amp; Treinamento</h3>
-            </div>
-            <p>Relatório final, manual de O&amp;M e treinamento presencial da equipe técnica.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Equipamentos & Normas -->
-    <section class="section sector-standards">
+    <!-- Instrumentação & Normas -->
+    <section class="section section--alt" id="instrumentacao">
       <div class="container">
-        <div class="section__header">
-          <span class="section__subtitle">Instrumentação e base normativa</span>
-          <h2 class="section__title">Equipamentos &amp; <span class="gradient-text">Normas</span></h2>
-        </div>
+        <div class="service-detail service-detail--reverse">
+          <div class="service-detail__content fade-in">
+            <span class="section__subtitle">Precisão de Medição</span>
+            <h2 class="section__title">Instrumentação &amp; <span class="gradient-text">Normas</span></h2>
+            <p>Utilizamos instrumentação calibrada e rastreável para cada medição, seguindo normas internacionais reconhecidas.</p>
 
-        <div class="sector-cards__grid">
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">A</div>
-              <h3>Balômetro</h3>
+            <h3>Equipamentos</h3>
+            <ul class="service-features">
+              <li><strong>Balômetro</strong> — Vazão direta em difusores e grelhas</li>
+              <li><strong>Anemômetro de Fio Quente</strong> — Velocidade do ar (resolução 0,01 m/s)</li>
+              <li><strong>Manômetro Diferencial</strong> — Pressão estática/dinâmica e cascata de pressão</li>
+              <li><strong>Tubo de Pitot</strong> — Travessia em dutos conforme ASHRAE 111</li>
+              <li><strong>Termohigrômetro</strong> — Temperatura e umidade com datalogger</li>
+              <li><strong>Medidor Ultrassônico</strong> — Vazão não invasiva em circuitos hidráulicos</li>
+              <li><strong>Tacômetro</strong> — RPM de ventiladores e bombas</li>
+              <li><strong>Analisador de Energia</strong> — Consumo, fator de potência e harmônicos</li>
+            </ul>
+
+            <h3>Base Normativa</h3>
+            <ul class="service-features">
+              <li><strong>ASHRAE 111</strong> — Testing, Adjusting and Balancing</li>
+              <li><strong>ASHRAE Guideline 0</strong> — The Commissioning Process</li>
+              <li><strong>ASHRAE Standard 202</strong> — Commissioning Process for Buildings</li>
+              <li><strong>NEBB</strong> — Procedural Standards for TAB</li>
+              <li><strong>NBR 16401</strong> — Instalações de Ar-Condicionado</li>
+              <li><strong>SMACNA</strong> — HVAC Systems Testing, Adjusting and Balancing</li>
+            </ul>
+          </div>
+          <div class="service-detail__aside fade-in">
+            <div class="service-card glass-card">
+              <div class="service-card__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4l3 3"></path>
+                </svg>
+              </div>
+              <h3 class="service-card__title">30% dos Sistemas Falham</h3>
+              <p>Sem comissionamento, até 30% dos sistemas HVAC não atingem a performance projetada — problemas invisíveis que geram custos reais.</p>
             </div>
-            <p>Vazão direta em difusores e grelhas com leitura instantânea.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">B</div>
-              <h3>Anemômetro de Fio Quente</h3>
-            </div>
-            <p>Velocidade do ar em dutos com resolução de 0,01 m/s.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">C</div>
-              <h3>Manômetro &amp; Tubo de Pitot</h3>
-            </div>
-            <p>Pressão estática/dinâmica e travessia de Pitot conforme ASHRAE 111.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">D</div>
-              <h3>Termohigrômetro &amp; Datalogger</h3>
-            </div>
-            <p>Temperatura, umidade e registro contínuo para verificação de estabilidade.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">E</div>
-              <h3>Medidor Ultrassônico</h3>
-            </div>
-            <p>Vazão não invasiva em circuitos hidráulicos sem interrupção da operação.</p>
-          </article>
-
-          <article class="sector-info-card fade-in">
-            <div class="sector-info-card__top">
-              <div class="sector-info-card__icon" aria-hidden="true">F</div>
-              <h3>Tacômetro &amp; Analisador de Energia</h3>
-            </div>
-            <p>RPM de ventiladores/bombas, consumo elétrico e eficiência energética.</p>
-          </article>
-        </div>
-
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>ASHRAE 111</strong><span>Testing, Adjusting and Balancing</span></div>
-          <div class="standard-badge fade-in"><strong>ASHRAE Guideline 0</strong><span>The Commissioning Process</span></div>
-          <div class="standard-badge fade-in"><strong>ASHRAE Standard 202</strong><span>Commissioning Process for Buildings</span></div>
-          <div class="standard-badge fade-in"><strong>NEBB</strong><span>Procedural Standards for TAB</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de Ar-Condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>SMACNA</strong><span>HVAC Systems TAB</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -327,11 +228,6 @@ $extra_css        = ['../setores/setor.css?v=1770600000'];
               </div>
             </a>
           </div>
-
-          <?php
-          $form_sector = 'TAB & Comissionamento';
-          include '../includes/form-sector.php';
-          ?>
         </div>
       </div>
     </section>
