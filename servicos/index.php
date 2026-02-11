@@ -277,6 +277,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
               <li><strong>Laudos de QAI</strong> — Qualidade do Ar Interior conforme RE nº 9 ANVISA</li>
               <li><strong>Treinamento Operacional</strong> — Capacitação da equipe de manutenção</li>
             </ul>
+            <a href="tab-comissionamento.php" class="btn btn--primary btn--full">Ver página completa de TAB & Comissionamento →</a>
           </div>
           <div class="service-detail__aside fade-in">
             <div class="service-card glass-card">
