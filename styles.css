@@ -1161,7 +1161,7 @@ select {
   .sobre__card--team {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 860px;
+    max-width: 960px;
   }
 
   .team-hero {
