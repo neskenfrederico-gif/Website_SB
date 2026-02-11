@@ -26,8 +26,8 @@ function nav_active($page, $current) {
             <li class="nav__item"><a href="<?= $home_link ?>" class="nav__link<?= nav_active('home', $active_page) ?>">Início</a></li>
             <li class="nav__item nav__item--dropdown"><a href="<?= $base . $sep ?>servicos/" class="nav__link<?= nav_active('servicos', $active_page) ?>">Serviços <span class="dropdown-arrow">▼</span></a>
               <ul class="nav__dropdown">
-                <li><a href="<?= $base . $sep ?>servicos/" class="nav__dropdown-link">📋 Visão Geral</a></li>
-                <li><a href="<?= $base . $sep ?>servicos/tab-comissionamento.php" class="nav__dropdown-link">🔬 TAB & Comissionamento</a></li>
+                <li><a href="<?= $base . $sep ?>servicos/" class="nav__dropdown-link">Visão Geral</a></li>
+                <li><a href="<?= $base . $sep ?>servicos/tab-comissionamento.php" class="nav__dropdown-link">TAB & Comissionamento</a></li>
               </ul>
             </li>
             <li class="nav__item"><a href="<?= $base . $sep ?>sobre/" class="nav__link<?= nav_active('sobre', $active_page) ?>">Sobre</a></li>
