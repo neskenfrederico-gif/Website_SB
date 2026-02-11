@@ -1160,16 +1160,13 @@ select {
 @media (min-width: 768px) {
   .sobre__card--team {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 720px;
-    max-height: 420px;
-    overflow: hidden;
+    grid-template-columns: 280px 1fr;
+    max-width: 780px;
   }
 
   .team-hero {
     height: 100%;
     min-height: 320px;
-    max-height: 420px;
     border-radius: var(--radius-xl) 0 0 var(--radius-xl);
   }
 
