@@ -144,13 +144,35 @@ $extra_css        = ['setor.css?v=1770600000'];
           <h2 class="section__title">Normas e <span class="gradient-text">boas práticas</span></h2>
         </div>
 
-        <div class="standards-grid">
-          <div class="standard-badge fade-in"><strong>NR-10</strong><span>Segurança em instalações elétricas</span></div>
-          <div class="standard-badge fade-in"><strong>NR-12</strong><span>Segurança em máquinas e equipamentos</span></div>
-          <div class="standard-badge fade-in"><strong>NR-15</strong><span>Atividades e operações insalubres</span></div>
-          <div class="standard-badge fade-in"><strong>NBR 16401</strong><span>Instalações de ar-condicionado</span></div>
-          <div class="standard-badge fade-in"><strong>ASHRAE</strong><span>Boas práticas internacionais HVAC</span></div>
-          <div class="standard-badge fade-in"><strong>SMACNA</strong><span>Construção e dimensionamento de dutos</span></div>
+        <p class="sector-norms-inline fade-in">
+          <strong>NR-10</strong> · <strong>NR-12</strong> · <strong>NR-15</strong> · <strong>NBR 16401</strong> · <strong>ASHRAE</strong> · <strong>SMACNA</strong>
+        </p>
+        <p class="sector-norms-desc fade-in">Segurança em instalações elétricas, máquinas e ambientes insalubres, dimensionamento de ar-condicionado e dutos conforme boas práticas nacionais e internacionais.</p>
+      </div>
+    </section>
+
+    <!-- Projetos de referência -->
+    <section class="section sector-cards" id="cases">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__subtitle">Projetos de referência</span>
+          <h2 class="section__title">Cases <span class="gradient-text">Industrial</span></h2>
+        </div>
+
+        <div class="sector-cards__grid sector-cards__grid--cases">
+          <a href="../projetos/projeto-ontex.php" class="sector-info-card sector-info-card--link fade-in">
+            <div class="sector-info-card__top">
+              <h3 class="sector-info-card__title">Ontex</h3>
+            </div>
+            <p><strong>15.600 m²</strong> · <strong>1.050 TR</strong><br>Controle de IBUTG com 710.000 m³/h para produção de fraldas, automação Siemens e resfriamento evaporativo.</p>
+          </a>
+
+          <a href="../projetos/projeto-savoy.php" class="sector-info-card sector-info-card--link fade-in">
+            <div class="sector-info-card__top">
+              <h3 class="sector-info-card__title">Savoy Cosméticos</h3>
+            </div>
+            <p><strong>953 m²</strong> · <strong>110.000 m³/h</strong><br>Ventilação e exaustão 100% para linha de envase de aerosóis com girotubo e controle de poluentes.</p>
+          </a>
         </div>
       </div>
     </section>
