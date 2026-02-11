@@ -194,7 +194,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
                 <span class="stat-label">menos retrabalho em obra</span>
               </div>
               <p>O Clash Detection identifica conflitos antes da construção, evitando custos de correção em campo.</p>
-              <a href="../artigos/bim-hvac-projetos-climatizacao.php" class="btn btn--secondary btn--full">Ler Artigo sobre BIM</a>
+              <a href="../artigos/bim-hvac-projetos.php" class="btn btn--secondary btn--full">Ler Artigo sobre BIM</a>
             </div>
           </div>
         </div>
@@ -245,7 +245,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
                 <tr><td>ISO 7</td><td>10.000 partículas/m³</td></tr>
                 <tr><td>ISO 8</td><td>100.000 partículas/m³</td></tr>
               </table>
-              <a href="../artigos/iso-14644-salas-limpas-hvac.php" class="btn btn--secondary btn--full">Ler Artigo sobre ISO 14644</a>
+              <a href="../artigos/classificacao-salas-limpas-iso-14644.php" class="btn btn--secondary btn--full">Ler Artigo sobre ISO 14644</a>
             </div>
           </div>
         </div>
@@ -288,7 +288,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
               </div>
               <h3 class="service-card__title">PMOC Obrigatório</h3>
               <p>A Lei 13.589/2018 exige PMOC para todos os edifícios climatizados. Multas podem chegar a <strong>R$ 200 mil</strong>.</p>
-              <a href="../artigos/pmoc-obrigatorio-lei-13589.php" class="btn btn--secondary btn--full">Ler Artigo sobre PMOC</a>
+              <a href="../artigos/o-que-e-pmoc.php" class="btn btn--secondary btn--full">Ler Artigo sobre PMOC</a>
             </div>
           </div>
         </div>
@@ -316,7 +316,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
           <div class="mini-service-card glass-card fade-in">
             <h3>Centrais de Água Gelada</h3>
             <p>Dimensionamento e projeto de CAGs com chillers, torres de resfriamento e sistemas de distribuição.</p>
-            <a href="../artigos/central-agua-gelada-chiller.php">Saiba mais →</a>
+            <a href="../artigos/sistemas-agua-gelada-cag.php">Saiba mais →</a>
           </div>
           <div class="mini-service-card glass-card fade-in">
             <h3>Data Centers</h3>
@@ -331,7 +331,7 @@ $canonical        = 'https://siqueiraeblanco.com.br/servicos/';
           <div class="mini-service-card glass-card fade-in">
             <h3>Pressurização de Escadas</h3>
             <p>Sistemas de segurança contra incêndio conforme IT-18 do Corpo de Bombeiros.</p>
-            <a href="../artigos/pressurizacao-escadas-it18.php">Saiba mais →</a>
+            <a href="../artigos/pressurizacao-escadas.php">Saiba mais →</a>
           </div>
         </div>
       </div>
