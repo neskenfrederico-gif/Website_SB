@@ -5136,3 +5136,9 @@ select {
   bottom: -250px; right: -200px;
   transform: rotate(-10deg);
 }
+
+/* --- UTILITY: MOBILE ONLY --- */
+.mobile-only { display: none; }
+@media (max-width: 768px) {
+  .mobile-only { display: block; }
+}

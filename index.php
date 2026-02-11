@@ -35,7 +35,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=75" />
+    <link rel="stylesheet" href="styles.css?v=76" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -747,6 +747,7 @@
               <li>PMOC e Laudos de Qualidade do Ar</li>
               <li>Retrofit e Análise Energética</li>
             </ul>
+            <a href="servicos/tab-comissionamento.php" class="btn btn--secondary btn--full mobile-only">Saiba mais sobre TAB & Cx →</a>
           </article>
         </div>
       </div>
