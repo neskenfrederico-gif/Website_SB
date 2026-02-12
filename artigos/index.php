@@ -8,7 +8,7 @@ $og_description   = 'Conteúdo técnico sobre climatização industrial, salas l
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

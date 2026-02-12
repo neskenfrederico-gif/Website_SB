@@ -8,7 +8,7 @@ $og_description   = 'Classes ISO 5 a 8, contagem de partículas e requisitos de 
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/classificacao-salas-limpas-iso-14644.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/classificacao-salas-limpas-iso-14644.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -8,7 +8,7 @@ $og_description   = $page_description;
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/servicos/tab-comissionamento.php';
 $canonical        = $og_url;
-$extra_css        = ['../setores/setor.css?v=1770600000'];
+$extra_css        = ['../setores/setor.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

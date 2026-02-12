@@ -8,7 +8,7 @@ $og_description   = 'Requisitos do Corpo de Bombeiros, cálculo de vazão e dime
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/pressurizacao-escadas.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/pressurizacao-escadas.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

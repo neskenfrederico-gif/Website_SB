@@ -8,7 +8,7 @@ $og_description   = 'Projeto HVAC completo: 25.000+ m², CAG de 1.500 TR, UTAs T
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-8.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-geolab.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770600000'];
+$extra_css        = ['projeto.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

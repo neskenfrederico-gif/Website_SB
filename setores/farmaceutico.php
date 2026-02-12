@@ -8,7 +8,7 @@ $og_description   = 'Projetos HVAC para hospitais e indústria farmacêutica: IS
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/farmaceutico.php';
 $canonical        = $og_url;
-$extra_css        = ['setor.css?v=1770600000'];
+$extra_css        = ['setor.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

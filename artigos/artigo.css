@@ -318,6 +318,73 @@
   line-height: 1.5;
 }
 
+/* Dark mode */
+html[data-theme="dark"] .article-content {
+  background: var(--color-gray-50);
+}
+
+html[data-theme="dark"] .related-articles {
+  background: var(--color-gray-100);
+}
+
+html[data-theme="dark"] .article-content h2,
+html[data-theme="dark"] .article-content h3,
+html[data-theme="dark"] .article-content strong,
+html[data-theme="dark"] .article-card__title,
+html[data-theme="dark"] .related-card__title {
+  color: var(--color-gray-800);
+}
+
+html[data-theme="dark"] .article-content p,
+html[data-theme="dark"] .article-content ul,
+html[data-theme="dark"] .article-content ol,
+html[data-theme="dark"] .article-content blockquote p,
+html[data-theme="dark"] .article-card__excerpt,
+html[data-theme="dark"] .article-card__meta,
+html[data-theme="dark"] .related-card__excerpt {
+  color: var(--color-gray-500);
+}
+
+html[data-theme="dark"] .article-content blockquote {
+  background: rgba(17, 26, 46, 0.82);
+  border-left-color: rgba(78, 205, 196, 0.8);
+}
+
+html[data-theme="dark"] .article-table {
+  background: rgba(17, 26, 46, 0.92);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+}
+
+html[data-theme="dark"] .article-table th,
+html[data-theme="dark"] .article-table td {
+  border-bottom-color: rgba(143, 162, 192, 0.24);
+}
+
+html[data-theme="dark"] .article-table td {
+  color: var(--color-gray-500);
+}
+
+html[data-theme="dark"] .article-table tr:hover td {
+  background: rgba(143, 162, 192, 0.08);
+}
+
+html[data-theme="dark"] .article-card,
+html[data-theme="dark"] .related-card {
+  background: rgba(17, 26, 46, 0.92);
+  border-color: rgba(143, 162, 192, 0.24);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
+}
+
+html[data-theme="dark"] .article-card:hover,
+html[data-theme="dark"] .related-card:hover {
+  border-color: rgba(78, 205, 196, 0.48);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.36);
+}
+
+html[data-theme="dark"] .article-card__meta {
+  border-top-color: rgba(143, 162, 192, 0.24);
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .article-hero__meta {

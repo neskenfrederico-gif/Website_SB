@@ -8,7 +8,7 @@ $og_description   = 'Entenda a obrigatoriedade do PMOC, multas de até R$ 200 mi
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/o-que-e-pmoc.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

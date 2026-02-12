@@ -5653,6 +5653,49 @@ html[data-theme="dark"] .pillar-card--featured .pillar-check li {
   color: rgba(233, 240, 248, 0.82);
 }
 
+html[data-theme="dark"] .logo-img {
+  filter: brightness(0) saturate(100%) invert(100%)
+    drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
+}
+
+html[data-theme="dark"] .content-block p,
+html[data-theme="dark"] .service-detail__content p,
+html[data-theme="dark"] .service-features li,
+html[data-theme="dark"] .service-card__list li,
+html[data-theme="dark"] .mini-service-card p,
+html[data-theme="dark"] .process-step__content p,
+html[data-theme="dark"] .cta-card p,
+html[data-theme="dark"] .contact-form-wrapper > p,
+html[data-theme="dark"] .coverage-note,
+html[data-theme="dark"] .stat-label,
+html[data-theme="dark"] .coverage-states span {
+  color: var(--color-gray-500);
+}
+
+html[data-theme="dark"] .service-detail__content h3,
+html[data-theme="dark"] .mini-service-card h3,
+html[data-theme="dark"] .process-step__content h3,
+html[data-theme="dark"] .cta-card h2,
+html[data-theme="dark"] .contact-form-wrapper h2,
+html[data-theme="dark"] .coverage-card h3,
+html[data-theme="dark"] .contact-card h3,
+html[data-theme="dark"] .tech-category h3,
+html[data-theme="dark"] .iso-table td:first-child {
+  color: var(--color-gray-800);
+}
+
+html[data-theme="dark"] .mini-service-card,
+html[data-theme="dark"] .lod-item,
+html[data-theme="dark"] .coverage-card,
+html[data-theme="dark"] .tech-pill {
+  background: rgba(17, 26, 46, 0.92);
+  border: 1px solid rgba(143, 162, 192, 0.24);
+}
+
+html[data-theme="dark"] .iso-table td {
+  border-bottom-color: rgba(143, 162, 192, 0.24);
+}
+
 @media (max-width: 768px) {
   .hero__description {
     max-width: 100%;

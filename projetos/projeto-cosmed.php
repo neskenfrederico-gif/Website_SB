@@ -8,7 +8,7 @@ $og_description   = 'Projeto executivo de HVAC para dermocosméticos com control
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-2.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-cosmed.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770600000'];
+$extra_css        = ['projeto.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

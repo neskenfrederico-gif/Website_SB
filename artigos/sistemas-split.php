@@ -8,7 +8,7 @@ $og_description   = 'Hi-wall, cassete, piso-teto, duto e multi-split. Quando usa
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/sistemas-split.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/sistemas-split.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

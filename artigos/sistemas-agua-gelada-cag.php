@@ -8,7 +8,7 @@ $og_description   = 'Chillers, torres, bombas e fancoils. Quando usar sistemas d
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/sistemas-agua-gelada-cag.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

@@ -8,7 +8,7 @@ $og_description   = 'Projeto de climatização para CD com 20.000 m², 500 TR e 
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-hypermarcas.php';
 $canonical        = $og_url;
-$extra_css        = ['projeto.css?v=1770600000'];
+$extra_css        = ['projeto.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

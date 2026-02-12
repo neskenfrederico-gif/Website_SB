@@ -8,7 +8,7 @@ $og_description   = 'Análise de ROI, sinais de obsolescência e planejamento de
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/retrofit-hvac-quando-fazer.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

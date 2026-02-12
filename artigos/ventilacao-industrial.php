@@ -8,7 +8,7 @@ $og_description   = 'Captação de poluentes, exaustão localizada, ventilação
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/artigos/ventilacao-industrial.php';
 $canonical        = 'https://siqueiraeblanco.com.br/artigos/ventilacao-industrial.php';
-$extra_css        = ['artigo.css?v=1770574139'];
+$extra_css        = ['artigo.css?v=1770973200'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
