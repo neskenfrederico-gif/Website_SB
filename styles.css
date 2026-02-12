@@ -902,12 +902,12 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 .hero__title .gradient-text {
-  background: linear-gradient(135deg, #92fff8 0%, #67ece0 45%, #4ac9df 100%);
+  color: #9ffaf3;
+  background: linear-gradient(135deg, #dcfffc 0%, #a8fbf4 45%, #6fece2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  -webkit-text-stroke: 0.6px rgba(7, 20, 38, 0.3);
-  filter: drop-shadow(0 2px 8px rgba(7, 20, 38, 0.35));
+  text-shadow: 0 2px 10px rgba(7, 20, 38, 0.58), 0 0 18px rgba(78, 205, 196, 0.18);
 }
 
 .hero__description {
