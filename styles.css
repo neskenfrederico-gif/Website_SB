@@ -5100,16 +5100,54 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 /* --- 3. IMPACT QUOTES --- */
 .impact-quote {
-  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+  padding: clamp(1.9rem, 4vw, 3.2rem) 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    420px 140px at 50% 50%,
+    rgba(78, 205, 196, 0.1),
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+.impact-quote .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 .impact-quote__text {
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 300;
-  color: var(--text-secondary, #4a4a5a);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  font-weight: 500;
+  color: var(--color-primary-light);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
   margin: 0;
+}
+
+.impact-quote__text::before,
+.impact-quote__text::after {
+  content: "";
+  width: clamp(38px, 7vw, 86px);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(78, 205, 196, 0.72),
+    transparent
+  );
+  flex-shrink: 0;
 }
 
 /* --- 4. TEAM ROLES --- */
@@ -5665,7 +5703,18 @@ html[data-theme="dark"] .team-role-card {
 }
 
 html[data-theme="dark"] .impact-quote__text {
-  color: var(--color-gray-500);
+  color: var(--color-gray-700);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .impact-quote__text::before,
+html[data-theme="dark"] .impact-quote__text::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(78, 205, 196, 0.8),
+    transparent
+  );
 }
 
 html[data-theme="dark"] .pillar-card--featured .pillar-card__title {
@@ -5739,6 +5788,10 @@ html[data-theme="dark"] .iso-table td {
 
   .section__header {
     margin-bottom: var(--spacing-8);
+  }
+
+  .impact-quote__text {
+    gap: var(--spacing-3);
   }
 
   .service-card,
