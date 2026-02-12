@@ -901,6 +901,15 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   letter-spacing: -0.03em;
 }
 
+.hero__title .gradient-text {
+  background: linear-gradient(135deg, #92fff8 0%, #67ece0 45%, #4ac9df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-stroke: 0.6px rgba(7, 20, 38, 0.3);
+  filter: drop-shadow(0 2px 8px rgba(7, 20, 38, 0.35));
+}
+
 .hero__description {
   font-size: var(--font-size-lg);
   color: var(--color-gray-300);
