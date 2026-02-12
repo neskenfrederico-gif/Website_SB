@@ -737,7 +737,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .hero__float-card-label {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.74);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: var(--spacing-5);
@@ -767,7 +767,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-full);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.78);
   font-size: var(--font-size-xs);
   letter-spacing: 0.05em;
   backdrop-filter: blur(8px);
@@ -815,13 +815,13 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .hero__counter-sep {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.62);
   margin: 0 2px;
 }
 
 .hero__counter-total {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.68);
 }
 
 .hero__progress {
@@ -1753,7 +1753,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
-  color: var(--color-gray-200);
+  color: var(--color-gray-300);
 }
 
 .compliance-grid li strong {
@@ -2329,7 +2329,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   margin-top: var(--spacing-4);
   font-size: var(--font-size-sm);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.74);
 }
 
 .footer__social {
@@ -2413,11 +2413,11 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 .footer__bottom p {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .footer__privacy-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.72);
   transition: color var(--transition-fast);
 }
 
@@ -2708,7 +2708,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   }
 
   .footer__col-arrow {
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.62);
     transition: transform var(--transition-base);
     flex-shrink: 0;
   }
@@ -2890,7 +2890,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .newsletter__description {
   font-size: var(--font-size-base);
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.7;
   max-width: 480px;
 }
@@ -2935,11 +2935,11 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .newsletter__privacy {
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .newsletter__privacy a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: underline;
   transition: color var(--transition-fast);
 }
@@ -3132,7 +3132,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .certifications__sublabel {
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.62);
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -5264,12 +5264,12 @@ html[data-theme="dark"] {
   --color-gray-50: #0b1220;
   --color-gray-100: #111a2e;
   --color-gray-200: #1d2a3f;
-  --color-gray-300: #2b3b57;
-  --color-gray-400: #8fa2c0;
-  --color-gray-500: #afbed5;
-  --color-gray-600: #c5d2e4;
-  --color-gray-700: #dbe5f2;
-  --color-gray-800: #e9f0f8;
+  --color-gray-300: #9fb4d0;
+  --color-gray-400: #b2c4da;
+  --color-gray-500: #c4d3e5;
+  --color-gray-600: #d3deec;
+  --color-gray-700: #e2eaf5;
+  --color-gray-800: #eef3fb;
   --color-gray-900: #070d18;
   --gradient-dark: linear-gradient(135deg, #0d1b31 0%, #070d18 100%);
   --text-primary: #ecf4ff;
@@ -5736,12 +5736,20 @@ html[data-theme="dark"] .logo-img {
 }
 
 html[data-theme="dark"] .hero__description {
-  color: rgba(233, 240, 248, 0.9);
+  color: rgba(233, 240, 248, 0.95);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
 }
 
 html[data-theme="dark"] .hero__description strong {
   color: var(--color-white);
+}
+
+html[data-theme="dark"] .page-hero__subtitle {
+  color: rgba(233, 240, 248, 0.92);
+}
+
+html[data-theme="dark"] .breadcrumb span[aria-current] {
+  color: rgba(219, 229, 242, 0.9);
 }
 
 html[data-theme="dark"] .article-hero__meta {
