@@ -4784,17 +4784,24 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 .coverage-states {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-2);
-  margin: var(--spacing-4) 0;
+  gap: var(--spacing-3);
+  margin: var(--spacing-4) 0 var(--spacing-5);
 }
 
 .coverage-states span {
-  background: var(--color-gray-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
   padding: var(--spacing-1) var(--spacing-3);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  color: var(--color-gray-700);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(30, 58, 95, 0.18);
+  background: linear-gradient(135deg, rgba(30, 58, 95, 0.08), rgba(67, 97, 238, 0.04));
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .coverage-note {
@@ -5765,9 +5772,15 @@ html[data-theme="dark"] .process-step__content p,
 html[data-theme="dark"] .cta-card p,
 html[data-theme="dark"] .contact-form-wrapper > p,
 html[data-theme="dark"] .coverage-note,
-html[data-theme="dark"] .stat-label,
-html[data-theme="dark"] .coverage-states span {
+html[data-theme="dark"] .stat-label {
   color: var(--color-gray-500);
+}
+
+html[data-theme="dark"] .coverage-states span {
+  color: var(--color-gray-800);
+  background: rgba(78, 205, 196, 0.16);
+  border: 1px solid rgba(78, 205, 196, 0.38);
+  box-shadow: inset 0 1px 0 rgba(233, 240, 248, 0.16), 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
 html[data-theme="dark"] .service-detail__content h3,
