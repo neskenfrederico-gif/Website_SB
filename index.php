@@ -26,6 +26,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.json" />
     <title>Siqueira e Blanco | Projetos HVAC e Climatização Industrial em Anápolis</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('sb-theme');
+          var resolvedTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolvedTheme);
+          document.documentElement.style.colorScheme = resolvedTheme;
+          var themeMeta = document.querySelector('meta[name="theme-color"]');
+          if (themeMeta) {
+            themeMeta.setAttribute('content', resolvedTheme === 'dark' ? '#0b1220' : '#1e3a5f');
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,7 +49,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=84" />
+    <link rel="stylesheet" href="styles.css?v=85" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -248,20 +262,38 @@
             </svg>
           </button>
         </div>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+        <div class="nav__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar tema" title="Alternar tema" aria-pressed="false">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="5"></line>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+              <line x1="2" y1="12" x2="5" y2="12"></line>
+              <line x1="19" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"></line>
+              <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"></line>
+              <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"></line>
+              <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"></line>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3c0.03 0.94 0.31 1.85 0.8 2.65A7 7 0 0 0 18.35 13c0.8 0.49 1.71 0.77 2.65 0.79z"></path>
+            </svg>
+          </button>
+          <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       </nav>
     </header>
 
@@ -1387,7 +1419,6 @@
               </div>
             </a>
           </div>
-          <!-- ATENÇÃO: Substitua o endpoint abaixo pelo seu link real do Formspree. -->
           <form class="contato__form glass-card" id="contact-form" action="https://formspree.io/f/mjgropnr" method="POST">
             <div class="form-group">
               <label for="name">Nome Completo</label>
@@ -1597,25 +1628,11 @@
       </svg>
     </a>
 
-    <script src="script.js?v=1770408003" defer></script>
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBL037W0QL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HBL037W0QL');
-    </script>
-    
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(() => {});
-        });
-      }
-    </script>
+    <?php
+    $base = '';
+    $script_version = '1770969600';
+    include 'includes/scripts.php';
+    ?>
     
     <!-- Tawk.to Live Chat: descomente e substitua TAWK_PROPERTY_ID/TAWK_WIDGET_ID pelo seu código real -->
     <!-- <script type="text/javascript">

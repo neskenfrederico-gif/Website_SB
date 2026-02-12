@@ -10,6 +10,73 @@ const contactForm = document.getElementById("contact-form");
 const statNumbers = document.querySelectorAll(".stats__number");
 const hero = document.querySelector(".hero");
 const sections = document.querySelectorAll("section[id]");
+const themeToggleButtons = document.querySelectorAll("[data-theme-toggle]");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const themeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const THEME_STORAGE_KEY = "sb-theme";
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch (e) {
+    return null;
+  }
+}
+
+function setStoredTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch (e) {}
+}
+
+function updateThemeToggleButtons(theme) {
+  const isDark = theme === "dark";
+  const nextLabel = isDark ? "Ativar modo claro" : "Ativar modo escuro";
+  themeToggleButtons.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(isDark));
+    btn.setAttribute("aria-label", nextLabel);
+    btn.setAttribute("title", nextLabel);
+  });
+}
+
+function applyTheme(theme, options = {}) {
+  const persist = options.persist ?? true;
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.style.colorScheme = theme;
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", theme === "dark" ? "#0b1220" : "#1e3a5f");
+  }
+
+  updateThemeToggleButtons(theme);
+  if (persist) setStoredTheme(theme);
+}
+
+function initThemeToggle() {
+  const storedTheme = getStoredTheme();
+  const bootstrapTheme = document.documentElement.getAttribute("data-theme");
+  const initialTheme = bootstrapTheme || storedTheme || (themeMediaQuery.matches ? "dark" : "light");
+  applyTheme(initialTheme, { persist: !!storedTheme });
+
+  themeToggleButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = current === "dark" ? "light" : "dark";
+      applyTheme(next, { persist: true });
+    });
+  });
+
+  const syncWithSystemTheme = (event) => {
+    if (getStoredTheme()) return;
+    applyTheme(event.matches ? "dark" : "light", { persist: false });
+  };
+
+  if (typeof themeMediaQuery.addEventListener === "function") {
+    themeMediaQuery.addEventListener("change", syncWithSystemTheme);
+  } else if (typeof themeMediaQuery.addListener === "function") {
+    themeMediaQuery.addListener(syncWithSystemTheme);
+  }
+}
 
 // ===== Mobile Menu =====
 // Create overlay element for mobile menu backdrop
@@ -381,7 +448,9 @@ function initFadeInObserver() {
 // ===== Contact Form =====
 async function sendFormToEndpoint(formEl, formData) {
   const endpoint = (formEl.getAttribute("action") || "").trim();
-  if (!endpoint) return { ok: false, skipped: true };
+  if (!endpoint || endpoint.includes("YOUR_FORM_ID")) {
+    return { ok: false, skipped: true };
+  }
 
   try {
     const response = await fetch(endpoint, {
@@ -397,21 +466,33 @@ async function sendFormToEndpoint(formEl, formData) {
 }
 
 function buildWhatsappMessage(data) {
+  const getValue = (value, fallback = "Não informado") => {
+    const normalized = (value ?? "").toString().trim();
+    return normalized || fallback;
+  };
+
+  const serviceType =
+    data.subject ||
+    data.service ||
+    data.sector ||
+    data.origem ||
+    "Não informado";
+
   return encodeURIComponent(
     `*Novo contato pelo site*
 
 ` +
-      `*Nome:* ${data.name}
+      `*Nome:* ${getValue(data.name)}
 ` +
-      `*E-mail:* ${data.email}
+      `*E-mail:* ${getValue(data.email)}
 ` +
-      `*Telefone:* ${data.phone || "Não informado"}
+      `*Telefone:* ${getValue(data.phone)}
 ` +
-      `*Tipo de Projeto:* ${data.subject}
+      `*Tipo de Projeto:* ${getValue(serviceType)}
 
 ` +
       `*Mensagem:*
-${data.message}`
+${getValue(data.message, "Sem mensagem")}`
   );
 }
 
@@ -443,6 +524,14 @@ if (contactForm) {
     // Object.fromEntries fallback for older browsers
     const data = {};
     formData.forEach((value, key) => { data[key] = value; });
+
+    // Honeypot: se preenchido, assume bot e encerra sem enviar
+    if (data._gotcha) {
+      showNotification("Mensagem enviada com sucesso!", "success");
+      contactForm.reset();
+      contactForm.classList.remove("was-submitted");
+      return;
+    }
 
     // Extra email validation (defensive)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -945,6 +1034,9 @@ function initFooterAccordion() {
 
 // ===== Initialize =====
 document.addEventListener("DOMContentLoaded", () => {
+  // Theme toggle + persistence
+  initThemeToggle();
+
   // Add loaded class to body
   document.body.classList.add("loaded");
 

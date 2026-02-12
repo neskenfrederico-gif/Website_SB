@@ -18,7 +18,7 @@ $og_title       = $og_title ?? $page_title;
 $og_description = $og_description ?? $page_description;
 $extra_css      = $extra_css ?? [];
 $extra_head     = $extra_head ?? '';
-$css_version = '84';
+$css_version = '85';
 $sep            = ($base === '') ? '' : '/';
 ?>
     <meta charset="UTF-8" />
@@ -40,8 +40,23 @@ $sep            = ($base === '') ? '' : '/';
     <link rel="icon" type="image/x-icon" href="<?= $base . $sep ?>favicon.ico" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/x-icon" href="<?= $base . $sep ?>favicon-light.ico" media="(prefers-color-scheme: dark)" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?= $base . $sep ?>apple-touch-icon.png" />
+    <link rel="manifest" href="<?= $base . $sep ?>manifest.json" />
 
     <title><?= htmlspecialchars($page_title) ?></title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('sb-theme');
+          var resolvedTheme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', resolvedTheme);
+          document.documentElement.style.colorScheme = resolvedTheme;
+          var themeMeta = document.querySelector('meta[name="theme-color"]');
+          if (themeMeta) {
+            themeMeta.setAttribute('content', resolvedTheme === 'dark' ? '#0b1220' : '#1e3a5f');
+          }
+        } catch (e) {}
+      })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

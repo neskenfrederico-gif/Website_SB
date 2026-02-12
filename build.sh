@@ -1,85 +1,78 @@
 #!/bin/bash
 # ======================================
 # Build Script - Siqueira e Blanco
-# Minifica CSS e JS para produção
+# Projeto PHP estático (sem etapa de bundling)
+# Minifica CSS/JS quando npx está disponível.
 # ======================================
 
 set -e
 
-echo "🔧 Build iniciando..."
+echo "[build] iniciando..."
 
-# Diretório de saída
 DIST="dist"
 rm -rf "$DIST"
 mkdir -p "$DIST"
-mkdir -p "$DIST/setores"
-mkdir -p "$DIST/projetos"
-mkdir -p "$DIST/portfolio"
 
-# Verificar se terser e cssnano estão instalados
-if ! command -v npx &> /dev/null; then
-    echo "❌ Node.js/npx não encontrado. Instale Node.js primeiro."
-    exit 1
+if command -v npx >/dev/null 2>&1; then
+    HAS_NPX=1
+else
+    HAS_NPX=0
 fi
 
-# Instalar dependências de build se necessário
-if [ ! -d "node_modules" ]; then
-    echo "📦 Instalando dependências de build..."
-    npm init -y 2>/dev/null || true
-    npm install --save-dev terser cssnano-cli html-minifier-terser 2>/dev/null || {
-        echo "⚠️  Não foi possível instalar dependências. Copiando arquivos sem minificação..."
-        cp -r *.html *.css *.js *.png *.jpg *.webp *.ico *.xml *.txt *.json "$DIST/" 2>/dev/null || true
-        cp -r setores/* "$DIST/setores/" 2>/dev/null || true
-        cp -r projetos/* "$DIST/projetos/" 2>/dev/null || true
-        cp -r portfolio/* "$DIST/portfolio/" 2>/dev/null || true
-        echo "✅ Build completo (sem minificação)"
-        exit 0
-    }
+copy_dir_if_exists() {
+    local dir="$1"
+    if [ -d "$dir" ]; then
+        cp -r "$dir" "$DIST/"
+    fi
+}
+
+copy_file_if_exists() {
+    local src="$1"
+    local dst="$2"
+    if [ -f "$src" ]; then
+        cp "$src" "$dst"
+    fi
+}
+
+echo "[build] copiando estrutura do site..."
+copy_dir_if_exists "artigos"
+copy_dir_if_exists "clientes"
+copy_dir_if_exists "contato"
+copy_dir_if_exists "docs"
+copy_dir_if_exists "includes"
+copy_dir_if_exists "portfolio"
+copy_dir_if_exists "projetos"
+copy_dir_if_exists "screenshots"
+copy_dir_if_exists "servicos"
+copy_dir_if_exists "setores"
+copy_dir_if_exists "sobre"
+
+cp -f *.php "$DIST/" 2>/dev/null || true
+cp -f *.css *.js "$DIST/" 2>/dev/null || true
+cp -f *.png *.jpg *.webp *.ico *.svg "$DIST/" 2>/dev/null || true
+cp -f *.xml *.txt *.json "$DIST/" 2>/dev/null || true
+copy_file_if_exists ".htaccess" "$DIST/.htaccess"
+
+if [ "$HAS_NPX" -eq 1 ]; then
+    echo "[build] minificando CSS/JS..."
+
+    npx --yes cssnano-cli styles.css "$DIST/styles.css" --no-map 2>/dev/null || true
+    npx --yes cssnano-cli artigos/artigo.css "$DIST/artigos/artigo.css" --no-map 2>/dev/null || true
+    npx --yes cssnano-cli projetos/projeto.css "$DIST/projetos/projeto.css" --no-map 2>/dev/null || true
+    npx --yes cssnano-cli setores/setor.css "$DIST/setores/setor.css" --no-map 2>/dev/null || true
+
+    npx --yes terser script.js -c -m -o "$DIST/script.js" 2>/dev/null || true
+    npx --yes terser form-validate.js -c -m -o "$DIST/form-validate.js" 2>/dev/null || true
+    npx --yes terser sw.js -c -m -o "$DIST/sw.js" 2>/dev/null || true
+else
+    echo "[build] npx não encontrado; mantendo arquivos sem minificação."
 fi
 
-echo "📦 Minificando CSS..."
-npx cssnano styles.css "$DIST/styles.css" --no-map 2>/dev/null || cp styles.css "$DIST/styles.css"
-
-echo "📦 Minificando JavaScript..."
-npx terser script.js -c -m -o "$DIST/script.js" 2>/dev/null || cp script.js "$DIST/script.js"
-npx terser form-validate.js -c -m -o "$DIST/form-validate.js" 2>/dev/null || cp form-validate.js "$DIST/form-validate.js"
-npx terser sw.js -c -m -o "$DIST/sw.js" 2>/dev/null || cp sw.js "$DIST/sw.js"
-
-echo "📦 Minificando HTML..."
-for file in *.html; do
-    npx html-minifier-terser "$file" \
-        --collapse-whitespace \
-        --remove-comments \
-        --minify-css true \
-        --minify-js true \
-        -o "$DIST/$file" 2>/dev/null || cp "$file" "$DIST/$file"
-done
-
-# Subpastas
-for file in setores/*.html; do
-    [ -f "$file" ] && (npx html-minifier-terser "$file" --collapse-whitespace --remove-comments -o "$DIST/$file" 2>/dev/null || cp "$file" "$DIST/$file")
-done
-
-for file in projetos/*.html; do
-    [ -f "$file" ] && (npx html-minifier-terser "$file" --collapse-whitespace --remove-comments -o "$DIST/$file" 2>/dev/null || cp "$file" "$DIST/$file")
-done
-
-# CSS de subpastas
-cp setores/*.css "$DIST/setores/" 2>/dev/null || true
-cp projetos/*.css "$DIST/projetos/" 2>/dev/null || true
-
-echo "📦 Copiando assets..."
-cp -r *.png *.jpg *.webp *.ico *.svg "$DIST/" 2>/dev/null || true
-cp *.xml *.txt *.json "$DIST/" 2>/dev/null || true
-cp .htaccess "$DIST/" 2>/dev/null || true
-cp -r portfolio/* "$DIST/portfolio/" 2>/dev/null || true
-
-# Calcular tamanho
-ORIGINAL=$(du -sh . --exclude=node_modules --exclude=dist 2>/dev/null | cut -f1)
-MINIFIED=$(du -sh "$DIST" 2>/dev/null | cut -f1)
+ORIGINAL_SIZE=$(du -sh . --exclude=dist 2>/dev/null | cut -f1)
+DIST_SIZE=$(du -sh "$DIST" 2>/dev/null | cut -f1)
 
 echo ""
-echo "✅ Build completo!"
-echo "   Original: $ORIGINAL"
-echo "   Minificado: $MINIFIED"
-echo "   Saída: ./$DIST/"
+echo "[build] concluido."
+echo "  tamanho fonte: ${ORIGINAL_SIZE:-N/A}"
+echo "  tamanho dist : ${DIST_SIZE:-N/A}"
+echo "  saida        : ./$DIST/"
