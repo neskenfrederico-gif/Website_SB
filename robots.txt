@@ -4,8 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /includes/
-Disallow: /scripts/
-Disallow: /*.json$
+Disallow: /screenshots/
 
 # Sitemap
 Sitemap: https://siqueiraeblanco.com.br/sitemap.xml

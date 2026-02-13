@@ -2,6 +2,9 @@
 # Siqueira e Blanco - Apache Configuration
 # ======================================
 
+# Evita listagem de diretórios sem index
+Options -Indexes
+
 # ---------------------------------------
 # Compressão GZIP
 # ---------------------------------------
@@ -81,6 +84,11 @@
   
   # Referrer Policy
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Hardenings adicionais
+  Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
 </IfModule>
 
 # ---------------------------------------
@@ -88,6 +96,15 @@
 # ---------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Bloquear acesso direto a includes/parciais
+  RewriteRule ^includes/ - [F,L,NC]
+
+  # Bloquear acesso a arquivos internos de build
+  RewriteRule ^(build\.sh$|CLAUDE(\.local)?\.md$|PLANO_MELHORIAS\.md$) - [F,L,NC]
+
+  # Bloquear arquivos sensíveis comuns
+  RewriteRule ^(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|yarn\.lock)$ - [F,L,NC]
 
   # Redirect .html → .php (301 permanente)
   RewriteCond %{REQUEST_FILENAME} !-f
