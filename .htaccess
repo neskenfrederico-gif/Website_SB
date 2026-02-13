@@ -89,6 +89,7 @@ Options -Indexes
   Header always set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), microphone=(), payment=(), usb=()"
   Header always set X-Permitted-Cross-Domain-Policies "none"
   Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on' || %{REQUEST_SCHEME} == 'https' || %{req:X-Forwarded-Proto} == 'https'"
 </IfModule>
 
 # ---------------------------------------
@@ -96,6 +97,11 @@ Options -Indexes
 # ---------------------------------------
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Forçar HTTPS (compatível com proxy/CDN)
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Bloquear acesso direto a includes/parciais
   RewriteRule ^includes/ - [F,L,NC]
@@ -109,10 +115,6 @@ Options -Indexes
   # Redirect .html → .php (301 permanente)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.+)\.html$ /$1.php [R=301,L]
-
-  # Forçar HTTPS (descomente em produção)
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Remover www (descomente se preferir sem www)
   # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
