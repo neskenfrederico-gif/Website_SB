@@ -51,8 +51,6 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link rel="stylesheet" href="styles.css?v=96" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
-    <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
-    <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
 
     <script type="application/ld+json">
 {
@@ -87,14 +85,6 @@
   "currenciesAccepted": "BRL",
   "paymentAccepted": "Transferência Bancária, Boleto, Pix",
   "knowsAbout": ["HVAC", "Climatização Industrial", "Salas Limpas", "BIM", "Comissionamento", "PMOC"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "47",
-    "reviewCount": "32"
-  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Serviços de Engenharia HVAC",
@@ -1475,8 +1465,8 @@
               ></textarea>
             </div>
             <div class="form-group form-group--honey" aria-hidden="true">
-              <label for="_honey">Não preencha este campo</label>
-              <input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off">
+              <label for="_honey" aria-hidden="true">Não preencha este campo</label>
+              <input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
             </div>
             <button type="submit" class="btn-cta btn-cta--primary">
               <div class="btn-cta__icon">

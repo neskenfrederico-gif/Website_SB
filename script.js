@@ -1082,6 +1082,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ===== Spotlight Cases Rotator =====
+function sanitizeHTML(str) {
+  return str.replace(/<(?!\/?(?:span|strong|em)\b)[^>]*>/gi, '');
+}
+
 function initSpotlightRotator() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const cases = [
@@ -1225,8 +1229,8 @@ function initSpotlightRotator() {
     if (imgEl) imgEl.style.opacity = '0';
 
     fadeTimeout = setTimeout(() => {
-      titleEl.innerHTML = c.title;
-      descEl.innerHTML = c.desc;
+      titleEl.innerHTML = sanitizeHTML(c.title);
+      descEl.innerHTML = sanitizeHTML(c.desc);
       stat1.textContent = c.stat1;
       stat1Label.textContent = c.stat1Label;
       stat2.textContent = c.stat2;
