@@ -524,6 +524,22 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   padding-left: var(--spacing-6);
 }
 
+.nav__dropdown-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: var(--spacing-1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav__item--dropdown.dropdown-open .nav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;
@@ -1073,33 +1089,6 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   transform: translateX(-50%);
 }
 
-.scroll-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-2);
-  color: var(--color-gray-400);
-  font-size: var(--font-size-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  animation: float 2s ease-in-out infinite;
-}
-
-.scroll-indicator__line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--color-secondary), transparent);
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
 
 /* ===== SECTIONS ===== */
 .section {
@@ -1269,23 +1258,6 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   padding-bottom: var(--spacing-4);
   margin-bottom: var(--spacing-4);
   border-bottom: 1px solid var(--color-gray-200);
-}
-
-.team-stat__value {
-  display: block;
-  font-size: var(--font-size-xl);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.2;
-}
-
-.team-stat__label {
-  display: block;
-  font-size: 0.65rem;
-  color: var(--color-gray-500);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: var(--spacing-1);
 }
 
 .team-contact {
@@ -2115,8 +2087,8 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 /* Expanded mode: override — show everything */
 .portfolio__grid.portfolio--expanded .project-card-link {
-  display: flex !important;
-  opacity: 1 !important;
+  display: flex;
+  opacity: 1;
   animation: fadeInUp var(--transition-slow) forwards;
 }
 
@@ -2377,6 +2349,11 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   font-size: var(--font-size-base);
   font-weight: 600;
   margin-bottom: var(--spacing-4);
+}
+
+.footer__col-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
 }
 
 .footer__col-toggle {
@@ -2717,7 +2694,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
     color: inherit;
   }
 
-  .footer__col-toggle h4 {
+  .footer__col-toggle .footer__col-title {
     margin-bottom: 0;
     color: var(--color-white);
     font-size: var(--font-size-base);
@@ -2744,7 +2721,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
     padding-bottom: var(--spacing-5);
   }
 
-  .footer__col h4:not(.footer__col-toggle h4) {
+  .footer__col h4:not(.footer__col-toggle .footer__col-title) {
     display: none;
   }
 

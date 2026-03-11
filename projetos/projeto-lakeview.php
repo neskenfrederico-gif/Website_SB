@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Projeto executivo de HVAC para apart hotel com 246 apartamentos: ar-condicionado split, exaustão sanitários e ventilação de garagens.';
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-3.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-lakeview.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

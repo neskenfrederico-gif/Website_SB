@@ -617,6 +617,9 @@ if (contactForm) {
       from { transform: translateX(0); opacity: 1; }
       to { transform: translateX(100%); opacity: 0; }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .notification { animation: none !important; }
+    }
   `;
   document.head.appendChild(style);
 })();
@@ -1257,7 +1260,7 @@ function initSpotlightRotator() {
       // Update image + alt text
       if (imgEl) {
         const picture = imgEl.closest('picture');
-        const source = picture ? picture.querySelector('source') : null;
+        const source = picture ? picture.querySelector('source[type="image/webp"]') : null;
         if (source) source.srcset = c.img;
         imgEl.src = c.img;
         imgEl.alt = c.alt;
@@ -1387,6 +1390,16 @@ function initClientsCarousel() {
 document.addEventListener('DOMContentLoaded', initClientsCarousel);
 
 /* Testimonial "Ver mais" */
+// ===== Dropdown Toggle (Keyboard Accessible) =====
+const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+if (dropdownToggle) {
+  dropdownToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    this.closest('.nav__item--dropdown').classList.toggle('dropdown-open');
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.testimonial-card__quote').forEach(function(quote) {
     if (quote.scrollHeight > quote.clientHeight + 2) {

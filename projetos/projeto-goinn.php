@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Elaboração de projeto HVAC para 172 apartamentos com exaustão mecânica e pressurização de escadas.';
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-4.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-goinn.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

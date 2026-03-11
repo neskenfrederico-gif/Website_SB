@@ -206,7 +206,7 @@
         <a href="#home" class="nav__logo">
           <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48">
         </a>
-        <div class="nav__menu" id="nav-menu" aria-label="Menu principal">
+        <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active">Início</a>
@@ -218,7 +218,10 @@
               <a href="sobre/" class="nav__link">Sobre</a>
             </li>
             <li class="nav__item nav__item--dropdown">
-              <a href="setores/" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
+              <a href="setores/" class="nav__link">Setores</a>
+              <button class="nav__dropdown-toggle" aria-expanded="false" aria-label="Abrir submenu de setores">
+                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
               <ul class="nav__dropdown">
                 <li><a href="setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
                 <li><a href="setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
@@ -432,19 +435,19 @@
           <div class="clients-showcase__card">
             <div class="clients-carousel" id="clients-carousel">
               <div class="clients-carousel__track" id="clients-track">
-                <img fetchpriority="high" src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" decoding="async" />
-                <img fetchpriority="high" src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" decoding="async" />
-                <img fetchpriority="high" src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" decoding="async" />
-                <img fetchpriority="high" src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" decoding="async" />
-                <img fetchpriority="high" src="clientes/jrd.jpg" alt="Logo Uniphar - Cliente de engenharia de climatização" decoding="async" />
-                <img fetchpriority="high" src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" decoding="async" />
-                <img fetchpriority="high" src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" decoding="async" />
-                <img fetchpriority="high" src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" decoding="async" />
-                <img fetchpriority="high" src="clientes/bioscie.jpg" alt="Logo Bio Scie - Cliente de HVAC industrial" decoding="async" />
-                <img fetchpriority="high" src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" decoding="async" />
-                <img fetchpriority="high" src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" decoding="async" />
-                <img fetchpriority="high" src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" decoding="async" />
-                <img fetchpriority="high" src="clientes/aublack.jpg" alt="Logo Au Black Industrial Consulting - Cliente de consultoria HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/jrd.jpg" alt="Logo Uniphar - Cliente de engenharia de climatização" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/bioscie.jpg" alt="Logo Bio Scie - Cliente de HVAC industrial" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/aublack.jpg" alt="Logo Au Black Industrial Consulting - Cliente de consultoria HVAC" decoding="async" />
               </div>
             </div>
             <div class="clients-carousel__dots" id="clients-dots"></div>
@@ -1409,6 +1412,8 @@
               </div>
             </a>
           </div>
+          <!-- Formularios de contato e newsletter usam o mesmo endpoint Formspree (mjgropnr).
+               Diferenciados pelo campo oculto form_type. Separar endpoints se volume aumentar. -->
           <form class="contato__form glass-card" id="contact-form" action="https://formspree.io/f/mjgropnr" method="POST">
             <div class="form-group">
               <label for="name">Nome Completo</label>
@@ -1551,7 +1556,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Links Rápidos</h4>
+              <span class="footer__col-title">Links Rápidos</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <ul class="footer__col-body">
@@ -1565,7 +1570,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Conteúdo</h4>
+              <span class="footer__col-title">Conteúdo</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <ul class="footer__col-body">
@@ -1579,7 +1584,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Contato</h4>
+              <span class="footer__col-title">Contato</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="footer__col-body">
