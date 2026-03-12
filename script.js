@@ -177,6 +177,7 @@ function highlightActiveSection() {
     setores: '.nav__link[href="setores/"], .nav__link[href="#setores"]',
     portfolio: '.nav__link[href="portfolio/"], .nav__link[href="#portfolio"]',
     contato: '.nav__link[href="contato/"], .nav__link[href="#contato"]',
+    'artigos-home': '.nav__link[href="artigos/"]',
   };
 
   sections.forEach((section) => {
@@ -244,6 +245,12 @@ function initPortfolioRotation() {
 
   if (allLinks.length === 0) return;
 
+  function getPageSize() {
+    if (window.innerWidth >= 1024) return 6;
+    if (window.innerWidth >= 768) return 4;
+    return 2;
+  }
+
   // Mark first batch visible, then activate collapsed mode
   var pageSize = getPageSize();
   for (var i = 0; i < allLinks.length && i < pageSize; i++) {
@@ -256,12 +263,6 @@ function initPortfolioRotation() {
   var currentPage = 0;
   var activeFilter = "all";
   var ROTATION_DELAY = 8000;
-
-  function getPageSize() {
-    if (window.innerWidth >= 1024) return 6;
-    if (window.innerWidth >= 768) return 4;
-    return 2;
-  }
 
   function getFilteredLinks() {
     return allLinks.filter(function(link) {
@@ -741,6 +742,7 @@ faqQuestions.forEach((question) => {
   question.addEventListener("click", () => {
     const item = question.parentElement;
     const answer = question.nextElementSibling;
+    if (!answer) return;
 
     // Toggle active class
     item.classList.toggle("active");
@@ -761,7 +763,8 @@ faqQuestions.forEach((question) => {
       if (q !== question) {
         q.parentElement.classList.remove("active");
         q.setAttribute("aria-expanded", "false");
-        q.nextElementSibling.style.maxHeight = 0;
+        const answer = q.nextElementSibling;
+        if (answer) answer.style.maxHeight = 0;
       }
     });
   });
@@ -775,7 +778,7 @@ window.addEventListener("resize", () => {
     faqQuestions.forEach((q) => {
       if (q.parentElement.classList.contains("active")) {
         const answer = q.nextElementSibling;
-        answer.style.maxHeight = answer.scrollHeight + "px";
+        if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
       }
     });
   }, 200);
@@ -1400,19 +1403,3 @@ if (dropdownToggle) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.testimonial-card__quote').forEach(function(quote) {
-    if (quote.scrollHeight > quote.clientHeight + 2) {
-      quote.classList.add('clamped');
-      var btn = quote.parentElement.querySelector('.testimonial-card__toggle');
-      if (btn) btn.classList.add('visible');
-    }
-  });
-  document.querySelectorAll('.testimonial-card__toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var quote = this.parentElement.querySelector('.testimonial-card__quote');
-      quote.classList.toggle('expanded');
-      this.textContent = quote.classList.contains('expanded') ? 'Ver menos ←' : 'Ver mais →';
-    });
-  });
-});

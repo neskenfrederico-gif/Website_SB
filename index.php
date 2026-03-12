@@ -49,7 +49,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=96" />
+    <link rel="stylesheet" href="styles.css?v=1741612800" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
 
     <script type="application/ld+json">
@@ -223,12 +223,12 @@
                 <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
               </button>
               <ul class="nav__dropdown">
-                <li><a href="setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-                <li><a href="setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
-                <li><a href="setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
-                <li><a href="setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
-                <li><a href="setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
-                <li><a href="setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+                <li><a href="setores/farmaceutico.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏥</span> Farmacêutico</a></li>
+                <li><a href="setores/datacenter.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">💾</span> Data Centers</a></li>
+                <li><a href="setores/corporativo.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏢</span> Corporativo</a></li>
+                <li><a href="setores/industrial.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏭</span> Industrial</a></li>
+                <li><a href="setores/pressurizacao.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🚨</span> Pressurização</a></li>
+                <li><a href="setores/pos-metais.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">⚙️</span> Pós de Metais</a></li>
               </ul>
             </li>
             <li class="nav__item">
@@ -1202,12 +1202,11 @@
           <h2 class="section__title">Depoimentos de <span class="gradient-text">Parceiros</span></h2>
         </div>
         <div class="testimonials__grid">
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Thatiane Cristina dos Santos">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Trabalho na gestão dos contratos com a empresa Siqueira e Blanco há mais de 20 anos, e posso atestar a competência para a execução de obras de climatização industrial em um nicho tão exigente como a Farmacêutica! A equipe possui sólidos conhecimentos técnicos, a documentação produzida é robusta e estão preparados tanto na gestão administrativa das obras, segurança do trabalho quanto na estrutura de oficina e ferramental. A Siqueira e Blanco assegura a qualidade requerida em atendimento às demandas do nosso time de Garantia da Qualidade e fiscalização dos órgãos reguladores no Brasil."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1222,12 +1221,11 @@
             </div>
           </article>
           
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Gerente de Facilities">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Profissionais altamente capacitados. O retrofit do nosso sistema de HVAC resultou em uma economia de energia de aproximadamente 35%, superando nossas expectativas iniciais."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1242,12 +1240,11 @@
             </div>
           </article>
           
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Fábio Pereira">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Trabalhamos com a Siqueira e Blanco há mais de 10 anos e a confiança é total. A equipe possui vasta experiência em HVAC aplicado à indústria, especialmente no complexo segmento farmacêutico. Eles garantem que todo o projeto e montagem estejam em conformidade até a etapa final de qualificações."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1625,7 +1622,7 @@
 
     <?php
     $base = '';
-    $script_version = '1770969600';
+    $script_version = '1741612800';
     include 'includes/scripts.php';
     ?>
     

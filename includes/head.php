@@ -19,7 +19,7 @@ $og_description = $og_description ?? $page_description;
 $og_type        = $og_type ?? 'website';
 $extra_css      = $extra_css ?? [];
 $extra_head     = $extra_head ?? '';
-$css_version = '96';
+$css_version = '1741612800';
 $sep            = ($base === '') ? '' : '/';
 ?>
     <meta charset="UTF-8" />
