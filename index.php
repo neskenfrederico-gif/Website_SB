@@ -49,10 +49,8 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=96" />
+    <link rel="stylesheet" href="styles.css?v=1741612800" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
-    <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
-    <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
 
     <script type="application/ld+json">
 {
@@ -87,14 +85,6 @@
   "currenciesAccepted": "BRL",
   "paymentAccepted": "Transferência Bancária, Boleto, Pix",
   "knowsAbout": ["HVAC", "Climatização Industrial", "Salas Limpas", "BIM", "Comissionamento", "PMOC"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "bestRating": "5",
-    "worstRating": "1",
-    "ratingCount": "47",
-    "reviewCount": "32"
-  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Serviços de Engenharia HVAC",
@@ -216,7 +206,7 @@
         <a href="#home" class="nav__logo">
           <img src="Logomarca.png" alt="Siqueira e Blanco - Engenharia HVAC" class="logo-img" width="180" height="48">
         </a>
-        <div class="nav__menu" id="nav-menu" aria-label="Menu principal">
+        <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active">Início</a>
@@ -228,14 +218,17 @@
               <a href="sobre/" class="nav__link">Sobre</a>
             </li>
             <li class="nav__item nav__item--dropdown">
-              <a href="setores/" class="nav__link">Setores <span class="dropdown-arrow">▼</span></a>
+              <a href="setores/" class="nav__link">Setores</a>
+              <button class="nav__dropdown-toggle" aria-expanded="false" aria-label="Abrir submenu de setores">
+                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
               <ul class="nav__dropdown">
-                <li><a href="setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-                <li><a href="setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
-                <li><a href="setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
-                <li><a href="setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
-                <li><a href="setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
-                <li><a href="setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+                <li><a href="setores/farmaceutico.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏥</span> Farmacêutico</a></li>
+                <li><a href="setores/datacenter.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">💾</span> Data Centers</a></li>
+                <li><a href="setores/corporativo.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏢</span> Corporativo</a></li>
+                <li><a href="setores/industrial.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏭</span> Industrial</a></li>
+                <li><a href="setores/pressurizacao.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🚨</span> Pressurização</a></li>
+                <li><a href="setores/pos-metais.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">⚙️</span> Pós de Metais</a></li>
               </ul>
             </li>
             <li class="nav__item">
@@ -442,19 +435,19 @@
           <div class="clients-showcase__card">
             <div class="clients-carousel" id="clients-carousel">
               <div class="clients-carousel__track" id="clients-track">
-                <img fetchpriority="high" src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" decoding="async" />
-                <img fetchpriority="high" src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" decoding="async" />
-                <img fetchpriority="high" src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" decoding="async" />
-                <img fetchpriority="high" src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" decoding="async" />
-                <img fetchpriority="high" src="clientes/jrd.jpg" alt="Logo Uniphar - Cliente de engenharia de climatização" decoding="async" />
-                <img fetchpriority="high" src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" decoding="async" />
-                <img fetchpriority="high" src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" decoding="async" />
-                <img fetchpriority="high" src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" decoding="async" />
-                <img fetchpriority="high" src="clientes/bioscie.jpg" alt="Logo Bio Scie - Cliente de HVAC industrial" decoding="async" />
-                <img fetchpriority="high" src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" decoding="async" />
-                <img fetchpriority="high" src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" decoding="async" />
-                <img fetchpriority="high" src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" decoding="async" />
-                <img fetchpriority="high" src="clientes/aublack.jpg" alt="Logo Au Black Industrial Consulting - Cliente de consultoria HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/brainfarma.jpg" alt="Logo Brainfarma - Cliente de projetos de salas limpas" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/hypera.jpg" alt="Logo Hypera Pharma - Cliente de climatização industrial" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/teuto.jpg" alt="Logo Teuto - Cliente de HVAC farmacêutico" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/jrd.jpg" alt="Logo Uniphar - Cliente de engenharia de climatização" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/ja-saude.jpg" alt="Logo JA Saúde Animal - Cliente de projetos HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/medquimica.jpg" alt="Logo Medquímica - Cliente de salas limpas" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/lab-globo.jpg" alt="Logo Laboratório Globo - Cliente de climatização" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/bioscie.jpg" alt="Logo Bio Scie - Cliente de HVAC industrial" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/ufg.jpg" alt="Logo UFG Universidade Federal de Goiás - Cliente institucional" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/bb.jpg" alt="Logo Banco do Brasil - Cliente de climatização corporativa" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/halexistar.jpg" alt="Logo Halexistar - Cliente de engenharia HVAC" decoding="async" />
+                <img loading="lazy" width="120" height="60" src="clientes/aublack.jpg" alt="Logo Au Black Industrial Consulting - Cliente de consultoria HVAC" decoding="async" />
               </div>
             </div>
             <div class="clients-carousel__dots" id="clients-dots"></div>
@@ -1209,12 +1202,11 @@
           <h2 class="section__title">Depoimentos de <span class="gradient-text">Parceiros</span></h2>
         </div>
         <div class="testimonials__grid">
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Thatiane Cristina dos Santos">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Trabalho na gestão dos contratos com a empresa Siqueira e Blanco há mais de 20 anos, e posso atestar a competência para a execução de obras de climatização industrial em um nicho tão exigente como a Farmacêutica! A equipe possui sólidos conhecimentos técnicos, a documentação produzida é robusta e estão preparados tanto na gestão administrativa das obras, segurança do trabalho quanto na estrutura de oficina e ferramental. A Siqueira e Blanco assegura a qualidade requerida em atendimento às demandas do nosso time de Garantia da Qualidade e fiscalização dos órgãos reguladores no Brasil."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1229,12 +1221,11 @@
             </div>
           </article>
           
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Gerente de Facilities">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Profissionais altamente capacitados. O retrofit do nosso sistema de HVAC resultou em uma economia de energia de aproximadamente 35%, superando nossas expectativas iniciais."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1249,12 +1240,11 @@
             </div>
           </article>
           
-          <article class="testimonial-card glass-card fade-in">
+          <article class="testimonial-card glass-card fade-in" aria-label="Depoimento de Fábio Pereira">
             <div class="testimonial-card__stars" role="img" aria-label="Avaliação: 5 de 5 estrelas">★★★★★</div>
             <blockquote class="testimonial-card__quote">
               "Trabalhamos com a Siqueira e Blanco há mais de 10 anos e a confiança é total. A equipe possui vasta experiência em HVAC aplicado à indústria, especialmente no complexo segmento farmacêutico. Eles garantem que todo o projeto e montagem estejam em conformidade até a etapa final de qualificações."
             </blockquote>
-            <button class="testimonial-card__toggle" aria-label="Ver depoimento completo">Ver mais →</button>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1419,6 +1409,8 @@
               </div>
             </a>
           </div>
+          <!-- Formularios de contato e newsletter usam o mesmo endpoint Formspree (mjgropnr).
+               Diferenciados pelo campo oculto form_type. Separar endpoints se volume aumentar. -->
           <form class="contato__form glass-card" id="contact-form" action="https://formspree.io/f/mjgropnr" method="POST">
             <div class="form-group">
               <label for="name">Nome Completo</label>
@@ -1475,8 +1467,8 @@
               ></textarea>
             </div>
             <div class="form-group form-group--honey" aria-hidden="true">
-              <label for="_honey">Não preencha este campo</label>
-              <input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off">
+              <label for="_honey" aria-hidden="true">Não preencha este campo</label>
+              <input type="text" id="_honey" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
             </div>
             <button type="submit" class="btn-cta btn-cta--primary">
               <div class="btn-cta__icon">
@@ -1561,7 +1553,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Links Rápidos</h4>
+              <span class="footer__col-title">Links Rápidos</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <ul class="footer__col-body">
@@ -1575,7 +1567,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Conteúdo</h4>
+              <span class="footer__col-title">Conteúdo</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <ul class="footer__col-body">
@@ -1589,7 +1581,7 @@
 
           <div class="footer__col footer__col--accordion">
             <button class="footer__col-toggle" aria-expanded="false">
-              <h4>Contato</h4>
+              <span class="footer__col-title">Contato</span>
               <svg class="footer__col-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="footer__col-body">
@@ -1630,7 +1622,7 @@
 
     <?php
     $base = '';
-    $script_version = '1770969600';
+    $script_version = '1741612800';
     include 'includes/scripts.php';
     ?>
     

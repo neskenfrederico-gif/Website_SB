@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Ventilação mecânica com renovação e exaustão total para aceite de área qualificada (Senador Canedo-GO).';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-savoy.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

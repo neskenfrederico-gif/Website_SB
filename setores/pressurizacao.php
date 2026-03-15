@@ -7,6 +7,7 @@ $og_title         = 'Pressurização de Escadas de Emergência | Siqueira e Blan
 $og_description   = 'Engenharia de pressurização de escadas conforme IT-18 e NBR 9079: ventiladores, dampers, bypass e controle de diferencial de pressão para segurança contra incêndio.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/pressurizacao.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['setor.css?v=1770973200'];
 ?>

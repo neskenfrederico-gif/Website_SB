@@ -5,8 +5,6 @@ const OFFLINE_URL = '/';
 // Arquivos essenciais para cache
 const PRECACHE_ASSETS = [
   '/',
-  '/styles.css',
-  '/script.js',
   '/Logomarca.png',
   '/manifest.json',
 ];

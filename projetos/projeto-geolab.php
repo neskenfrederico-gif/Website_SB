@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Projeto HVAC completo: 25.000+ m², CAG de 1.500 TR, UTAs TROX TKZ e desumidificador químico.';
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-8.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-geolab.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

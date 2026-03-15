@@ -34,12 +34,12 @@ function nav_active($page, $current) {
             <li class="nav__item nav__item--dropdown">
               <a href="<?= $base . $sep ?>setores/" class="nav__link<?= nav_active('setores', $active_page) ?>">Setores <span class="dropdown-arrow">▼</span></a>
               <ul class="nav__dropdown">
-                <li><a href="<?= $base . $sep ?>setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
-                <li><a href="<?= $base . $sep ?>setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
-                <li><a href="<?= $base . $sep ?>setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
-                <li><a href="<?= $base . $sep ?>setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
-                <li><a href="<?= $base . $sep ?>setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
-                <li><a href="<?= $base . $sep ?>setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
+                <li><a href="<?= $base . $sep ?>setores/farmaceutico.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏥</span> Farmacêutico</a></li>
+                <li><a href="<?= $base . $sep ?>setores/datacenter.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">💾</span> Data Centers</a></li>
+                <li><a href="<?= $base . $sep ?>setores/corporativo.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏢</span> Corporativo</a></li>
+                <li><a href="<?= $base . $sep ?>setores/industrial.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🏭</span> Industrial</a></li>
+                <li><a href="<?= $base . $sep ?>setores/pressurizacao.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">🚨</span> Pressurização</a></li>
+                <li><a href="<?= $base . $sep ?>setores/pos-metais.php" class="nav__dropdown-link"><span role="img" aria-hidden="true">⚙️</span> Pós de Metais</a></li>
               </ul>
             </li>
             <li class="nav__item"><a href="<?= $base . $sep ?>portfolio/" class="nav__link<?= nav_active('portfolio', $active_page) ?>">Portfólio</a></li>

@@ -7,6 +7,7 @@ $og_title         = 'Climatização Hospitalar e Farmacêutica | Siqueira e Blan
 $og_description   = 'Projetos HVAC para hospitais e indústria farmacêutica: ISO 14644, NBR 7256, ANVISA RDC 301/RDC 50, cascata de pressão e filtragem HEPA/ULPA.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/farmaceutico.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['setor.css?v=1770973200'];
 ?>

@@ -177,6 +177,7 @@ function highlightActiveSection() {
     setores: '.nav__link[href="setores/"], .nav__link[href="#setores"]',
     portfolio: '.nav__link[href="portfolio/"], .nav__link[href="#portfolio"]',
     contato: '.nav__link[href="contato/"], .nav__link[href="#contato"]',
+    'artigos-home': '.nav__link[href="artigos/"]',
   };
 
   sections.forEach((section) => {
@@ -244,6 +245,12 @@ function initPortfolioRotation() {
 
   if (allLinks.length === 0) return;
 
+  function getPageSize() {
+    if (window.innerWidth >= 1024) return 6;
+    if (window.innerWidth >= 768) return 4;
+    return 2;
+  }
+
   // Mark first batch visible, then activate collapsed mode
   var pageSize = getPageSize();
   for (var i = 0; i < allLinks.length && i < pageSize; i++) {
@@ -256,12 +263,6 @@ function initPortfolioRotation() {
   var currentPage = 0;
   var activeFilter = "all";
   var ROTATION_DELAY = 8000;
-
-  function getPageSize() {
-    if (window.innerWidth >= 1024) return 6;
-    if (window.innerWidth >= 768) return 4;
-    return 2;
-  }
 
   function getFilteredLinks() {
     return allLinks.filter(function(link) {
@@ -617,6 +618,9 @@ if (contactForm) {
       from { transform: translateX(0); opacity: 1; }
       to { transform: translateX(100%); opacity: 0; }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .notification { animation: none !important; }
+    }
   `;
   document.head.appendChild(style);
 })();
@@ -738,6 +742,7 @@ faqQuestions.forEach((question) => {
   question.addEventListener("click", () => {
     const item = question.parentElement;
     const answer = question.nextElementSibling;
+    if (!answer) return;
 
     // Toggle active class
     item.classList.toggle("active");
@@ -758,7 +763,8 @@ faqQuestions.forEach((question) => {
       if (q !== question) {
         q.parentElement.classList.remove("active");
         q.setAttribute("aria-expanded", "false");
-        q.nextElementSibling.style.maxHeight = 0;
+        const answer = q.nextElementSibling;
+        if (answer) answer.style.maxHeight = 0;
       }
     });
   });
@@ -772,7 +778,7 @@ window.addEventListener("resize", () => {
     faqQuestions.forEach((q) => {
       if (q.parentElement.classList.contains("active")) {
         const answer = q.nextElementSibling;
-        answer.style.maxHeight = answer.scrollHeight + "px";
+        if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
       }
     });
   }, 200);
@@ -1082,6 +1088,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ===== Spotlight Cases Rotator =====
+function sanitizeHTML(str) {
+  return str.replace(/<(?!\/?(?:span|strong|em)\b)[^>]*>/gi, '');
+}
+
 function initSpotlightRotator() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const cases = [
@@ -1225,8 +1235,8 @@ function initSpotlightRotator() {
     if (imgEl) imgEl.style.opacity = '0';
 
     fadeTimeout = setTimeout(() => {
-      titleEl.innerHTML = c.title;
-      descEl.innerHTML = c.desc;
+      titleEl.innerHTML = sanitizeHTML(c.title);
+      descEl.innerHTML = sanitizeHTML(c.desc);
       stat1.textContent = c.stat1;
       stat1Label.textContent = c.stat1Label;
       stat2.textContent = c.stat2;
@@ -1253,7 +1263,7 @@ function initSpotlightRotator() {
       // Update image + alt text
       if (imgEl) {
         const picture = imgEl.closest('picture');
-        const source = picture ? picture.querySelector('source') : null;
+        const source = picture ? picture.querySelector('source[type="image/webp"]') : null;
         if (source) source.srcset = c.img;
         imgEl.src = c.img;
         imgEl.alt = c.alt;
@@ -1383,19 +1393,13 @@ function initClientsCarousel() {
 document.addEventListener('DOMContentLoaded', initClientsCarousel);
 
 /* Testimonial "Ver mais" */
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.testimonial-card__quote').forEach(function(quote) {
-    if (quote.scrollHeight > quote.clientHeight + 2) {
-      quote.classList.add('clamped');
-      var btn = quote.parentElement.querySelector('.testimonial-card__toggle');
-      if (btn) btn.classList.add('visible');
-    }
+// ===== Dropdown Toggle (Keyboard Accessible) =====
+const dropdownToggle = document.querySelector('.nav__dropdown-toggle');
+if (dropdownToggle) {
+  dropdownToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    this.closest('.nav__item--dropdown').classList.toggle('dropdown-open');
   });
-  document.querySelectorAll('.testimonial-card__toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var quote = this.parentElement.querySelector('.testimonial-card__quote');
-      quote.classList.toggle('expanded');
-      this.textContent = quote.classList.contains('expanded') ? 'Ver menos ←' : 'Ver mais →';
-    });
-  });
-});
+}
+

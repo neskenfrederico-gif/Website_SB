@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Climatização do Centro Cultural Banco do Brasil em Brasília — 15.000 m², 900 TR, controle de precisão para galerias de arte.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-ccbb.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Climatização das 3 sedes do Banco do Brasil em Brasília — 96.135 m², 4.350 TR, sistema de água gelada com chillers centrífugos e parafuso.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-bancodobrasil.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

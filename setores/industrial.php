@@ -7,6 +7,7 @@ $og_title         = 'Ventilação e Climatização Industrial | Siqueira e Blanc
 $og_description   = 'Engenharia HVAC industrial: exaustão de gases, controle de particulados, resfriamento de processo e ventilação forçada, com conformidade NR e SMACNA.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/industrial.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['setor.css?v=1770973200'];
 ?>

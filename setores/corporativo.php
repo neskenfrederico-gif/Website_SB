@@ -7,6 +7,7 @@ $og_title         = 'Climatização Corporativa High-End | Siqueira e Blanco';
 $og_description   = 'Engenharia HVAC para edifícios Triple A: IAQ, conforto (ASHRAE 55), eficiência (ASHRAE 90.1) e suporte a certificações LEED/WELL com BIM.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/corporativo.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['setor.css?v=1770973200'];
 ?>

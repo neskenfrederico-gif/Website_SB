@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Projeto executivo de HVAC para produção de injetáveis com controle de pressão, HEPA e conformidade RDC 301/ANVISA.';
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-1.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-injetaveis.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

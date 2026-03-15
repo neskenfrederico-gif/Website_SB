@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'Projeto executivo HVAC com sistema híbrido VRF + Chiller/Fancoil e automação para escola/hotel em Brasília-DF.';
 $og_image         = 'https://siqueiraeblanco.com.br/portfolio/portfolio-6.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-esaf.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

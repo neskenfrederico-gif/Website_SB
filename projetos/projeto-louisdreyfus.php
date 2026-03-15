@@ -7,6 +7,7 @@ $og_title         = $page_title;
 $og_description   = 'HVAC e ventilação para enclausuramento de envase, com dutos padrão TDC (Jataí-GO).';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/projetos/projeto-louisdreyfus.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['projeto.css?v=1770973200'];
 ?>

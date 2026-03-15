@@ -16,9 +16,10 @@
  */
 $og_title       = $og_title ?? $page_title;
 $og_description = $og_description ?? $page_description;
+$og_type        = $og_type ?? 'website';
 $extra_css      = $extra_css ?? [];
 $extra_head     = $extra_head ?? '';
-$css_version = '96';
+$css_version = '1741612800';
 $sep            = ($base === '') ? '' : '/';
 ?>
     <meta charset="UTF-8" />
@@ -31,9 +32,12 @@ $sep            = ($base === '') ? '' : '/';
     <meta property="og:description" content="<?= htmlspecialchars($og_description) ?>" />
     <meta property="og:image" content="<?= htmlspecialchars($og_image) ?>" />
     <meta property="og:url" content="<?= htmlspecialchars($og_url) ?>" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="<?= htmlspecialchars($og_type) ?>" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($page_title) ?>" />
+    <meta name="twitter:description" content="<?= htmlspecialchars($page_description) ?>" />
+    <meta name="twitter:image" content="<?= htmlspecialchars($og_image) ?>" />
     <meta name="theme-color" content="#1e3a5f" />
 
     <link rel="canonical" href="<?= htmlspecialchars($canonical) ?>" />

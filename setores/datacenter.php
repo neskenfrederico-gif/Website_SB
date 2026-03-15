@@ -7,6 +7,7 @@ $og_title         = 'Climatização para Data Centers | Siqueira e Blanco';
 $og_description   = 'Projetos HVAC de precisão: redundância Tier III/IV, microclima, hot/cold aisle, in-row cooling e otimização de PUE, com base ASHRAE TC 9.9 e TIA-942.';
 $og_image         = 'https://siqueiraeblanco.com.br/banner_hero.webp';
 $og_url           = 'https://siqueiraeblanco.com.br/setores/datacenter.php';
+$og_type        = 'article';
 $canonical        = $og_url;
 $extra_css        = ['setor.css?v=1770973200'];
 ?>
