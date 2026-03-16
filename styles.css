@@ -619,6 +619,61 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   66% { transform: translate(-15px, 15px) scale(0.95); }
 }
 
+/* Scroll indicator */
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.hero__scroll-indicator:hover {
+  opacity: 1;
+}
+
+.hero__scroll-mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.hero__scroll-wheel {
+  width: 3px;
+  height: 8px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  animation: scrollWheel 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.4; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero__scroll-indicator {
+    bottom: 4.5rem;
+  }
+
+  .hero__scroll-mouse {
+    width: 22px;
+    height: 36px;
+  }
+}
+
 /* Layout assimétrico */
 .hero__content {
   position: relative;
