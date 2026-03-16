@@ -49,7 +49,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=97" />
+    <link rel="stylesheet" href="styles.css?v=98" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -402,21 +402,21 @@
     <!-- Stats Section (New) -->
     <section class="section stats">
       <div class="stats__container container grid">
-        <div class="stats__data">
+        <div class="stats__data fade-in stagger-1">
           <span class="stats__number" data-target="200" aria-label="200+">0</span>
           <span class="stats__symbol">+</span>
           <p class="stats__title">Projetos <br> Entregues</p>
         </div>
-        <div class="stats__data">
+        <div class="stats__data fade-in stagger-2">
           <span class="stats__number" data-target="50" aria-label="50k">0</span>
           <span class="stats__symbol">k</span>
           <p class="stats__title">TRs <br> Projetados</p>
         </div>
-        <div class="stats__data">
+        <div class="stats__data fade-in stagger-3">
           <span class="stats__number" data-target="12" aria-label="12">0</span>
           <p class="stats__title">Estados <br> Atendidos</p>
         </div>
-        <div class="stats__data">
+        <div class="stats__data fade-in stagger-4">
           <span class="stats__number" data-target="100" aria-label="100%">0</span>
           <span class="stats__symbol">%</span>
           <p class="stats__title">Conformidade <br> Normativa</p>
@@ -435,11 +435,11 @@
     <section class="section clients-showcase" id="clientes">
       <div class="container">
         <div class="clients-showcase__wrapper">
-          <div class="clients-showcase__text">
+          <div class="clients-showcase__text slide-in-left">
             <h2 class="clients-showcase__title">Engenharia para<br>grandes resultados</h2>
             <p class="clients-showcase__subtitle">Conheça alguns dos clientes que confiam em <strong>nossas soluções.</strong></p>
           </div>
-          <div class="clients-showcase__card">
+          <div class="clients-showcase__card slide-in-right">
             <div class="clients-carousel" id="clients-carousel">
               <div class="clients-carousel__track" id="clients-track">
                 <img fetchpriority="high" src="clientes/geolab.jpg" alt="Logo Geolab - Cliente de engenharia HVAC farmacêutica" decoding="async" />
@@ -571,7 +571,7 @@
     <!-- Lifecycle Section (Refactored - Pillars of Engineering) -->
     <section class="section lifecycle" id="ciclo-de-vida">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Nossa Atuação</span>
           <h2 class="section__title">Os 3 Pilares da <span class="gradient-text">Engenharia Industrial</span></h2>
         </div>
@@ -657,7 +657,7 @@
     <!-- Serviços Section -->
     <section class="section servicos" id="servicos">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Nossos Serviços</span>
           <h2 class="section__title">
             Soluções Completas em
@@ -795,7 +795,7 @@
     <!-- Engineering Process Section -->
     <section class="section process process--airflow" id="processo">
       <div class="container">
-         <div class="section__header">
+         <div class="section__header fade-in">
            <span class="section__subtitle">Metodologia</span>
            <h2 class="section__title">Processo de <span class="gradient-text">Engenharia</span></h2>
          </div>
@@ -824,7 +824,7 @@
     <section class="section manifesto" id="manifesto">
       <div class="manifesto__airflow" aria-hidden="true"></div>
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Filosofia</span>
           <h2 class="section__title">O Que Nos <span class="gradient-text">Move</span></h2>
         </div>
@@ -863,7 +863,7 @@
     <!-- Sobre Section -->
     <section class="section sobre" id="sobre">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Quem Somos</span>
           <h2 class="section__title">Engenharia HVAC de <span class="gradient-text">Alta Complexidade</span></h2>
         </div>
@@ -994,7 +994,7 @@
     <!-- Sectors Section -->
     <section class="section sectors" id="setores">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Expertise de Mercado</span>
           <h2 class="section__title">Setores de <span class="gradient-text">Atuação</span></h2>
         </div>
@@ -1085,7 +1085,7 @@
     <!-- FAQ Section -->
     <section class="section faq" id="faq">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Dúvidas Frequentes</span>
           <h2 class="section__title">Perguntas <span class="gradient-text">Frequentes</span></h2>
         </div>
@@ -1169,7 +1169,7 @@
     <!-- Portfolio Section -->
     <section class="section portfolio" id="portfolio">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Portfólio</span>
           <h2 class="section__title">
             Projetos <span class="gradient-text">Realizados</span>
@@ -1204,7 +1204,7 @@
     <!-- Depoimentos Section -->
     <section class="section testimonials" id="depoimentos">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">O Que Dizem Nossos Clientes</span>
           <h2 class="section__title">Depoimentos de <span class="gradient-text">Parceiros</span></h2>
         </div>
@@ -1275,7 +1275,7 @@
     <!-- Artigos em Destaque -->
     <section class="section articles-home" id="artigos-home">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Base de Conhecimento</span>
           <h2 class="section__title">Artigos <span class="gradient-text">Técnicos</span></h2>
         </div>
@@ -1337,7 +1337,7 @@
     <!-- Contato Section -->
     <section class="section contato" id="contato">
       <div class="container">
-        <div class="section__header">
+        <div class="section__header fade-in">
           <span class="section__subtitle">Contato</span>
           <h2 class="section__title">
             Vamos Conversar Sobre Seu <span class="gradient-text">Projeto</span>

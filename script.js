@@ -422,27 +422,82 @@ statNumbers.forEach((num) => {
   statsObserver.observe(num);
 });
 
-// ===== Fade In Animation on Scroll =====
-function initFadeInObserver() {
-  const fadeElements = document.querySelectorAll(".fade-in");
+// ===== Scroll-Driven Animations =====
+function initScrollAnimations() {
+  // Unified observer for all scroll-triggered animations
+  const animElements = document.querySelectorAll(
+    ".fade-in, .slide-in-left, .slide-in-right, .scale-in"
+  );
 
-  if (!fadeElements.length) return;
+  if (!animElements.length) return;
 
-  const fadeObserver = new IntersectionObserver(
+  // Respect prefers-reduced-motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    animElements.forEach((el) => el.classList.add("visible"));
+    return;
+  }
+
+  const scrollObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          fadeObserver.unobserve(entry.target);
+          scrollObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
   );
 
-  fadeElements.forEach((el) => {
-    fadeObserver.observe(el);
+  animElements.forEach((el) => {
+    scrollObserver.observe(el);
   });
+}
+
+// Backward-compatible alias
+function initFadeInObserver() {
+  initScrollAnimations();
+}
+
+// ===== Hero Parallax on Scroll =====
+function initHeroParallax() {
+  var hero = document.querySelector(".hero");
+  var slider = document.querySelector(".hero__slider");
+  var overlay = document.querySelector(".hero__overlay");
+
+  if (!hero || !slider) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  var ticking = false;
+
+  function updateParallax() {
+    var scrollY = window.pageYOffset;
+    var heroH = hero.offsetHeight;
+
+    // Only apply while hero is in view
+    if (scrollY <= heroH) {
+      var factor = scrollY * 0.35;
+      slider.style.transform = "translateY(" + factor + "px) scale(1.05)";
+      if (overlay) {
+        overlay.style.transform = "translateY(" + (factor * 0.15) + "px)";
+      }
+      // Fade hero content slightly as user scrolls down
+      var opacity = 1 - (scrollY / heroH) * 0.6;
+      var content = hero.querySelector(".hero__content");
+      if (content) {
+        content.style.opacity = Math.max(opacity, 0.2);
+        content.style.transform = "translateY(" + (scrollY * 0.12) + "px)";
+      }
+    }
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 // ===== Contact Form =====
@@ -1043,8 +1098,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Detect if we are on the homepage
   const isHomepage = !!document.getElementById("home");
 
-  // Initialize Fade-in Observer (all pages)
-  initFadeInObserver();
+  // Initialize scroll-driven animations (all pages)
+  initScrollAnimations();
+
+  // Hero parallax effect
+  initHeroParallax();
 
   // Footer current year (all pages)
   const yearEl = document.getElementById("current-year");
