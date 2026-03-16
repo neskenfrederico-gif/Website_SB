@@ -12,7 +12,7 @@
  */
 $base          = $base ?? '';
 $extra_scripts = $extra_scripts ?? [];
-$script_version = $script_version ?? '1770969600';
+$script_version = $script_version ?? '1770969601';
 $enable_analytics = $enable_analytics ?? true;
 $ga_measurement_id = $ga_measurement_id ?? 'G-HBL037W0QL';
 $enable_pwa = $enable_pwa ?? true;
