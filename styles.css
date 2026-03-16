@@ -976,12 +976,12 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 .testimonials .section__title .gradient-text,
 .contato .section__title .gradient-text,
 .newsletter__title .gradient-text {
-  color: #cffffa;
-  background: linear-gradient(135deg, #ecfffe 0%, #ccfff9 48%, #9ff7ef 100%);
+  color: #4ecdc4;
+  background: linear-gradient(135deg, #7eeeea 0%, #4ecdc4 45%, #3dbdb5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 2px 12px rgba(4, 12, 24, 0.75), 0 0 16px rgba(78, 205, 196, 0.24);
+  filter: drop-shadow(0 0 12px rgba(78, 205, 196, 0.35));
 }
 
 .hero__description {
