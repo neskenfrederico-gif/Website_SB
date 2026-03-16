@@ -705,18 +705,20 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-2xl);
+  border-radius: 24px;
   padding: var(--spacing-10);
   text-align: center;
   max-width: 280px;
   width: 100%;
-  transition: transform var(--transition-slow), border-color var(--transition-base);
+  transition: transform var(--transition-slow), border-color var(--transition-base), box-shadow var(--transition-base);
   animation: heroCardFloat 6s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .hero__float-card:hover {
   border-color: var(--color-secondary-a35);
   transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16), 0 0 20px rgba(78, 205, 196, 0.08);
 }
 
 @keyframes heroCardFloat {
@@ -890,12 +892,12 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .hero__subtitle {
   display: inline-block;
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: 0.5rem 0.9rem;
   background: var(--color-secondary-a10);
   border: 1px solid var(--color-secondary-a30);
   border-radius: var(--radius-full);
   color: var(--color-secondary);
-  font-size: var(--font-size-sm);
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -932,7 +934,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   color: var(--color-gray-300);
   max-width: 540px;
   margin: 0 0 var(--spacing-8);
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .hero__description strong {
@@ -1898,11 +1900,16 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   transition: background var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn:hover {
   background: var(--gradient-primary);
   color: var(--color-white);
   border-color: transparent;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, rgba(78, 205, 196, 0.15), rgba(30, 58, 95, 0.1));
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 .portfolio__grid {
@@ -2348,8 +2355,8 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: var(--gradient-accent);
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-secondary), var(--color-primary), transparent);
 }
 
 .footer__content {
@@ -2413,12 +2420,13 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .footer__col a {
   font-size: var(--font-size-sm);
-  transition: color var(--transition-fast), padding-left var(--transition-fast);
+  display: inline-block;
+  transition: color var(--transition-base), transform var(--transition-base);
 }
 
 .footer__col a:hover {
   color: var(--color-secondary);
-  padding-left: var(--spacing-2);
+  transform: translateX(3px);
 }
 
 .footer__col p {
@@ -4913,11 +4921,14 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   color: var(--color-gray-400);
   text-decoration: none;
   font-size: var(--font-size-sm);
+  display: inline-block;
+  transition: color var(--transition-base), transform var(--transition-base);
   transition: color var(--transition-fast);
 }
 
 .footer__links a:hover {
   color: var(--color-secondary);
+  transform: translateX(3px);
 }
 
 .footer__contact p {
