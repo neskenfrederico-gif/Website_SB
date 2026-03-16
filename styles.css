@@ -977,11 +977,11 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 .contato .section__title .gradient-text,
 .newsletter__title .gradient-text {
   color: #4ecdc4;
-  background: linear-gradient(135deg, #7eeeea 0%, #4ecdc4 45%, #3dbdb5 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #b2fff8 30%, #4ecdc4 70%, #3dbdb5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 12px rgba(78, 205, 196, 0.35));
+  filter: drop-shadow(0 0 18px rgba(78, 205, 196, 0.5)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .hero__description {
