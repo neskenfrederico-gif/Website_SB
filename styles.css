@@ -3159,11 +3159,12 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   gap: var(--spacing-3);
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
-  transition: color var(--transition-base);
+  transition: color var(--transition-base), transform var(--transition-base);
 }
 
 .certifications__badge:hover {
   color: var(--color-secondary);
+  transform: translateY(-2px);
 }
 
 .certifications__badge svg {
@@ -3739,8 +3740,16 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .contact-card {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.08),
+    0 0 20px rgba(78, 205, 196, 0.06);
 }
 
 /* ===== CONTATO MAP IFRAME ===== */
@@ -4029,13 +4038,13 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   width: auto;
   max-width: 160px;
   object-fit: contain;
-  opacity: 0.85;
-  transition: all var(--transition-base);
+  opacity: 0.7;
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .clients-carousel__track img:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .clients-carousel__dots {
@@ -4111,12 +4120,14 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border-radius: 20px;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .testimonial-card__stars {
@@ -5564,7 +5575,7 @@ html[data-theme="dark"] .btn--secondary:hover {
 .form-group textarea,
 .form-group select,
 .newsletter__input {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   transition: border-color var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
 }
 
@@ -5572,7 +5583,7 @@ html[data-theme="dark"] .btn--secondary:hover {
 .form-group textarea:focus,
 .form-group select:focus,
 .newsletter__input:focus {
-  box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.14);
+  box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.14), 0 0 16px rgba(78, 205, 196, 0.06);
 }
 
 .footer {
