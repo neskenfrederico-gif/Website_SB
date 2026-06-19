@@ -601,6 +601,14 @@ if (contactForm) {
   let isSubmitting = false;
   const formLoadTime = Date.now();
 
+  // A11y: limpa o estado de erro de um campo assim que ele fica valido
+  contactForm.addEventListener("input", (e) => {
+    const field = e.target;
+    if (field.getAttribute("aria-invalid") === "true" && field.checkValidity && field.checkValidity()) {
+      field.removeAttribute("aria-invalid");
+    }
+  });
+
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -617,6 +625,17 @@ if (contactForm) {
 
     // HTML5 validation (shows visual feedback via CSS)
     if (!contactForm.checkValidity()) {
+      // A11y: marca os campos invalidos e move o foco para o primeiro deles
+      let firstInvalid = null;
+      contactForm.querySelectorAll("input, select, textarea").forEach((field) => {
+        if (field.willValidate && !field.checkValidity()) {
+          field.setAttribute("aria-invalid", "true");
+          if (!firstInvalid) firstInvalid = field;
+        } else {
+          field.removeAttribute("aria-invalid");
+        }
+      });
+      if (firstInvalid) firstInvalid.focus();
       showNotification("Por favor, preencha todos os campos obrigatórios.", "error");
       return;
     }

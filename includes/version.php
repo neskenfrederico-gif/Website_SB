@@ -8,4 +8,4 @@
  * cache do navegador/CDN seja invalidado de forma consistente.
  */
 $css_version    = $css_version ?? '107';
-$script_version = $script_version ?? '1771000002';
+$script_version = $script_version ?? '1771000003';
