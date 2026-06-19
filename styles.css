@@ -694,12 +694,16 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 
 .hero__text {
   position: relative;
+  display: grid;
 }
 
 /* Hero Pages (multi-content rotator) */
+/* Todas as paginas ocupam a mesma celula do grid (1/1), entao o container
+   reserva sempre a altura do slide mais alto — a altura do hero fica
+   padronizada e nao "pula" ao trocar de slide no carrossel. */
 .hero__page {
+  grid-area: 1 / 1;
   text-align: left;
-  position: absolute;
   width: 100%;
   opacity: 0;
   pointer-events: none;
@@ -709,7 +713,6 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 .hero__page.active {
-  position: relative;
   opacity: 1;
   pointer-events: auto;
 }
