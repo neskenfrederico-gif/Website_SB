@@ -1,3 +1,4 @@
+<?php require __DIR__ . '/includes/version.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -49,7 +50,7 @@
       onload="this.media='all'"
     />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="styles.css?v=101" />
+    <link rel="stylesheet" href="styles.css?v=<?= $css_version ?>" />
     <link rel="preload" as="image" href="banner_hero1.webp" type="image/webp" />
     <link rel="preload" as="image" href="banner_hero1.jpg" type="image/jpeg" />
     <link rel="preload" as="image" href="Logomarca.png" type="image/png" />
@@ -1635,7 +1636,6 @@
 
     <?php
     $base = '';
-    $script_version = '1770969601';
     include 'includes/scripts.php';
     ?>
     
