@@ -5,6 +5,9 @@
  * Tanto a index.php quanto portfolio/index.php consomem este arquivo.
  *
  * Campo 'highlight' (opcional): selo técnico curto exibido no card.
+ * Use APENAS para diferenciais reais (classificação/certificação/segurança),
+ * não para equipamento, fornecedor ou tipo de sistema. Projetos sem
+ * diferencial marcante ficam sem o campo (e sem selo).
  */
 $projects = [
     [
@@ -28,7 +31,6 @@ $projects = [
         'image'       => 19,
         'area'        => '96.135 m²',
         'capacity'    => '4.350 TR',
-        'highlight'   => 'Chillers + pressurização',
         'description' => '3 sedes no Setor Bancário Sul de Brasília com chillers parafuso e centrífugo, fancoils e pressurização.',
     ],
     [
@@ -40,7 +42,7 @@ $projects = [
         'image'       => 20,
         'area'        => '15.000 m²',
         'capacity'    => '900 TR',
-        'highlight'   => 'Dual fluid de precisão',
+        'highlight'   => 'Climatização de precisão',
         'description' => 'Centro Cultural Banco do Brasil com dual fluid de precisão para galerias, teatro (262 lugares) e cinema.',
     ],
     [
@@ -64,7 +66,7 @@ $projects = [
         'image'       => 1,
         'area'        => '1.800 m²',
         'capacity'    => '180 TR',
-        'highlight'   => 'Filtragem absoluta terminal',
+        'highlight'   => 'Filtragem absoluta',
         'description' => 'Sistema de expansão indireta com FANCOIL e filtragem absoluta terminal.',
     ],
     [
@@ -76,7 +78,6 @@ $projects = [
         'image'       => 2,
         'area'        => '1.800 m²',
         'capacity'    => '160 TR',
-        'highlight'   => 'Evaporadora TROX TKZ',
         'description' => 'Área de produção de dermocosméticos com expansão direta e evaporadora TROX TKZ.',
     ],
     [
@@ -112,7 +113,6 @@ $projects = [
         'image'       => 16,
         'area'        => '4.000 m²',
         'capacity'    => '200 TR',
-        'highlight'   => 'Climatização VRF',
         'description' => 'CD Autoportante com climatização VRF e automação integrada Siemens.',
     ],
     [
@@ -124,7 +124,6 @@ $projects = [
         'image'       => 15,
         'area'        => '20.000 m²',
         'capacity'    => '500 TR',
-        'highlight'   => 'Automação Schneider',
         'description' => 'CD Ar-Condicionado com expansão direta (Splitão) e automação Schneider.',
     ],
     [
@@ -136,7 +135,6 @@ $projects = [
         'image'       => 3,
         'area'        => '19.968 m²',
         'capacity'    => '502 TR',
-        'highlight'   => '246 apartamentos',
         'description' => 'Apart Hotel com 246 apartamentos em Brasília. Sistema Split para apartamentos e áreas comuns.',
     ],
     [
@@ -160,7 +158,7 @@ $projects = [
         'image'       => 5,
         'area'        => '27.500 m²',
         'capacity'    => '941 TR',
-        'highlight'   => 'VRF + pressurização',
+        'highlight'   => 'Pressurização de escadas',
         'description' => 'Edifício comercial em Brasília com sistema VRF/Split e pressurização de escadas.',
     ],
     [
@@ -172,7 +170,6 @@ $projects = [
         'image'       => 9,
         'area'        => '14.600 m²',
         'capacity'    => '513 TR',
-        'highlight'   => 'Uso misto · 208 apts',
         'description' => 'Edifício misto Comercial/Apart hotel com 208 apartamentos, lojas e áreas administrativas.',
     ],
     [
@@ -184,7 +181,6 @@ $projects = [
         'image'       => 6,
         'area'        => '18.500 m²',
         'capacity'    => '1.220 TR',
-        'highlight'   => 'Híbrido VRF + Chiller',
         'description' => 'Sistema híbrido VRF-Split (350 TR) + Chiller-Fancoil (870 TR) para a Escola de Administração Fazendária.',
     ],
     [
@@ -196,7 +192,6 @@ $projects = [
         'image'       => 7,
         'area'        => '6.872 m²',
         'capacity'    => '343 TR',
-        'highlight'   => 'Sistema VRF-Split',
         'description' => 'Sede da PRF em Vitória-ES com sistema VRF-Split para alojamentos, adm. e auditório.',
     ],
     [
@@ -220,7 +215,6 @@ $projects = [
         'image'       => 13,
         'area'        => '953 m²',
         'capacity'    => '110.000 m³/h',
-        'highlight'   => 'Exaustão 100%',
         'description' => 'Ventilação e exaustão 100% para linha de envase de aerosóis com girotubo.',
     ],
     [
@@ -232,7 +226,6 @@ $projects = [
         'image'       => 17,
         'area'        => '7.000 m²',
         'capacity'    => '250 TR',
-        'highlight'   => 'Automação Siemens',
         'description' => 'CD logístico com expansão direta (splitão), dutos em MPU e automação Siemens.',
     ],
     [
@@ -244,7 +237,6 @@ $projects = [
         'image'       => 14,
         'area'        => '577 m²',
         'capacity'    => '150 TR',
-        'highlight'   => 'Expansão direta · Splitão',
         'description' => 'Climatização com expansão direta e 03 condicionadores Splitão (91.800 m³/h).',
     ],
 ];
