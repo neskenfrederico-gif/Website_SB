@@ -12,7 +12,7 @@
  */
 $base          = $base ?? '';
 $extra_scripts = $extra_scripts ?? [];
-$script_version = $script_version ?? '1771000001';
+require __DIR__ . '/version.php';
 $enable_analytics = $enable_analytics ?? true;
 $ga_measurement_id = $ga_measurement_id ?? 'G-HBL037W0QL';
 $enable_pwa = $enable_pwa ?? true;
