@@ -22,6 +22,7 @@ $sep = ($base === '') ? '' : '/';
               <li><a href="<?= $base . $sep ?>">Início</a></li>
               <li><a href="<?= $base . $sep ?>sobre/">Sobre Nós</a></li>
               <li><a href="<?= $base . $sep ?>servicos/">Serviços</a></li>
+              <li><a href="<?= $base . $sep ?>pmoc/">Conformidade PMOC</a></li>
               <li><a href="<?= $base . $sep ?>portfolio/">Portfólio</a></li>
               <li><a href="<?= $base . $sep ?>contato/">Contato</a></li>
             </ul>
