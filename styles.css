@@ -664,13 +664,11 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 @media (max-width: 768px) {
+  /* No mobile nao ha espaco vertical entre o link "Ver Projetos" e a
+     navegacao numerada (01/05) — o indicador de rolagem ficava sobreposto
+     ao texto. Em telas touch o gesto de rolar ja e natural, entao ocultamos. */
   .hero__scroll-indicator {
-    bottom: 4.5rem;
-  }
-
-  .hero__scroll-mouse {
-    width: 22px;
-    height: 36px;
+    display: none;
   }
 }
 
