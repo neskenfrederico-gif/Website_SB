@@ -37,9 +37,10 @@ $extra_css        = [];
         { "@type": "ListItem", "position": 1, "name": "Hospitalar & Farmacêutico", "url": "https://siqueiraeblanco.com.br/setores/farmaceutico.php" },
         { "@type": "ListItem", "position": 2, "name": "Data Centers", "url": "https://siqueiraeblanco.com.br/setores/datacenter.php" },
         { "@type": "ListItem", "position": 3, "name": "Corporativo", "url": "https://siqueiraeblanco.com.br/setores/corporativo.php" },
-        { "@type": "ListItem", "position": 4, "name": "Industrial", "url": "https://siqueiraeblanco.com.br/setores/industrial.php" },
-        { "@type": "ListItem", "position": 5, "name": "Pressurização de Escadas", "url": "https://siqueiraeblanco.com.br/setores/pressurizacao.php" },
-        { "@type": "ListItem", "position": 6, "name": "Ventilação Pós de Metais", "url": "https://siqueiraeblanco.com.br/setores/pos-metais.php" }
+        { "@type": "ListItem", "position": 4, "name": "Hoteleiro", "url": "https://siqueiraeblanco.com.br/setores/hoteleiro.php" },
+        { "@type": "ListItem", "position": 5, "name": "Industrial", "url": "https://siqueiraeblanco.com.br/setores/industrial.php" },
+        { "@type": "ListItem", "position": 6, "name": "Pressurização de Escadas", "url": "https://siqueiraeblanco.com.br/setores/pressurizacao.php" },
+        { "@type": "ListItem", "position": 7, "name": "Ventilação Pós de Metais", "url": "https://siqueiraeblanco.com.br/setores/pos-metais.php" }
       ]
     }
   }
@@ -84,6 +85,12 @@ $extra_css        = [];
             <div class="sector-card__icon" aria-hidden="true">🏢</div>
             <h3>Corporativo High-End</h3>
             <p>Edifícios Triple A, certificações LEED/WELL, foco em conforto térmico e qualidade do ar interior.</p>
+            <span class="sector-card__hint" aria-hidden="true">Ver detalhes</span>
+          </a>
+          <a class="sector-card sector-card--link fade-in" href="hoteleiro.php" aria-label="Abrir setor Hoteleiro">
+            <div class="sector-card__icon" aria-hidden="true">🏨</div>
+            <h3>Hoteleiro</h3>
+            <p>Conforto e silêncio para o hóspede (NBR 10152), eficiência em ocupação variável e pressurização de escadas (IT-18).</p>
             <span class="sector-card__hint" aria-hidden="true">Ver detalhes</span>
           </a>
           <a class="sector-card sector-card--link fade-in" href="industrial.php" aria-label="Abrir setor Industrial">

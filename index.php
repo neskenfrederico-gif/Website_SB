@@ -234,6 +234,7 @@
                 <li><a href="setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
                 <li><a href="setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
                 <li><a href="setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
+                <li><a href="setores/hoteleiro.php" class="nav__dropdown-link">🏨 Hoteleiro</a></li>
                 <li><a href="setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
                 <li><a href="setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
                 <li><a href="setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
@@ -1021,6 +1022,12 @@
             <div class="sector-card__icon" aria-hidden="true">🏢</div>
             <h3>Corporativo High-End</h3>
             <p>Edifícios Triple A, certificações LEED/WELL, foco em conforto térmico e qualidade do ar interior.</p>
+            <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
+          </a>
+          <a class="sector-card sector-card--link fade-in" href="setores/hoteleiro.php" aria-label="Abrir setor Hoteleiro">
+            <div class="sector-card__icon" aria-hidden="true">🏨</div>
+            <h3>Hoteleiro</h3>
+            <p>Conforto e silêncio para o hóspede, eficiência em ocupação variável e pressurização de escadas.</p>
             <span class="sector-card__hint" aria-hidden="true">Clique para ver detalhes</span>
           </a>
           <a class="sector-card sector-card--link fade-in" href="setores/industrial.php" aria-label="Abrir setor Industrial">
