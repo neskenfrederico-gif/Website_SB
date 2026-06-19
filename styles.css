@@ -2776,8 +2776,19 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
     margin-bottom: var(--spacing-4);
   }
 
+  /* Valor sempre em 1 linha e label com altura reservada para 2 linhas:
+     assim o card mantem a MESMA altura em todos os slides e a altura do
+     hero nao muda a cada volta do carrossel. */
   .hero__float-card-value {
     font-size: var(--font-size-3xl);
+    white-space: nowrap;
+  }
+
+  .hero__float-card-label {
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero__orb--1 { width: 250px; height: 250px; }
