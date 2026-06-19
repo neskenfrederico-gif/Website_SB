@@ -7,5 +7,5 @@
  * que todas as páginas (inclusive a home) apontem para a mesma versão e o
  * cache do navegador/CDN seja invalidado de forma consistente.
  */
-$css_version    = $css_version ?? '107';
+$css_version    = $css_version ?? '108';
 $script_version = $script_version ?? '1771000003';

@@ -2102,6 +2102,23 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
   letter-spacing: 0.05em;
 }
 
+/* Selo técnico do card de projeto (campo 'highlight' em projects-data.php) */
+.project-card__highlight {
+  align-self: flex-start;
+  margin-bottom: var(--spacing-2);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary-a15);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+html[data-theme="dark"] .project-card__highlight {
+  color: var(--color-secondary-light);
+}
+
 .project-card__content {
   padding: var(--spacing-6);
   display: flex;
