@@ -1102,7 +1102,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-q-1">
-              <p>O PMOC (Plano de Manutenção, Operação e Controle) é obrigatório por lei (Lei 13.589/2018) para todos os edifícios climatizados. A falta dele pode acarretar multas de até R$ 200 mil, além de riscos à saúde dos ocupantes e processos trabalhistas por qualidade do ar inadequada (Síndrome do Edifício Doente).</p>
+              <p>O PMOC (Plano de Manutenção, Operação e Controle) é obrigatório por lei (Lei 13.589/2018) para todos os edifícios climatizados. A falta dele pode acarretar multas de até R$ 200 mil, além de riscos à saúde dos ocupantes e processos trabalhistas por qualidade do ar inadequada (Síndrome do Edifício Doente). <a href="pmoc/">Faça o autodiagnóstico gratuito de conformidade →</a></p>
             </div>
           </div>
           <div class="faq-item fade-in">

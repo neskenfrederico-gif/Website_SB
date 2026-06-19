@@ -1,0 +1,195 @@
+/* ===== PMOC — Autodiagnóstico de Conformidade =====
+   Estilos específicos da página /pmoc/. Carregado apenas aqui via $extra_css.
+   Reutiliza tokens do :root (cores, espaçamentos, raios) do styles.css. */
+
+/* Cartões de risco / contexto legal */
+.pmoc-risks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.pmoc-risk-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-6);
+}
+
+.pmoc-risk-card__value {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-secondary);
+  line-height: 1.1;
+}
+
+.pmoc-risk-card__label {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+/* Quiz / checklist */
+.pmoc-quiz {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--spacing-8);
+}
+
+.pmoc-quiz__intro {
+  color: var(--color-gray-600);
+  margin-bottom: var(--spacing-6);
+}
+
+.pmoc-q {
+  border: none;
+  margin: 0 0 var(--spacing-5);
+  padding: var(--spacing-5) 0 0;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.pmoc-q:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.pmoc-q__legend {
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-3);
+  display: block;
+  width: 100%;
+}
+
+.pmoc-q__num {
+  color: var(--color-secondary);
+  font-weight: 800;
+  margin-right: var(--spacing-2);
+}
+
+.pmoc-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+.pmoc-opt {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Esconde o radio nativo mantendo a acessibilidade */
+.pmoc-opt input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.pmoc-opt span {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-5);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+  transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  user-select: none;
+}
+
+.pmoc-opt input:checked + span {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: var(--color-white);
+}
+
+.pmoc-opt input:focus-visible + span {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+.pmoc-quiz__actions {
+  margin-top: var(--spacing-8);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.pmoc-quiz__hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+}
+
+/* Resultado */
+.pmoc-result {
+  margin-top: var(--spacing-8);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-gray-400);
+  background: var(--color-gray-50);
+}
+
+.pmoc-result[hidden] {
+  display: none;
+}
+
+.pmoc-result--ok {
+  border-left-color: #16a34a;
+  background: rgba(22, 163, 74, 0.08);
+}
+
+.pmoc-result--warn {
+  border-left-color: #d97706;
+  background: rgba(217, 119, 6, 0.08);
+}
+
+.pmoc-result--danger {
+  border-left-color: #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.pmoc-result__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-gray-800);
+}
+
+.pmoc-result__score {
+  font-weight: 800;
+}
+
+.pmoc-result__text {
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-5);
+}
+
+.pmoc-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+}
+
+/* Barra de progresso do diagnóstico */
+.pmoc-meter {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-200);
+  overflow: hidden;
+  margin: var(--spacing-4) 0;
+}
+
+.pmoc-meter__fill {
+  height: 100%;
+  width: 0;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease, background 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .pmoc-risks {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
