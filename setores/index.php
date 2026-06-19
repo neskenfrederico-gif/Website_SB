@@ -15,6 +15,16 @@ $extra_css        = [];
   <head>
     <?php include '../includes/head.php'; ?>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Setores", "item": "https://siqueiraeblanco.com.br/setores/" }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
