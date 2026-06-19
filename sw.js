@@ -1,5 +1,5 @@
 // Service Worker - Siqueira e Blanco
-const CACHE_NAME = 'sb-engenharia-v2';
+const CACHE_NAME = 'sb-engenharia-v3';
 const OFFLINE_URL = '/';
 
 // Arquivos essenciais para cache
