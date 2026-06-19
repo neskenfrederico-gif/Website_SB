@@ -244,14 +244,20 @@ function initPortfolioRotation() {
 
   if (allLinks.length === 0) return;
 
-  // Mark first batch visible, then activate collapsed mode
-  var pageSize = getPageSize();
-  for (var i = 0; i < allLinks.length && i < pageSize; i++) {
-    allLinks[i].classList.add("portfolio-visible");
-  }
-  grid.classList.add("portfolio--collapsed");
+  // The dedicated portfolio page lists every project — it has no "Ver todos"
+  // button. Only the homepage preview uses the collapsed/rotating set.
+  var isFullListing = !showAllBtn;
 
-  var isExpanded = false;
+  if (!isFullListing) {
+    // Mark first batch visible, then activate collapsed mode
+    var pageSize = getPageSize();
+    for (var i = 0; i < allLinks.length && i < pageSize; i++) {
+      allLinks[i].classList.add("portfolio-visible");
+    }
+    grid.classList.add("portfolio--collapsed");
+  }
+
+  var isExpanded = isFullListing;
   var rotationInterval = null;
   var currentPage = 0;
   var activeFilter = "all";
