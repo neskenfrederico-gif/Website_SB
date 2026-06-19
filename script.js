@@ -557,6 +557,46 @@ ${getValue(data.message, "Sem mensagem")}`
   );
 }
 
+// ===== Analytics (GA4) =====
+// Helper seguro: nao faz nada se o gtag nao estiver disponivel (ex: GA
+// desabilitado, bloqueador de anuncios). Nunca lanca excecao.
+function trackEvent(name, params) {
+  try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, params || {});
+    }
+  } catch (e) {}
+}
+
+// Rastreia cliques de conversao (WhatsApp e CTAs principais) via delegacao,
+// sem interferir na navegacao (listener passivo, sem preventDefault).
+document.addEventListener(
+  "click",
+  function (e) {
+    var el = e.target.closest && e.target.closest("a, button");
+    if (!el) return;
+    var href = el.getAttribute("href") || "";
+
+    if (/wa\.me|api\.whatsapp|whatsapp\.com/i.test(href) ||
+        el.classList.contains("whatsapp-float") ||
+        el.id === "whatsapp-float") {
+      trackEvent("whatsapp_click", {
+        location: (el.id === "whatsapp-float" || el.classList.contains("whatsapp-float")) ? "float" : "link",
+        link_url: href,
+      });
+      return;
+    }
+
+    if (el.classList.contains("btn--primary")) {
+      trackEvent("cta_click", {
+        cta_text: (el.textContent || "").trim().slice(0, 60),
+        link_url: href,
+      });
+    }
+  },
+  { passive: true }
+);
+
 if (contactForm) {
   let isSubmitting = false;
   const formLoadTime = Date.now();
@@ -626,6 +666,14 @@ if (contactForm) {
         );
         window.open(`https://wa.me/5562992250067?text=${whatsappMessage}`, "_blank");
       }
+
+      // GA4: lead gerado pelo formulario de contato
+      trackEvent("generate_lead", {
+        method: "contact_form",
+        transport: result && result.ok ? "endpoint" : "whatsapp_fallback",
+        servico: data.service || data.servico || "",
+        setor: data.sector || data.setor || "",
+      });
 
       contactForm.reset();
       contactForm.classList.remove("was-submitted");
