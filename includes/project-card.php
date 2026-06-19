@@ -18,6 +18,9 @@ $spec2_value = $project['capacity'];
       </div>
     </div>
     <div class="project-card__content">
+      <?php if (!empty($project['highlight'])): ?>
+      <span class="project-card__highlight"><?= htmlspecialchars($project['highlight']) ?></span>
+      <?php endif; ?>
       <h3 class="project-card__title"><?= htmlspecialchars($project['title']) ?></h3>
       <span class="project-card__client"><?= htmlspecialchars($project['client']) ?></span>
       <div class="project-card__specs">
