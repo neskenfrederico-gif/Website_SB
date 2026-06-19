@@ -37,6 +37,7 @@ function nav_active($page, $current) {
                 <li><a href="<?= $base . $sep ?>setores/farmaceutico.php" class="nav__dropdown-link">🏥 Farmacêutico</a></li>
                 <li><a href="<?= $base . $sep ?>setores/datacenter.php" class="nav__dropdown-link">💾 Data Centers</a></li>
                 <li><a href="<?= $base . $sep ?>setores/corporativo.php" class="nav__dropdown-link">🏢 Corporativo</a></li>
+                <li><a href="<?= $base . $sep ?>setores/hoteleiro.php" class="nav__dropdown-link">🏨 Hoteleiro</a></li>
                 <li><a href="<?= $base . $sep ?>setores/industrial.php" class="nav__dropdown-link">🏭 Industrial</a></li>
                 <li><a href="<?= $base . $sep ?>setores/pressurizacao.php" class="nav__dropdown-link">🚨 Pressurização</a></li>
                 <li><a href="<?= $base . $sep ?>setores/pos-metais.php" class="nav__dropdown-link">⚙️ Pós de Metais</a></li>
