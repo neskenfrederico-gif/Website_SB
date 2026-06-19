@@ -14,6 +14,16 @@ $canonical        = 'https://siqueiraeblanco.com.br/sobre/';
   <head>
     <?php include '../includes/head.php'; ?>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://siqueiraeblanco.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://siqueiraeblanco.com.br/sobre/" }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AboutPage",
